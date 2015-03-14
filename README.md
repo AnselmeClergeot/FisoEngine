@@ -1,16 +1,17 @@
-### Welcome to my isometric engine repository!
+### Welcome to the Fiso Engine repository!
 
-*I am doing a complete redesign of the unstable and awkward first version of <a href="https://github.com/AnselmeClergeot/Fiso-Engine/">Fiso Engine</a>.*
+Fiso Engine is a **soft** and **simple** isometric engine made for being **easily bindable with any graphics library**.<br/>
+During the development, the engine is bind only with <a href="http://www.sfml-dev.org/index-fr.php">SFML</a>. <br/>
+It is still in development and offers daily versions.<br/>
+Fiso Engine is under the <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3.0 License</a>.<br/>
+For more informations, you can contact me by mail at anselmedu25@hotmail.com.
 
-***With this complete redesign:***
-* The engine will be simply bindable with any graphic library and not specifically SFML
-* The global structure is clarified, rethought, and optimized
-* The sources are much simplier to understand because of adding of clear sub-functions
-* Many functions refactored
-* ...
+Fiso Engine is very simple of use and will offer all the features you would expect to create your game:
+* Map creation/saving and manipulation
+* Map files editing with map-editor software
+* Global map tile-shading
+* Tile global animations (water, etc) and specific animations (door, etc)
+* Map object entities
+* Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc)
 
-Also, a regularly updated documentation will be avalaible to learn how to use the engine.
-
-Feel free to contact me at my e-mail adress: anselmedu25@hotmail.com
-
-#### Stay tuned!
+You can access the <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Welcome-to-the-doc!">updated wiki</a> to learn how to use the engine or access all classes documentation.
