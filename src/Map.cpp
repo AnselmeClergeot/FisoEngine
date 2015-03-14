@@ -22,7 +22,7 @@ void Map::addLayerFile(const std::string path)
     m_dataLoader.addLoadFile(path);
 }
 
-void Map::setTexture(const std::string path)
+void Map::setTileset(const std::string path)
 {
     m_drawerLoader.setTilesetPath(path);
 }

@@ -21,7 +21,7 @@ class Map : public sf::Drawable
 
         //All these methods are indirect setters
         void addLayerFile(const std::string path);
-        void setTexture(const std::string path);
+        void setTileset(const std::string path);
         void setTileSize(const Vector2 size);
         void setTileSize(const unsigned int w, const unsigned int h);
         void setTileBaseHeight(const unsigned int h);
