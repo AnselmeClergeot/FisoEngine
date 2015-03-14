@@ -37,3 +37,22 @@ void Vector3::operator-=(const Vector3 &vec)
     y-=vec.y;
     z-=vec.z;
 }
+
+Vector3 operator+(const Vector3 &v1, const Vector3 &v2)
+{
+    Vector3 res(v1);
+    res+=v2;
+    return res;
+}
+
+Vector3 operator-(const Vector3 &v1, const Vector3 &v2)
+{
+    Vector3 res(v1);
+    res-=v2;
+    return res;
+}
+
+bool operator==(const Vector3 &v1, const Vector3 &v2)
+{
+    return (v1.x==v2.x && v1.y==v2.y && v1.z==v2.z);
+}

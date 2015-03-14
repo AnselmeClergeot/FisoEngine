@@ -14,4 +14,8 @@ class Vector2
         int x, y;
 };
 
+Vector2 operator+(const Vector2 &v1, const Vector2 &v2);
+Vector2 operator-(const Vector2 &v1, const Vector2 &v2);
+bool operator==(const Vector2 &v1, const Vector2 &v2);
+
 #endif // VECTOR2_H
