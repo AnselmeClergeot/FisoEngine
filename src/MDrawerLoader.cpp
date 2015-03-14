@@ -25,7 +25,7 @@ bool MDrawerLoader::fileExists(const std::string path)
     return file.good();
 }
 
-void MDrawerLoader::setSpritesheetPath(const std::string path)
+void MDrawerLoader::setTilesetPath(const std::string path)
 {
     if(fileExists(path))
         m_path = path;

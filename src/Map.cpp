@@ -24,7 +24,7 @@ void Map::addLayerFile(const std::string path)
 
 void Map::setTexture(const std::string path)
 {
-    m_drawerLoader.setSpritesheetPath(path);
+    m_drawerLoader.setTilesetPath(path);
 }
 
 void Map::setTileSize(const Vector2 size)

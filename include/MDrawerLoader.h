@@ -17,13 +17,13 @@ class MDrawerLoader
         //Check if file exists
         bool fileExists(const std::string path);
 
-        //Set spritesheet path
-        void setSpritesheetPath(const std::string path);
+        //Set tileset path
+        void setTilesetPath(const std::string path);
 
-        //To load spritesheet
+        //To load tileset
         void loadTexture();
 
-        //Setting spritesheet to all tiles
+        //Setting tileset to all tiles
         void setTilesTex();
 
         //Setting good tileFrame to all tiles
@@ -37,7 +37,7 @@ class MDrawerLoader
         MDrawer &m_drawer;
         //Reference to MData to get some essential data
         MData &m_data;
-        //Spritesheet path
+        //Tileset path
         std::string m_path;
 };
 
