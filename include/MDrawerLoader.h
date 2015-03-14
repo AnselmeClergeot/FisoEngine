@@ -29,6 +29,9 @@ class MDrawerLoader
         //Setting good tileFrame to all tiles
         void setTilesRect();
 
+        //Resize the drawer sprite list (tiles)
+        void resizeTileList();
+
     private:
         //Reference to the class to modify
         MDrawer &m_drawer;

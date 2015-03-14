@@ -8,7 +8,7 @@ MDrawerLoader::MDrawerLoader(MDrawer &drawer, MData &data) : m_drawer(drawer), m
 void MDrawerLoader::load()
 {
     loadTexture();
-    m_drawer.resizeTileList(m_data.getPermConf().getSize());
+    resizeTileList();
     setTilesTex();
     setTilesRect();
     m_drawer.updatePosition();
@@ -40,11 +40,16 @@ void MDrawerLoader::loadTexture()
 void MDrawerLoader::setTilesTex()
 {
     for(int i(0); i<m_data.getPermConf().getSize(); i++)
-        m_drawer.tileAt(i).setTexture(m_drawer.getTexture());
+        m_drawer.getTileList()[i].setTexture(m_drawer.getTexture());
 }
 
 void MDrawerLoader::setTilesRect()
 {
     for(int i(0); i<m_data.getPermConf().getSize(); i++)
         m_drawer.updateAt(i);
+}
+
+void MDrawerLoader::resizeTileList()
+{
+    m_drawer.getTileList().resize(m_data.getPermConf().getSize());
 }

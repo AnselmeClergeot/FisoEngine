@@ -31,7 +31,7 @@ class MDataLoader
         void loadMatrices();
 
         //To set temporary matrix as same of permanent for the start of program
-        void equalizePermWithTemp();
+        void equalizeMatrices();
 
     private:
 

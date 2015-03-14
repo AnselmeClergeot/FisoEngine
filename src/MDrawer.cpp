@@ -7,19 +7,14 @@ MDrawer::MDrawer(MData &data) : m_texture(),
 
 }
 
-void MDrawer::resizeTileList(const unsigned int s)
-{
-    m_tileSprites.resize(s);
-}
-
 sf::Texture &MDrawer::getTexture()
 {
     return m_texture;
 }
 
-sf::Sprite &MDrawer::tileAt(const unsigned int i)
+std::vector<sf::Sprite> &MDrawer::getTileList()
 {
-    return m_tileSprites[i];
+    return m_tileSprites;
 }
 
 void MDrawer::updateAt(const unsigned int i)

@@ -28,7 +28,7 @@ void MDataLoader::load()
     loadMapSize();
     resizeMatrices();
     loadMatrices();
-    equalizePermWithTemp();
+    equalizeMatrices();
 }
 
 void MDataLoader::save()
@@ -102,7 +102,7 @@ void MDataLoader::loadMatrices()
     }
 }
 
-void MDataLoader::equalizePermWithTemp()
+void MDataLoader::equalizeMatrices()
 {
     m_data.getTempConf() = m_data.getPermConf();
 }

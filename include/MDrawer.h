@@ -12,14 +12,11 @@ class MDrawer : public sf::Drawable
     public:
         MDrawer(MData &data);
 
-        //To resize tile list
-        void resizeTileList(const unsigned int s);
-
-        //Getting sprite texture
+        //Getting sprite texture (for loader)
         sf::Texture &getTexture();
 
-        //To get a reference of the sprite at iter i
-        sf::Sprite &tileAt(const unsigned int i);
+        //Get a reference to the tile list (for loader)
+        std::vector<sf::Sprite> &getTileList();
 
         //Update tile rect from the temp matrix
         void updateAt(const unsigned int i);
