@@ -15,7 +15,7 @@ class Matrix3d
         void operator=(const Matrix3d &matrix);
         Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d);
         Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int f);
-        void resize(const unsigned int w, const unsigned int h, const unsigned int d);
+        void resize(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill);
         void clear();
 
         //Accessors
@@ -28,7 +28,7 @@ class Matrix3d
         unsigned int get3dIter(const unsigned int x, const unsigned int y, const unsigned int z);
         unsigned int get2dIter(const unsigned int x, const unsigned int y);
         Vector2 get2dFromIter(const unsigned int iter);
-        std::vector<int> getData();
+        std::vector<int> getData() const;
 
     private:
         unsigned int m_w, m_h, m_d;

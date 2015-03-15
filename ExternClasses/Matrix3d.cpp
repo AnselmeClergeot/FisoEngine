@@ -26,12 +26,12 @@ Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned in
                                                                                                    m_data(w*h*d, f)
 {}
 
-void Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d)
+void Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill)
 {
         m_w = w;
         m_h = h;
         m_d = d;
-        m_data.resize(w*h*d);
+        m_data.resize(w*h*d, fill);
 }
 
 void Matrix3d::clear()
@@ -87,7 +87,7 @@ Vector2 Matrix3d::get2dFromIter(const unsigned int iter)
     return Vector2(res.quot, res.rem);
 }
 
-std::vector<int> Matrix3d::getData()
+std::vector<int> Matrix3d::getData() const
 {
     return m_data;
 }
