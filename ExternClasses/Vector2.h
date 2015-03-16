@@ -8,7 +8,7 @@ class Vector2
         Vector2();
         Vector2(const int paramx, const int paramy);
         Vector2(const Vector2 &vec);
-        void operator=(const Vector2 &vec);
+        Vector2& operator=(const Vector2 &vec);
         void operator+=(const Vector2 &vec);
         void operator-=(const Vector2 &vec);
         int x, y;

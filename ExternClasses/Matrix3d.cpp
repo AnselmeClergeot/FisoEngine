@@ -8,12 +8,14 @@ Matrix3d::Matrix3d() : m_w(0), m_h(0), m_d(0), m_data(0)
 Matrix3d::Matrix3d(const Matrix3d &matrix) : m_w(matrix.m_w), m_h(matrix.m_h), m_d(matrix.m_d), m_data(matrix.m_data)
 {}
 
-void Matrix3d::operator=(const Matrix3d &matrix)
+Matrix3d& Matrix3d::operator=(const Matrix3d &matrix)
 {
     m_w = matrix.m_w;
     m_h = matrix.m_h;
     m_d = matrix.m_d;
     m_data = matrix.m_data;
+
+    return *this;
 }
 
 Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d) : m_w(w),
@@ -82,9 +84,7 @@ unsigned int Matrix3d::get2dIter(const unsigned int x, const unsigned int y)
 
 Vector2 Matrix3d::get2dFromIter(const unsigned int iter)
 {
-    div_t res;
-    res = div(iter, m_w);
-    return Vector2(res.quot, res.rem);
+    return Vector2(div(iter, m_w).quot, div(iter, m_w).rem);
 }
 
 std::vector<int> Matrix3d::getData() const

@@ -12,7 +12,7 @@ class Matrix3d
     public:
         Matrix3d();
         Matrix3d(const Matrix3d &matrix);
-        void operator=(const Matrix3d &matrix);
+        Matrix3d& operator=(const Matrix3d &matrix);
         Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d);
         Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int f);
         void resize(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill);

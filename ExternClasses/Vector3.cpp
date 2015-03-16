@@ -10,18 +10,18 @@ Vector3::Vector3(const int paramx, const int paramy, const int paramz) : x(param
 
 }
 
-Vector3::Vector3(const Vector3 &vec)
+Vector3::Vector3(const Vector3 &vec) : x(vec.x), y(vec.y), z(vec.z)
 {
-    x = vec.x;
-    y = vec.y;
-    z = vec.z;
+
 }
 
-void Vector3::operator=(const Vector3 &vec)
+Vector3& Vector3::operator=(const Vector3 &vec)
 {
     x = vec.x;
     y = vec.y;
     z = vec.z;
+
+    return *this;
 }
 
 void Vector3::operator+=(const Vector3 &vec)
