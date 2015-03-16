@@ -53,8 +53,8 @@ void MDataLoader::save()
 
 void MDataLoader::resizeMatrices()
 {
-    m_data.getTempConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y);
-    m_data.getPermConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y);
+    m_data.getTempConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y, 0);
+    m_data.getPermConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y, 0);
 }
 
 void MDataLoader::loadMapSize()

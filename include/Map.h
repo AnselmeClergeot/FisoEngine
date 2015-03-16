@@ -4,8 +4,7 @@
 #include "MData.h"
 #include "MDataLoader.h"
 
-#include "MDrawer.h"
-#include "MDrawerLoader.h"
+#include "TileGroup.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -52,9 +51,9 @@ class Map : public sf::Drawable
         //Map data loading and container
         MData m_data;
         MDataLoader m_dataLoader;
-        //Map drawer loading and drawer itself
-        MDrawer m_drawer;
-        MDrawerLoader m_drawerLoader;
+        //The map TileGroup
+        TileGroup m_tileGroup;
+
 };
 
 #endif // MAP_H

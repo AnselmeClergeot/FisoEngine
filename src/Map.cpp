@@ -1,7 +1,7 @@
 #include "Map.h"
 
 Map::Map() : m_data(), m_dataLoader(m_data),
-             m_drawer(m_data), m_drawerLoader(m_drawer, m_data)
+             m_tileGroup(m_data.getTempConf(), m_data)
 {
 
 }
@@ -9,7 +9,7 @@ Map::Map() : m_data(), m_dataLoader(m_data),
 void Map::init()
 {
     m_dataLoader.load();
-    m_drawerLoader.load();
+    m_tileGroup.initialize();
 }
 
 void Map::save()
@@ -24,7 +24,7 @@ void Map::addLayerFile(const std::string path)
 
 void Map::setTileset(const std::string path)
 {
-    m_drawerLoader.setTilesetPath(path);
+    m_tileGroup.setTilesetPath(path);
 }
 
 void Map::setTileSize(const Vector2 size)
@@ -50,7 +50,7 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
     if(modifDraw)
     {
         m_data.getTempConf().at(coord.x, coord.y, coord.z) = tile;
-        m_drawer.updateAt(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
+        m_tileGroup.updateTile(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
     }
 }
 
@@ -62,7 +62,7 @@ void Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned i
 void Map::setPosition(const Vector2 pos)
 {
     m_data.setPosition(pos);
-    m_drawer.updatePosition();
+    m_tileGroup.updatePosition();
 }
 
 void Map::setPosition(const unsigned int x, const unsigned int y)
@@ -73,7 +73,7 @@ void Map::setPosition(const unsigned int x, const unsigned int y)
 void Map::move(const Vector2 rate)
 {
     m_data.move(rate);
-    m_drawer.updatePosition();
+    m_tileGroup.updatePosition();
 }
 
 void Map::move(const unsigned int rx, const unsigned int ry)
@@ -83,7 +83,8 @@ void Map::move(const unsigned int rx, const unsigned int ry)
 
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    m_drawer.draw(target, states);
+    for(int layer(0); layer<m_data.getSize().y; layer++)
+        m_tileGroup.draw(target, states, layer);
 }
 
 Vector3 Map::getDimensions() const
@@ -113,5 +114,5 @@ unsigned int Map::getTileAt(const Vector3 coord)
 
 unsigned int Map::getTileAt(const unsigned int x, const unsigned int y, const unsigned int z)
 {
-    getTileAt(Vector3(x, y, z));
+    return getTileAt(Vector3(x, y, z));
 }

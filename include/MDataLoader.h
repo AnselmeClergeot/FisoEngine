@@ -34,11 +34,10 @@ class MDataLoader
         void equalizeMatrices();
 
     private:
-
-        //Layer loading files list
-        std::vector<std::string> m_paths;
         //Reference to the class to modify
         MData &m_data;
+        //Layer loading files list
+        std::vector<std::string> m_paths;
 };
 
 #endif // MDATALOADER_H
