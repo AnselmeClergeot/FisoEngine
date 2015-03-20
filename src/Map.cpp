@@ -1,7 +1,10 @@
 #include "Map.h"
 
 Map::Map() : m_data(), m_dataLoader(m_data),
-             m_tileGroup(m_data.getTempConf(), m_data)
+             m_tileGroup(m_data.getTempConf(), m_data),
+             m_shadowsLoader(m_data),
+             m_shadowsTilegroup(m_shadowsLoader.getMatrix(), m_data),
+             m_shadowsInterface()
 {
 
 }
@@ -115,4 +118,9 @@ unsigned int Map::getTileAt(const Vector3 coord)
 unsigned int Map::getTileAt(const unsigned int x, const unsigned int y, const unsigned int z)
 {
     return getTileAt(Vector3(x, y, z));
+}
+
+ShadowsInterface &Map::shadows()
+{
+    return m_shadowsInterface;
 }

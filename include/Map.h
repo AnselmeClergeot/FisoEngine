@@ -6,6 +6,9 @@
 
 #include "TileGroup.h"
 
+#include "ShadowsInterface.h"
+#include "SLoader.h"
+
 #include <SFML/Graphics.hpp>
 
 //This class is the user interface
@@ -47,12 +50,25 @@ class Map : public sf::Drawable
         unsigned int getTileAt(const Vector3 coord);
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
+        ShadowsInterface &shadows();
+
     private:
+        //Map----------------------------------
+
         //Map data loading and container
         MData m_data;
         MDataLoader m_dataLoader;
         //The map TileGroup
         TileGroup m_tileGroup;
+
+        //Shadows----------------------------------
+        //The loader
+        SLoader m_shadowsLoader;
+        //The shadows tile-group
+        TileGroup m_shadowsTilegroup;
+        //The interface for user
+        ShadowsInterface m_shadowsInterface;
+
 
 };
 
