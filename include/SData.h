@@ -19,7 +19,7 @@ class SData
         Matrix3d &getMatrix();
 
         //To update shading from new tile coord
-        Vector3 setNewTile(const Vector3 coord, TileGroup &tilegroup);
+        void setNewTile(const Vector3 coord, TileGroup &tilegroup);
 
         //To get initialized/on states
         bool isOn() const;

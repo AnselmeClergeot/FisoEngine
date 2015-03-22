@@ -21,7 +21,7 @@ Matrix3d &SData::getMatrix()
     return m_matrix;
 }
 
-Vector3 SData::setNewTile(const Vector3 coord, TileGroup &tilegroup)
+void SData::setNewTile(const Vector3 coord, TileGroup &tilegroup)
 {
     for(int z(coord.z-1); z>-1; z--)
     {
