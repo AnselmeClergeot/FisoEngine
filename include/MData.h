@@ -3,6 +3,7 @@
 
 #include "../ExternClasses/Matrix3d.h"
 #include "../ExternClasses/Vector2.h"
+#include <algorithm>
 
 //This class is the map that contains all the map data, size, etc
 class MData
@@ -17,6 +18,8 @@ class MData
 
         void setTileSize(const Vector2 size);
         void setTileBaseHeight(const unsigned int h);
+        void setInvisibleTile(const unsigned int tile);
+        void addTranslucentTile(const unsigned int tile);
 
         //Accessors
         Matrix3d &getTempConf();
@@ -27,6 +30,8 @@ class MData
 
         Vector2 getTileSize() const;
         unsigned int getTileBaseHeight() const;
+        unsigned int getInvisibleTile() const;
+        bool isTranslucent(const unsigned int tile) const;
 
     private:
         //Tile-configurations classes
@@ -40,6 +45,8 @@ class MData
         //Tile global data
         Vector2 m_tileSize;
         unsigned int m_tileBaseHeight;
+        unsigned m_invisibleTile;
+        std::vector<unsigned int> m_translucentTiles;
 };
 
 #endif // MDATA_H

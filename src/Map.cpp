@@ -2,9 +2,10 @@
 
 Map::Map() : m_data(), m_dataLoader(m_data),
              m_tileGroup(m_data.getTempConf(), m_data),
-             m_shadowsLoader(m_data),
-             m_shadowsTilegroup(m_shadowsLoader.getMatrix(), m_data),
-             m_shadowsInterface()
+             m_shadowsData(m_data),
+             m_shadowsLoader(m_shadowsData, m_data),
+             m_shadowsTilegroup(m_shadowsData.getMatrix(), m_data),
+             m_shadowsInterface(m_shadowsLoader, m_shadowsData, m_shadowsTilegroup)
 {
 
 }
@@ -45,6 +46,16 @@ void Map::setTileBaseHeight(const unsigned int h)
     m_data.setTileBaseHeight(h);
 }
 
+void Map::setInvisibleTile(const unsigned int tile)
+{
+    m_data.setInvisibleTile(tile);
+}
+
+void Map::addTranslucentTile(const unsigned int tile)
+{
+    m_data.addTranslucentTile(tile);
+}
+
 void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw)
 {
     if(modifConf)
@@ -54,6 +65,8 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
     {
         m_data.getTempConf().at(coord.x, coord.y, coord.z) = tile;
         m_tileGroup.updateTile(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
+        if(m_shadowsData.isInitialized())
+            m_shadowsData.setNewTile(coord, m_shadowsTilegroup);
     }
 }
 
@@ -66,6 +79,8 @@ void Map::setPosition(const Vector2 pos)
 {
     m_data.setPosition(pos);
     m_tileGroup.updatePosition();
+    if(m_shadowsData.isInitialized())
+        m_shadowsTilegroup.updatePosition();
 }
 
 void Map::setPosition(const unsigned int x, const unsigned int y)
@@ -77,6 +92,8 @@ void Map::move(const Vector2 rate)
 {
     m_data.move(rate);
     m_tileGroup.updatePosition();
+    if(m_shadowsData.isInitialized())
+        m_shadowsTilegroup.updatePosition();
 }
 
 void Map::move(const unsigned int rx, const unsigned int ry)
@@ -87,7 +104,11 @@ void Map::move(const unsigned int rx, const unsigned int ry)
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     for(int layer(0); layer<m_data.getSize().y; layer++)
+    {
         m_tileGroup.draw(target, states, layer);
+        if(m_shadowsData.isOn())
+            m_shadowsTilegroup.draw(target, states, layer);
+    }
 }
 
 Vector3 Map::getDimensions() const
@@ -108,6 +129,16 @@ Vector2 Map::getTileSize() const
 unsigned int Map::getTileBaseHeight() const
 {
     return m_data.getTileBaseHeight();
+}
+
+unsigned int Map::getInvisibleTile() const
+{
+    return m_data.getInvisibleTile();
+}
+
+bool Map::isTranslucent(const unsigned int tile) const
+{
+    return m_data.isTranslucent(tile);
 }
 
 unsigned int Map::getTileAt(const Vector3 coord)

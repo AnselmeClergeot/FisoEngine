@@ -2,7 +2,7 @@
 
 MData::MData() : m_tempConf(), m_permConf(),
                  m_size(), m_position(),
-                 m_tileSize(), m_tileBaseHeight(0)
+                 m_tileSize(), m_tileBaseHeight(0), m_invisibleTile(0), m_translucentTiles()
 {
 
 }
@@ -33,6 +33,16 @@ void MData::setTileBaseHeight(const unsigned int h)
     m_tileBaseHeight = h;
 }
 
+void MData::setInvisibleTile(const unsigned int tile)
+{
+    m_invisibleTile = tile;
+    addTranslucentTile(tile);
+}
+
+void MData::addTranslucentTile(const unsigned int tile)
+{
+    m_translucentTiles.push_back(tile);
+}
 //Accessors
 Matrix3d &MData::getTempConf()
 {
@@ -62,4 +72,14 @@ Vector2 MData::getTileSize() const
 unsigned int MData::getTileBaseHeight() const
 {
     return m_tileBaseHeight;
+}
+
+unsigned int MData::getInvisibleTile() const
+{
+    return m_invisibleTile;
+}
+
+bool MData::isTranslucent(const unsigned int tile) const
+{
+    return std::find(m_translucentTiles.begin(), m_translucentTiles.end(), tile)!=m_translucentTiles.end();
 }

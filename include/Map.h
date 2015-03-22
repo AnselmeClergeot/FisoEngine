@@ -8,6 +8,7 @@
 
 #include "ShadowsInterface.h"
 #include "SLoader.h"
+#include "SData.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -27,6 +28,8 @@ class Map : public sf::Drawable
         void setTileSize(const Vector2 size);
         void setTileSize(const unsigned int w, const unsigned int h);
         void setTileBaseHeight(const unsigned int h);
+        void setInvisibleTile(const unsigned int tile);
+        void addTranslucentTile(const unsigned int tile);
 
         //To set a tile at specific world coordinate
         void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);
@@ -47,6 +50,8 @@ class Map : public sf::Drawable
         Vector2 getPosition() const;
         Vector2 getTileSize() const;
         unsigned int getTileBaseHeight() const;
+        unsigned int getInvisibleTile() const;
+        bool isTranslucent(const unsigned int tile) const;
         unsigned int getTileAt(const Vector3 coord);
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
@@ -64,6 +69,8 @@ class Map : public sf::Drawable
         //Shadows----------------------------------
         //The loader
         SLoader m_shadowsLoader;
+        //The data
+        SData m_shadowsData;
         //The shadows tile-group
         TileGroup m_shadowsTilegroup;
         //The interface for user
