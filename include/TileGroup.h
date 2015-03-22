@@ -25,6 +25,11 @@ class TileGroup
         //To set a certain tile frame
         void frameTile(const unsigned int index, const Vector2 coord);
 
+        //To set the opacity of a specific tile
+        void setSpecificOpacity(const unsigned int index, const unsigned int opacity);
+        //To set a global tile number opacity
+        void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
+
         //To draw a specific tile layer
         void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const;
 

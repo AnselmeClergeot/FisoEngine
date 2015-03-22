@@ -75,6 +75,21 @@ void Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned i
     setTileAt(Vector3(x, y, z), tile, modifConf, modifDraw);
 }
 
+void Map::setSpecificOpacity(const Vector3 coord, const unsigned int opacity)
+{
+    m_tileGroup.setSpecificOpacity(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z), opacity);
+}
+
+void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity)
+{
+    setSpecificOpacity(Vector3(x, y, z), opacity);
+}
+
+void Map::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+{
+    m_tileGroup.setGlobalOpacity(tile, opacity);
+}
+
 void Map::setPosition(const Vector2 pos)
 {
     m_data.setPosition(pos);

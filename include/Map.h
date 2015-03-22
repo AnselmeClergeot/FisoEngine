@@ -34,6 +34,11 @@ class Map : public sf::Drawable
         //To set a tile at specific world coordinate
         void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
+        //To set a specific tile opacity
+        void setSpecificOpacity(const Vector3 coord, const unsigned int opacity);
+        void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity);
+        //To set a global tile number opacity
+        void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
 
         //Positioning methods
         void setPosition(const Vector2 pos);

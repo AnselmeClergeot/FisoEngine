@@ -56,3 +56,15 @@ void TileGroupData::frameTile(const unsigned int index, const Vector2 coord)
                                                 m_mapData.getTileSize().x,
                                                 m_mapData.getTileSize().y));
 }
+
+void TileGroupData::setSpecificOpacity(const unsigned int index, const unsigned int opacity)
+{
+    m_tiles[index].setColor(sf::Color(255, 255, 255, opacity));
+}
+
+void TileGroupData::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+{
+    for(int i(0); i<m_mapData.getTempConf().getSize(); i++)
+        if(m_mapData.getTempConf().at(i)==tile)
+            m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
+}

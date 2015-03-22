@@ -32,6 +32,16 @@ void TileGroup::frameTile(const unsigned int index, const Vector2 coord)
     m_data.frameTile(index, coord);
 }
 
+void TileGroup::setSpecificOpacity(const unsigned int index, const unsigned int opacity)
+{
+    m_data.setSpecificOpacity(index, opacity);
+}
+
+void TileGroup::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+{
+    m_data.setGlobalOpacity(tile, opacity);
+}
+
 void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const
 {
     m_drawer.draw(target, states, layer);
