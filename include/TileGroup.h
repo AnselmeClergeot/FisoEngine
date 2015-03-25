@@ -29,9 +29,16 @@ class TileGroup
         void setSpecificOpacity(const unsigned int index, const unsigned int opacity);
         //To set a global tile number opacity
         void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
+        //To set the base opacity of all the tiles
+        void setGroupOpacity(const unsigned int opacity);
 
         //To draw a specific tile layer
         void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const;
+
+        //To get specific tile opacity
+        unsigned int getTileOpacity(const unsigned int index) const;
+        //To get group opacity
+        unsigned int getGroupOpacity() const;
 
     private:
         //Data container and loader and drawer

@@ -1,6 +1,6 @@
 #include "TileGroupData.h"
 
-TileGroupData::TileGroupData(Matrix3d &config, MData &mapData) : m_tileset(), m_tiles(), m_config(config), m_mapData(mapData)
+TileGroupData::TileGroupData(Matrix3d &config, MData &mapData) : m_tileset(), m_tiles(), m_config(config), m_mapData(mapData), m_opacity(255)
 {
 
 }
@@ -64,7 +64,24 @@ void TileGroupData::setSpecificOpacity(const unsigned int index, const unsigned 
 
 void TileGroupData::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
 {
-    for(int i(0); i<m_mapData.getTempConf().getSize(); i++)
+    for(int i(0); i<m_tiles.size(); i++)
         if(m_mapData.getTempConf().at(i)==tile)
             m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
+}
+
+void TileGroupData::setGroupOpacity(const unsigned int opacity)
+{
+    m_opacity = opacity;
+    for(int i(0); i<m_tiles.size(); i++)
+        m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
+}
+
+unsigned int TileGroupData::getTileOpacity(const unsigned int index) const
+{
+    return m_tiles[index].getColor().a;
+}
+
+unsigned int TileGroupData::getGroupOpacity() const
+{
+    return m_opacity;
 }

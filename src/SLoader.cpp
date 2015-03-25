@@ -22,12 +22,5 @@ void SLoader::calculateMatrix()
     for(unsigned int z(0); z<m_mapData.getSize().y; z++)
         for(unsigned int y(0); y<m_mapData.getSize().x; y++)
             for(unsigned int x(0); x<m_mapData.getSize().x; x++)
-            {
-                if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(x, y, z)))
-                    for(unsigned int layerOffset(z+1); layerOffset<m_mapData.getSize().y; layerOffset++)
-                    {
-                        if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(x, y, layerOffset)))
-                            m_data.getMatrix().at(x, y, z)=m_mapData.getTempConf().at(x, y, layerOffset);
-                    }
-            }
+                m_data.setNewTile(Vector3(x, y, z));
 }

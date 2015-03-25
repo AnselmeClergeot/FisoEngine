@@ -39,6 +39,8 @@ class Map : public sf::Drawable
         void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity);
         //To set a global tile number opacity
         void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
+        //To set all tiles opacity
+        void setGroupOpacity(const unsigned int opacity);
 
         //Positioning methods
         void setPosition(const Vector2 pos);
@@ -59,6 +61,10 @@ class Map : public sf::Drawable
         bool isTranslucent(const unsigned int tile) const;
         unsigned int getTileAt(const Vector3 coord);
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
+        unsigned int getGroupOpacity() const;
+
+        unsigned int getTileOpacity(const Vector3 coord);
+        unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
 
         ShadowsInterface &shadows();
 

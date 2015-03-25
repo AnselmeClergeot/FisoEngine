@@ -12,6 +12,9 @@ class ShadowsInterface
         //To set the shadows tileset path
         void setTileset(const std::string path);
 
+        //To set the shadows opacity
+        void setOpacity(const unsigned int opacity);
+
         //To start loading/calculating all shadows stuff
         void init();
 

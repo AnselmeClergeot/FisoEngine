@@ -12,6 +12,7 @@ class SData
         SData(MData &mapData);
         //To set on
         void setOn(bool on);
+
         //To set initialized
         void setInitialized();
 
@@ -19,12 +20,12 @@ class SData
         Matrix3d &getMatrix();
 
         //To update shading from new tile coord
-        void setNewTile(const Vector3 coord, TileGroup &tilegroup);
+        void setNewTile(const Vector3 coord, TileGroup &mapTg, TileGroup &shadowsTg);
+        void setNewTile(const Vector3 coord);
 
         //To get initialized/on states
         bool isOn() const;
         bool isInitialized() const;
-
 
     private:
         //Reference to the MData

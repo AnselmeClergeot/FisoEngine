@@ -36,6 +36,13 @@ class TileGroupData
         void setSpecificOpacity(const unsigned int index, const unsigned int opacity);
         //To set a global tile number opacity
         void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
+        //To set the all tiles opacity
+        void setGroupOpacity(const unsigned int opacity);
+
+        //To get specific tile opacity
+        unsigned int getTileOpacity(const unsigned int index) const;
+        //To get group opacity
+        unsigned int getGroupOpacity() const;
     private:
         //The tileset texture
         sf::Texture m_tileset;
@@ -45,6 +52,8 @@ class TileGroupData
         Matrix3d &m_config;
         //Reference to MData to get essential data
         MData &m_mapData;
+        //Group opacity
+        unsigned int m_opacity;
 };
 
 #endif // TILEGROUPDATA_H

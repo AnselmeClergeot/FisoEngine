@@ -3,8 +3,8 @@
 Map::Map() : m_data(), m_dataLoader(m_data),
              m_tileGroup(m_data.getTempConf(), m_data),
              m_shadowsData(m_data),
-             m_shadowsLoader(m_shadowsData, m_data),
              m_shadowsTilegroup(m_shadowsData.getMatrix(), m_data),
+             m_shadowsLoader(m_shadowsData, m_data),
              m_shadowsInterface(m_shadowsLoader, m_shadowsData, m_shadowsTilegroup)
 {
 
@@ -66,7 +66,7 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
         m_data.getTempConf().at(coord.x, coord.y, coord.z) = tile;
         m_tileGroup.updateTile(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
         if(m_shadowsData.isInitialized())
-            m_shadowsData.setNewTile(coord, m_shadowsTilegroup);
+            m_shadowsData.setNewTile(coord, m_tileGroup, m_shadowsTilegroup);
     }
 }
 
@@ -78,6 +78,8 @@ void Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned i
 void Map::setSpecificOpacity(const Vector3 coord, const unsigned int opacity)
 {
     m_tileGroup.setSpecificOpacity(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z), opacity);
+    if(m_shadowsData.isInitialized())
+        m_shadowsData.setNewTile(coord, m_tileGroup, m_shadowsTilegroup);
 }
 
 void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity)
@@ -88,6 +90,11 @@ void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const uns
 void Map::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
 {
     m_tileGroup.setGlobalOpacity(tile, opacity);
+}
+
+void Map::setGroupOpacity(const unsigned int opacity)
+{
+    m_tileGroup.setGroupOpacity(opacity);
 }
 
 void Map::setPosition(const Vector2 pos)
@@ -164,6 +171,21 @@ unsigned int Map::getTileAt(const Vector3 coord)
 unsigned int Map::getTileAt(const unsigned int x, const unsigned int y, const unsigned int z)
 {
     return getTileAt(Vector3(x, y, z));
+}
+
+unsigned int Map::getGroupOpacity() const
+{
+    return m_tileGroup.getGroupOpacity();
+}
+
+unsigned int Map::getTileOpacity(const Vector3 coord)
+{
+    return m_tileGroup.getTileOpacity(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
+}
+
+unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z)
+{
+    return getTileOpacity(Vector3(x, y, z));
 }
 
 ShadowsInterface &Map::shadows()

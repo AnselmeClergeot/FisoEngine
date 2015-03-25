@@ -12,6 +12,11 @@ void ShadowsInterface::setTileset(const std::string path)
     m_tilegroup.setTilesetPath(path);
 }
 
+void ShadowsInterface::setOpacity(const unsigned int opacity)
+{
+    m_tilegroup.setGroupOpacity(opacity);
+}
+
 void ShadowsInterface::init()
 {
     m_loader.initialize();

@@ -42,7 +42,22 @@ void TileGroup::setGlobalOpacity(const unsigned int tile, const unsigned int opa
     m_data.setGlobalOpacity(tile, opacity);
 }
 
+void TileGroup::setGroupOpacity(const unsigned int opacity)
+{
+    m_data.setGroupOpacity(opacity);
+}
+
 void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const
 {
     m_drawer.draw(target, states, layer);
+}
+
+unsigned int TileGroup::getTileOpacity(const unsigned int index) const
+{
+    return m_data.getTileOpacity(index);
+}
+
+unsigned int TileGroup::getGroupOpacity() const
+{
+    return m_data.getGroupOpacity();
 }
