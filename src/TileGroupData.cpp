@@ -72,8 +72,12 @@ void TileGroupData::setGlobalOpacity(const unsigned int tile, const unsigned int
 void TileGroupData::setGroupOpacity(const unsigned int opacity)
 {
     m_opacity = opacity;
+}
+
+void TileGroupData::applyGroupOpacity()
+{
     for(int i(0); i<m_tiles.size(); i++)
-        m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
+        m_tiles[i].setColor(sf::Color(255, 255, 255, m_opacity));
 }
 
 unsigned int TileGroupData::getTileOpacity(const unsigned int index) const

@@ -15,6 +15,7 @@ void TileGroup::setTilesetPath(const std::string path)
 void TileGroup::initialize()
 {
     m_loader.initialize();
+    m_data.applyGroupOpacity();
 }
 
 void TileGroup::updatePosition()
@@ -45,6 +46,7 @@ void TileGroup::setGlobalOpacity(const unsigned int tile, const unsigned int opa
 void TileGroup::setGroupOpacity(const unsigned int opacity)
 {
     m_data.setGroupOpacity(opacity);
+    m_data.applyGroupOpacity();
 }
 
 void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const

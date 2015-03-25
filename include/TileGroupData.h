@@ -38,6 +38,7 @@ class TileGroupData
         void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
         //To set the all tiles opacity
         void setGroupOpacity(const unsigned int opacity);
+        void applyGroupOpacity();
 
         //To get specific tile opacity
         unsigned int getTileOpacity(const unsigned int index) const;
