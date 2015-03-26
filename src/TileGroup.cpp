@@ -38,9 +38,9 @@ void TileGroup::setSpecificOpacity(const unsigned int index, const unsigned int 
     m_data.setSpecificOpacity(index, opacity);
 }
 
-void TileGroup::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+void TileGroup::setTypeOpacity(const unsigned int tile, const unsigned int opacity)
 {
-    m_data.setGlobalOpacity(tile, opacity);
+    m_data.setTypeOpacity(tile, opacity);
 }
 
 void TileGroup::setGroupOpacity(const unsigned int opacity)

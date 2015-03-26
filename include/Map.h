@@ -38,7 +38,7 @@ class Map : public sf::Drawable
         void setSpecificOpacity(const Vector3 coord, const unsigned int opacity);
         void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity);
         //To set a global tile number opacity
-        void setGlobalOpacity(const unsigned int tile, const unsigned int opacity);
+        void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
         //To set all tiles opacity
         void setGroupOpacity(const unsigned int opacity);
 

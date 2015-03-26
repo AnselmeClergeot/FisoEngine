@@ -62,7 +62,7 @@ void TileGroupData::setSpecificOpacity(const unsigned int index, const unsigned 
     m_tiles[index].setColor(sf::Color(255, 255, 255, opacity));
 }
 
-void TileGroupData::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int opacity)
 {
     for(int i(0); i<m_tiles.size(); i++)
         if(m_mapData.getTempConf().at(i)==tile)

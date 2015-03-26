@@ -45,7 +45,7 @@ class MData
         //Tile global data
         Vector2 m_tileSize;
         unsigned int m_tileBaseHeight;
-        unsigned m_invisibleTile;
+        unsigned int m_invisibleTile;
         std::vector<unsigned int> m_translucentTiles;
 };
 

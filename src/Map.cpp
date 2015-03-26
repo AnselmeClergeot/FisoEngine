@@ -87,14 +87,16 @@ void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const uns
     setSpecificOpacity(Vector3(x, y, z), opacity);
 }
 
-void Map::setGlobalOpacity(const unsigned int tile, const unsigned int opacity)
+void Map::setTypeOpacity(const unsigned int tile, const unsigned int opacity)
 {
-    m_tileGroup.setGlobalOpacity(tile, opacity);
+    m_tileGroup.setTypeOpacity(tile, opacity);
+    m_shadowsData.updateTileType(tile, m_tileGroup, m_shadowsTilegroup);
 }
 
 void Map::setGroupOpacity(const unsigned int opacity)
 {
     m_tileGroup.setGroupOpacity(opacity);
+    m_shadowsData.updateAllTiles(m_tileGroup, m_shadowsTilegroup);
 }
 
 void Map::setPosition(const Vector2 pos)

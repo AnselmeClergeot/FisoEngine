@@ -23,6 +23,9 @@ class SData
         void setNewTile(const Vector3 coord, TileGroup &mapTg, TileGroup &shadowsTg);
         void setNewTile(const Vector3 coord);
 
+        void updateAllTiles(TileGroup &mapTg, TileGroup &shadowsTg);
+        void updateTileType(const unsigned int type, TileGroup &mapTg, TileGroup &shadowsTg);
+
         //To get initialized/on states
         bool isOn() const;
         bool isInitialized() const;

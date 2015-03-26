@@ -67,6 +67,24 @@ void SData::setNewTile(const Vector3 coord)
             setNewTile(Vector3(coord.x, coord.y, z));
 }
 
+void SData::updateAllTiles(TileGroup &mapTg, TileGroup &shadowsTg)
+{
+    for(int z(0); z<m_mapData.getSize().y; z++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
+            for(int x(0); x<m_mapData.getSize().x; x++)
+                setNewTile(Vector3(x, y, z), mapTg, shadowsTg);
+}
+
+void SData::updateTileType(const unsigned int type, TileGroup &mapTg, TileGroup &shadowsTg)
+{
+    for(int z(0); z<m_mapData.getSize().y; z++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
+            for(int x(0); x<m_mapData.getSize().x; x++)
+                if(m_mapData.getTempConf().at(x, y, z)==type)
+                    setNewTile(Vector3(x, y, z), mapTg, shadowsTg);
+
+}
+
 bool SData::isOn() const
 {
     return m_on;
