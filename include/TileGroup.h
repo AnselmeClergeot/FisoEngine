@@ -8,22 +8,22 @@
 class TileGroup
 {
     public:
-        TileGroup(Matrix3d &config, MData &mapData);
+        TileGroup(MData &mapData);
 
         //To set the tileset path
         void setTilesetPath(const std::string path);
+
+        //To set the configuration of the tilegrouo
+        void setConfiguration(Matrix3d &matrix);
+
+        //To set a tile number at specific coordinates
+        void setTileAt(const Vector3 coord, const unsigned int index);
 
         //To start initializing all the TileGroupData stuff
         void initialize();
 
         //To update the global tile-group position
         void updatePosition();
-
-        //To update a tile appearance from the configuration matrix
-        void updateTile(const unsigned int index);
-
-        //To set a certain tile frame
-        void frameTile(const unsigned int index, const Vector2 coord);
 
         //To set the opacity of a specific tile
         void setSpecificOpacity(const unsigned int index, const unsigned int opacity);

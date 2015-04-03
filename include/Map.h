@@ -1,16 +1,19 @@
 #ifndef MAP_H
 #define MAP_H
 
+
+#include <SFML/Graphics.hpp>
+
 #include "MData.h"
-#include "MDataLoader.h"
+#include "MConfigsLoader.h"
+#include "MConfigsSaver.h"
 
 #include "TileGroup.h"
 
 #include "ShadowsInterface.h"
-#include "SLoader.h"
-#include "SData.h"
-
-#include <SFML/Graphics.hpp>
+#include "SInitializer.h"
+#include "SStates.h"
+#include "DynamicShader.h"
 
 //This class is the user interface
 class Map : public sf::Drawable
@@ -36,7 +39,8 @@ class Map : public sf::Drawable
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
         //To set a specific tile opacity
         void setSpecificOpacity(const Vector3 coord, const unsigned int opacity);
-        void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity);
+        void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+                                const unsigned int opacity);
         //To set a global tile number opacity
         void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
         //To set all tiles opacity
@@ -66,28 +70,30 @@ class Map : public sf::Drawable
         unsigned int getTileOpacity(const Vector3 coord);
         unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
 
+        //Accessor to shadows interface
         ShadowsInterface &shadows();
 
     private:
         //Map----------------------------------
 
-        //Map data loading and container
+        //Map data loader/saver and data container
         MData m_data;
-        MDataLoader m_dataLoader;
+        MConfigsLoader m_configsLoader;
+        MConfigsSaver m_configsSaver;
         //The map TileGroup
         TileGroup m_tileGroup;
 
         //Shadows----------------------------------
-        //The loader
-        SLoader m_shadowsLoader;
-        //The data
-        SData m_shadowsData;
         //The shadows tile-group
         TileGroup m_shadowsTilegroup;
+        //The shadows states
+        SStates m_shadowsStates;
+        //The initializer
+        SInitializer m_shadowsInitializer;
         //The interface for user
         ShadowsInterface m_shadowsInterface;
-
-
+        //The dynamic shader
+        DynamicShader m_dynamicShader;
 };
 
 #endif // MAP_H

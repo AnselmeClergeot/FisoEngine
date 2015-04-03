@@ -1,14 +1,13 @@
-#ifndef MDATALOADER_H
-#define MDATALOADER_H
-
+#ifndef MCONFIGSLOADER_H
+#define MCONFIGSLOADER_H
 #include <fstream>
 
 #include "MData.h"
 //This class will load all the map data
-class MDataLoader
+class MConfigsLoader
 {
     public:
-        MDataLoader(MData &data);
+        MConfigsLoader(MData &data);
 
         //Function to know if a file exists
         bool fileExists(const std::string path);
@@ -17,9 +16,6 @@ class MDataLoader
 
         //Base function to load all stuff
         void load();
-
-        //Function to save tile-configurations into start file
-        void save();
 
         //To prepare matrices of filling
         void resizeMatrices();
@@ -40,4 +36,4 @@ class MDataLoader
         std::vector<std::string> m_paths;
 };
 
-#endif // MDATALOADER_H
+#endif // MCONFIGSLOADER_H

@@ -20,11 +20,11 @@ class SData
         Matrix3d &getMatrix();
 
         //To update shading from new tile coord
-        void setNewTile(const Vector3 coord, TileGroup &mapTg, TileGroup &shadowsTg);
-        void setNewTile(const Vector3 coord);
+        void setTileToShade(const Vector3 coord, TileGroup &mapTg, TileGroup &shadowsTg);
+        void setTileToShade(const Vector3 coord);
 
-        void updateAllTiles(TileGroup &mapTg, TileGroup &shadowsTg);
-        void updateTileType(const unsigned int type, TileGroup &mapTg, TileGroup &shadowsTg);
+        void updateAllTilesForOpacity(TileGroup &mapTg, TileGroup &shadowsTg);
+        void updateTileTypeForOpacity(const unsigned int type, TileGroup &mapTg, TileGroup &shadowsTg);
 
         //To get initialized/on states
         bool isOn() const;

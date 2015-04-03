@@ -11,7 +11,7 @@ class TileGroupDrawer
     public:
         TileGroupDrawer(MData &mapData, TileGroupData &data);
 
-        //Method to draw if a tile is visible
+        //To know if a particular tile is visible on the screen
         bool tileIsVisible(const Vector3 coord, sf::RenderTarget &target) const;
 
         //Method to draw a specific layer
@@ -20,7 +20,7 @@ class TileGroupDrawer
     private:
         //Reference to MData to get essential data
         MData &m_mapData;
-        //Reference to the TileGroupData to get sprites, etc
+        //Reference to the TileGroupData to get sprites to draw
         TileGroupData &m_data;
 };
 
