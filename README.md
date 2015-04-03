@@ -8,10 +8,16 @@ For more informations, you can contact me by mail at anselmedu25@hotmail.com.
 
 Fiso Engine is very simple of use and will offer all the features you would expect to create your game:
 * Map creation/saving and manipulation
-* Map files editing with map-editor software
-* Global map tile-shading
-* Tile global animations (water, etc) and specific animations (door, etc)
-* Map object entities
-* Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc)
+* Map editing with map-editor software
+* Tile opacity manipulating
+* Map shading
+* Tile global animations (water, etc.) and specific animations (door, etc.)
+* Map object entities (for players, etc.)
+* Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
+
+### Last updates
+
+* The tile opacity manipulating system is fully operational. /!\ First version, can hide bug(s) /!\
+* Better class SRP respect and role-comprehension (separated classes in other clear-defined classes, class renaming...)
 
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine documentation & tutorials</a>
