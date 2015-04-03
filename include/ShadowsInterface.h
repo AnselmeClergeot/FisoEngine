@@ -2,7 +2,6 @@
 #define SHADOWSINTERFACE_H
 
 #include "SInitializer.h"
-#include "SData.h"
 #include "TileGroup.h"
 
 class ShadowsInterface
