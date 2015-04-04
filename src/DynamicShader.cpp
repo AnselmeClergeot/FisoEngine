@@ -46,7 +46,7 @@ void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
 }
 
 unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
-    for(int z(tileCoord.z); z>-1; z--)
+    for(int z(tileCoord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
             return z;
