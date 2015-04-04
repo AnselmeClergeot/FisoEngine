@@ -14,4 +14,4 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map object entities
 * Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc)
 
-#### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine documentation & tutorials</a>
+#### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
