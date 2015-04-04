@@ -52,6 +52,8 @@ class TileGroupData
         unsigned int getTileOpacity(const unsigned int index) const;
         //To get group opacity
         unsigned int getGroupOpacity() const;
+        //To reset a tile opacity (to 255)
+        void resetOpacity(const Vector3 coord);
 
     private:
         //The tileset texture

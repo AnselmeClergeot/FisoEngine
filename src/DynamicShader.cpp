@@ -12,6 +12,9 @@ void DynamicShader::updateShading(const Vector3 coord) {
         {
             m_shadowsTg.setTileAt(Vector3(coord.x, coord.y, z),
                                   m_mapData.getTempConf().at(coord.x, coord.y, coord.z));
+
+            updateOpacityOfSpecific(coord);
+
             break;
         }
 
@@ -46,11 +49,11 @@ void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
 }
 
 unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
-    for(int z(tileCoord.z); z>-1; z--)
+    for(int z(tileCoord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
             return z;
     }
-    //If an error occurred...
+
     return 0;
 }
