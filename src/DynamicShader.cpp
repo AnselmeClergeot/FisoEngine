@@ -12,6 +12,8 @@ void DynamicShader::updateShading(const Vector3 coord) {
         {
             m_shadowsTg.setTileAt(Vector3(coord.x, coord.y, z),
                                   m_mapData.getTempConf().at(coord.x, coord.y, coord.z));
+                                  
+            updateOpacityOfSpecific(coord);
             break;
         }
 
