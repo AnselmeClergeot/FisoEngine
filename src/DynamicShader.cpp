@@ -53,6 +53,6 @@ unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
             return z;
     }
-    //If an error occurred...
+
     return 0;
 }
