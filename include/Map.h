@@ -4,6 +4,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "RunEnvironment.h"
+
 #include "MData.h"
 #include "MConfigsLoader.h"
 #include "MConfigsSaver.h"
@@ -24,7 +26,7 @@
 class Map : public sf::Drawable
 {
     public:
-        Map();
+        Map(RunEnvironment &environment);
 
         //Method to start map "creation" or save it
         void init();
@@ -85,8 +87,9 @@ class Map : public sf::Drawable
         EntitiesInterface &entities();
 
     private:
+        //Running environment----------------------
+        RunEnvironment &m_environment;
         //Map----------------------------------
-
         //Map data loader/saver and data container
         MData m_data;
         MConfigsLoader m_configsLoader;

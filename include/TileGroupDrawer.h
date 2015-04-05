@@ -3,6 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "RunEnvironment.h"
+
 #include "MData.h"
 #include "TileGroupData.h"
 
@@ -11,10 +13,10 @@
 class TileGroupDrawer
 {
     public:
-        TileGroupDrawer(MData &mapData, TileGroupData &data);
+        TileGroupDrawer(MData &mapData, TileGroupData &data, RunEnvironment &environment);
 
         //To know if a particular tile is visible on the screen
-        bool tileIsVisible(const Vector3 coord, sf::RenderTarget &target) const;
+        bool tileIsVisible(const Vector3 coord) const;
 
         //Method to draw a specific layer
         void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
@@ -25,6 +27,8 @@ class TileGroupDrawer
         MData &m_mapData;
         //Reference to the TileGroupData to get sprites to draw
         TileGroupData &m_data;
+        //Reference to RunEnvironment
+        RunEnvironment &m_environment;
 };
 
 #endif // TILEGROUPDRAWER_H

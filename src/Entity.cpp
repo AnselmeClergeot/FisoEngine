@@ -2,10 +2,11 @@
 
 #include "IsometricMath.h"
 
-Entity::Entity(MData &mapData) : m_tilePosition(), m_pixelPosition(), m_dimensions(), m_baseCoord(),
+Entity::Entity(MData &mapData, RunEnvironment &environment) : m_tilePosition(), m_pixelPosition(), m_dimensions(), m_baseCoord(),
                    m_texture(), m_sprite(),
                    m_drawState(false),
-                   m_mapData(&mapData)
+                   m_mapData(&mapData),
+                   m_environment(&environment)
 {
 
 }
@@ -49,15 +50,15 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(target))
+    if(isVisible())
         target.draw(m_sprite);
 }
 
-bool Entity::isVisible(sf::RenderTarget &target) const {
+bool Entity::isVisible() const {
     return (m_pixelPosition.x+m_dimensions.x>0 &&
             m_pixelPosition.y+m_dimensions.y>0 &&
-            m_pixelPosition.x < target.getSize().x &&
-            m_pixelPosition.y < target.getSize().y);
+            m_pixelPosition.x < m_environment->getWindowResolution().x &&
+            m_pixelPosition.y < m_environment->getWindowResolution().y);
 }
 
 void Entity::setDrawState(const bool set) {

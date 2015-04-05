@@ -9,12 +9,13 @@
 #include "../ExternClasses/Vector2.h"
 #include "../ExternClasses/Vector3.h"
 
+#include "RunEnvironment.h"
 #include "MData.h"
 
 class Entity
 {
     public:
-        Entity(MData &mapData);
+        Entity(MData &mapData, RunEnvironment &environment);
         //To know if a file exists
         bool fileExists(const std::string path);
 
@@ -37,7 +38,7 @@ class Entity
         void draw(sf::RenderTarget& target) const;
 
         //To know if this entity is visible
-        bool isVisible(sf::RenderTarget &target) const;
+        bool isVisible() const;
 
         //To set to draw or not
         void setDrawState(const bool set);
@@ -78,8 +79,11 @@ class Entity
         sf::Sprite m_sprite;
         //If the entity has to be drawn
         bool m_drawState;
-        //Reference to the MData
+        //Pointer to the MData
         MData *m_mapData;
+        //Pointer to RunEnvironment
+        RunEnvironment *m_environment;
+
 };
 
 #endif // ENTITY_H

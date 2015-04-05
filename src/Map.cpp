@@ -1,13 +1,14 @@
 #include "Map.h"
 
-Map::Map() : m_data(),
-             m_configsLoader(m_data), m_configsSaver(m_data),
-             m_tileGroup(m_data), m_shadowsTilegroup(m_data),
-             m_shadowsStates(),
-             m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
-             m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-             m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-             m_entityContainer(m_data), m_entityInterface(m_entityContainer), m_interposing(m_entityContainer)
+Map::Map(RunEnvironment &environment) : m_environment(environment),
+                                        m_data(),
+                                        m_configsLoader(m_data), m_configsSaver(m_data),
+                                        m_tileGroup(m_data, m_environment), m_shadowsTilegroup(m_data, m_environment),
+                                        m_shadowsStates(),
+                                        m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
+                                        m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
+                                        m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
+                                        m_entityContainer(m_data, m_environment), m_entityInterface(m_entityContainer), m_interposing(m_entityContainer)
 {}
 
 void Map::init() {

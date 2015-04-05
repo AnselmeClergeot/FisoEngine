@@ -1,6 +1,8 @@
 #ifndef TILEGROUP_H
 #define TILEGROUP_H
 
+#include "RunEnvironment.h"
+
 #include "TileGroupData.h"
 #include "TileGroupLoader.h"
 #include "TileGroupDrawer.h"
@@ -8,7 +10,7 @@
 class TileGroup
 {
     public:
-        TileGroup(MData &mapData);
+        TileGroup(MData &mapData, RunEnvironment &environment);
 
         //To set the tileset path
         void setTilesetPath(const std::string path);

@@ -1,6 +1,7 @@
 #include "EntitiesContainer.h"
 
-EntitiesContainer::EntitiesContainer(MData &mapData) : m_entities(), m_mapData(mapData)
+EntitiesContainer::EntitiesContainer(MData &mapData, RunEnvironment &environment) : m_entities(), m_mapData(mapData),
+                                                                                    m_environment(environment)
 {}
 
 EntitiesContainer::~EntitiesContainer() {
@@ -9,7 +10,7 @@ EntitiesContainer::~EntitiesContainer() {
 }
 
 void EntitiesContainer::add() {
-    m_entities.push_back(new Entity(m_mapData));
+    m_entities.push_back(new Entity(m_mapData, m_environment));
 }
 
 void EntitiesContainer::remove(const unsigned int iter) {

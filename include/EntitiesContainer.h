@@ -2,13 +2,13 @@
 #define ENTITIESCONTAINER_H
 
 #include "Entity.h"
-
+#include "RunEnvironment.h"
 #include "MData.h"
 
 class EntitiesContainer
 {
     public:
-        EntitiesContainer(MData &mapData);
+        EntitiesContainer(MData &mapData, RunEnvironment &environment);
         ~EntitiesContainer();
 
         //To add an entity to the list
@@ -26,6 +26,8 @@ class EntitiesContainer
         std::vector<Entity*> m_entities;
         //Reference to MData for the Entity constructor
         MData &m_mapData;
+        //Reference to RunEnvironment
+        RunEnvironment &m_environment;
 };
 
 #endif // ENTITIESCONTAINER_H
