@@ -80,3 +80,7 @@ Vector3 Entity::getTilePosition() const {
 Vector2 Entity::getBaseCoord() const {
     return m_baseCoord;
 }
+
+sf::Sprite &Entity::getSprite() {
+    return m_sprite;
+}

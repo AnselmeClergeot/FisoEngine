@@ -38,7 +38,10 @@ void EntitiesInterface::setDrawStateOf(const unsigned int iter, const bool set) 
     m_container.entityAt(iter).setDrawState(set);
 }
 
-void EntitiesInterface::setLayerOf(const unsigned int iter, const unsigned int layer)
-{
+void EntitiesInterface::setLayerOf(const unsigned int iter, const unsigned int layer) {
     m_container.entityAt(iter).setLayer(layer);
+}
+
+sf::Sprite &EntitiesInterface::getSpriteOf(const unsigned int iter) {
+    return m_container.entityAt(iter).getSprite();
 }

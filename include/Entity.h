@@ -54,6 +54,9 @@ class Entity
         //To get the base coord
         Vector2 getBaseCoord() const;
 
+        //To get a reference to the sprite
+        sf::Sprite &getSprite();
+
     private:
         //The corresponding tile position
         Vector3 m_tilePosition;

@@ -34,6 +34,9 @@ class EntitiesInterface
         //To set layer
         void setLayerOf(const unsigned int iter, const unsigned int layer);
 
+        //To get the sprite of a specific object
+        sf::Sprite &getSpriteOf(const unsigned int iter);
+
     private:
         //Reference to the EntityContainer
         EntitiesContainer &m_container;
