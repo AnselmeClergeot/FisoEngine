@@ -20,4 +20,4 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * The tile opacity manipulating system is fully operational. /!\ First version, can hide bug(s) /!\
 * Better class SRP respect and role-comprehension (separated classes in other clear-defined classes, class renaming...)
 
-#### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine documentation & tutorials</a>
+#### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
