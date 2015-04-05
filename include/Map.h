@@ -17,6 +17,7 @@
 
 #include "EntitiesContainer.h"
 #include "EntitiesInterface.h"
+#include "EntitiesInterposing.h"
 
 //This class is the user interface
 class Map : public sf::Drawable
@@ -105,6 +106,8 @@ class Map : public sf::Drawable
         EntitiesContainer m_entityContainer;
         //The interface
         EntitiesInterface m_entityInterface;
+        //For entities map interposing
+        EntitiesInterposing m_interposing;
 };
 
 #endif // MAP_H

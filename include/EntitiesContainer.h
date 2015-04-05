@@ -18,6 +18,9 @@ class EntitiesContainer
 
         //To get a reference to an entity of the list
         Entity &entityAt(const unsigned int iter);
+
+        //To get the total entities number
+        unsigned int getEntitiesNumber() const;
     private:
         std::vector<Entity> m_entities;
         //Reference to MData for the Entity constructor

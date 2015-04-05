@@ -26,6 +26,10 @@ void EntitiesInterface::updatePixelPositionOf(const unsigned int iter, const Vec
     m_container.entityAt(iter).updatePixelPosition(pos);
 }
 
+void EntitiesInterface::move(const unsigned int iter, const Vector2 rate) {
+    m_container.entityAt(iter).move(rate);
+}
+
 void EntitiesInterface::setImagePathOf(const unsigned int iter, const std::string path) {
     m_container.entityAt(iter).setImagePath(path);
 }

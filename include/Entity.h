@@ -27,6 +27,9 @@ class Entity
         //To update the pixel position
         void updatePixelPosition(const Vector2 pos);
 
+        //To move the entity
+        void move(const Vector2 rate);
+
         //To set the sprite image path and load it
         void setImagePath(const std::string path);
 
@@ -44,6 +47,12 @@ class Entity
 
         //To set the layer
         void setLayer(const unsigned int layer);
+
+        //Get the tile position of this entity
+        Vector3 getTilePosition() const;
+
+        //To get the base coord
+        Vector2 getBaseCoord() const;
 
     private:
         //The corresponding tile position

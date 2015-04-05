@@ -22,6 +22,9 @@ class EntitiesInterface
         //To update the pixel position
         void updatePixelPositionOf(const unsigned int iter, const Vector2 pos);
 
+        //To move an entity
+        void move(const unsigned int iter, const Vector2 rate);
+
         //To set the sprite image path and load it
         void setImagePathOf(const unsigned int iter, const std::string path);
 

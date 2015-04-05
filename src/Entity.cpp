@@ -36,6 +36,12 @@ void Entity::updatePixelPosition(const Vector2 pos) {
     calculateTilePosition();
 }
 
+void Entity::move(const Vector2 rate)
+{
+    m_pixelPosition += rate;
+    updatePixelPosition(m_pixelPosition);
+}
+
 void Entity::setImagePath(const std::string path) {
     if(fileExists(path))
         m_texture.loadFromFile(path);
@@ -59,10 +65,18 @@ void Entity::setDrawState(const bool set) {
 }
 
 void Entity::calculateTilePosition() {
-    m_tilePosition.x = getTileCoordAtPixels(m_pixelPosition, m_tilePosition.z, *m_mapData).x;
-    m_tilePosition.y = getTileCoordAtPixels(m_pixelPosition, m_tilePosition.z, *m_mapData).y;
+    m_tilePosition.x = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, *m_mapData).x;
+    m_tilePosition.y = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, *m_mapData).y;
 }
 
 void Entity::setLayer(const unsigned int layer) {
     m_tilePosition.z = layer;
+}
+
+Vector3 Entity::getTilePosition() const {
+    return m_tilePosition;
+}
+
+Vector2 Entity::getBaseCoord() const {
+    return m_baseCoord;
 }

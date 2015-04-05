@@ -37,8 +37,9 @@ void TileGroup::setGroupOpacity(const unsigned int opacity) {
     m_data.applyGroupOpacity();
 }
 
-void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const {
-    m_drawer.draw(target, states, layer);
+void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+                     const EntitiesInterposing *interposing) const {
+    m_drawer.draw(target, states, layer, interposing);
 }
 
 unsigned int TileGroup::getTileOpacity(const unsigned int index) const {

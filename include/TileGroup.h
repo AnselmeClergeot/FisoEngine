@@ -33,7 +33,8 @@ class TileGroup
         void setGroupOpacity(const unsigned int opacity);
 
         //To draw a specific tile layer
-        void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const;
+        void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+                  const EntitiesInterposing *interposing = 0) const;
 
         //To get specific tile opacity
         unsigned int getTileOpacity(const unsigned int index) const;

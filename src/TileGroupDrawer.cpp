@@ -10,11 +10,16 @@ bool TileGroupDrawer::tileIsVisible(const Vector3 coord, sf::RenderTarget &targe
             m_data.spriteAt(coord).getPosition().y < target.getSize().y);
 }
 
-void TileGroupDrawer::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const {
+void TileGroupDrawer::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+                     const EntitiesInterposing *interposing) const {
     for(int x(0); x<m_mapData.getSize().x; x++)
             for(int y(0); y<m_mapData.getSize().x; y++)
     {
         if(tileIsVisible(Vector3(x, y, layer), target))
             target.draw(m_data.spriteAt(Vector3(x, y, layer)));
+        if(interposing!=0)
+        {
+            interposing->interpose(Vector3(x, y, layer), target, states);
+        }
     }
 }

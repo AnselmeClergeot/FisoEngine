@@ -6,6 +6,8 @@
 #include "MData.h"
 #include "TileGroupData.h"
 
+#include "EntitiesInterposing.h"
+
 class TileGroupDrawer
 {
     public:
@@ -15,7 +17,8 @@ class TileGroupDrawer
         bool tileIsVisible(const Vector3 coord, sf::RenderTarget &target) const;
 
         //Method to draw a specific layer
-        void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer) const;
+        void draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+                     const EntitiesInterposing *interposing = 0) const;
 
     private:
         //Reference to MData to get essential data

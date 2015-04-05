@@ -14,3 +14,7 @@ void EntitiesContainer::remove(const unsigned int iter) {
 Entity &EntitiesContainer::entityAt(const unsigned int iter) {
     return m_entities[iter];
 }
+
+unsigned int EntitiesContainer::getEntitiesNumber() const {
+    return m_entities.size();
+}
