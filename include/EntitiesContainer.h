@@ -9,6 +9,7 @@ class EntitiesContainer
 {
     public:
         EntitiesContainer(MData &mapData);
+        ~EntitiesContainer();
 
         //To add an entity to the list
         void add();
@@ -22,7 +23,7 @@ class EntitiesContainer
         //To get the total entities number
         unsigned int getEntitiesNumber() const;
     private:
-        std::vector<Entity> m_entities;
+        std::vector<Entity*> m_entities;
         //Reference to MData for the Entity constructor
         MData &m_mapData;
 };

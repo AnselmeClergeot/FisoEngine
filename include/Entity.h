@@ -34,7 +34,7 @@ class Entity
         void setImagePath(const std::string path);
 
         //To draw this entity
-        void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+        void draw(sf::RenderTarget& target) const;
 
         //To know if this entity is visible
         bool isVisible(sf::RenderTarget &target) const;
@@ -63,10 +63,10 @@ class Entity
         Vector2 m_dimensions;
         //The base coord of the entity
         Vector2 m_baseCoord;
-        //The entity image
-        sf::Sprite m_sprite;
         //The entity texture;
         sf::Texture m_texture;
+        //The entity image
+        sf::Sprite m_sprite;
         //If the entity has to be drawn
         bool m_drawState;
         //Reference to the MData

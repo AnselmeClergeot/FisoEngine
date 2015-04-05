@@ -3,7 +3,7 @@
 #include "IsometricMath.h"
 
 Entity::Entity(MData &mapData) : m_tilePosition(), m_pixelPosition(), m_dimensions(), m_baseCoord(),
-                   m_sprite(), m_texture(),
+                   m_texture(), m_sprite(),
                    m_drawState(false),
                    m_mapData(&mapData)
 {
@@ -48,9 +48,9 @@ void Entity::setImagePath(const std::string path) {
     m_sprite.setTexture(m_texture);
 }
 
-void Entity::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+void Entity::draw(sf::RenderTarget& target) const {
     if(isVisible(target))
-        target.draw(m_sprite, states);
+        target.draw(m_sprite);
 }
 
 bool Entity::isVisible(sf::RenderTarget &target) const {
