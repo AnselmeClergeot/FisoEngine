@@ -37,6 +37,9 @@ class EntitiesInterface
         //To get the sprite of a specific object
         sf::Sprite &getSpriteOf(const unsigned int iter);
 
+        //To get the tile position of an entity
+        Vector3 getTilePositionOf(const unsigned int iter);
+
     private:
         //Reference to the EntityContainer
         EntitiesContainer &m_container;

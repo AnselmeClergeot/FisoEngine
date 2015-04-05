@@ -18,6 +18,7 @@
 #include "EntitiesContainer.h"
 #include "EntitiesInterface.h"
 #include "EntitiesInterposing.h"
+#include "IsometricMath.h"
 
 //This class is the user interface
 class Map : public sf::Drawable
@@ -73,6 +74,10 @@ class Map : public sf::Drawable
 
         unsigned int getTileOpacity(const Vector3 coord);
         unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
+
+        //To get the map-relative tile coord from pixel coord
+        Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const;
+
 
         //Accessor to shadows interface
         ShadowsInterface &shadows();

@@ -45,3 +45,7 @@ void EntitiesInterface::setLayerOf(const unsigned int iter, const unsigned int l
 sf::Sprite &EntitiesInterface::getSpriteOf(const unsigned int iter) {
     return m_container.entityAt(iter).getSprite();
 }
+
+Vector3 EntitiesInterface::getTilePositionOf(const unsigned int iter) {
+    return m_container.entityAt(iter).getTilePosition();
+}

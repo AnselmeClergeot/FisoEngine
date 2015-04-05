@@ -170,6 +170,10 @@ unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, con
     return getTileOpacity(Vector3(x, y, z));
 }
 
+Vector2 Map::getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const {
+    return ::getTileCoordAtPixels(pixels, layer, m_data);
+}
+
 ShadowsInterface &Map::shadows() {
     return m_shadowsInterface;
 }
