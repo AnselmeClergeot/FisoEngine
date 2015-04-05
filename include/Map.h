@@ -15,6 +15,9 @@
 #include "SStates.h"
 #include "DynamicShader.h"
 
+#include "EntitiesContainer.h"
+#include "EntitiesInterface.h"
+
 //This class is the user interface
 class Map : public sf::Drawable
 {
@@ -72,6 +75,8 @@ class Map : public sf::Drawable
 
         //Accessor to shadows interface
         ShadowsInterface &shadows();
+        //Accessor to the entities interface
+        EntitiesInterface &entities();
 
     private:
         //Map----------------------------------
@@ -94,6 +99,12 @@ class Map : public sf::Drawable
         ShadowsInterface m_shadowsInterface;
         //The dynamic shader
         DynamicShader m_dynamicShader;
+
+        //Entities---------------------------------
+        //The entities container
+        EntitiesContainer m_entityContainer;
+        //The interface
+        EntitiesInterface m_entityInterface;
 };
 
 #endif // MAP_H

@@ -6,7 +6,8 @@ Map::Map() : m_data(),
              m_shadowsStates(),
              m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
              m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-             m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup)
+             m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
+             m_entityContainer(m_data), m_entityInterface(m_entityContainer)
 {}
 
 void Map::init() {
@@ -171,4 +172,8 @@ unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, con
 
 ShadowsInterface &Map::shadows() {
     return m_shadowsInterface;
+}
+
+EntitiesInterface &Map::entities() {
+    return m_entityInterface;
 }
