@@ -54,8 +54,14 @@ class Entity
         //To get the base coord
         Vector2 getBaseCoord() const;
 
+        //To get the dimensions
+        Vector2 getDimensions() const;
+
         //To get a reference to the sprite
         sf::Sprite &getSprite();
+
+        //The drawing state
+        bool getDrawingState() const;
 
     private:
         //The corresponding tile position

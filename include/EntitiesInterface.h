@@ -40,6 +40,15 @@ class EntitiesInterface
         //To get the tile position of an entity
         Vector3 getTilePositionOf(const unsigned int iter);
 
+        //To get the base coord of a specific entity
+        Vector2 getBaseCoordOf(const unsigned int iter);
+
+        //To get the draw state of a specific entity
+        bool getDrawStateOf(const unsigned int iter);
+
+        //To get the dimensions of a specific entity
+        Vector2 getDimensionsOf(const unsigned int iter);
+
     private:
         //Reference to the EntityContainer
         EntitiesContainer &m_container;

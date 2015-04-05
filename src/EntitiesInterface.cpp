@@ -49,3 +49,15 @@ sf::Sprite &EntitiesInterface::getSpriteOf(const unsigned int iter) {
 Vector3 EntitiesInterface::getTilePositionOf(const unsigned int iter) {
     return m_container.entityAt(iter).getTilePosition();
 }
+
+Vector2 EntitiesInterface::getBaseCoordOf(const unsigned int iter) {
+    return m_container.entityAt(iter).getBaseCoord();
+}
+
+bool EntitiesInterface::getDrawStateOf(const unsigned int iter) {
+    return m_container.entityAt(iter).getDrawingState();
+}
+
+Vector2 EntitiesInterface::getDimensionsOf(const unsigned int iter) {
+    return m_container.entityAt(iter).getDimensions();
+}

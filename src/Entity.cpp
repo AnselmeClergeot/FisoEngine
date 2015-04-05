@@ -81,6 +81,14 @@ Vector2 Entity::getBaseCoord() const {
     return m_baseCoord;
 }
 
+Vector2 Entity::getDimensions() const {
+    return m_dimensions;
+}
+
 sf::Sprite &Entity::getSprite() {
     return m_sprite;
+}
+
+bool Entity::getDrawingState() const {
+    return m_drawState;
 }
