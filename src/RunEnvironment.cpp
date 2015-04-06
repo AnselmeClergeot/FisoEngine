@@ -1,9 +1,7 @@
 #include "RunEnvironment.h"
 
 RunEnvironment::RunEnvironment() : m_windowRes(1980, 1080)
-{
-
-}
+{}
 
 void RunEnvironment::setWindowResolution(const Vector2 res) {
     m_windowRes = res;

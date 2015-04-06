@@ -8,23 +8,22 @@
 
 #include "MData.h"
 
+//This class save the map permanent configuration into the loading files.
 class MConfigsSaver
 {
     public:
+        //The only constructor
         MConfigsSaver(MData &data);
 
-        //Function to know if a file exists
-        bool fileExists(const std::string path);
+        //To add layer loading file path        void addLoadFile(const std::string path);
 
-        //add layer load file        void addLoadFile(const std::string path);
-
-        //Function to save tile-configurations into start file
+        //Function to save the map permanent configuration into the loading files
         void save();
 
     private:
-        //Reference to MData
+        //Reference to MData to get the configuration
         MData &m_data;
-        //Layer loading files list
+        //The list of loading files path
         std::vector<std::string> m_paths;
 };
 

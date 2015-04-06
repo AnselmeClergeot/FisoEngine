@@ -1,9 +1,7 @@
 #include "EntitiesInterface.h"
 
 EntitiesInterface::EntitiesInterface(EntitiesContainer &container) : m_container(container)
-{
-
-}
+{}
 
 void EntitiesInterface::createEntity() {
     m_container.add();
@@ -12,7 +10,6 @@ void EntitiesInterface::createEntity() {
 void EntitiesInterface::removeEntity(const unsigned int iter) {
     m_container.remove(iter);
 }
-
 
 void EntitiesInterface::setDimensionsOf(const unsigned int iter, const Vector2 dim) {
     m_container.entityAt(iter).setDimensions(dim);

@@ -1,18 +1,10 @@
 #include "MConfigsSaver.h"
 
+//To access usefull loading/files functions
+#include "LoadingFuncs.h"
+
 MConfigsSaver::MConfigsSaver(MData &data) : m_data(data)
 {}
-
-bool MConfigsSaver::fileExists(const std::string path) {
-    std::ifstream file(path.c_str());
-
-    if(!file.good())
-    {
-        std::cout << "Enable to find file " << path << std::endl;
-        exit(1);
-    }
-    return file.good();
-}
 
 void MConfigsSaver::addLoadFile(const std::string path) {
     if(fileExists(path))

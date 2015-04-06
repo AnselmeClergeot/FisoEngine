@@ -22,8 +22,11 @@ void TileGroupData::setConfiguration(Matrix3d &config) {
 void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
     m_config.at(coord.x, coord.y, coord.z) = index;
 
+    //If the tile set is the invisible one, reset the opacity:
     if(index==m_mapData.getInvisibleTile())
         resetOpacity(coord);
+
+    //Updating appearance of this tile
     updateTileFromConfig(m_config.get3dIter(coord.x, coord.y, coord.z));
 }
 
@@ -70,6 +73,7 @@ void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int o
 
 void TileGroupData::setGroupOpacity(const unsigned int opacity) {
     m_opacity = opacity;
+    applyGroupOpacity();
 }
 
 void TileGroupData::applyGroupOpacity() {
@@ -85,7 +89,6 @@ unsigned int TileGroupData::getGroupOpacity() const {
     return m_opacity;
 }
 
-void TileGroupData::resetOpacity(const Vector3 coord)
-{
+void TileGroupData::resetOpacity(const Vector3 coord) {
     setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z), 255);
 }

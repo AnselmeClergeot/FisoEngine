@@ -1,14 +1,16 @@
 #include "Map.h"
 
-Map::Map(RunEnvironment &environment) : m_environment(environment),
-                                        m_data(),
-                                        m_configsLoader(m_data), m_configsSaver(m_data),
-                                        m_tileGroup(m_data, m_environment), m_shadowsTilegroup(m_data, m_environment),
-                                        m_shadowsStates(),
-                                        m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
-                                        m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-                                        m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-                                        m_entityContainer(m_data, m_environment), m_entityInterface(m_entityContainer), m_interposing(m_entityContainer)
+Map::Map(RunEnvironment &environment)
+    : m_environment(environment),
+      m_data(),
+      m_configsLoader(m_data), m_configsSaver(m_data),
+      m_tileGroup(m_data, m_environment), m_shadowsTilegroup(m_data, m_environment),
+      m_shadowsStates(),
+      m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
+      m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
+      m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
+      m_entityContainer(m_data, m_environment), m_entityInterface(m_entityContainer),
+      m_interposing(m_entityContainer)
 {}
 
 void Map::init() {
@@ -120,10 +122,10 @@ void Map::move(const unsigned int rx, const unsigned int ry) {
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     for(int layer(0); layer<m_data.getSize().y; layer++)
     {
-        m_tileGroup.draw(target, states, layer, &m_interposing);
+        m_tileGroup.draw(target, layer, &m_interposing);
 
         if(m_shadowsStates.isOn())
-            m_shadowsTilegroup.draw(target, states, layer);
+            m_shadowsTilegroup.draw(target, layer);
     }
 }
 

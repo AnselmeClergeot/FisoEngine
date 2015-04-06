@@ -1,18 +1,9 @@
 #include "MConfigsLoader.h"
 
+#include "LoadingFuncs.h"
+
 MConfigsLoader::MConfigsLoader(MData &data) : m_data(data), m_paths()
 {}
-
-bool MConfigsLoader::fileExists(const std::string path) {
-    std::ifstream file(path.c_str());
-
-    if(!file.good())
-    {
-        std::cout << "Enable to find file " << path << std::endl;
-        exit(1);
-    }
-    return file.good();
-}
 
 void MConfigsLoader::addLoadFile(const std::string path) {
     if(fileExists(path))

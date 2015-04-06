@@ -1,36 +1,37 @@
 #ifndef SINITIALIZER_H
 #define SINITIALIZER_H
 
-#include "MData.h"
-#include "SStates.h"
 #include "TileGroup.h"
+#include "SStates.h"
+#include "MData.h"
 #include "../ExternClasses/Matrix3d.h"
 
+//This class calculates the shadows configuration in a matrix to send to the TileGroup.
 class SInitializer
 {
     public:
+        //The only constructor
         SInitializer(TileGroup &tilegroup, SStates &states, MData &mapData);
 
-        //to start calculating the config vector
+        //the root function that calls the functions below
         void initialize();
 
-        //To resize the config
+        //To resize the configuration matrix
         void resizeMatrix(Matrix3d &tempConf);
 
-        //To fill the matrix
+        //The function that call calculateShadowInConf() for all the tiles
         void fillMatrix(Matrix3d &tempConf);
 
-        //Calculate shade render from tile coordinates
+        //TO calculate the shadow position generated from tile coordinates and put it into configuration
         void calculateShadowInConf(const Vector3 coord, Matrix3d &tempConf);
 
     private:
-        //Reference to the shadows tilegroup
+        //Reference to the shadows tilegroup to load
         TileGroup &m_tileGroup;
-        //A reference to MData
+        //A reference to MData to get needed informations
         MData &m_mapData;
-        //A reference to the states
+        //A reference to the shadows system states, to set initialized when calculating finished
         SStates &m_states;
-
 };
 
 #endif // SINITIALIZER_H

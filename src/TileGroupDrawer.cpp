@@ -1,25 +1,28 @@
 #include "TileGroupDrawer.h"
+//To access drawing usefull functions such as knowing if an element is visible
+#include "DrawingFuncs.h"
 
-TileGroupDrawer::TileGroupDrawer(MData &mapData, TileGroupData &data, RunEnvironment &environment) : m_mapData(mapData), m_data(data), m_environment(environment)
+TileGroupDrawer::TileGroupDrawer(MData &mapData, TileGroupData &data,
+                                 RunEnvironment &environment) : m_mapData(mapData),
+                                                                m_data(data),
+                                                                m_environment(environment)
 {}
 
-bool TileGroupDrawer::tileIsVisible(const Vector3 coord) const {
-    return (m_data.spriteAt(coord).getPosition().x+m_mapData.getTileSize().x>0 &&
-            m_data.spriteAt(coord).getPosition().y+m_mapData.getTileSize().y>0 &&
-            m_data.spriteAt(coord).getPosition().x < m_environment.getWindowResolution().x &&
-            m_data.spriteAt(coord).getPosition().y < m_environment.getWindowResolution().y);
-}
-
-void TileGroupDrawer::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
                      const EntitiesInterposing *interposing) const {
     for(int x(0); x<m_mapData.getSize().x; x++)
-            for(int y(0); y<m_mapData.getSize().x; y++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
     {
-        if(tileIsVisible(Vector3(x, y, layer)))
+        if(isVisible(toIsometricPosition(Vector3(x, y, layer), m_mapData),
+                             m_mapData.getTileSize(), m_environment))
+        {
             target.draw(m_data.spriteAt(Vector3(x, y, layer)));
+        }
+
+        //If the tilegroup is a map tilegroup and that entities have to be interpose, then
         if(interposing!=0)
         {
-            interposing->interpose(Vector3(x, y, layer), target, states);
+            interposing->interpose(Vector3(x, y, layer), target);
         }
     }
 }

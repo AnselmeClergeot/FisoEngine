@@ -1,7 +1,6 @@
 #ifndef MAP_H
 #define MAP_H
 
-
 #include <SFML/Graphics.hpp>
 
 #include "RunEnvironment.h"
@@ -20,69 +19,101 @@
 #include "EntitiesContainer.h"
 #include "EntitiesInterface.h"
 #include "EntitiesInterposing.h"
+
 #include "IsometricMath.h"
 
-//This class is the user interface
+//This class is the user interface to interact with different domains of the map.
 class Map : public sf::Drawable
 {
     public:
+        //The only constructor for the user
         Map(RunEnvironment &environment);
 
-        //Method to start map "creation" or save it
+        //To call map creation
         void init();
+        //To save the map
         void save();
 
-        //All these methods are indirect setters
+        //To add a layer file for loading configuration
         void addLayerFile(const std::string path);
+
+        //To set the map tileset path
         void setTileset(const std::string path);
+
+        //To set the tile size
         void setTileSize(const Vector2 size);
         void setTileSize(const unsigned int w, const unsigned int h);
+
+        //To set the tile base height
         void setTileBaseHeight(const unsigned int h);
+
+        //To set the invisible tile number
         void setInvisibleTile(const unsigned int tile);
+
+        //To add a translucent tile number to the list
         void addTranslucentTile(const unsigned int tile);
 
-        //To set a tile at specific world coordinate
+        //To set a tile from number at specific world coordinates
         void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
-        //To set a specific tile opacity
+
+        //To set the opacity of a particular tile
         void setSpecificOpacity(const Vector3 coord, const unsigned int opacity);
         void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
                                 const unsigned int opacity);
-        //To set a global tile number opacity
+
+        //To set the opacity of all the tiles of a particular type
         void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
-        //To set all tiles opacity
+
+        //To set the same opacity to all map tiles
         void setGroupOpacity(const unsigned int opacity);
 
-        //Positioning methods
+        //To set map position in pixels
         void setPosition(const Vector2 pos);
         void setPosition(const unsigned int x, const unsigned int y);
 
+        //To move the map position
         void move(const Vector2 rate);
         void move(const unsigned int rx, const unsigned int ry);
 
-        //Draw method
+        //To draw the entire map (with shadows and entities)
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-        //Accessors useful for user
+        //To get the map dimensions
         Vector3 getDimensions() const;
+
+        //To get map position
         Vector2 getPosition() const;
+
+        //To get tile size
         Vector2 getTileSize() const;
+
+        //To get tile base height
         unsigned int getTileBaseHeight() const;
+
+        //To get the invisible tile number
         unsigned int getInvisibleTile() const;
+
+        //To know if a tile number correspond to a translucent tile
         bool isTranslucent(const unsigned int tile) const;
+
+        //To get the tile number at a specific 3D coordinates
         unsigned int getTileAt(const Vector3 coord);
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
+
+        //To get the map opacity (the tilegroup opacity)
         unsigned int getGroupOpacity() const;
 
+        //To get the opacity of a particular tile at 3D coordinates
         unsigned int getTileOpacity(const Vector3 coord);
         unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
 
-        //To get the map-relative tile coord from pixel coord
+        //To get the tile pointed by 2D screen coordinates
         Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const;
-
 
         //Accessor to shadows interface
         ShadowsInterface &shadows();
+
         //Accessor to the entities interface
         EntitiesInterface &entities();
 

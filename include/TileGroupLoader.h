@@ -5,38 +5,36 @@
 #include <fstream>
 
 #include "TileGroupData.h"
-#include "../ExternClasses/Matrix3d.h"
 
+//This class loads and configure the TileGroup drawing stuff such as the tile list, etc.
 class TileGroupLoader
 {
     public:
+        //The only constructor, called by TileGroup class
         TileGroupLoader(TileGroupData &data);
 
-        //To know if a file exists
-        bool fileExists(const std::string path);
-
-        //To set the tilegroup tileset path
+        //To set the path of the tileset
         void setTilesetPath(const std::string path);
 
-        //To load the tileset in memory from the path
+        //To load the tileset image from the path
         void loadTileset();
 
-        //To resize the tile list
+        //To resize the tile list of TileGroupData
         void resizeTileList();
 
-        //To set all tiles already-loaded tileset
+        //To set the tileset to all the tiles in the list of TileGroupData
         void setTilesTileset();
 
-        //To set all tiles tileset frame
+        //To set the good tileset frame of all the tiles in the list of TileGroupData
         void setTilesRect();
 
-        //To call initializing the TileGroupData stuff
+        //The root function that call all above functions
         void initialize();
 
     private:
         //The tileset path
         std::string m_tilesetPath;
-        //Reference to the TileGroupData to load
+        //A reference to the TileGroupData to load
         TileGroupData &m_data;
 };
 

@@ -1,26 +1,19 @@
 #include "Entity.h"
 
 #include "IsometricMath.h"
+#include "LoadingFuncs.h"
+#include "DrawingFuncs.h"
 
-Entity::Entity(MData &mapData, RunEnvironment &environment) : m_tilePosition(), m_pixelPosition(), m_dimensions(), m_baseCoord(),
-                   m_texture(), m_sprite(),
-                   m_drawState(false),
-                   m_mapData(&mapData),
-                   m_environment(&environment)
-{
-
-}
-
-bool Entity::fileExists(const std::string path) {
-    std::ifstream file(path.c_str());
-
-    if(!file.good())
-    {
-        std::cout << "Enable to find file " << path << std::endl;
-        exit(1);
-    }
-    return file.good();
-}
+Entity::Entity(MData &mapData, RunEnvironment &environment) : m_tilePosition(),
+                                                              m_pixelPosition(),
+                                                              m_dimensions(),
+                                                              m_baseCoord(),
+                                                              m_texture(),
+                                                              m_sprite(),
+                                                              m_drawState(false),
+                                                              m_mapData(&mapData),
+                                                              m_environment(&environment)
+{}
 
 void Entity::setDimensions(const Vector2 dim) {
     m_dimensions = dim;
@@ -50,15 +43,8 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible())
+    if(isVisible(m_pixelPosition+m_baseCoord, m_dimensions, *m_environment))
         target.draw(m_sprite);
-}
-
-bool Entity::isVisible() const {
-    return (m_pixelPosition.x+m_dimensions.x>0 &&
-            m_pixelPosition.y+m_dimensions.y>0 &&
-            m_pixelPosition.x < m_environment->getWindowResolution().x &&
-            m_pixelPosition.y < m_environment->getWindowResolution().y);
 }
 
 void Entity::setDrawState(const bool set) {

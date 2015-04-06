@@ -39,7 +39,7 @@ void DynamicShader::updateOpacityOfType(const unsigned int type) {
         for(int y(0); y<m_mapData.getSize().x; y++)
             for(int x(0); x<m_mapData.getSize().x; x++)
                 if(m_mapData.getTempConf().at(x, y, z)==type)
-                updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
+                    updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
 }
 
 void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {

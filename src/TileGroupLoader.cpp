@@ -1,17 +1,10 @@
 #include "TileGroupLoader.h"
 
+//To access file-loading usefull functions
+#include "LoadingFuncs.h"
+
 TileGroupLoader::TileGroupLoader(TileGroupData &data) : m_tilesetPath(""), m_data(data)
 {}
-
-bool TileGroupLoader::fileExists(const std::string path) {
-    std::ifstream file(path.c_str());
-    if(!file.good())
-    {
-        std::cout << "Enable to find file " << path << std::endl;
-        exit(1);
-    }
-    return file.good();
-}
 
 void TileGroupLoader::setTilesetPath(const std::string path) {
     if(fileExists(path))
@@ -42,5 +35,6 @@ void TileGroupLoader::initialize() {
     setTilesTileset();
     setTilesRect();
 
+    //Updating the loaded TileGroup position before the first frame
     m_data.updateTileGroupPosition();
 }

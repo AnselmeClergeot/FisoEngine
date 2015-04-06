@@ -1,7 +1,7 @@
 #include "ShadowsInterface.h"
 
 ShadowsInterface::ShadowsInterface(SInitializer &initializer, SStates &states, TileGroup &tilegroup)
- : m_initializer(initializer), m_states(states), m_tilegroup(tilegroup)
+    : m_initializer(initializer), m_states(states), m_tilegroup(tilegroup)
 {}
 
 void ShadowsInterface::setTileset(const std::string path) {

@@ -3,36 +3,35 @@
 #include <fstream>
 
 #include "MData.h"
-//This class will load all the map data
+
+//This class load the map configurations from loading files.
 class MConfigsLoader
 {
     public:
+        //The only constructor
         MConfigsLoader(MData &data);
 
-        //Function to know if a file exists
-        bool fileExists(const std::string path);
+        //To add a loading file (layer)        void addLoadFile(const std::string path);
 
-        //add layer load file        void addLoadFile(const std::string path);
-
-        //Base function to load all stuff
+        //Root function that call functions below
         void load();
 
-        //To prepare matrices of filling
+        //To resize the temporary and permanent matrices
         void resizeMatrices();
 
-        //Set map size
+        //To set the map dimensions from files size
         void loadMapSize();
 
-        //Fill permanent configuration matrix
+        //To fill the two matrices from the values in the loading files
         void loadMatrices();
 
         //To set temporary matrix as same of permanent for the start of program
         void equalizeMatrices();
 
     private:
-        //Reference to the class to modify
+        //Reference to MData to load its configurations
         MData &m_data;
-        //Layer loading files list
+        //Loading files paths list
         std::vector<std::string> m_paths;
 };
 

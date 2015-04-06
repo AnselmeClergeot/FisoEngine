@@ -3,68 +3,81 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "../ExternClasses/Matrix3d.h"
 #include "MData.h"
+#include "../ExternClasses/Matrix3d.h"
 #include "IsometricMath.h"
 
+//This class warps the TileGroupData such as tile list, texture, etc.
 class TileGroupData
 {
     public:
+        //The only constructor
         TileGroupData(MData &mapData);
 
-        //Accessors for the loader
+        //To get the tileset texture, for the loader
         sf::Texture &getTileset();
+
+        //To get the tile list, for loader
         std::vector<sf::Sprite> &getTiles();
+
+        //To get the total tile number
         unsigned int getTileNumber() const;
 
-        //Set the config from a temporary one
+        //Set the tilegroup tile-configuration
         void setConfiguration(Matrix3d &config);
 
-        //To set a number in config from particular coordinates
+        //To set a specific tile of the tilegroup
         void setTileAt(const Vector3 coord, const unsigned int index);
 
-        //To get a reference to a certain tile sprite
+        //To get a reference to a particular tile sprite from 3D coordinates
         sf::Sprite &spriteAt(const Vector3 coord);
+
+        //To get a reference to a particular tile sprite from global index
         sf::Sprite &spriteAt(const unsigned int index);
 
-        //To update the tilegroup global position
+        //To update the tilegroup position
         void updateTileGroupPosition();
 
-        //To set a particular tile position
+        //To set a specific tile position
         void setTilePosition(const Vector3 coord);
 
-        //To update a particular tile appearance from the configuration matrix
+        //To update a tile appearance from the configuration matrix
         void updateTileFromConfig(const unsigned int index);
 
-        //To set a particular tile tileset-frame
+        //To set the tileset frame of a particular tile
         void frameTile(const unsigned int index, const Vector2 coord);
 
         //To set the opacity of a specific tile
         void setSpecificOpacity(const unsigned int index, const unsigned int opacity);
-        //To set a global tile number opacity
+
+        //To set the opacity of all the tiles of same type
         void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
-        //To set the all tiles same opacity
+
+        //To set the opacity of all the tiles
         void setGroupOpacity(const unsigned int opacity);
-        //To apply the tilegroup opacity to all tiles
+
+        //To apply the tilegroup opacity to all the tiles
         void applyGroupOpacity();
 
         //To get specific tile opacity
         unsigned int getTileOpacity(const unsigned int index) const;
-        //To get group opacity
+
+        //To get the tilegroup opacity
         unsigned int getGroupOpacity() const;
-        //To reset a tile opacity (to 255)
+
+        //To reset a tile opacity to 255 value
         void resetOpacity(const Vector3 coord);
 
     private:
         //The tileset texture
         sf::Texture m_tileset;
-        //The vector of tiles
+        //The list of tiles (sprites)
         std::vector<sf::Sprite> m_tiles;
-        //Reference to the matrix configuration
+        //The tilegroup configuration
         Matrix3d m_config;
-        //Reference to MData to get essential data
+        //Reference to MData to get needed informations
         MData &m_mapData;
-        //Group opacity
+        //The tilegroup opacity
         unsigned int m_opacity;
 };
 

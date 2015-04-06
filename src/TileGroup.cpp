@@ -1,6 +1,8 @@
 #include "TileGroup.h"
 
-TileGroup::TileGroup(MData &mapData, RunEnvironment &environment) : m_data(mapData), m_loader(m_data), m_drawer(mapData, m_data, environment)
+TileGroup::TileGroup(MData &mapData, RunEnvironment &environment) : m_data(mapData),
+                                                                    m_loader(m_data),
+                                                                    m_drawer(mapData, m_data, environment)
 {}
 
 void TileGroup::setTilesetPath(const std::string path) {
@@ -9,6 +11,7 @@ void TileGroup::setTilesetPath(const std::string path) {
 
 void TileGroup::initialize() {
     m_loader.initialize();
+    //If a tilegroup opacity was set before initialization...
     m_data.applyGroupOpacity();
 }
 
@@ -34,12 +37,11 @@ void TileGroup::setTypeOpacity(const unsigned int tile, const unsigned int opaci
 
 void TileGroup::setGroupOpacity(const unsigned int opacity) {
     m_data.setGroupOpacity(opacity);
-    m_data.applyGroupOpacity();
 }
 
-void TileGroup::draw(sf::RenderTarget& target, sf::RenderStates states, const unsigned int layer,
+void TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
                      const EntitiesInterposing *interposing) const {
-    m_drawer.draw(target, states, layer, interposing);
+    m_drawer.draw(target, layer, interposing);
 }
 
 unsigned int TileGroup::getTileOpacity(const unsigned int index) const {
