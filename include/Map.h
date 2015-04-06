@@ -52,6 +52,8 @@ class Map : public sf::Drawable
 
         //To add a translucent tile number to the list
         void addTranslucentTile(const unsigned int tile);
+        //To remove a translucent tile number in the list
+        void removeTranslucentTile(const unsigned int tile);
 
         //To set a tile from number at specific world coordinates
         void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);

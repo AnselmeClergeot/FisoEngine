@@ -46,10 +46,21 @@ void Map::setTileBaseHeight(const unsigned int h) {
 
 void Map::setInvisibleTile(const unsigned int tile) {
     m_data.setInvisibleTile(tile);
+    addTranslucentTile(tile);
 }
 
 void Map::addTranslucentTile(const unsigned int tile) {
     m_data.addTranslucentTile(tile);
+
+    if(m_shadowsStates.isInitialized())
+        m_dynamicShader.updateShadingOfAll();
+}
+
+void Map::removeTranslucentTile(const unsigned int tile) {
+    m_data.removeTranslucentTile(tile);
+
+    if(m_shadowsStates.isInitialized())
+        m_dynamicShader.updateShadingOfAll();
 }
 
 void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw) {

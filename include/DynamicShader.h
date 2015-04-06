@@ -14,6 +14,9 @@ class DynamicShader
         //Calculates generated shadow from a tile coordinates
         void updateShading(const Vector3 coord);
 
+        //To calculates generated shadows from all tiles of the tilegroup
+        void updateShadingOfAll();
+
         //To update the entire shading system by taking in account tiles opacity
         void updateOpacityOfAll();
 

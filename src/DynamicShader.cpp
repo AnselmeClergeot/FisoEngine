@@ -27,6 +27,13 @@ void DynamicShader::updateShading(const Vector3 coord) {
             updateShading(Vector3(coord.x, coord.y, z));
 }
 
+void DynamicShader::updateShadingOfAll() {
+    for(int z(0); z<m_mapData.getSize().y; z++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
+            for(int x(0); x<m_mapData.getSize().x; x++)
+                updateShading(Vector3(x, y, z));
+}
+
 void DynamicShader::updateOpacityOfAll() {
     for(int z(0); z<m_mapData.getSize().y; z++)
         for(int y(0); y<m_mapData.getSize().x; y++)

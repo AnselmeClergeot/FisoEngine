@@ -27,11 +27,18 @@ void MData::setTileBaseHeight(const unsigned int h) {
 
 void MData::setInvisibleTile(const unsigned int tile) {
     m_invisibleTile = tile;
-    addTranslucentTile(tile);
 }
 
 void MData::addTranslucentTile(const unsigned int tile) {
     m_translucentTiles.push_back(tile);
+}
+
+void MData::removeTranslucentTile(const unsigned int tile) {
+    for(int i(0); i<m_translucentTiles.size(); i++)
+    {
+        if(m_translucentTiles[i]==tile)
+            m_translucentTiles.erase(m_translucentTiles.begin()+i);
+    }
 }
 
 Matrix3d &MData::getTempConf() {

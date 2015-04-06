@@ -32,6 +32,8 @@ class MData
 
         //To add a translucent tile to the list
         void addTranslucentTile(const unsigned int tile);
+        //To remove a translucent tile in the list
+        void removeTranslucentTile(const unsigned int tile);
 
         //To get the temporary configuration
         Matrix3d &getTempConf();
