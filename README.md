@@ -30,7 +30,7 @@ Tile-based means that the world of your game is composed of tiles: a tile is an 
 No. FisoEngine is not an extremely powerful engine that can handles enormous maps. But don't worry, unless you want to create a copy of Minecraft, the capacities of FisoEngine should be enough.
 
 * **I have an idea, or I think a part of FisoEngine is not optimised. What should I do?**
-Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or even more ideas, reviews...
+Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or more ideas, reviews... I promise sending you an answer below 48 hours maximum. 
 
 ### On which engine part are you working currently?
 
