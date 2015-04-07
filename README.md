@@ -19,4 +19,6 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 
 I am working on the addition of tile animations to the engine. Be ready for the 1.0 release within a month!
 
+### Where can I learn how to use FisoEngine ?
+**Here they are:**
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
