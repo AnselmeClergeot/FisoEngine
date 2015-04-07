@@ -15,11 +15,27 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map object entities (for players, etc.)
 * Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
-### Last updates
+### F.A.Q
+* **Why should I use FisoEngine?**
+The advantage of FisoEngine over others isometric engines, is that it is not an ISOMETRIC GAME ENGINE but only an ISOMETRIC ENGINE focused on offering isometric events on a way that you can create YOUR game with YOUR gameplay and add YOUR functionalities without being limited to the engine itself. So if you have a game idea that meets these requirements: "Isometric", "Tile-based", "Using a reasonnable world size", don't hesitate to use the engine.
 
-* The entity system (first version) is operational.
-* Creation of RunEnvironment class. User has to inform some running parameters (window size, etc) to it before initializing its map object.
-* Factored same functions in different classes into two file "LoadingFuncs" and "DrawingFuncs".
-* Commented and indented the engine sources.
+* **For which graphic engine FisoEngine is made for?**
+FisoEngine is not designed for a specific graphic engine. It is designed to use as less graphic engine dependency as possible, to allow anyone to bind the engine sources with its graphic engine without having to modify many lines of code.<br/>
+Note: during the development, FisoEngine is only bind with SFML. 
 
+* **What means exactly the term "tile-based"?**
+Tile-based means that the world of your game is composed of tiles: a tile is an image that corresponds to a world block, or a floor. Many games are using this kind of world: almost all 2D RPG, turn-based strategy games, etc.
+
+* **Can I use FisoEngine to create worlds as big as Minecraft?**
+No. FisoEngine is not an extremely powerful engine that can handles enormous maps. But don't worry, unless you want to create a copy of Minecraft, the capacities of FisoEngine should be enough.
+
+* **I have an idea, or I think a part of FisoEngine is not optimised. What should I do?**
+Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or more ideas, reviews... I promise sending you an answer below 48 hours maximum. 
+
+### On which engine part are you working currently?
+
+I am working on the addition of tile animations to the engine. Be ready for the 1.0 release within a month!
+
+### Where can I learn how to use FisoEngine ?
+**Here they are:**
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
