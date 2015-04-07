@@ -15,11 +15,8 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map object entities (for players, etc.)
 * Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
-### Last updates
+### On which engine part are you working currently?
 
-* The entity system (first version) is operational.
-* Creation of RunEnvironment class. User has to inform some running parameters (window size, etc) to it before initializing its map object.
-* Factored same functions in different classes into two file "LoadingFuncs" and "DrawingFuncs".
-* Commented and indented the engine sources.
+I am working on the addition of tile animations to the engine. Be ready for the 1.0 release within a month!
 
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
