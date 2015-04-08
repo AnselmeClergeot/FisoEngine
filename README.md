@@ -29,6 +29,9 @@ Tile-based means that the world of your game is composed of tiles: a tile is an 
 * **Can I use FisoEngine to create worlds as big as Minecraft?**
 No. FisoEngine is not an extremely powerful engine that can handles enormous maps. But don't worry, unless you want to create a copy of Minecraft, the capacities of FisoEngine should be enough.
 
+* **Can I freely modify FisoEngine sources? What do I have to do?**
+Yes. You can do every thing you want with the FisoEngine sources untill you redistribuate them under the same circumstances you got them. For more informations, <a href="https://www.gnu.org/copyleft/gpl.html"><go to the GNU GENERAL PUBLIC LICENSE page.</a>
+
 * **I have an idea, or I think a part of FisoEngine is not optimised. What should I do?**
 Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or more ideas, reviews... I promise sending you an answer below 48 hours maximum. 
 
