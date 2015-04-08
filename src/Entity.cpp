@@ -19,8 +19,18 @@ void Entity::setDimensions(const Vector2 dim) {
     m_dimensions = dim;
 }
 
+void Entity::setDimensions(const unsigned int w, const unsigned int h) {
+    m_dimensions.x = w;
+    m_dimensions.y = h;
+}
+
 void Entity::setBaseCoord(const Vector2 coord) {
     m_baseCoord = coord;
+}
+
+void Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
+    m_baseCoord.x = x;
+    m_baseCoord.y = y;
 }
 
 void Entity::updatePixelPosition(const Vector2 pos) {
@@ -30,9 +40,24 @@ void Entity::updatePixelPosition(const Vector2 pos) {
     calculateTilePosition();
 }
 
-void Entity::move(const Vector2 rate)
-{
+void Entity::updatePixelPosition(const unsigned int x, const unsigned int y) {
+    m_pixelPosition.x = x;
+    m_pixelPosition.y = y;
+
+    m_sprite.setPosition(x, y);
+
+    calculateTilePosition();
+}
+
+void Entity::move(const Vector2 rate) {
     m_pixelPosition += rate;
+    updatePixelPosition(m_pixelPosition);
+}
+
+void Entity::move(const unsigned int x, const unsigned int y) {
+    m_pixelPosition.x += x;
+    m_pixelPosition.y += y;
+
     updatePixelPosition(m_pixelPosition);
 }
 

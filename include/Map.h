@@ -17,7 +17,6 @@
 #include "DynamicShader.h"
 
 #include "EntitiesContainer.h"
-#include "EntitiesInterface.h"
 #include "EntitiesInterposing.h"
 
 #include "IsometricMath.h"
@@ -116,8 +115,8 @@ class Map : public sf::Drawable
         //Accessor to shadows interface
         ShadowsInterface &shadows();
 
-        //Accessor to the entities interface
-        EntitiesInterface &entities();
+        //Accessor to the entities container to add/remove/access objects
+        EntitiesContainer &entities();
 
     private:
         //Running environment----------------------
@@ -145,8 +144,6 @@ class Map : public sf::Drawable
         //Entities---------------------------------
         //The entities container
         EntitiesContainer m_entityContainer;
-        //The interface
-        EntitiesInterface m_entityInterface;
         //For entities map interposing
         EntitiesInterposing m_interposing;
 };

@@ -9,11 +9,11 @@ EntitiesContainer::~EntitiesContainer() {
         delete(m_entities[i]);
 }
 
-void EntitiesContainer::add() {
+void EntitiesContainer::createEntity() {
     m_entities.push_back(new Entity(m_mapData, m_environment));
 }
 
-void EntitiesContainer::remove(const unsigned int iter) {
+void EntitiesContainer::removeEntity(const unsigned int iter) {
     m_entities.erase(m_entities.begin()+iter);
 }
 

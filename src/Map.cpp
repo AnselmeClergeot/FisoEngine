@@ -9,7 +9,7 @@ Map::Map(RunEnvironment &environment)
       m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
       m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
       m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-      m_entityContainer(m_data, m_environment), m_entityInterface(m_entityContainer),
+      m_entityContainer(m_data, m_environment),
       m_interposing(m_entityContainer)
 {}
 
@@ -192,6 +192,6 @@ ShadowsInterface &Map::shadows() {
     return m_shadowsInterface;
 }
 
-EntitiesInterface &Map::entities() {
-    return m_entityInterface;
+EntitiesContainer &Map::entities() {
+    return m_entityContainer;
 }

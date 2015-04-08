@@ -16,10 +16,10 @@ class EntitiesContainer
         ~EntitiesContainer();
 
         //To add an entity to the list
-        void add();
+        void createEntity();
 
         //To remove an entity from the list
-        void remove(const unsigned int iter);
+        void removeEntity(const unsigned int iter);
 
         //To get a reference to an entity of the list
         Entity &entityAt(const unsigned int iter);

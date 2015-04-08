@@ -15,33 +15,33 @@
 //Entity is used for interposing graphical elements in the map.
 class Entity
 {
+    friend class EntitiesInterposing;
     public:
         //The only constructor
         Entity(MData &mapData, RunEnvironment &environment);
 
         //To set the entity dimensions
         void setDimensions(const Vector2 dim);
+        //To set the entity dimensions
+        void setDimensions(const unsigned int w, const unsigned int h);
 
         //To set the base coord
         void setBaseCoord(const Vector2 coord);
 
-        //To update the entity position
-        void updatePixelPosition(const Vector2 pos);
+        //To set the base coord
+        void setBaseCoord(const unsigned int x, const unsigned int y);
 
         //To move the entity
         void move(const Vector2 rate);
 
+        //To move the entity
+        void move(const unsigned int x, const unsigned int y);
+
         //To set the entity image path and load it
         void setImagePath(const std::string path);
 
-        //To draw this entity
-        void draw(sf::RenderTarget& target) const;
-
         //To set to draw or not
         void setDrawState(const bool set);
-
-        //To calculate the tile position from the pixel position
-        void calculateTilePosition();
 
         //To set the layer on which the entity is on
         void setLayer(const unsigned int layer);
@@ -61,7 +61,20 @@ class Entity
         //To get the drawing state
         bool getDrawingState() const;
 
+        //To update the entity position
+        void updatePixelPosition(const Vector2 pos);
+
+        //To update the entity position
+        void updatePixelPosition(const unsigned int x, const unsigned int y);
+
     private:
+
+        //To draw this entity
+        void draw(sf::RenderTarget& target) const;
+
+        //To calculate the tile position from the pixel position
+        void calculateTilePosition();
+
         //The corresponding tile position
         Vector3 m_tilePosition;
         //The entity screen position
