@@ -110,6 +110,10 @@ void Map::setPosition(const Vector2 pos) {
     m_data.setPosition(pos);
     m_tileGroup.updatePosition();
 
+    //Recalculating all entity tile position because map position changed
+    for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
+        m_entityContainer.entityAt(i).calculateTilePosition();
+
     if(m_shadowsStates.isInitialized())
       m_shadowsTilegroup.updatePosition();
 }
@@ -121,6 +125,10 @@ void Map::setPosition(const unsigned int x, const unsigned int y) {
 void Map::move(const Vector2 rate) {
     m_data.move(rate);
     m_tileGroup.updatePosition();
+
+    //Recalculating all entity tile position because map position changed
+    for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
+        m_entityContainer.entityAt(i).calculateTilePosition();
 
     if(m_shadowsStates.isInitialized())
         m_shadowsTilegroup.updatePosition();

@@ -67,13 +67,13 @@ class Entity
         //To update the entity position
         void updatePixelPosition(const unsigned int x, const unsigned int y);
 
+        //To calculate the tile position from the pixel position
+        void calculateTilePosition();
+
     private:
 
         //To draw this entity
         void draw(sf::RenderTarget& target) const;
-
-        //To calculate the tile position from the pixel position
-        void calculateTilePosition();
 
         //The corresponding tile position
         Vector3 m_tilePosition;
