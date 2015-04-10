@@ -62,10 +62,10 @@ class Entity
         bool getDrawingState() const;
 
         //To update the entity position
-        void updatePixelPosition(const Vector2 pos);
+        void setPixelPosition(const Vector2 pos);
 
         //To update the entity position
-        void updatePixelPosition(const unsigned int x, const unsigned int y);
+        void setPixelPosition(const unsigned int x, const unsigned int y);
 
         //To calculate the tile position from the pixel position
         void calculateTilePosition();

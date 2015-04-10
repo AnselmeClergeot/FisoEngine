@@ -33,32 +33,24 @@ void Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
     m_baseCoord.y = y;
 }
 
-void Entity::updatePixelPosition(const Vector2 pos) {
+void Entity::setPixelPosition(const Vector2 pos) {
     m_pixelPosition = pos;
     m_sprite.setPosition(pos.x, pos.y);
 
     calculateTilePosition();
 }
 
-void Entity::updatePixelPosition(const unsigned int x, const unsigned int y) {
-    m_pixelPosition.x = x;
-    m_pixelPosition.y = y;
-
-    m_sprite.setPosition(x, y);
-
-    calculateTilePosition();
+void Entity::setPixelPosition(const unsigned int x, const unsigned int y) {
+    setPixelPosition(Vector2(x, y));
 }
 
 void Entity::move(const Vector2 rate) {
     m_pixelPosition += rate;
-    updatePixelPosition(m_pixelPosition);
+    setPixelPosition(m_pixelPosition);
 }
 
 void Entity::move(const unsigned int x, const unsigned int y) {
-    m_pixelPosition.x += x;
-    m_pixelPosition.y += y;
-
-    updatePixelPosition(m_pixelPosition);
+    move(Vector2(x, y));
 }
 
 void Entity::setImagePath(const std::string path) {
