@@ -17,7 +17,7 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 
 ### F.A.Q
 * **Why should I use FisoEngine?**
-The advantage of FisoEngine over others isometric engines, is that it is not an ISOMETRIC GAME ENGINE but only an ISOMETRIC ENGINE focused on offering isometric events on a way that you can create YOUR game with YOUR gameplay and add YOUR functionalities without being limited to the engine itself. So if you have a game idea that meets these requirements: "Isometric", "Tile-based", "Using a reasonnable world size", don't hesitate to use the engine.
+The advantage of FisoEngine over others isometric engines, is that it is not an ISOMETRIC GAME ENGINE but only an ISOMETRIC ENGINE focused on offering isometric events on a way that you can create YOUR game with YOUR gameplay and add YOUR functionalities without being limited to the engine itself. So if you have a game idea that meets these requirements: "isometric", "tile-based", don't hesitate to use the engine.
 
 * **For which graphic engine FisoEngine is made for?**
 FisoEngine is not designed for a specific graphic engine. It is designed to use as less graphic engine dependency as possible, to allow anyone to bind the engine sources with its graphic engine without having to modify many lines of code.<br/>
@@ -26,8 +26,8 @@ Note: during the development, FisoEngine is only bind with SFML.
 * **What means exactly the term "tile-based"?**
 Tile-based means that the world of your game is composed of tiles: a tile is an image that corresponds to a world block, or a floor. Many games are using this kind of world: almost all 2D RPG, turn-based strategy games, etc.
 
-* **Can I use FisoEngine to create worlds as big as Minecraft?**
-No. FisoEngine is not an extremely powerful engine that can handles enormous maps. But don't worry, unless you want to create a copy of Minecraft, the capacities of FisoEngine should be enough.
+* **Can I use FisoEngine to create big worlds?**
+Yes and no. FisoEngine can't be used to handles worlds as big as Minecraft, but it can handles relatively large worlds which may be widely sufficient for 90% of games. The maximum world size depends of the computer performance, but you can easily manage world reloading for map changing to not loose any performances.
 
 * **Can I freely modify FisoEngine sources?**
 Yes. You can do every thing you want with the FisoEngine sources untill you redistribuate them under the same circumstances you got them. For more informations, go to the <a href="https://www.gnu.org/copyleft/gpl.html"> GNU GENERAL PUBLIC LICENSE page </a>.
