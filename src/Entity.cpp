@@ -60,7 +60,7 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition+m_baseCoord, m_dimensions, *m_environment))
+    if(isVisible(m_pixelPosition, m_baseCoord, *m_environment))
         target.draw(m_sprite);
 }
 
@@ -87,6 +87,10 @@ Vector2 Entity::getBaseCoord() const {
 
 Vector2 Entity::getDimensions() const {
     return m_dimensions;
+}
+
+Vector2 Entity::getPixelPosition() const {
+    return m_pixelPosition;
 }
 
 sf::Sprite &Entity::getSprite() {

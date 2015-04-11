@@ -55,6 +55,9 @@ class Entity
         //To get the dimensions of the entity
         Vector2 getDimensions() const;
 
+        //To get the pixel position
+        Vector2 getPixelPosition() const;
+
         //To get a reference to the sprite
         sf::Sprite &getSprite();
 

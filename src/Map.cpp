@@ -107,12 +107,15 @@ void Map::setGroupOpacity(const unsigned int opacity) {
 }
 
 void Map::setPosition(const Vector2 pos) {
+
+    Vector2 tempPos;
+    tempPos = m_data.getPosition();
+
     m_data.setPosition(pos);
     m_tileGroup.updatePosition();
 
-    //Recalculating all entity tile position because map position changed
     for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
-        m_entityContainer.entityAt(i).calculateTilePosition();
+        m_entityContainer.entityAt(i).move(m_data.getPosition()-tempPos);
 
     if(m_shadowsStates.isInitialized())
       m_shadowsTilegroup.updatePosition();
@@ -126,9 +129,8 @@ void Map::move(const Vector2 rate) {
     m_data.move(rate);
     m_tileGroup.updatePosition();
 
-    //Recalculating all entity tile position because map position changed
     for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
-        m_entityContainer.entityAt(i).calculateTilePosition();
+        m_entityContainer.entityAt(i).move(rate);
 
     if(m_shadowsStates.isInitialized())
         m_shadowsTilegroup.updatePosition();
