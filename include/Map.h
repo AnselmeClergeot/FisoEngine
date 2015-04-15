@@ -30,6 +30,10 @@ class Map : public sf::Drawable
 
         //To call map creation
         void init();
+
+        //To reload the map
+        void reload();
+
         //To save the map
         void save();
 

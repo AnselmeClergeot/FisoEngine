@@ -19,6 +19,15 @@ void Map::init() {
     m_tileGroup.initialize();
 }
 
+void Map::reload() {
+    m_configsLoader.load();
+    m_tileGroup.setConfiguration(m_data.getTempConf());
+    m_tileGroup.initialize();
+
+    if(m_shadowsStates.isInitialized())
+        m_shadowsInterface.init();
+}
+
 void Map::save() {
     m_configsSaver.save();
 }
@@ -143,6 +152,7 @@ void Map::move(const unsigned int rx, const unsigned int ry) {
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     for(int layer(0); layer<m_data.getSize().y; layer++)
     {
+        std::cout << "PASSED" << std::endl;;
         m_tileGroup.draw(target, layer, &m_interposing);
 
         if(m_shadowsStates.isOn())
