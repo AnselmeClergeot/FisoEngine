@@ -13,6 +13,9 @@ class MConfigsLoader
 
         //To add a loading file (layer)        void addLoadFile(const std::string path);
 
+        //To reset loading file list
+        void resetLayerList();
+
         //Root function that call functions below
         void load();
 

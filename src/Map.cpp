@@ -37,6 +37,11 @@ void Map::addLayerFile(const std::string path) {
     m_configsSaver.addLoadFile(path);
 }
 
+void Map::resetLayerFiles() {
+    m_configsLoader.resetLayerList();
+    m_configsSaver.resetLayerList();
+}
+
 void Map::setTileset(const std::string path) {
     m_tileGroup.setTilesetPath(path);
 }

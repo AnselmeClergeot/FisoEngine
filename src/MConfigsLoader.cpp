@@ -10,6 +10,10 @@ void MConfigsLoader::addLoadFile(const std::string path) {
         m_paths.push_back(path);
 }
 
+void MConfigsLoader::resetLayerList() {
+        m_paths.clear();
+}
+
 void MConfigsLoader::load() {
     loadMapSize();
     resizeMatrices();

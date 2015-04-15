@@ -17,6 +17,9 @@ class MConfigsSaver
 
         //To add layer loading file path        void addLoadFile(const std::string path);
 
+        //To reset loading file list
+        void resetLayerList();
+
         //Function to save the map permanent configuration into the loading files
         void save();
 

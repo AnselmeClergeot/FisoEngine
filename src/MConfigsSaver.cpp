@@ -11,6 +11,10 @@ void MConfigsSaver::addLoadFile(const std::string path) {
         m_paths.push_back(path);
 }
 
+void MConfigsSaver::resetLayerList() {
+    m_paths.clear();
+}
+
 void MConfigsSaver::save() {
     std::ofstream file;
 

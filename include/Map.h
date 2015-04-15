@@ -40,6 +40,9 @@ class Map : public sf::Drawable
         //To add a layer file for loading configuration
         void addLayerFile(const std::string path);
 
+        //To reset the layers file to prepare map reloading
+        void resetLayerFiles();
+
         //To set the map tileset path
         void setTileset(const std::string path);
 
