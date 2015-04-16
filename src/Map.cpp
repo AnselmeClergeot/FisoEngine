@@ -20,9 +20,7 @@ void Map::init() {
 }
 
 void Map::reload() {
-    m_configsLoader.load();
-    m_tileGroup.setConfiguration(m_data.getTempConf());
-    m_tileGroup.initialize();
+    init();
 
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
