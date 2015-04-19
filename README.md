@@ -8,14 +8,16 @@ For more informations, you can contact me by mail at anselmedu25@hotmail.com.
 
 Fiso Engine is very simple of use and will offer all the features you would expect to create your game:
 * Map creation/saving and manipulation
-* Map editing with map-editor software
+* Level editing with map-editor software
+* Map dynamic reloading
 * Tile opacity manipulating
 * Map shading
-* Tile global animations (water, etc.) and specific animations (door, etc.)
+* Tile global animations (water, etc.)
+* Tile single animations (door, etc.)
 * Map object entities (for players, etc.)
 * Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
-### Development information board : latest development news!
+### Latest development news !
 The early version of the tile animation system is released.<br/>
 Nobody except me has tested this version and some bugs or unexpected behaviours may be inside the system. If
 you find one of these, you know what to do : anselmedu25@hotmail.com ! Thank you.
