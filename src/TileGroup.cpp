@@ -51,3 +51,7 @@ unsigned int TileGroup::getTileOpacity(const unsigned int index) const {
 unsigned int TileGroup::getGroupOpacity() const {
     return m_data.getGroupOpacity();
 }
+
+void TileGroup::setTileSpritesheetX(const unsigned int iter, const unsigned int x) {
+    m_data.setTileSpritesheetX(iter, x);
+}

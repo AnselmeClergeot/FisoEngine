@@ -68,6 +68,9 @@ class TileGroupData
         //To reset a tile opacity to 255 value
         void resetOpacity(const Vector3 coord);
 
+        //To set the tile X spritesheet coordinate
+        void setTileSpritesheetX(const unsigned int iter, unsigned int x);
+
     private:
         //The tileset texture
         sf::Texture m_tileset;

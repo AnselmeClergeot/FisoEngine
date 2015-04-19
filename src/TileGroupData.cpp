@@ -92,3 +92,10 @@ unsigned int TileGroupData::getGroupOpacity() const {
 void TileGroupData::resetOpacity(const Vector3 coord) {
     setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z), 255);
 }
+
+void TileGroupData::setTileSpritesheetX(const unsigned int iter, unsigned int x) {
+    m_tiles[iter].setTextureRect(sf::IntRect(x*m_mapData.getTileSize().x,
+                               m_mapData.getTempConf().at(iter)*m_mapData.getTileSize().y,
+                               m_mapData.getTileSize().x,
+                               m_mapData.getTileSize().y));
+}

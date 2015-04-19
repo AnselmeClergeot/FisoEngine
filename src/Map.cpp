@@ -10,13 +10,16 @@ Map::Map(RunEnvironment &environment)
       m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
       m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
       m_entityContainer(m_data, m_environment),
-      m_interposing(m_entityContainer)
+      m_interposing(m_entityContainer),
+      m_animator(m_data, m_tileGroup, m_shadowsTilegroup, m_dynamicShader), m_animationsInterface(m_animator)
 {}
 
 void Map::init() {
     m_configsLoader.load();
     m_tileGroup.setConfiguration(m_data.getTempConf());
     m_tileGroup.initialize();
+
+    m_animator.resizeAnimationsDataList();
 }
 
 void Map::reload() {
@@ -157,7 +160,6 @@ void Map::move(const unsigned int rx, const unsigned int ry) {
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     for(int layer(0); layer<m_data.getSize().y; layer++)
     {
-        std::cout << "PASSED" << std::endl;;
         m_tileGroup.draw(target, layer, &m_interposing);
 
         if(m_shadowsStates.isOn())
@@ -219,4 +221,8 @@ ShadowsInterface &Map::shadows() {
 
 EntitiesContainer &Map::entities() {
     return m_entityContainer;
+}
+
+AnimationsInterface &Map::animations() {
+    return m_animationsInterface;
 }
