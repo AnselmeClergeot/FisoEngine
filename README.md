@@ -15,6 +15,11 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map object entities (for players, etc.)
 * Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
+### Development information board : latest development news!
+The early version of the tile animation system is released.<br/>
+Nobody except me has tested this version and some bugs or unexpected behaviours may be inside the system. If
+you find one of these, you know what to do : anselmedu25@hotmail.com ! Thank you.
+
 ### F.A.Q
 * **Why should I use FisoEngine?**
 The advantage of FisoEngine over others isometric engines, is that it is not an ISOMETRIC GAME ENGINE but only an ISOMETRIC ENGINE focused on offering isometric events on a way that you can create YOUR game with YOUR gameplay and add YOUR functionalities without being limited to the engine itself. So if you have a game idea that meets these requirements: "isometric", "tile-based", don't hesitate to use the engine.
