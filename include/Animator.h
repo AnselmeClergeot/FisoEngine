@@ -32,13 +32,11 @@ class Animator
 
         const TileAnimData &animAt(const unsigned int iter) const;
 
-        //To apply the animations to the tilegroups
-        void apply();
-
-
     private:
 
         void updateX();
+
+        void apply();
 
         std::vector<TileAnimData> m_tileAnimationsData;
         MData &m_mapData;
