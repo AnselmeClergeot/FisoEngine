@@ -91,12 +91,20 @@ void Animator::setKindOf(const Vector3 coord, AnimKind kind) {
     m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(kind);
 }
 
-void Animator::setAnimStatus(const Vector3 coord, bool status) {
-    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(status);
+void Animator::launchAnimation(const Vector3 coord) {
+    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(true);
 }
 
-const TileAnimData &Animator::animAt(const unsigned int iter) const {
-    return m_tileAnimationsData[iter];
+void Animator::launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
+    launchAnimation(Vector3(x, y, z));
+}
+
+void Animator::stopAnimation(const Vector3 coord) {
+    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(false);
+}
+
+void Animator::stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
+    stopAnimation(Vector3(x, y, z));
 }
 
 void Animator::updateX() {

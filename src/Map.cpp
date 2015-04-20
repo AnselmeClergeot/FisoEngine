@@ -11,7 +11,7 @@ Map::Map(RunEnvironment &environment)
       m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
       m_entityContainer(m_data, m_environment),
       m_interposing(m_entityContainer),
-      m_animator(m_data, m_tileGroup, m_shadowsTilegroup, m_dynamicShader), m_animationsInterface(m_animator)
+      m_animator(m_data, m_tileGroup, m_shadowsTilegroup, m_dynamicShader)
 {}
 
 void Map::init() {
@@ -221,6 +221,6 @@ EntitiesContainer &Map::entities() {
     return m_entityContainer;
 }
 
-AnimationsInterface &Map::animations() {
-    return m_animationsInterface;
+Animator &Map::animator() {
+    return m_animator;
 }

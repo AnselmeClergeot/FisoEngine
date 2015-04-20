@@ -21,9 +21,7 @@
 
 #include "IsometricMath.h"
 
-#include "AnimationsInterface.h"
 #include "Animator.h"
-#include "AnimationsApplicator.h"
 
 //This class is the user interface to interact with different domains of the map.
 class Map : public sf::Drawable
@@ -130,7 +128,7 @@ class Map : public sf::Drawable
         EntitiesContainer &entities();
 
         //Accessor to the animation-system interface
-        AnimationsInterface &animations();
+        Animator &animator();
 
     private:
         //Running environment----------------------
@@ -162,9 +160,6 @@ class Map : public sf::Drawable
         EntitiesInterposing m_interposing;
 
         //Animations-------------------------------
-        //The interface
-        AnimationsInterface m_animationsInterface;
-        //The animator
         Animator m_animator;
 };
 

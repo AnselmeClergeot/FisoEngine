@@ -11,10 +11,10 @@
 
 class Animator
 {
+    friend class Map;
+
     public:
         Animator(MData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader);
-
-        void resizeAnimationsDataList();
 
         void setAnimation(const unsigned tile, const unsigned int length);
 
@@ -24,19 +24,23 @@ class Animator
 
         void setSingleAnimKind(const unsigned int tile);
 
-        void setDirectionOf(const Vector3 coord, AnimDirection direction);
+        void setDirectionOf(const Vector3 coord, const AnimDirection direction);
 
-        void setKindOf(const Vector3 coord, AnimKind kind);
+        void setKindOf(const Vector3 coord, const AnimKind kind);
 
-        void setAnimStatus(const Vector3 coord, bool status);
+        void launchAnimation(const Vector3 coord);
+        void launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z);
 
-        const TileAnimData &animAt(const unsigned int iter) const;
+        void stopAnimation(const Vector3 coord);
+        void stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z);
 
     private:
 
         void updateX();
 
         void apply();
+
+        void resizeAnimationsDataList();
 
         std::vector<TileAnimData> m_tileAnimationsData;
         MData &m_mapData;
