@@ -42,6 +42,4 @@ Yes. You can do every thing you want with the FisoEngine sources untill you redi
 * **I have an idea, or I think a part of FisoEngine is not optimised. What should I do?**
 Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or more ideas, reviews... I promise sending you an answer below 48 hours maximum. 
 
-### Where can I learn how to use FisoEngine ?
-**Here they are:**
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
