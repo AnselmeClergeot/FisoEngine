@@ -1,14 +1,14 @@
 #ifndef SHADOWSINTERFACE_H
 #define SHADOWSINTERFACE_H
 
-#include "SInitializer.h"
+#include "ShadowsInitializer.h"
 #include "TileGroup.h"
 
 class ShadowsInterface
 {
     public:
         //The only constructor
-        ShadowsInterface(SInitializer &loader, SStates &states, TileGroup &tilegroup);
+        ShadowsInterface(ShadowsInitializer &loader, ShadowsSystemStates &states, TileGroup &tilegroup);
 
         //To set the shadows tileset path
         void setTileset(const std::string path);
@@ -24,9 +24,9 @@ class ShadowsInterface
 
     private:
         //Reference to the shadows loader to call initialization when user wants
-        SInitializer &m_initializer;
+        ShadowsInitializer &m_initializer;
         //Reference to the shadows data to set on/off on user demand
-        SStates &m_states;
+        ShadowsSystemStates &m_states;
         //Reference to the shadows tile-group to apply user modifications
         TileGroup &m_tilegroup;
 };

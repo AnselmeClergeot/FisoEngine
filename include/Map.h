@@ -12,8 +12,8 @@
 #include "TileGroup.h"
 
 #include "ShadowsInterface.h"
-#include "SInitializer.h"
-#include "SStates.h"
+#include "ShadowsInitializer.h"
+#include "ShadowsSystemStates.h"
 #include "DynamicShader.h"
 
 #include "EntitiesContainer.h"
@@ -145,9 +145,9 @@ class Map : public sf::Drawable
         //The shadows tile-group
         TileGroup m_shadowsTilegroup;
         //The shadows states
-        SStates m_shadowsStates;
+        ShadowsSystemStates m_shadowsStates;
         //The initializer
-        SInitializer m_shadowsInitializer;
+        ShadowsInitializer m_shadowsInitializer;
         //The interface for user
         ShadowsInterface m_shadowsInterface;
         //The dynamic shader

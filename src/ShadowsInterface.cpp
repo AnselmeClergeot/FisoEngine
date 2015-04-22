@@ -1,6 +1,6 @@
 #include "ShadowsInterface.h"
 
-ShadowsInterface::ShadowsInterface(SInitializer &initializer, SStates &states, TileGroup &tilegroup)
+ShadowsInterface::ShadowsInterface(ShadowsInitializer &initializer, ShadowsSystemStates &states, TileGroup &tilegroup)
     : m_initializer(initializer), m_states(states), m_tilegroup(tilegroup)
 {}
 
