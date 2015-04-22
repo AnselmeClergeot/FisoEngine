@@ -6,8 +6,8 @@
 #include "ScreenInfos.h"
 
 #include "MapData.h"
-#include "MConfigsLoader.h"
-#include "MConfigsSaver.h"
+#include "ConfigsLoader.h"
+#include "ConfigsSaver.h"
 
 #include "TileGroup.h"
 
@@ -136,8 +136,8 @@ class Map : public sf::Drawable
         //Map----------------------------------
         //Map data loader/saver and data container
         MapData m_data;
-        MConfigsLoader m_configsLoader;
-        MConfigsSaver m_configsSaver;
+        ConfigsLoader m_configsLoader;
+        ConfigsSaver m_configsSaver;
         //The map TileGroup
         TileGroup m_tileGroup;
 
