@@ -24,6 +24,8 @@ class Animator
 
         void setSingleAnimKind(const unsigned int tile);
 
+        void setGlobalAnimKind(const unsigned int tile);
+
         void setDirectionOf(const Vector3 coord, const AnimDirection direction);
 
         void setKindOf(const Vector3 coord, const AnimKind kind);
@@ -36,8 +38,6 @@ class Animator
 
     private:
 
-        void updateX();
-
         void apply();
 
         void resizeAnimationsDataList();
@@ -47,8 +47,6 @@ class Animator
         Timer m_timer;
 
         unsigned int m_speed;
-        unsigned int m_x;
-        unsigned int m_maxLength;
 
         //Links to tilegroups to modify
         TileGroup &m_mapTilegroup, &m_shadowsTilegroup;

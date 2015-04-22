@@ -17,11 +17,11 @@ class TileAnimData
 
         void setLength(const unsigned int length);
 
-        void setX(const unsigned int x);
-        void increaseX();
-        void decreaseX();
-
         void setStatus(const bool status);
+
+        void updateX();
+
+        void resetX();
 
         AnimKind getKind() const;
 

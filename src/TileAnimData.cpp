@@ -30,18 +30,6 @@ void TileAnimData::setLength(const unsigned int length) {
     m_length = length;
 }
 
-void TileAnimData::setX(const unsigned int x) {
-    m_x = x;
-}
-
-void TileAnimData::increaseX() {
-    m_x++;
-}
-
-void TileAnimData::decreaseX() {
-    m_x--;
-}
-
 AnimKind TileAnimData::getKind() const {
     return m_kind;
 }
@@ -60,4 +48,44 @@ unsigned int TileAnimData::getX() const {
 
 bool TileAnimData::getStatus() const {
     return m_status;
+}
+
+void TileAnimData::updateX() {
+    if(m_status==true)
+        if(m_length>1)
+        {
+            if(m_direction==Right)
+            {
+                if(m_x+1<m_length)
+                    m_x++;
+                else
+                {
+                    resetX();
+                    if(m_kind==Single)
+                        m_status = false;
+                }
+
+            }
+
+            if(m_direction==Left)
+            {
+                if(m_x>0)
+                    m_x--;
+                else
+                {
+                    resetX();
+                    if(m_kind==Single)
+                        m_status = false;
+                }
+
+            }
+        }
+}
+
+void TileAnimData::resetX() {
+    if(m_direction==Left)
+        m_x = m_length-1;
+
+    if(m_direction==Right)
+        m_x = 0;
 }
