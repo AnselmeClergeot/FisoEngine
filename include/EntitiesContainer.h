@@ -12,9 +12,6 @@ class EntitiesContainer
         //The only constructor
         EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos);
 
-        //The destructor
-        ~EntitiesContainer();
-
         //To add an entity to the list
         void createEntity();
 
@@ -29,7 +26,7 @@ class EntitiesContainer
 
     private:
         //The list of Entities
-        std::vector<Entity*> m_entities;
+        std::vector<std::unique_ptr<Entity>> m_entities;
         //Reference to MData to initialize new Entity
         MapData &m_mapData;
         //Reference to RunEnvironment to get window size for culling purpose

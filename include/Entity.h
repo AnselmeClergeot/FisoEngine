@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <memory>
 
 #include <SFML/Graphics.hpp>
 
@@ -93,9 +94,9 @@ class Entity
         //If the entity has to be drawn
         bool m_drawState;
         //Pointer to the MData
-        MapData *m_mapData;
+        std::unique_ptr<MapData> m_mapData;
         //Pointer to RunEnvironment
-        ScreenInfos *m_screenInfos;
+        std::unique_ptr<ScreenInfos> m_screenInfos;
 };
 
 #endif // ENTITY_H

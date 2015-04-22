@@ -4,13 +4,8 @@ EntitiesContainer::EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos)
                                                                                     m_screenInfos(screenInfos)
 {}
 
-EntitiesContainer::~EntitiesContainer() {
-    for(std::size_t i(0); i<m_entities.size(); i++)
-        delete(m_entities[i]);
-}
-
 void EntitiesContainer::createEntity() {
-    m_entities.push_back(new Entity(m_mapData, m_screenInfos));
+    m_entities.push_back(std::unique_ptr<Entity>(new Entity(m_mapData, m_screenInfos)));
 }
 
 void EntitiesContainer::removeEntity(const unsigned int iter) {
