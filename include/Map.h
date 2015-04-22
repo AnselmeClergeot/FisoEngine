@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "RunEnvironment.h"
+#include "ScreenInfos.h"
 
 #include "MData.h"
 #include "MConfigsLoader.h"
@@ -28,7 +28,7 @@ class Map : public sf::Drawable
 {
     public:
         //The only constructor for the user
-        Map(RunEnvironment &environment);
+        Map(ScreenInfos &screenInfos);
 
         //To call map creation
         void init();
@@ -132,7 +132,7 @@ class Map : public sf::Drawable
 
     private:
         //Running environment----------------------
-        RunEnvironment &m_environment;
+        ScreenInfos &m_screenInfos;
         //Map----------------------------------
         //Map data loader/saver and data container
         MData m_data;

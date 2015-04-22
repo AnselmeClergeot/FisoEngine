@@ -1,7 +1,7 @@
 #include "TileGroupLoader.h"
 
-//To access file-loading usefull functions
-#include "LoadingFuncs.h"
+//To access usefull io functions
+#include "ioFuncs.h"
 
 TileGroupLoader::TileGroupLoader(TileGroupData &data) : m_tilesetPath(""), m_data(data)
 {}
@@ -20,12 +20,12 @@ void TileGroupLoader::resizeTileList() {
 }
 
 void TileGroupLoader::setTilesTileset() {
-    for(int i(0); i<m_data.getTileNumber(); i++)
+    for(std::size_t i(0); i<m_data.getTileNumber(); i++)
         m_data.spriteAt(i).setTexture(m_data.getTileset());
 }
 
 void TileGroupLoader::setTilesRect() {
-    for(int i(0); i<m_data.getTileNumber(); i++)
+    for(std::size_t i(0); i<m_data.getTileNumber(); i++)
         m_data.updateTileFromConfig(i);
 }
 

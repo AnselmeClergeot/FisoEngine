@@ -1,15 +1,15 @@
 #include "Map.h"
 
-Map::Map(RunEnvironment &environment)
-    : m_environment(environment),
+Map::Map(ScreenInfos &screenInfos)
+    : m_screenInfos(screenInfos),
       m_data(),
       m_configsLoader(m_data), m_configsSaver(m_data),
-      m_tileGroup(m_data, m_environment), m_shadowsTilegroup(m_data, m_environment),
+      m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
       m_shadowsStates(),
       m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
       m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
       m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-      m_entityContainer(m_data, m_environment),
+      m_entityContainer(m_data, m_screenInfos),
       m_interposing(m_entityContainer),
       m_animator(m_data, m_tileGroup, m_shadowsTilegroup, m_dynamicShader)
 {}
@@ -129,7 +129,7 @@ void Map::setPosition(const Vector2 pos) {
     m_data.setPosition(pos);
     m_tileGroup.updatePosition();
 
-    for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
+    for(std::size_t i(0); i<m_entityContainer.getEntitiesNumber(); i++)
         m_entityContainer.entityAt(i).move(m_data.getPosition()-tempPos);
 
     if(m_shadowsStates.isInitialized())
@@ -144,7 +144,7 @@ void Map::move(const Vector2 rate) {
     m_data.move(rate);
     m_tileGroup.updatePosition();
 
-    for(int i(0); i<m_entityContainer.getEntitiesNumber(); i++)
+    for(std::size_t i(0); i<m_entityContainer.getEntitiesNumber(); i++)
         m_entityContainer.entityAt(i).move(rate);
 
     if(m_shadowsStates.isInitialized())

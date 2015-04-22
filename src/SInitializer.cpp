@@ -20,14 +20,14 @@ void SInitializer::resizeMatrix(Matrix3d &tempConf) {
 }
 
 void SInitializer::fillMatrix(Matrix3d &tempConf) {
-    for(unsigned int z(0); z<m_mapData.getSize().y; z++)
-        for(unsigned int y(0); y<m_mapData.getSize().x; y++)
-            for(unsigned int x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 calculateShadowInConf(Vector3(x, y, z), tempConf);
 }
 
 void SInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d &tempConf) {
-    for(int z(coord.z-1); z>-1; z--)
+    for(std::size_t z(coord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)))
         {
@@ -40,7 +40,7 @@ void SInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d &tempConf
         }
     }
 
-    for(int z(coord.z); z<m_mapData.getSize().y; z++)
+    for(std::size_t z(coord.z); z<m_mapData.getSize().y; z++)
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)) && z!=coord.z)
             calculateShadowInConf(Vector3(coord.x, coord.y, z), tempConf);
 }

@@ -2,7 +2,7 @@
 #define ENTITIESCONTAINER_H
 
 #include "MData.h"
-#include "RunEnvironment.h"
+#include "ScreenInfos.h"
 #include "Entity.h"
 
 //EntitiesContainer is the class that warps all the entities into a vector and create/delete them.
@@ -10,7 +10,7 @@ class EntitiesContainer
 {
     public:
         //The only constructor
-        EntitiesContainer(MData &mapData, RunEnvironment &environment);
+        EntitiesContainer(MData &mapData, ScreenInfos &screenInfos);
 
         //The destructor
         ~EntitiesContainer();
@@ -33,7 +33,7 @@ class EntitiesContainer
         //Reference to MData to initialize new Entity
         MData &m_mapData;
         //Reference to RunEnvironment to get window size for culling purpose
-        RunEnvironment &m_environment;
+        ScreenInfos &m_screenInfos;
 };
 
 #endif // ENTITIESCONTAINER_H

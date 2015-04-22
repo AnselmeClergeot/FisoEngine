@@ -1,7 +1,7 @@
 #include "MConfigsSaver.h"
 
-//To access usefull loading/files functions
-#include "LoadingFuncs.h"
+//To access usefull io functions
+#include "ioFuncs.h"
 
 MConfigsSaver::MConfigsSaver(MData &data) : m_data(data)
 {}
@@ -18,12 +18,12 @@ void MConfigsSaver::resetLayerList() {
 void MConfigsSaver::save() {
     std::ofstream file;
 
-    for(int z(0); z<m_paths.size(); z++)
+    for(std::size_t z(0); z<m_paths.size(); z++)
     {
         file.open(m_paths[z].c_str());
-        for(int y(0); y<m_data.getSize().x; y++)
+        for(std::size_t y(0); y<m_data.getSize().x; y++)
         {
-            for(int x(0); x<m_data.getSize().x; x++)
+            for(std::size_t x(0); x<m_data.getSize().x; x++)
             {
                 file << m_data.getPermConf().at(x, y, z);
                 if(x+1<m_data.getSize().x)

@@ -1,16 +1,16 @@
 #include "EntitiesContainer.h"
 
-EntitiesContainer::EntitiesContainer(MData &mapData, RunEnvironment &environment) : m_entities(), m_mapData(mapData),
-                                                                                    m_environment(environment)
+EntitiesContainer::EntitiesContainer(MData &mapData, ScreenInfos &screenInfos) : m_entities(), m_mapData(mapData),
+                                                                                    m_screenInfos(screenInfos)
 {}
 
 EntitiesContainer::~EntitiesContainer() {
-    for(int i(0); i<m_entities.size(); i++)
+    for(std::size_t i(0); i<m_entities.size(); i++)
         delete(m_entities[i]);
 }
 
 void EntitiesContainer::createEntity() {
-    m_entities.push_back(new Entity(m_mapData, m_environment));
+    m_entities.push_back(new Entity(m_mapData, m_screenInfos));
 }
 
 void EntitiesContainer::removeEntity(const unsigned int iter) {
@@ -18,6 +18,7 @@ void EntitiesContainer::removeEntity(const unsigned int iter) {
 }
 
 Entity &EntitiesContainer::entityAt(const unsigned int iter) {
+    assert(iter<m_entities.size());
     return *m_entities[iter];
 }
 

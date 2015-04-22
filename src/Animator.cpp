@@ -12,7 +12,7 @@ void Animator::setAnimation(const unsigned tile, const unsigned int length) {
     if(length>m_maxLength)
         m_maxLength = length;
 
-    for(int i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
     {
         if(m_mapData.getTempConf().at(i)==tile)
         {
@@ -35,7 +35,7 @@ void Animator::next() {
         updateX();
 
 
-        for(int i(0); i<m_tileAnimationsData.size(); i++)
+        for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
         {
             if(m_tileAnimationsData[i].getStatus()==true)
             {
@@ -76,7 +76,7 @@ void Animator::next() {
 }
 
 void Animator::setSingleAnimKind(const unsigned int tile) {
-    for(int i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
     {
         if(m_mapData.getTempConf().at(i)==tile)
             m_tileAnimationsData[i].setKind(Single);
@@ -115,7 +115,7 @@ void Animator::updateX() {
 }
 
 void Animator::apply() {
-    for(int i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
     {
         m_mapTilegroup.setTileSpritesheetX(i, m_tileAnimationsData[i].getX());
     }

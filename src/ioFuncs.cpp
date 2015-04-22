@@ -1,4 +1,4 @@
-#include "LoadingFuncs.h"
+#include "ioFuncs.h"
 
 bool fileExists(const std::string path) {
     std::ifstream file(path.c_str());

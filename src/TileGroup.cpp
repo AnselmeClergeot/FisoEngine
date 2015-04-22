@@ -1,8 +1,8 @@
 #include "TileGroup.h"
 
-TileGroup::TileGroup(MData &mapData, RunEnvironment &environment) : m_data(mapData),
+TileGroup::TileGroup(MData &mapData, ScreenInfos &screenInfos) : m_data(mapData),
                                                                     m_loader(m_data),
-                                                                    m_drawer(mapData, m_data, environment)
+                                                                    m_drawer(mapData, m_data, screenInfos)
 {}
 
 void TileGroup::setTilesetPath(const std::string path) {

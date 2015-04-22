@@ -5,7 +5,7 @@
 
 #include "MData.h"
 #include "TileGroupData.h"
-#include "RunEnvironment.h"
+#include "ScreenInfos.h"
 
 #include "EntitiesInterposing.h"
 
@@ -14,7 +14,7 @@ class TileGroupDrawer
 {
     public:
         //The only constructor, called by TileGroup class
-        TileGroupDrawer(MData &mapData, TileGroupData &data, RunEnvironment &environment);
+        TileGroupDrawer(MData &mapData, TileGroupData &data, ScreenInfos &screenInfos);
 
         //Method to draw a specific layer (and to interpose entities between tiles)
         void draw(sf::RenderTarget& target, const unsigned int layer,
@@ -26,7 +26,7 @@ class TileGroupDrawer
         //Reference to TileGroupData to get the sprites to draw
         TileGroupData &m_data;
         //Reference to RunEnvironment, to get screen informations
-        RunEnvironment &m_environment;
+        ScreenInfos &m_screenInfos;
 };
 
 #endif // TILEGROUPDRAWER_H

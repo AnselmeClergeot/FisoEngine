@@ -1,7 +1,7 @@
 #ifndef TILEGROUP_H
 #define TILEGROUP_H
 
-#include "RunEnvironment.h"
+#include "ScreenInfos.h"
 
 #include "TileGroupData.h"
 #include "TileGroupLoader.h"
@@ -12,7 +12,7 @@ class TileGroup
 {
     public:
         //The only constructor
-        TileGroup(MData &mapData, RunEnvironment &environment);
+        TileGroup(MData &mapData, ScreenInfos &screenInfos);
 
         //To set the tilegroup tileset path
         void setTilesetPath(const std::string path);

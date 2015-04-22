@@ -1,6 +1,6 @@
 #include "MConfigsLoader.h"
 
-#include "LoadingFuncs.h"
+#include "ioFuncs.h"
 
 MConfigsLoader::MConfigsLoader(MData &data) : m_data(data), m_paths()
 {}
@@ -45,7 +45,7 @@ void MConfigsLoader::loadMatrices() {
     std::ifstream file;
     std::string line("");
 
-    for(int z(0); z<m_paths.size(); z++)
+    for(std::size_t z(0); z<m_paths.size(); z++)
     {
         file.open(m_paths[z].c_str());
         std::string index("");
@@ -54,7 +54,7 @@ void MConfigsLoader::loadMatrices() {
         while(!file.eof())
         {
             std::getline(file, line);
-            for(int i(0); i<line.length(); i++)
+            for(std::size_t i(0); i<line.length(); i++)
             {
                 if(line[i]!=',') index+=line[i];
                 if(line[i]==',' || i==line.length()-1)

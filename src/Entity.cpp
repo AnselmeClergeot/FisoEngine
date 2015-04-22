@@ -1,10 +1,10 @@
 #include "Entity.h"
 
 #include "IsometricMath.h"
-#include "LoadingFuncs.h"
+#include "ioFuncs.h"
 #include "DrawingFuncs.h"
 
-Entity::Entity(MData &mapData, RunEnvironment &environment) : m_tilePosition(),
+Entity::Entity(MData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
                                                               m_pixelPosition(),
                                                               m_dimensions(),
                                                               m_baseCoord(),
@@ -12,7 +12,7 @@ Entity::Entity(MData &mapData, RunEnvironment &environment) : m_tilePosition(),
                                                               m_sprite(),
                                                               m_drawState(false),
                                                               m_mapData(&mapData),
-                                                              m_environment(&environment)
+                                                              m_screenInfos(&screenInfos)
 {}
 
 void Entity::setDimensions(const Vector2 dim) {
@@ -60,7 +60,7 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition, m_baseCoord, *m_environment))
+    if(isVisible(m_pixelPosition, m_baseCoord, *m_screenInfos))
         target.draw(m_sprite);
 }
 

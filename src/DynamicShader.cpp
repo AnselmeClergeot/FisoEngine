@@ -6,7 +6,7 @@ DynamicShader::DynamicShader(MData &mapData, TileGroup &mapTg, TileGroup &shadow
 {}
 
 void DynamicShader::updateShading(const Vector3 coord) {
-    for(int z(coord.z-1); z>-1; z--)
+    for(std::size_t z(coord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)))
         {
@@ -22,29 +22,29 @@ void DynamicShader::updateShading(const Vector3 coord) {
             m_shadowsTg.setTileAt(Vector3(coord.x, coord.y, z), m_mapData.getInvisibleTile());
     }
 
-    for(int z(coord.z); z<m_mapData.getSize().y; z++)
+    for(std::size_t z(coord.z); z<m_mapData.getSize().y; z++)
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)) && z!=coord.z)
             updateShading(Vector3(coord.x, coord.y, z));
 }
 
 void DynamicShader::updateShadingOfAll() {
-    for(int z(0); z<m_mapData.getSize().y; z++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 updateShading(Vector3(x, y, z));
 }
 
 void DynamicShader::updateOpacityOfAll() {
-    for(int z(0); z<m_mapData.getSize().y; z++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
 }
 
 void DynamicShader::updateOpacityOfType(const unsigned int type) {
-    for(int z(0); z<m_mapData.getSize().y; z++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 if(m_mapData.getTempConf().at(x, y, z)==type)
                     updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
 }
@@ -56,7 +56,7 @@ void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
 }
 
 unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
-    for(int z(tileCoord.z-1); z>-1; z--)
+    for(std::size_t z(tileCoord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
             return z;

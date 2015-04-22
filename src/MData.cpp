@@ -34,7 +34,7 @@ void MData::addTranslucentTile(const unsigned int tile) {
 }
 
 void MData::removeTranslucentTile(const unsigned int tile) {
-    for(int i(0); i<m_translucentTiles.size(); i++)
+    for(std::size_t i(0); i<m_translucentTiles.size(); i++)
     {
         if(m_translucentTiles[i]==tile)
             m_translucentTiles.erase(m_translucentTiles.begin()+i);

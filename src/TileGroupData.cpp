@@ -39,9 +39,9 @@ sf::Sprite &TileGroupData::spriteAt(const unsigned int index) {
 }
 
 void TileGroupData::updateTileGroupPosition() {
-    for(int z(0); z<m_mapData.getSize().y; z++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 setTilePosition(Vector3(x, y, z));
 }
 
@@ -66,7 +66,7 @@ void TileGroupData::setSpecificOpacity(const unsigned int index, const unsigned 
 }
 
 void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
-    for(int i(0); i<m_tiles.size(); i++)
+    for(std::size_t i(0); i<m_tiles.size(); i++)
         if(m_mapData.getTempConf().at(i)==tile)
             m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
 }
@@ -77,7 +77,7 @@ void TileGroupData::setGroupOpacity(const unsigned int opacity) {
 }
 
 void TileGroupData::applyGroupOpacity() {
-    for(int i(0); i<m_tiles.size(); i++)
+    for(std::size_t i(0); i<m_tiles.size(); i++)
         m_tiles[i].setColor(sf::Color(255, 255, 255, m_opacity));
 }
 
