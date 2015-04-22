@@ -1,8 +1,8 @@
 #ifndef ISOMETRICMATH_H
 #define ISOMETRICMATH_H
 
-#include "../ExternClasses/Vector2.h"
-#include "../ExternClasses/Vector3.h"
+#include "Vector2.h"
+#include "Vector3.h"
 #include "MData.h"
 
 //This file offers functions essentials for isometric calculations

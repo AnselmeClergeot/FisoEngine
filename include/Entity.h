@@ -6,8 +6,8 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "../ExternClasses/Vector2.h"
-#include "../ExternClasses/Vector3.h"
+#include "Vector2.h"
+#include "Vector3.h"
 
 #include "RunEnvironment.h"
 #include "MData.h"

@@ -5,8 +5,8 @@
 
 #include "MData.h"
 #include "TileAnimData.h"
-#include "../ExternClasses/Timer.h"
-#include "../ExternClasses/Vector3.h"
+#include "Timer.h"
+#include "Vector3.h"
 #include "DynamicShader.h"
 
 class Animator

@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "MData.h"
-#include "../ExternClasses/Matrix3d.h"
+#include "Matrix3d.h"
 #include "IsometricMath.h"
 
 //This class warps the TileGroupData such as tile list, texture, etc.

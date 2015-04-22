@@ -1,7 +1,7 @@
 #ifndef RUNENVIRONMENT_H
 #define RUNENVIRONMENT_H
 
-#include "../ExternClasses/Vector2.h"
+#include "Vector2.h"
 
 class RunEnvironment
 {

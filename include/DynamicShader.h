@@ -3,7 +3,7 @@
 
 #include "MData.h"
 #include "TileGroup.h"
-#include "../ExternClasses/Vector3.h"
+#include "Vector3.h"
 
 //This class calculates new shading/shadows opacity, etc... This is the dynamic shader.
 class DynamicShader

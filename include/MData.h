@@ -1,8 +1,8 @@
 #ifndef MDATA_H
 #define MDATA_H
 
-#include "../ExternClasses/Matrix3d.h"
-#include "../ExternClasses/Vector2.h"
+#include "Matrix3d.h"
+#include "Vector2.h"
 #include <algorithm>
 
 //This class warps all the map data, such as size, tile size, etc.

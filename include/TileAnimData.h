@@ -1,7 +1,7 @@
 #ifndef TILEANIMDATA_H
 #define TILEANIMDATA_H
 
-#include "../ExternClasses/Vector2.h"
+#include "Vector2.h"
 
 enum AnimKind {Global, Single};
 enum AnimDirection {Right, Left};

@@ -4,7 +4,7 @@
 #include "TileGroup.h"
 #include "SStates.h"
 #include "MData.h"
-#include "../ExternClasses/Matrix3d.h"
+#include "Matrix3d.h"
 
 //This class calculates the shadows configuration in a matrix to send to the TileGroup.
 class SInitializer
