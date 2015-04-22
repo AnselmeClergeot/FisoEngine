@@ -27,7 +27,7 @@ void ShadowsInitializer::fillMatrix(Matrix3d &tempConf) {
 }
 
 void ShadowsInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d &tempConf) {
-    for(std::size_t z(coord.z-1); z>-1; z--)
+    for(int z(coord.z-1); z>-1; z--)
     {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)))
         {
@@ -40,7 +40,7 @@ void ShadowsInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d &te
         }
     }
 
-    for(std::size_t z(coord.z); z<m_mapData.getSize().y; z++)
+    for(int z(coord.z); z<m_mapData.getSize().y; z++)
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)) && z!=coord.z)
             calculateShadowInConf(Vector3(coord.x, coord.y, z), tempConf);
 }

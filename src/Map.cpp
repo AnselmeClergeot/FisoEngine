@@ -86,6 +86,7 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
     {
         m_data.getTempConf().at(coord.x, coord.y, coord.z) = tile;
         m_tileGroup.setTileAt(coord, tile);
+
         m_animator.updateTileAt(coord);
 
         if(m_shadowsStates.isInitialized())
@@ -163,6 +164,7 @@ void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 
         if(m_shadowsStates.isOn())
             m_shadowsTilegroup.draw(target, layer);
+
     }
 }
 
