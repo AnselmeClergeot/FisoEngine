@@ -11,7 +11,7 @@ Map::Map(ScreenInfos &screenInfos)
       m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
       m_entityContainer(m_data, m_screenInfos),
       m_interposing(m_entityContainer),
-      m_animator(m_data, m_tileGroup, m_shadowsTilegroup, m_dynamicShader)
+      m_animator(m_data, m_tileGroup, m_dynamicShader)
 {}
 
 void Map::init() {
@@ -86,6 +86,7 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
     {
         m_data.getTempConf().at(coord.x, coord.y, coord.z) = tile;
         m_tileGroup.setTileAt(coord, tile);
+        m_animator.updateTileAt(coord);
 
         if(m_shadowsStates.isInitialized())
             m_dynamicShader.updateShading(coord);
@@ -211,6 +212,10 @@ unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, con
 
 Vector2 Map::getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const {
     return ::getTileCoordAtPixels(pixels, layer, m_data);
+}
+
+Vector2 Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const {
+    return getTileCoordAtPixels(Vector2(px, py), layer);
 }
 
 ShadowsInterface &Map::shadows() {

@@ -120,6 +120,7 @@ class Map : public sf::Drawable
 
         //To get the tile pointed by 2D screen coordinates
         Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const;
+        Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
 
         //Accessor to shadows interface
         ShadowsInterface &shadows();

@@ -14,7 +14,7 @@ class Animator
     friend class Map;
 
     public:
-        Animator(MapData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader);
+        Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader);
 
         void setAnimation(const unsigned tile, const unsigned int length);
 
@@ -36,11 +36,15 @@ class Animator
         void stopAnimation(const Vector3 coord);
         void stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z);
 
+        unsigned int getSpeed() const;
+
     private:
 
         void apply();
 
         void resizeAnimationsDataList();
+
+        void updateTileAt(const Vector3 coord);
 
         std::vector<TileAnimData> m_tileAnimationsData;
         MapData &m_mapData;
@@ -48,8 +52,11 @@ class Animator
 
         unsigned int m_speed;
 
+        //The list of animations, with tile number, length, and type: Single (1) or Global (0)
+        std::vector<Vector3> m_animations;
+
         //Links to tilegroups to modify
-        TileGroup &m_mapTilegroup, &m_shadowsTilegroup;
+        TileGroup &m_mapTilegroup;
 
         //Link to dynamic shader to change shadows from tile
         DynamicShader &m_shader;
