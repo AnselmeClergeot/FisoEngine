@@ -2,14 +2,14 @@
 #define MCONFIGSLOADER_H
 #include <fstream>
 
-#include "MData.h"
+#include "MapData.h"
 
 //This class load the map configurations from loading files.
 class MConfigsLoader
 {
     public:
         //The only constructor
-        MConfigsLoader(MData &data);
+        MConfigsLoader(MapData &data);
 
         //To add a loading file (layer)        void addLoadFile(const std::string path);
 
@@ -33,7 +33,7 @@ class MConfigsLoader
 
     private:
         //Reference to MData to load its configurations
-        MData &m_data;
+        MapData &m_data;
         //Loading files paths list
         std::vector<std::string> m_paths;
 };

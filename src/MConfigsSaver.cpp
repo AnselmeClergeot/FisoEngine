@@ -3,7 +3,7 @@
 //To access usefull io functions
 #include "ioFuncs.h"
 
-MConfigsSaver::MConfigsSaver(MData &data) : m_data(data)
+MConfigsSaver::MConfigsSaver(MapData &data) : m_data(data)
 {}
 
 void MConfigsSaver::addLoadFile(const std::string path) {

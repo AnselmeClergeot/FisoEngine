@@ -12,7 +12,7 @@ class TileGroup
 {
     public:
         //The only constructor
-        TileGroup(MData &mapData, ScreenInfos &screenInfos);
+        TileGroup(MapData &mapData, ScreenInfos &screenInfos);
 
         //To set the tilegroup tileset path
         void setTilesetPath(const std::string path);

@@ -2,7 +2,7 @@
 //To access drawing usefull functions such as knowing if an element is visible
 #include "DrawingFuncs.h"
 
-TileGroupDrawer::TileGroupDrawer(MData &mapData, TileGroupData &data,
+TileGroupDrawer::TileGroupDrawer(MapData &mapData, TileGroupData &data,
                                  ScreenInfos &screenInfos) : m_mapData(mapData),
                                                                 m_data(data),
                                                                 m_screenInfos(screenInfos)

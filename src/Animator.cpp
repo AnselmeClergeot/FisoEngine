@@ -1,6 +1,6 @@
 #include "Animator.h"
 
-Animator::Animator(MData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader)
+Animator::Animator(MapData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader)
 : m_tileAnimationsData(), m_mapData(mapData), m_timer(), m_speed(150), m_x(0), m_maxLength(0),
 m_mapTilegroup(mapTilegroup), m_shadowsTilegroup(shadowsTilegroup), m_shader(shader) {}
 

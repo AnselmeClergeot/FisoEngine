@@ -1,7 +1,7 @@
 #ifndef ENTITIESCONTAINER_H
 #define ENTITIESCONTAINER_H
 
-#include "MData.h"
+#include "MapData.h"
 #include "ScreenInfos.h"
 #include "Entity.h"
 
@@ -10,7 +10,7 @@ class EntitiesContainer
 {
     public:
         //The only constructor
-        EntitiesContainer(MData &mapData, ScreenInfos &screenInfos);
+        EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos);
 
         //The destructor
         ~EntitiesContainer();
@@ -31,7 +31,7 @@ class EntitiesContainer
         //The list of Entities
         std::vector<Entity*> m_entities;
         //Reference to MData to initialize new Entity
-        MData &m_mapData;
+        MapData &m_mapData;
         //Reference to RunEnvironment to get window size for culling purpose
         ScreenInfos &m_screenInfos;
 };

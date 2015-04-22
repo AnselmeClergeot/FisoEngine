@@ -1,6 +1,6 @@
 #include "DynamicShader.h"
 
-DynamicShader::DynamicShader(MData &mapData, TileGroup &mapTg, TileGroup &shadowsTg) : m_mapData(mapData),
+DynamicShader::DynamicShader(MapData &mapData, TileGroup &mapTg, TileGroup &shadowsTg) : m_mapData(mapData),
                                                                                        m_mapTg(mapTg),
                                                                                        m_shadowsTg(shadowsTg)
 {}

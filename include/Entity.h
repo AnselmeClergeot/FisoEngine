@@ -10,7 +10,7 @@
 #include "Vector3.h"
 
 #include "ScreenInfos.h"
-#include "MData.h"
+#include "MapData.h"
 
 //Entity is used for interposing graphical elements in the map.
 class Entity
@@ -18,7 +18,7 @@ class Entity
     friend class EntitiesInterposing;
     public:
         //The only constructor
-        Entity(MData &mapData, ScreenInfos &screenInfos);
+        Entity(MapData &mapData, ScreenInfos &screenInfos);
 
         //To set the entity dimensions
         void setDimensions(const Vector2 dim);
@@ -93,7 +93,7 @@ class Entity
         //If the entity has to be drawn
         bool m_drawState;
         //Pointer to the MData
-        MData *m_mapData;
+        MapData *m_mapData;
         //Pointer to RunEnvironment
         ScreenInfos *m_screenInfos;
 };

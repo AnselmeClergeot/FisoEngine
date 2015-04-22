@@ -2,7 +2,7 @@
 
 #include "ioFuncs.h"
 
-MConfigsLoader::MConfigsLoader(MData &data) : m_data(data), m_paths()
+MConfigsLoader::MConfigsLoader(MapData &data) : m_data(data), m_paths()
 {}
 
 void MConfigsLoader::addLoadFile(const std::string path) {

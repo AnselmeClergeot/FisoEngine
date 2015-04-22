@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "MData.h"
+#include "MapData.h"
 #include "TileAnimData.h"
 #include "Timer.h"
 #include "Vector3.h"
@@ -14,7 +14,7 @@ class Animator
     friend class Map;
 
     public:
-        Animator(MData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader);
+        Animator(MapData &mapData, TileGroup &mapTilegroup, TileGroup &shadowsTilegroup, DynamicShader &shader);
 
         void setAnimation(const unsigned tile, const unsigned int length);
 
@@ -43,7 +43,7 @@ class Animator
         void resizeAnimationsDataList();
 
         std::vector<TileAnimData> m_tileAnimationsData;
-        MData &m_mapData;
+        MapData &m_mapData;
         Timer m_timer;
 
         unsigned int m_speed;

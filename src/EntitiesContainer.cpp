@@ -1,6 +1,6 @@
 #include "EntitiesContainer.h"
 
-EntitiesContainer::EntitiesContainer(MData &mapData, ScreenInfos &screenInfos) : m_entities(), m_mapData(mapData),
+EntitiesContainer::EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos) : m_entities(), m_mapData(mapData),
                                                                                     m_screenInfos(screenInfos)
 {}
 

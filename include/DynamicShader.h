@@ -1,7 +1,7 @@
 #ifndef DYNAMICSHADER_H
 #define DYNAMICSHADER_H
 
-#include "MData.h"
+#include "MapData.h"
 #include "TileGroup.h"
 #include "Vector3.h"
 
@@ -9,7 +9,7 @@
 class DynamicShader
 {
     public:
-        DynamicShader(MData &mapData, TileGroup &mapTg, TileGroup &shadowsTg);
+        DynamicShader(MapData &mapData, TileGroup &mapTg, TileGroup &shadowsTg);
 
         //Calculates generated shadow from a tile coordinates
         void updateShading(const Vector3 coord);
@@ -31,7 +31,7 @@ class DynamicShader
 
     private:
         //Reference to MData to get needed informations
-        MData &m_mapData;
+        MapData &m_mapData;
         //Reference to the map tilegroup to get tiles opacity values
         TileGroup &m_mapTg;
         //Reference to the shadows tilegroup to operate on it

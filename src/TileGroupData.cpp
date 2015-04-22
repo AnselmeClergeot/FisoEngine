@@ -1,6 +1,6 @@
 #include "TileGroupData.h"
 
-TileGroupData::TileGroupData(MData &mapData) : m_tileset(), m_tiles(), m_config(), m_mapData(mapData), m_opacity(255)
+TileGroupData::TileGroupData(MapData &mapData) : m_tileset(), m_tiles(), m_config(), m_mapData(mapData), m_opacity(255)
 {}
 
 sf::Texture &TileGroupData::getTileset() {

@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "MData.h"
+#include "MapData.h"
 #include "TileGroupData.h"
 #include "ScreenInfos.h"
 
@@ -14,7 +14,7 @@ class TileGroupDrawer
 {
     public:
         //The only constructor, called by TileGroup class
-        TileGroupDrawer(MData &mapData, TileGroupData &data, ScreenInfos &screenInfos);
+        TileGroupDrawer(MapData &mapData, TileGroupData &data, ScreenInfos &screenInfos);
 
         //Method to draw a specific layer (and to interpose entities between tiles)
         void draw(sf::RenderTarget& target, const unsigned int layer,
@@ -22,7 +22,7 @@ class TileGroupDrawer
 
     private:
         //Reference to MData, to get needed informations
-        MData &m_mapData;
+        MapData &m_mapData;
         //Reference to TileGroupData to get the sprites to draw
         TileGroupData &m_data;
         //Reference to RunEnvironment, to get screen informations

@@ -3,7 +3,7 @@
 
 #include "TileGroup.h"
 #include "SStates.h"
-#include "MData.h"
+#include "MapData.h"
 #include "Matrix3d.h"
 
 //This class calculates the shadows configuration in a matrix to send to the TileGroup.
@@ -11,7 +11,7 @@ class SInitializer
 {
     public:
         //The only constructor
-        SInitializer(TileGroup &tilegroup, SStates &states, MData &mapData);
+        SInitializer(TileGroup &tilegroup, SStates &states, MapData &mapData);
 
         //the root function that calls the functions below
         void initialize();
@@ -29,7 +29,7 @@ class SInitializer
         //Reference to the shadows tilegroup to load
         TileGroup &m_tileGroup;
         //A reference to MData to get needed informations
-        MData &m_mapData;
+        MapData &m_mapData;
         //A reference to the shadows system states, to set initialized when calculating finished
         SStates &m_states;
 };

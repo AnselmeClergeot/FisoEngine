@@ -6,14 +6,14 @@
 #include <fstream>
 #include <cstdlib>
 
-#include "MData.h"
+#include "MapData.h"
 
 //This class save the map permanent configuration into the loading files.
 class MConfigsSaver
 {
     public:
         //The only constructor
-        MConfigsSaver(MData &data);
+        MConfigsSaver(MapData &data);
 
         //To add layer loading file path        void addLoadFile(const std::string path);
 
@@ -25,7 +25,7 @@ class MConfigsSaver
 
     private:
         //Reference to MData to get the configuration
-        MData &m_data;
+        MapData &m_data;
         //The list of loading files path
         std::vector<std::string> m_paths;
 };

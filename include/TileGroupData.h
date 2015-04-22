@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "MData.h"
+#include "MapData.h"
 #include "Matrix3d.h"
 #include "IsometricMath.h"
 
@@ -12,7 +12,7 @@ class TileGroupData
 {
     public:
         //The only constructor
-        TileGroupData(MData &mapData);
+        TileGroupData(MapData &mapData);
 
         //To get the tileset texture, for the loader
         sf::Texture &getTileset();
@@ -79,7 +79,7 @@ class TileGroupData
         //The tilegroup configuration
         Matrix3d m_config;
         //Reference to MData to get needed informations
-        MData &m_mapData;
+        MapData &m_mapData;
         //The tilegroup opacity
         unsigned int m_opacity;
 };

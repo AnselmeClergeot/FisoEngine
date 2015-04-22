@@ -4,7 +4,7 @@
 #include "ioFuncs.h"
 #include "DrawingFuncs.h"
 
-Entity::Entity(MData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
+Entity::Entity(MapData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
                                                               m_pixelPosition(),
                                                               m_dimensions(),
                                                               m_baseCoord(),

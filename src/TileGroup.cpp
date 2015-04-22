@@ -1,6 +1,6 @@
 #include "TileGroup.h"
 
-TileGroup::TileGroup(MData &mapData, ScreenInfos &screenInfos) : m_data(mapData),
+TileGroup::TileGroup(MapData &mapData, ScreenInfos &screenInfos) : m_data(mapData),
                                                                     m_loader(m_data),
                                                                     m_drawer(mapData, m_data, screenInfos)
 {}

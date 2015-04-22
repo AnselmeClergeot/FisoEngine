@@ -1,6 +1,6 @@
 #include "SInitializer.h"
 
-SInitializer::SInitializer(TileGroup &tilegroup, SStates &states, MData &mapData) : m_tileGroup(tilegroup),
+SInitializer::SInitializer(TileGroup &tilegroup, SStates &states, MapData &mapData) : m_tileGroup(tilegroup),
                                                                                     m_mapData(mapData),
                                                                                     m_states(states)
 {}
