@@ -49,7 +49,7 @@ class TileGroup
         unsigned int getGroupOpacity() const;
 
         //To set the tile X spritesheet coordinate
-        void setTileSpritesheetX(const unsigned int iter, unsigned int x);
+        void setTileSpritesheetX(const unsigned int iter, const unsigned int x);
 
     private:
         //Data container

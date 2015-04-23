@@ -91,7 +91,23 @@ void Animator::stopAnimation(const unsigned int x, const unsigned int y, const u
 
 void Animator::apply() {
     for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
+    {
+        if(m_mapData.getTempConf().at(i)!=m_mapData.getInvisibleTile() &&
+           m_tileAnimationsData[i].getLength()>1)
         m_mapTilegroup.setTileSpritesheetX(i, m_tileAnimationsData[i].getX());
+    }
+
+    for(int x(0); x<m_mapData.getSize().x; x++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
+            for(int z(0); z<m_mapData.getSize().y; z++)
+            {
+                if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
+                   m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getLength()>1)
+                    m_shader.updateTileFromAnim(Vector3(x, y, z),
+                                        m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
+            }
+
+
 }
 
 unsigned int Animator::getSpeed() const {

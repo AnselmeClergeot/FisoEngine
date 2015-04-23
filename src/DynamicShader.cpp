@@ -62,5 +62,9 @@ unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
             return z;
     }
 
-    return 0;
+    return 1;
+}
+
+void DynamicShader::updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX) {
+    m_shadowsTg.setTileSpritesheetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
 }

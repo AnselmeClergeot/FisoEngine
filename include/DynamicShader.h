@@ -29,6 +29,8 @@ class DynamicShader
         //To get the generated shadow z coordinate, from the 3D tile coord that generates it
         unsigned int getShadowZ(const Vector3 tileCoord);
 
+        void updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX);
+
     private:
         //Reference to MData to get needed informations
         MapData &m_mapData;
