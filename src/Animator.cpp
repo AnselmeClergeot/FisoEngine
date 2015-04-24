@@ -69,8 +69,17 @@ void Animator::setDirectionOf(const Vector3 coord, AnimDirection direction) {
     m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setDirection(direction);
 }
 
+void Animator::setDirectionOf(const unsigned int x, const unsigned int y, const unsigned int z,
+                              AnimDirection direction) {
+    setDirectionOf(Vector3(x, y, z), direction);
+}
+
 void Animator::setKindOf(const Vector3 coord, AnimKind kind) {
     m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(kind);
+}
+
+void Animator::setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, AnimKind kind) {
+    setKindOf(Vector3(x, y, z), kind);
 }
 
 void Animator::launchAnimation(const Vector3 coord) {

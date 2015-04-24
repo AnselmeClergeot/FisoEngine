@@ -1,41 +1,99 @@
+/**
+ * \file ConfigsLoader.h
+ * \brief Definition of ConfigsLoader class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 24/04/15
+ *
+ * ConfigsLoader.h defines the ConfigsLoader class
+ *
+ */
+
 #ifndef CONFIGSLOADER_H
 #define CONFIGSLOADER_H
 #include <fstream>
-
 #include "MapData.h"
 
-//This class load the map configurations from loading files.
+/**
+ * \class ConfigsLoader
+ * \brief Class that charges map configurations
+ *
+ * This class is charged to load the map configurations from the layer files.
+ */
 class ConfigsLoader
 {
     public:
-        //The only constructor
+
+        /**
+        * \fn ConfigsLoader(MapData &data)
+        * \brief The class constructor
+        *
+        * \param data Reference to the MapData to get needed data
+        * \return void
+        */
         ConfigsLoader(MapData &data);
 
-        //To add a loading file (layer)        void addLoadFile(const std::string path);
+        /**
+        * \fn void addLoadFile(const std::string path)
+        * \brief To add a layer file
+        *
+        * \param path The path of the layer file
+        * \return void
+        */        void addLoadFile(const std::string path);
 
-        //To reset loading file list
+        /**
+        * \fn void resetLayerList()
+        * \brief To reset the layer configuration files list
+        *
+        * \return void
+        */
         void resetLayerList();
 
-        //Root function that call functions below
+        /**
+        * \fn void load()
+        * \brief To call the loading of the configurations
+        *
+        * \return void
+        */
         void load();
 
-        //To resize the temporary and permanent matrices
+    private:
+
+        /**
+        * \fn void resizeMatrices()
+        * \brief To resize the configuration matrices
+        *
+        * \return void
+        */
         void resizeMatrices();
 
-        //To set the map dimensions from files size
+        /**
+        * \fn void loadMapSize()
+        * \brief To set the map size from the reading of one of the layer file
+        *
+        * \return void
+        */
         void loadMapSize();
 
-        //To fill the two matrices from the values in the loading files
+        /**
+        * \fn void loadMatrices()
+        * \brief To read the layer files and fill the matrices
+        *
+        * \return void
+        */
         void loadMatrices();
 
-        //To set temporary matrix as same of permanent for the start of program
+        /**
+        * \fn void equalizeMatrices()
+        * \brief To set the map temporary configuration as the same of the permanent one
+        *
+        * \return void
+        */
         void equalizeMatrices();
 
-    private:
-        //Reference to MData to load its configurations
-        MapData &m_data;
-        //Loading files paths list
-        std::vector<std::string> m_paths;
+        MapData &m_data; /*!< The reference to the MapData to get needed data */
+
+        std::vector<std::string> m_paths; /*!< The layer files path list */
 };
 
 #endif // CONFIGSLOADER_H

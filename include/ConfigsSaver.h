@@ -1,33 +1,70 @@
+/**
+ * \file ConfigsSaver.h
+ * \brief Definition of ConfigsSaver class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 24/04/15
+ *
+ * ConfigsSaver.h defines the ConfigsSaver class
+ *
+ */
+
 #ifndef CONFIGSSAVER_H
 #define CONFIGSSAVER_H
-
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include <cstdlib>
-
 #include "MapData.h"
 
-//This class save the map permanent configuration into the loading files.
+/**
+ * \class ConfigsSaver
+ * \brief Class that saves map configurations
+ *
+ * This class is charged to saves the map configurations into the layer files.
+ */
 class ConfigsSaver
 {
     public:
-        //The only constructor
+
+        /**
+        * \fn ConfigsSaver(MapData &data)
+        * \brief The class constructor
+        *
+        * \param data Reference to the MapData to get needed data
+        * \return void
+        */
         ConfigsSaver(MapData &data);
 
-        //To add layer loading file path        void addLoadFile(const std::string path);
+        /**
+        * \fn void addLoadFile(const std::string path)
+        * \brief To add a layer file
+        *
+        * \param path The path of the layer file
+        * \return void
+        */        void addLoadFile(const std::string path);
 
-        //To reset loading file list
+        /**
+        * \fn void resetLayerList()
+        * \brief To reset the layer configuration files list
+        *
+        * \return void
+        */
         void resetLayerList();
 
-        //Function to save the map permanent configuration into the loading files
+        /**
+        * \fn void save()
+        * \brief To save the map configurations into the files
+        *
+        * \return void
+        */
         void save();
 
     private:
-        //Reference to MData to get the configuration
-        MapData &m_data;
-        //The list of loading files path
-        std::vector<std::string> m_paths;
+
+        MapData &m_data; /*!< Reference to the MapData to get needed data */
+
+        std::vector<std::string> m_paths; /*!< The layer files path list */
 };
 
 #endif // CONFIGSSAVER_H

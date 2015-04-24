@@ -1,21 +1,49 @@
+/**
+ * \file EntitiesInterposing.h
+ * \brief Definition of EntitiesInterposing class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 24/04/15
+ *
+ * EntitiesInterposing.h defines the EntitiesInterposing class
+ *
+ */
+
 #ifndef ENTITIESINTERPOSING_H
 #define ENTITIESINTERPOSING_H
-
 #include "EntitiesContainer.h"
 
-//This class checks at each frame if an entity of the list has to be drawn on this specific tile coordinates.
+/**
+ * \class EntitiesInterposing
+ * \brief Class that interposes the entities into the map tiles
+ *
+ * This class is charged to interposes the user entities between the map tiles of the TileGroup.
+ */
 class EntitiesInterposing
 {
     public:
-        //The only constructor
+        /**
+        * \fn EntitiesInterposing(EntitiesContainer &container)
+        * \brief The class constructor
+        *
+        * \param container Reference to the entities container to access the entities
+        */
         EntitiesInterposing(EntitiesContainer &container);
 
-        //To interpose entities corresponding to the tile coordinates
+        /**
+        * \fn void interpose(Vector3 coord, sf::RenderTarget& target) const
+        * \brief This function is called at each map drawing to draw each entity of the map
+                  at the right moment, before certain tiles and after others.
+        *
+        * \param coord The drawing tile coordinate
+        * \param target The target to draw the entities on. [SPECIFIC TO SFML]
+        * \return void
+        */
         void interpose(Vector3 coord, sf::RenderTarget& target) const;
 
     private:
         //The entity container, to access all the entities
-        EntitiesContainer &m_container;
+        EntitiesContainer &m_container; /* !< Reference to the EntitiesContainer to access the entities*/
 };
 
 #endif // ENTITIESINTERPOSING_H

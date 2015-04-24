@@ -1,102 +1,233 @@
+/**
+ * \file Entity.h
+ * \brief Definition of Entity class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 24/04/15
+ *
+ * Entity.h defines the Entity class
+ *
+ */
+
 #ifndef ENTITY_H
 #define ENTITY_H
-
 #include <iostream>
 #include <fstream>
 #include <memory>
-
 #include <SFML/Graphics.hpp>
-
 #include "Vector2.h"
 #include "Vector3.h"
-
 #include "ScreenInfos.h"
 #include "MapData.h"
 
-//Entity is used for interposing graphical elements in the map.
+/**
+ * \class Entity
+ * \brief Class that contains all entity data
+ *
+ * Entity class is the class manipulated by the user to interact with this same entity.
+ * Entity class contains all entity data from position, size, to the image of this entity...
+ */
 class Entity
 {
     friend class EntitiesInterposing;
     public:
-        //The only constructor
+
+        /**
+        * \fn Entity(MapData &mapData, ScreenInfos &screenInfos)
+        * \brief The class constructor
+        *
+        * \param mapData Reference to the MapData to get useful data
+        * \param screenInfos Reference to the user ScreenInfos to get useful screen data
+        */
         Entity(MapData &mapData, ScreenInfos &screenInfos);
 
-        //To set the entity dimensions
+        /**
+        * \fn void setDimensions(const Vector2 dim)
+        * \brief To set the entity dimensions
+        *
+        * \param dim The entity dimensions in pixels
+        * \return void
+        */
         void setDimensions(const Vector2 dim);
-        //To set the entity dimensions
+
+        /**
+        * \fn void setDimensions(const unsigned int w, const unsigned int h)
+        * \brief To set the entity dimensions
+        *
+        * \param w The entity width in pixel
+        * \param h The entity height in pixel
+        * \return void
+        */
         void setDimensions(const unsigned int w, const unsigned int h);
 
-        //To set the base coord
+        /**
+        * \fn void setBaseCoord(const Vector2 coord)
+        * \brief To set the base coordinate of the entity
+        *
+        * \param coord The entity base coordinates relative to the top-left entity corner
+        * \return void
+        */
         void setBaseCoord(const Vector2 coord);
 
-        //To set the base coord
+        /**
+        * \fn void setBaseCoord(const unsigned int x, const unsigned int y)
+        * \brief To set the base coordinate of the entity
+        *
+        * \param x The entity base x coordinate relative to the left entity border
+        * \param y The entity base y coordinate relative to the top entity border
+        * \return void
+        */
         void setBaseCoord(const unsigned int x, const unsigned int y);
 
-        //To move the entity
+        /**
+        * \fn void move(const Vector2 rate)
+        * \brief To move the entity relatively from its position
+        *
+        * \param rate The move rate in pixels
+        * \return void
+        */
         void move(const Vector2 rate);
 
-        //To move the entity
-        void move(const unsigned int x, const unsigned int y);
+        /**
+        * \fn void move(const unsigned int rx, const unsigned int ry)
+        * \brief To move the entity relatively from its position
+        *
+        * \param rx The move x rate in pixel
+        * \param ry The move y rate in pixel
+        * \return void
+        */
+        void move(const unsigned int rx, const unsigned int ry);
 
-        //To set the entity image path and load it
+        /**
+        * \fn void setImagePath(const std::string path)
+        * \brief To set the entity image path
+        *
+        * \param path The image path
+        * \return void
+        */
         void setImagePath(const std::string path);
 
-        //To set to draw or not
-        void setDrawState(const bool set);
+        /**
+        * \fn void setDrawState(const bool state)
+        * \brief To set the draw state of the entity (if it have to be drawn or not)
+        *
+        * \param state The draw state: true for on and false for off
+        * \return void
+        */
+        void setDrawState(const bool state);
 
-        //To set the layer on which the entity is on
+        /**
+        * \fn void setLayer(const unsigned int layer)
+        * \brief To set the layer on which the entity is laying
+        *
+        * \param layer The layer number (counting from bottom)
+        * \return void
+        */
         void setLayer(const unsigned int layer);
 
-        //Get the tile position of this entity
+        /**
+        * \fn Vector3 getTilePosition() const
+        * \brief To get the entity tile position
+        *
+        * \return The entity position in tile coordinates relative to the map, into a Vector3
+        */
         Vector3 getTilePosition() const;
 
-        //To get the base coord
+        /**
+        * \fn Vector2 getBaseCoord() const
+        * \brief To get the entity base coordinates
+        *
+        * \return The entity base coordinates in a Vector2
+        */
         Vector2 getBaseCoord() const;
 
-        //To get the dimensions of the entity
+        /**
+        * \fn Vector2 getDimensions() const
+        * \brief To get the entity dimensions
+        *
+        * \return The entity dimensions in pixels in a Vector2
+        */
         Vector2 getDimensions() const;
 
-        //To get the pixel position
+        /**
+        * \fn Vector2 getPixelPosition() const
+        * \brief To get the entity pixel-position
+        *
+        * \return The entity pixel-position in a Vector2
+        */
         Vector2 getPixelPosition() const;
 
-        //To get a reference to the sprite
+        /**
+        * \fn sf::Sprite &getSprite()
+        * \brief To get a reference to the entity sprite (image) [SPECIFIC TO SFML]
+        *
+        * \return A reference to the entity sprite
+        */
         sf::Sprite &getSprite();
 
-        //To get the drawing state
+        /**
+        * \fn bool getDrawingState() const
+        * \brief To get the drawing state of the entity
+        *
+        * \return The entity drawing state: true for on and false for off
+        */
         bool getDrawingState() const;
 
-        //To update the entity position
+        /**
+        * \fn void setPixelPosition(const Vector2 pos)
+        * \brief To set the position of the entity in pixels
+        *
+        * \param pos The position in pixels
+        * \return void
+        */
         void setPixelPosition(const Vector2 pos);
 
-        //To update the entity position
+        /**
+        * \fn void setPixelPosition(const unsigned int x, const unsigned int y)
+        * \brief To set the position of the entity in pixels
+        *
+        * \param x The x position in pixel
+        * \param y The y position in pixel
+        * \return void
+        */
         void setPixelPosition(const unsigned int x, const unsigned int y);
 
-        //To calculate the tile position from the pixel position
+        /**
+        * \fn void calculateTilePosition()
+        * \brief To update, calculate the entity tile position from its pixels position
+        *
+        * \return void
+        */
         void calculateTilePosition();
 
     private:
 
-        //To draw this entity
+        /**
+        * \fn void draw(sf::RenderTarget& target) const
+        * \brief To draw the entity
+        *
+        * \param target The target to draw the entity on [SPECIFIC TO SFML]
+        * \return void
+        */
         void draw(sf::RenderTarget& target) const;
 
-        //The corresponding tile position
-        Vector3 m_tilePosition;
-        //The entity screen position
-        Vector2 m_pixelPosition;
-        //The entity dimensions
-        Vector2 m_dimensions;
-        //The base coord of the entity
-        Vector2 m_baseCoord;
-        //The entity texture;
-        sf::Texture m_texture;
-        //The entity image
-        sf::Sprite m_sprite;
-        //If the entity has to be drawn
-        bool m_drawState;
-        //Pointer to the MData
-        std::unique_ptr<MapData> m_mapData;
-        //Pointer to RunEnvironment
-        std::unique_ptr<ScreenInfos> m_screenInfos;
+        Vector3 m_tilePosition; /* !< The entity tile position*/
+
+        Vector2 m_pixelPosition; /* !< The entity pixels position*/
+
+        Vector2 m_dimensions; /* !< The entity dimensions*/
+
+        Vector2 m_baseCoord; /* !< The entity base coordinates*/
+
+        sf::Texture m_texture; /* !< The entity texture [SPECIFIC TO SFML]*/
+
+        sf::Sprite m_sprite; /* !< The entity sprite [SPECIFIC TO SFML]*/
+
+        bool m_drawState; /* !< The entity draw state*/
+
+        std::unique_ptr<MapData> m_mapData; /* !< The pointer to the MapData to get useful data*/
+
+        std::unique_ptr<ScreenInfos> m_screenInfos; /* !< The pointer to the ScreenInfos to get screen data*/
 };
 
 #endif // ENTITY_H

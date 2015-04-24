@@ -49,8 +49,8 @@ void Entity::move(const Vector2 rate) {
     setPixelPosition(m_pixelPosition);
 }
 
-void Entity::move(const unsigned int x, const unsigned int y) {
-    move(Vector2(x, y));
+void Entity::move(const unsigned int rx, const unsigned int ry) {
+    move(Vector2(rx, ry));
 }
 
 void Entity::setImagePath(const std::string path) {
@@ -64,8 +64,8 @@ void Entity::draw(sf::RenderTarget& target) const {
         target.draw(m_sprite);
 }
 
-void Entity::setDrawState(const bool set) {
-    m_drawState = set;
+void Entity::setDrawState(const bool state) {
+    m_drawState = state;
 }
 
 void Entity::calculateTilePosition() {
