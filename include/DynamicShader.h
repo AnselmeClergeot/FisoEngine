@@ -79,15 +79,6 @@ class DynamicShader
         void updateOpacityOfSpecific(const Vector3 coord);
 
         /**
-        * \fn unsigned int getShadowZ(const Vector3 tileCoord)
-        * \brief To get the shadow z coordinate from a specific tile coordinates
-        *
-        * \param tileCoord The tile coordinates
-        * \return The z coordinate of the engendered shadow in an unsigned int
-        */
-        unsigned int getShadowZ(const Vector3 tileCoord);
-
-        /**
         * \fn void updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX)
         * \brief To update the shadow of a specific tile to link with the animation state of this tile
         *
@@ -98,6 +89,24 @@ class DynamicShader
         void updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX);
 
     private:
+
+        /**
+        * \fn unsigned int getShadowZ(const Vector3 tileCoord)
+        * \brief To get the shadow z coordinate from a specific tile coordinates
+        *
+        * \param tileCoord The tile coordinates
+        * \return The z coordinate of the engendered shadow in an unsigned int
+        */
+        unsigned int getShadowZ(const Vector3 tileCoord);
+
+        /**
+        * \fn bool haveShadowVisible(const Vector3 tileCoord)
+        * \brief To know if a tile have a shadow taking in account the depth
+        *
+        * \param tileCoord The tile coordinates
+        * \return True if the tile have a shadow, false otherwise
+        */
+        bool haveShadowVisible(const Vector3 tileCoord);
 
         MapData &m_mapData; /*!< The reference to the MapData to get needed data*/
 

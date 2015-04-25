@@ -38,7 +38,11 @@ void DynamicShader::updateOpacityOfAll() {
     for(std::size_t z(0); z<m_mapData.getSize().y; z++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
             for(std::size_t x(0); x<m_mapData.getSize().x; x++)
-                updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
+            {
+                if(haveShadowVisible(Vector3(x, y, z)))
+                    updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
+            }
+
 }
 
 void DynamicShader::updateOpacityOfType(const unsigned int type) {
@@ -46,10 +50,16 @@ void DynamicShader::updateOpacityOfType(const unsigned int type) {
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
             for(std::size_t x(0); x<m_mapData.getSize().x; x++)
                 if(m_mapData.getTempConf().at(x, y, z)==type)
-                    updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
+                {
+                    if(haveShadowVisible(Vector3(x, y, z)))
+                        updateOpacityOfSpecific(Vector3(x, y, getShadowZ(Vector3(x, y, z))));
+                }
+
 }
 
 void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
+
+    if(haveShadowVisible(coord))
     m_shadowsTg.setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, getShadowZ(coord)),
     (int)((float)m_mapTg.getTileOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z))/
     (float)255*m_shadowsTg.getGroupOpacity()));
@@ -62,9 +72,24 @@ unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
             return z;
     }
 
-    return 1;
+    return 0;
+}
+
+bool DynamicShader::haveShadowVisible(const Vector3 tileCoord) {
+    bool have(false);
+
+    if(tileCoord.z==0)
+        return have;
+
+    for(int z(tileCoord.z-1); z>-1; z--)
+    {
+        if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
+            have = true;
+    }
+    return have;
 }
 
 void DynamicShader::updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX) {
+    if(haveShadowVisible(tileCoord))
     m_shadowsTg.setTileSpritesheetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
 }

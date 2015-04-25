@@ -1,10 +1,25 @@
+/**
+ * \file TileAnimData.h
+ * \brief Definition of TileAnimData class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 25/04/15
+ *
+ * TileAnimData.h defines the TileAnimData class
+ *
+ */
+
 #ifndef TILEANIMDATA_H
 #define TILEANIMDATA_H
-
 #include "Vector2.h"
 
-enum AnimKind {Global, Single};
-enum AnimDirection {Right, Left};
+/*!  AnimKind defines the tile animation type*/
+enum AnimKind {Global, /* !< A global animation kind like water, etc. */
+               Single /* !< A single animation kind like door, explosion, etc. */ };
+
+/*!  AnimDirection defines the tile animation direction*/
+enum AnimDirection {Right, /* !< Right direction animation */
+                    Left /* !< Left direction animation */ };
 
 class TileAnimData
 {
