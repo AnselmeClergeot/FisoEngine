@@ -27,7 +27,7 @@
 #include "Animator.h"
 
 /**
- * \struct Map
+ * \class Map
  * \brief Class used by user to manipulate an isometric map
  *
  * Map is the class that user instantiates to handle and draw an isometric map.

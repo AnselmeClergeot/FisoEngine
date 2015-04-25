@@ -201,6 +201,7 @@ class Animator
         * \fn void updateTileAt(const Vector3 coord)
         * \brief To update the TileAnimData concerned by map 3D coordinates (if tile number has changed)
         *
+        * \param coord The tile coordinate to update
         * \return void
         */
         void updateTileAt(const Vector3 coord);

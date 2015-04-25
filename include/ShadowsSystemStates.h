@@ -1,3 +1,14 @@
+/**
+ * \file ShadowsSystemStates.h
+ * \brief Definition of ShadowsSystemStates class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 25/04/15
+ *
+ * ShadowsSystemStates.h defines the ShadowsSystemStates class
+ *
+ */
+
 #ifndef SHADOWSSYSTEMSTATES_H
 #define SHADOWSSYSTEMSTATES_H
 

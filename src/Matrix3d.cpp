@@ -24,8 +24,8 @@ Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned in
                                                                                        m_data(w*h*d)
 {}
 
-Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int f) : m_w(w),                                                                                                             m_h(h),                                                                                                             m_d(d),
-                                                                                                   m_data(w*h*d, f)
+Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill) : m_w(w),                                                                                                             m_h(h),                                                                                                             m_d(d),
+                                                                                            m_data(w*h*d, fill)
 {}
 
 void Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill)
@@ -49,6 +49,7 @@ int &Matrix3d::at(const unsigned int x, const unsigned int y, const unsigned int
 
 int &Matrix3d::at(const unsigned int index)
 {
+    assert(index<m_data.size());
     return m_data[index];
 }
 
@@ -82,9 +83,9 @@ unsigned int Matrix3d::get2dIter(const unsigned int x, const unsigned int y)
     return x * m_w + y;
 }
 
-Vector2 Matrix3d::get2dFromIter(const unsigned int iter)
+Vector2 Matrix3d::get2dFromIndex(const unsigned int index)
 {
-    return Vector2(div(iter, m_w).quot, div(iter, m_w).rem);
+    return Vector2(div(index, m_w).quot, div(index, m_w).rem);
 }
 
 std::vector<int> Matrix3d::getData() const
