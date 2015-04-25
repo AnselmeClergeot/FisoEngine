@@ -24,7 +24,7 @@ void TileGroup::setTileAt(const Vector3 coord, const unsigned int index) {
 }
 
 void TileGroup::updatePosition() {
-    m_data.updateTileGroupPosition();
+    m_data.updatePosition();
 }
 
 void TileGroup::setSpecificOpacity(const unsigned int index, const unsigned int opacity) {
@@ -52,6 +52,6 @@ unsigned int TileGroup::getGroupOpacity() const {
     return m_data.getGroupOpacity();
 }
 
-void TileGroup::setTileSpritesheetX(const unsigned int iter, const unsigned int x) {
-    m_data.setTileSpritesheetX(iter, x);
+void TileGroup::setTileTilesetX(const unsigned int index, const unsigned int x) {
+    m_data.setTileTilesetX(index, x);
 }

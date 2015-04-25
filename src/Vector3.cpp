@@ -5,7 +5,7 @@ Vector3::Vector3() : x(0), y(0), z(0)
 
 }
 
-Vector3::Vector3(const int paramx, const int paramy, const int paramz) : x(paramx), y(paramy), z(paramz)
+Vector3::Vector3(const int x, const int y, const int z) : x(x), y(y), z(z)
 {
 
 }

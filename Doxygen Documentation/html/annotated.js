@@ -1,0 +1,25 @@
+var annotated =
+[
+    [ "Animator", "class_animator.html", "class_animator" ],
+    [ "ConfigsLoader", "class_configs_loader.html", "class_configs_loader" ],
+    [ "ConfigsSaver", "class_configs_saver.html", "class_configs_saver" ],
+    [ "DynamicShader", "class_dynamic_shader.html", "class_dynamic_shader" ],
+    [ "EntitiesContainer", "class_entities_container.html", "class_entities_container" ],
+    [ "EntitiesInterposing", "class_entities_interposing.html", "class_entities_interposing" ],
+    [ "Entity", "class_entity.html", "class_entity" ],
+    [ "Map", "class_map.html", "class_map" ],
+    [ "MapData", "class_map_data.html", "class_map_data" ],
+    [ "Matrix3d", "class_matrix3d.html", "class_matrix3d" ],
+    [ "ScreenInfos", "class_screen_infos.html", "class_screen_infos" ],
+    [ "ShadowsInitializer", "class_shadows_initializer.html", "class_shadows_initializer" ],
+    [ "ShadowsInterface", "class_shadows_interface.html", "class_shadows_interface" ],
+    [ "ShadowsSystemStates", "class_shadows_system_states.html", "class_shadows_system_states" ],
+    [ "TileAnimData", "class_tile_anim_data.html", "class_tile_anim_data" ],
+    [ "TileGroup", "class_tile_group.html", "class_tile_group" ],
+    [ "TileGroupData", "class_tile_group_data.html", "class_tile_group_data" ],
+    [ "TileGroupDrawer", "class_tile_group_drawer.html", "class_tile_group_drawer" ],
+    [ "TileGroupLoader", "class_tile_group_loader.html", "class_tile_group_loader" ],
+    [ "Timer", "class_timer.html", "class_timer" ],
+    [ "Vector2", "class_vector2.html", "class_vector2" ],
+    [ "Vector3", "class_vector3.html", "class_vector3" ]
+];

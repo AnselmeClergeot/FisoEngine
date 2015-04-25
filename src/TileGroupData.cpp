@@ -24,7 +24,7 @@ void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
 
     //If the tile set is the invisible one, reset the opacity:
     if(index==m_mapData.getInvisibleTile())
-        resetOpacity(coord);
+        resetOpacityOf(coord);
 
     //Updating appearance of this tile
     updateTileFromConfig(m_config.get3dIter(coord.x, coord.y, coord.z));
@@ -38,7 +38,7 @@ sf::Sprite &TileGroupData::spriteAt(const unsigned int index) {
     return m_tiles[index];
 }
 
-void TileGroupData::updateTileGroupPosition() {
+void TileGroupData::updatePosition() {
     for(std::size_t z(0); z<m_mapData.getSize().y; z++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
             for(std::size_t x(0); x<m_mapData.getSize().x; x++)
@@ -89,13 +89,10 @@ unsigned int TileGroupData::getGroupOpacity() const {
     return m_opacity;
 }
 
-void TileGroupData::resetOpacity(const Vector3 coord) {
+void TileGroupData::resetOpacityOf(const Vector3 coord) {
     setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z), 255);
 }
 
-void TileGroupData::setTileSpritesheetX(const unsigned int iter, unsigned int x) {
-    m_tiles[iter].setTextureRect(sf::IntRect(x*m_mapData.getTileSize().x,
-                               m_mapData.getTempConf().at(iter)*m_mapData.getTileSize().y,
-                               m_mapData.getTileSize().x,
-                               m_mapData.getTileSize().y));
+void TileGroupData::setTileTilesetX(const unsigned int index, unsigned int x) {
+    frameTile(index, Vector2(x, m_config.at(index)));
 }

@@ -75,11 +75,11 @@ class ShadowsInitializer
         */
         void calculateShadowInConf(const Vector3 coord, Matrix3d &tempConf);
 
-        TileGroup &m_tileGroup; /* !< The reference to the shadows TileGroup */
+        TileGroup &m_tileGroup; /*!< The reference to the shadows TileGroup */
 
-        MapData &m_mapData; /* !< The reference to the MapData to access useful map data */
+        MapData &m_mapData; /*!< The reference to the MapData to access useful map data */
 
-        ShadowsSystemStates &m_states; /* !< The reference to the ShadowsSystemStates  */
+        ShadowsSystemStates &m_states; /*!< The reference to the ShadowsSystemStates  */
 };
 
 #endif // SHADOWSINITIALIZER_H

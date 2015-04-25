@@ -5,7 +5,7 @@ Vector2::Vector2() : x(0), y(0)
 
 }
 
-Vector2::Vector2(const int paramx, const int paramy) : x(paramx), y(paramy)
+Vector2::Vector2(const int x, const int y) : x(x), y(y)
 {
 
 }

@@ -48,6 +48,7 @@ class Matrix3d
         * \brief The assignment operator
         *
         * \param matrix Reference to the copy model
+        * \return Reference to the set Matrix3d
         */
         Matrix3d& operator=(const Matrix3d &matrix);
 
@@ -183,13 +184,13 @@ class Matrix3d
         std::vector<int> getData() const;
 
     private:
-        unsigned int m_w, /* !< The matrix width */
+        unsigned int m_w, /*!< The matrix width */
 
-        m_h, /* !< The matrix height */
+        m_h, /*!< The matrix height */
 
-        m_d; /* !< The matrix depth */
+        m_d; /*!< The matrix depth */
 
-        std::vector<int> m_data /* !< The matrix data */;
+        std::vector<int> m_data /*!< The matrix data */;
 };
 
 #endif // MATRIX3D_H

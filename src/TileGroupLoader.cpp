@@ -36,5 +36,5 @@ void TileGroupLoader::initialize() {
     setTilesRect();
 
     //Updating the loaded TileGroup position before the first frame
-    m_data.updateTileGroupPosition();
+    m_data.updatePosition();
 }

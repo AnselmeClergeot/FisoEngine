@@ -60,7 +60,7 @@ class ScreenInfos
 
     private:
 
-        Vector2 m_windowRes; /* !< The window resolution in pixels */
+        Vector2 m_windowRes; /*!< The window resolution in pixels */
 };
 
 #endif // SCREENINFOS_H

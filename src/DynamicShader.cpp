@@ -91,5 +91,5 @@ bool DynamicShader::haveShadowVisible(const Vector3 tileCoord) {
 
 void DynamicShader::updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX) {
     if(haveShadowVisible(tileCoord))
-    m_shadowsTg.setTileSpritesheetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
+    m_shadowsTg.setTileTilesetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
 }

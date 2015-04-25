@@ -103,7 +103,7 @@ void Animator::apply() {
     {
         if(m_mapData.getTempConf().at(i)!=m_mapData.getInvisibleTile() &&
            m_tileAnimationsData[i].getLength()>1)
-        m_mapTilegroup.setTileSpritesheetX(i, m_tileAnimationsData[i].getX());
+        m_mapTilegroup.setTileTilesetX(i, m_tileAnimationsData[i].getX());
     }
 
     for(int x(0); x<m_mapData.getSize().x; x++)

@@ -1,41 +1,94 @@
+/**
+ * \file TileGroupLoader.h
+ * \brief Definition of TileGroupLoader class
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 25/04/15
+ *
+ * TileGroupLoader.h defines the TileGroupLoader class
+ *
+ */
+
 #ifndef TILEGROUPLOADER_H
 #define TILEGROUPLOADER_H
-
 #include <iostream>
 #include <fstream>
-
 #include "TileGroupData.h"
 
-//This class loads and configure the TileGroup drawing stuff such as the tile list, etc.
+/**
+ * \class TileGroupLoader
+ * \brief This class is charged to load TileGroupData stuff
+ *
+ * TileGroupLoader is charged to load the TileGroupData stuff such as the tileset, and setting it to all tiles, etc.
+ * It also frames the tiles before the first drawing call.
+ */
 class TileGroupLoader
 {
     public:
-        //The only constructor, called by TileGroup class
+
+        /**
+        * \fn TileGroupLoader(TileGroupData &data)
+        * \brief The class constructor
+        *
+        * \param data Reference to the TileGroupData to load
+        */
         TileGroupLoader(TileGroupData &data);
 
-        //To set the path of the tileset
+        /**
+        * \fn void setTilesetPath(const std::string path)
+        * \brief To set the tileset image of the TileGroup
+        *
+        * \param path The image file path
+        * \return void
+        */
         void setTilesetPath(const std::string path);
 
-        //To load the tileset image from the path
-        void loadTileset();
-
-        //To resize the tile list of TileGroupData
-        void resizeTileList();
-
-        //To set the tileset to all the tiles in the list of TileGroupData
-        void setTilesTileset();
-
-        //To set the good tileset frame of all the tiles in the list of TileGroupData
-        void setTilesRect();
-
-        //The root function that call all above functions
+        /**
+        * \fn void initialize()
+        * \brief To call TileGroupData loading
+        *
+        * \return void
+        */
         void initialize();
 
     private:
-        //The tileset path
-        std::string m_tilesetPath;
-        //A reference to the TileGroupData to load
-        TileGroupData &m_data;
+
+        /**
+        * \fn void loadTileset()
+        * \brief To load the tileset image from the path informed
+        *
+        * \return void
+        */
+        void loadTileset();
+
+        /**
+        * \fn void resizeTileList()
+        * \brief To resize the tile list
+        *
+        * \return void
+        */
+        void resizeTileList();
+
+        /**
+        * \fn void setTilesTileset()
+        * \brief To set the tileset to all the tiles in the list
+        *
+        * \return void
+        */
+        void setTilesTileset();
+
+        /**
+        * \fn void setTilesRect()
+        * \brief To frame all the tiles in the list
+        *
+        * \return void
+        */
+
+        void setTilesRect();
+
+        std::string m_tilesetPath; /*!<  The tileset fille path */
+
+        TileGroupData &m_data; /*!<  The reference to the TileGroupData to load */
 };
 
 #endif // TILEGROUPLOADER_H

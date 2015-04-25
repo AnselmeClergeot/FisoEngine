@@ -170,21 +170,21 @@ class MapData
 
     private:
 
-        Matrix3d m_tempConf; /* !< The temporary configuration, used for map appearance purpose (shadows, etc.)*/
+        Matrix3d m_tempConf; /*!< The temporary configuration, used for map appearance purpose (shadows, etc.)*/
 
-        Matrix3d m_permConf; /* !< The permanent configuration, the one used for saving and loading the map */
+        Matrix3d m_permConf; /*!< The permanent configuration, the one used for saving and loading the map */
 
-        Vector2 m_size; /* !< The map dimensions */
+        Vector2 m_size; /*!< The map dimensions */
 
-        Vector2 m_position; /* !< The map position */
+        Vector2 m_position; /*!< The map position */
 
-        Vector2 m_tileSize; /* !< The map tiles dimensions */
+        Vector2 m_tileSize; /*!< The map tiles dimensions */
 
-        unsigned int m_tileBaseHeight; /* !< The map tiles base height */
+        unsigned int m_tileBaseHeight; /*!< The map tiles base height */
 
-        unsigned int m_invisibleTile; /* !< The map invisible tile number */
+        unsigned int m_invisibleTile; /*!< The map invisible tile number */
 
-        std::vector<unsigned int> m_translucentTiles; /* !< The list of translucent tiles number */
+        std::vector<unsigned int> m_translucentTiles; /*!< The list of translucent tiles number */
 };
 
 #endif // MAPDATA_H

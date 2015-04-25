@@ -64,9 +64,9 @@ class ShadowsSystemStates
 
     private:
 
-        bool m_on, /* !< The on/off state */
+        bool m_on, /*!< The on/off state */
 
-        m_initialized; /* !< The initialized or not state */
+        m_initialized; /*!< The initialized or not state */
 };
 
 #endif // SHADOWSSYSTEMSTATES_H

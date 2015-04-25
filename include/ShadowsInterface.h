@@ -71,11 +71,11 @@ class ShadowsInterface
 
     private:
 
-        ShadowsInitializer &m_initializer; /* !< Reference to the ShadowsInitializer to call initialization*/
+        ShadowsInitializer &m_initializer; /*!< Reference to the ShadowsInitializer to call initialization*/
 
-        ShadowsSystemStates &m_states; /* !< Reference to the ShadowsSystemStates to change states */
+        ShadowsSystemStates &m_states; /*!< Reference to the ShadowsSystemStates to change states */
 
-        TileGroup &m_tilegroup; /* !< Reference to the shadows TileGroup  to act directly on it when needed*/
+        TileGroup &m_tilegroup; /*!< Reference to the shadows TileGroup  to act directly on it when needed*/
 };
 
 #endif // SHADOWSINTERFACE_H
