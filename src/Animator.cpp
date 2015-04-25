@@ -6,8 +6,8 @@ Animator::Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &sha
                                                                                        m_animations(),
                                                                                        m_mapTilegroup(mapTilegroup),                                                                                       m_shader(shader) {}
 
-void Animator::resizeAnimationsDataList() {
-    m_tileAnimationsData.resize(m_mapData.getTempConf().getSize());
+void Animator::resizeAnimationsDataList(const unsigned int size) {
+    m_tileAnimationsData.resize(size);
 }
 
 void Animator::setAnimation(const unsigned tile, const unsigned int length) {

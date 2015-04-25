@@ -190,12 +190,12 @@ class Animator
         void apply();
 
         /**
-        * \fn void resizeAnimationsDataList()
+        * \fn void resizeAnimationsDataList(const unsigned int size)
         * \brief To resize the TileAnimData vector
         *
         * \return void
         */
-        void resizeAnimationsDataList();
+        void resizeAnimationsDataList(const unsigned int size);
 
         /**
         * \fn void updateTileAt(const Vector3 coord)
