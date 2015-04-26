@@ -15,7 +15,7 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Tile global animations (water, etc.)
 * Tile single animations (door, etc.)
 * Map object entities (for players, etc.)
-* Many usefull functions at your disposal to help you improving your gameplay (tile-picking, etc.)
+* Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
 ### Latest development news !
 The early version of the tile animation system is released.<br/>
@@ -42,5 +42,7 @@ Yes. You can do every thing you want with the FisoEngine sources untill you redi
 * **I have an idea, or I think a part of FisoEngine is not optimised. What should I do?**
 Don't hesitate to send me messages to my email adress above. I would like to get feedbacks or more ideas, reviews... I promise sending you an answer below 48 hours maximum. 
 
+
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
 #### <a href="https://github.com/AnselmeClergeot/FisoEngine/tree/master/Doxygen%20Documentation">Engine documentation!</a>
+#### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases/tag/1.0.0">Beta release!</a>
