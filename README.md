@@ -18,9 +18,7 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
 ### Latest development news !
-The early version of the tile animation system is released.<br/>
-Nobody except me has tested this version and some bugs or unexpected behaviours may be inside the system. If
-you find one of these, you know what to do : anselmedu25@hotmail.com ! Thank you.
+**The beta release is avalaible! I am looking for testers to experiment this first version!**
 
 ### F.A.Q
 * **Why should I use FisoEngine?**
