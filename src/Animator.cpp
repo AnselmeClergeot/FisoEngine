@@ -162,9 +162,17 @@ unsigned int Animator::getFrameAt(const Vector3 coord) const {
            getX();
 }
 
+unsigned int Animator::getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+    return getFrameAt(Vector3(x, y, z));
+}
+
 bool Animator::getStatusAt(const Vector3 coord) const {
     return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
     getStatus();
+}
+
+bool Animator::getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+    return getStatusAt(Vector3(x, y, z));
 }
 
 AnimKind Animator::getKindAt(const Vector3 coord) const {
@@ -172,7 +180,46 @@ AnimKind Animator::getKindAt(const Vector3 coord) const {
     getKind();
 }
 
+AnimKind Animator::getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+    return getKindAt(Vector3(x, y, z));
+}
+
 AnimDirection Animator::getDirectionAt(const Vector3 coord) const {
     return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
     getDirection();
+}
+
+AnimDirection Animator::getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+    return getDirectionAt(Vector3(x, y, z));
+}
+
+unsigned int Animator::getAnimLengthOfTile(const unsigned int tile) const {
+    assert(tileIsAnimated(tile));
+
+    for(std::size_t i(0); i<m_animations.size(); i++)
+        if(m_animations[i].x==tile)
+            return m_animations[i].y;
+}
+
+AnimKind Animator::getAnimKindOfTile(const unsigned int tile) const {
+    assert(tileIsAnimated(tile));
+
+    for(std::size_t i(0); i<m_animations.size(); i++)
+        if(m_animations[i].x==tile)
+        {
+            if(m_animations[i].z==0)
+                return Global;
+            else
+                return Single;
+        }
+}
+
+bool Animator::tileIsAnimated(const unsigned int tile) const {
+    bool animated(false);
+
+    for(std::size_t i(0); i<m_animations.size(); i++)
+        if(m_animations[i].x==tile)
+            animated = true;
+
+    return animated;
 }

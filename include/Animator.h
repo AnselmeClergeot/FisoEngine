@@ -189,6 +189,17 @@ class Animator
         unsigned int getFrameAt(const Vector3 coord) const;
 
         /**
+        * \fn unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \brief To get the animation frame of a specific tile
+        *
+        * \param x The tile x coordinate
+        * \param y The tile y coordinate
+        * \param z The tile z coordinate
+        * \return The animation frame of the tile
+        */
+        unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+
+        /**
         * \fn bool getStatusAt(const Vector3 coord) const
         * \brief To get the animation status of a specific tile
         *
@@ -196,6 +207,17 @@ class Animator
         * \return The animation status of the tile
         */
         bool getStatusAt(const Vector3 coord) const;
+
+        /**
+        * \fn bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \brief To get the animation status of a specific tile
+        *
+        * \param x The tile x coordinate
+        * \param y The tile y coordinate
+        * \param z The tile z coordinate
+        * \return The animation status of the tile
+        */
+        bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
 
         /**
         * \fn AnimKind getKindAt(const Vector3 coord) const
@@ -207,6 +229,17 @@ class Animator
         AnimKind getKindAt(const Vector3 coord) const;
 
         /**
+        * \fn AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \brief To get the animation kind of a specific tile
+        *
+        * \param x The tile x coordinate
+        * \param y The tile y coordinate
+        * \param z The tile z coordinate
+        * \return The animation kind of the tile
+        */
+        AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+
+        /**
         * \fn AnimDirection getDirectionAt(const Vector3 coord) const
         * \brief To get the animation direction of a specific tile
         *
@@ -214,6 +247,35 @@ class Animator
         * \return The animation direction of the tile
         */
         AnimDirection getDirectionAt(const Vector3 coord) const;
+
+        /**
+        * \fn AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \brief To get the animation direction of a specific tile
+        *
+        * \param x The tile x coordinate
+        * \param y The tile y coordinate
+        * \param z The tile z coordinate
+        * \return The animation direction of the tile
+        */
+        AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+
+        /**
+        * \fn unsigned int getAnimLengthOfTile(const unsigned int tile) const
+        * \brief To get the length of the animation of a specific tile type
+        *
+        * \param tile The tile type from its number
+        * \return The animation length
+        */
+        unsigned int getAnimLengthOfTile(const unsigned int tile) const;
+
+        /**
+        * \fn AnimKind getAnimKindOfTile(const unsigned int tile)
+        * \brief To get the kind of the animation of a specific tile type
+        *
+        * \param tile The tile type from its number
+        * \return The animation kind
+        */
+        AnimKind getAnimKindOfTile(const unsigned int tile) const;
 
     private:
 
@@ -241,6 +303,15 @@ class Animator
         * \return void
         */
         void updateTileAt(const Vector3 coord);
+
+        /**
+        * \fn bool tileIsAnimated(const unsigned int tile) const
+        * \brief To know if an animation has been set for a specific tile type
+        *
+        * \param tile The tile type from its number
+        * \return True if the tile is animated, false otherwise
+        */
+        bool tileIsAnimated(const unsigned int tile) const;
 
         std::vector<TileAnimData> m_tileAnimationsData; /*!< The TileAnimData list */
 
