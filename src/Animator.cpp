@@ -156,3 +156,23 @@ void Animator::updateTileAt(const Vector3 coord) {
         }
     }
 }
+
+unsigned int Animator::getFrameAt(const Vector3 coord) const {
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+           getX();
+}
+
+bool Animator::getStatusAt(const Vector3 coord) const {
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+    getStatus();
+}
+
+AnimKind Animator::getKindAt(const Vector3 coord) const {
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+    getKind();
+}
+
+AnimDirection Animator::getDirectionAt(const Vector3 coord) const {
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+    getDirection();
+}

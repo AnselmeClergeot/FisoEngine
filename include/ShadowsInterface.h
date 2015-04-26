@@ -69,6 +69,14 @@ class ShadowsInterface
         */
         void setOn(bool on);
 
+        /**
+        * \fn unsigned int getOpacity() const
+        * \brief To get the shadows opacity
+        *
+        * \return The shadows opacity
+        */
+        unsigned int getOpacity() const;
+
     private:
 
         ShadowsInitializer &m_initializer; /*!< Reference to the ShadowsInitializer to call initialization*/

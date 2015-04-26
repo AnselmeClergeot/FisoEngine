@@ -20,3 +20,7 @@ void ShadowsInterface::init() {
 void ShadowsInterface::setOn(bool on) {
     m_states.setOn(on);
 }
+
+unsigned int ShadowsInterface::getOpacity() const {
+    return m_tilegroup.getGroupOpacity();
+}

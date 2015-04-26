@@ -179,6 +179,42 @@ class Animator
         */
         unsigned int getSpeed() const;
 
+        /**
+        * \fn unsigned int getFrameAt(const Vector3 coord) const
+        * \brief To get the animation frame of a specific tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return The animation frame of the tile
+        */
+        unsigned int getFrameAt(const Vector3 coord) const;
+
+        /**
+        * \fn bool getStatusAt(const Vector3 coord) const
+        * \brief To get the animation status of a specific tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return The animation status of the tile
+        */
+        bool getStatusAt(const Vector3 coord) const;
+
+        /**
+        * \fn AnimKind getKindAt(const Vector3 coord) const
+        * \brief To get the animation kind of a specific tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return The animation kind of the tile
+        */
+        AnimKind getKindAt(const Vector3 coord) const;
+
+        /**
+        * \fn AnimDirection getDirectionAt(const Vector3 coord) const
+        * \brief To get the animation direction of a specific tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return The animation direction of the tile
+        */
+        AnimDirection getDirectionAt(const Vector3 coord) const;
+
     private:
 
         /**
