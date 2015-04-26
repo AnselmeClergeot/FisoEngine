@@ -44,5 +44,5 @@ Don't hesitate to send me messages to my email adress above. I would like to get
 
 
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
-#### <a href="https://github.com/AnselmeClergeot/FisoEngine/tree/master/Doxygen%20Documentation">Engine documentation!</a>
+#### <a href="https://github.com/AnselmeClergeot/FisoEngine/tree/master/Documentation">Engine documentation!</a>
 #### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases/tag/1.0.0">Beta release!</a>
