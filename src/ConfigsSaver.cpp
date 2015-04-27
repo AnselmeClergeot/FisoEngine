@@ -1,10 +1,10 @@
 #include "ConfigsSaver.h"
-
-//To access usefull io functions
 #include "ioFuncs.h"
 
-ConfigsSaver::ConfigsSaver(MapData &data) : m_data(data)
-{}
+ConfigsSaver::ConfigsSaver(MapData &data) : m_data(data), m_paths()
+{
+
+}
 
 void ConfigsSaver::addLoadFile(const std::string path) {
     if(fileExists(path))

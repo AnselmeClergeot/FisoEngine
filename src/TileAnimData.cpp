@@ -1,7 +1,10 @@
 #include "TileAnimData.h"
 
-TileAnimData::TileAnimData() : m_kind(Global), m_direction(Right),
-                               m_x(0), m_status(false), m_length(0)
+TileAnimData::TileAnimData() : m_kind(Global),
+                               m_direction(Right),
+                               m_x(0),
+                               m_status(false),
+                               m_length(0)
 {
 
 }

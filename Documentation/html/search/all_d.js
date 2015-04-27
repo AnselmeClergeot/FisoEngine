@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save',['save',['../class_configs_saver.html#a1f35d8a8497986df0abf5a4813cf166a',1,'ConfigsSaver::save()'],['../class_map.html#afaddf3b189d4ab51219e77d45e0d4fbe',1,'Map::save()']]],
-  ['screeninfos',['ScreenInfos',['../class_screen_infos.html',1,'ScreenInfos'],['../class_screen_infos.html#ad788d4730035f096a879a263f176a233',1,'ScreenInfos::ScreenInfos()']]],
+  ['screeninfos',['ScreenInfos',['../class_screen_infos.html',1,'ScreenInfos'],['../class_screen_infos.html#ad788d4730035f096a879a263f176a233',1,'ScreenInfos::ScreenInfos()'],['../class_screen_infos.html#a6cbaab208b54066bebff8db910d88a47',1,'ScreenInfos::ScreenInfos(const unsigned int screenW, const unsigned int screenH)']]],
   ['screeninfos_2eh',['ScreenInfos.h',['../_screen_infos_8h.html',1,'']]],
   ['setanimation',['setAnimation',['../class_animator.html#a88c3e3d7a09afbf1da69804216011c16',1,'Animator']]],
   ['setbasecoord',['setBaseCoord',['../class_entity.html#a3ebd56cc1e8b8b9dc269b3de7821b1a3',1,'Entity::setBaseCoord(const Vector2 coord)'],['../class_entity.html#a320b57f4a5378f2adfbf140bfceb706d',1,'Entity::setBaseCoord(const unsigned int x, const unsigned int y)']]],

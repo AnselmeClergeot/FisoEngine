@@ -117,24 +117,26 @@ $(document).ready(function(){initNavTree('_screen_infos_8h_source.html','');});
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> res);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> screenW, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> screenH);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">getWindowResolution</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">   63</a></span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">m_windowRes</a>; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // SCREENINFOS_H</span></div>
-<div class="ttc" id="class_screen_infos_html_a029999321a9b71df3289ad05dce0f39c"><div class="ttname"><a href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">ScreenInfos::setWindowResolution</a></div><div class="ttdeci">void setWindowResolution(const Vector2 res)</div><div class="ttdoc">To set the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:6</div></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> res);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">getWindowResolution</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">   72</a></span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">m_windowRes</a>; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // SCREENINFOS_H</span></div>
+<div class="ttc" id="class_screen_infos_html_a029999321a9b71df3289ad05dce0f39c"><div class="ttname"><a href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">ScreenInfos::setWindowResolution</a></div><div class="ttdeci">void setWindowResolution(const Vector2 res)</div><div class="ttdoc">To set the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:13</div></div>
 <div class="ttc" id="_vector2_8h_html"><div class="ttname"><a href="_vector2_8h.html">Vector2.h</a></div><div class="ttdoc">Definition of Vector2 class. </div></div>
 <div class="ttc" id="class_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:21</div></div>
-<div class="ttc" id="class_screen_infos_html_a2994f81aa3dcf56323868632dff579df"><div class="ttname"><a href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">ScreenInfos::m_windowRes</a></div><div class="ttdeci">Vector2 m_windowRes</div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:63</div></div>
+<div class="ttc" id="class_screen_infos_html_a2994f81aa3dcf56323868632dff579df"><div class="ttname"><a href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">ScreenInfos::m_windowRes</a></div><div class="ttdeci">Vector2 m_windowRes</div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:72</div></div>
 <div class="ttc" id="class_screen_infos_html_ad788d4730035f096a879a263f176a233"><div class="ttname"><a href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos::ScreenInfos</a></div><div class="ttdeci">ScreenInfos()</div><div class="ttdoc">The class default constructor. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:3</div></div>
-<div class="ttc" id="class_screen_infos_html_a0fd28929a25df5a3686961e5c42124d5"><div class="ttname"><a href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">ScreenInfos::getWindowResolution</a></div><div class="ttdeci">Vector2 getWindowResolution() const </div><div class="ttdoc">To get the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:14</div></div>
+<div class="ttc" id="class_screen_infos_html_a0fd28929a25df5a3686961e5c42124d5"><div class="ttname"><a href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">ScreenInfos::getWindowResolution</a></div><div class="ttdeci">Vector2 getWindowResolution() const </div><div class="ttdoc">To get the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:21</div></div>
 <div class="ttc" id="class_screen_infos_html"><div class="ttname"><a href="class_screen_infos.html">ScreenInfos</a></div><div class="ttdoc">This class is used to inform environment screen data. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -142,7 +144,7 @@ $(document).ready(function(){initNavTree('_screen_infos_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_screen_infos_8h.html">ScreenInfos.h</a></li>
-    <li class="footer">Generated on Sun Apr 26 2015 17:00:45 for MoteurRedesign by
+    <li class="footer">Generated on Mon Apr 27 2015 13:32:22 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

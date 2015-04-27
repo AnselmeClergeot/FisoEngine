@@ -1,8 +1,8 @@
 #include "TileGroup.h"
 
 TileGroup::TileGroup(MapData &mapData, ScreenInfos &screenInfos) : m_data(mapData),
-                                                                    m_loader(m_data),
-                                                                    m_drawer(mapData, m_data, screenInfos)
+                                                                   m_loader(m_data),
+                                                                   m_drawer(mapData, m_data, screenInfos)
 {}
 
 void TileGroup::setTilesetPath(const std::string path) {
@@ -11,7 +11,7 @@ void TileGroup::setTilesetPath(const std::string path) {
 
 void TileGroup::initialize() {
     m_loader.initialize();
-    //If a tilegroup opacity was set before initialization...
+    //If the TileGroup opacity was set before initialization
     m_data.applyGroupOpacity();
 }
 

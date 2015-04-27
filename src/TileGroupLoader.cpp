@@ -1,10 +1,10 @@
 #include "TileGroupLoader.h"
-
-//To access usefull io functions
 #include "ioFuncs.h"
 
 TileGroupLoader::TileGroupLoader(TileGroupData &data) : m_tilesetPath(""), m_data(data)
-{}
+{
+
+}
 
 void TileGroupLoader::setTilesetPath(const std::string path) {
     if(fileExists(path))
@@ -35,6 +35,6 @@ void TileGroupLoader::initialize() {
     setTilesTileset();
     setTilesRect();
 
-    //Updating the loaded TileGroup position before the first frame
+    //Updating the TileGroup position before the first frame
     m_data.updatePosition();
 }

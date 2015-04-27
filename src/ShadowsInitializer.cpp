@@ -1,9 +1,12 @@
 #include "ShadowsInitializer.h"
 
-ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup, ShadowsSystemStates &states, MapData &mapData) : m_tileGroup(tilegroup),
-                                                                                    m_mapData(mapData),
-                                                                                    m_states(states)
-{}
+ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup, ShadowsSystemStates &states, MapData &mapData)
+    : m_tileGroup(tilegroup),
+      m_mapData(mapData),
+      m_states(states)
+{
+
+}
 
 void ShadowsInitializer::initialize() {
     Matrix3d tempConf;

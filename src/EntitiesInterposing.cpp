@@ -1,7 +1,9 @@
 #include "EntitiesInterposing.h"
 
 EntitiesInterposing::EntitiesInterposing(EntitiesContainer &container) : m_container(container)
-{}
+{
+
+}
 
 void EntitiesInterposing::interpose(Vector3 coord, sf::RenderTarget& target) const {
     for(std::size_t i(0); i<m_container.getEntitiesNumber(); i++)

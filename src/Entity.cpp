@@ -1,5 +1,4 @@
 #include "Entity.h"
-
 #include "IsometricMath.h"
 #include "ioFuncs.h"
 #include "DrawingFuncs.h"
@@ -13,7 +12,9 @@ Entity::Entity(MapData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
                                                               m_drawState(false),
                                                               m_mapData(&mapData),
                                                               m_screenInfos(&screenInfos)
-{}
+{
+
+}
 
 void Entity::setDimensions(const Vector2 dim) {
     m_dimensions = dim;

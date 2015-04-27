@@ -1,8 +1,11 @@
 #include "EntitiesContainer.h"
 
-EntitiesContainer::EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos) : m_entities(), m_mapData(mapData),
-                                                                                    m_screenInfos(screenInfos)
-{}
+EntitiesContainer::EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos) : m_entities(),
+                                                                                   m_mapData(mapData),
+                                                                                   m_screenInfos(screenInfos)
+{
+
+}
 
 void EntitiesContainer::createEntity() {
     m_entities.push_back(std::unique_ptr<Entity>(new Entity(m_mapData, m_screenInfos)));

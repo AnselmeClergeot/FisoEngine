@@ -1,15 +1,16 @@
 #include "TileGroupDrawer.h"
-//To access drawing usefull functions such as knowing if an element is visible
 #include "DrawingFuncs.h"
 
-TileGroupDrawer::TileGroupDrawer(MapData &mapData, TileGroupData &data,
-                                 ScreenInfos &screenInfos) : m_mapData(mapData),
-                                                                m_data(data),
-                                                                m_screenInfos(screenInfos)
-{}
+TileGroupDrawer::TileGroupDrawer(MapData &mapData, TileGroupData &data, ScreenInfos &screenInfos)
+    : m_mapData(mapData),
+      m_data(data),
+      m_screenInfos(screenInfos)
+{
+
+}
 
 void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
-                     const EntitiesInterposing *interposing) const {
+                           const EntitiesInterposing *interposing) const {
     for(std::size_t x(0); x<m_mapData.getSize().x; x++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
     {
@@ -20,10 +21,8 @@ void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
             target.draw(m_data.spriteAt(Vector3(x, y, layer)));
         }
 
-        //If the tilegroup is a map tilegroup and that entities have to be interpose, then interpose
+        //If the TileGroup is the map main TileGroup
         if(interposing!=0)
-        {
             interposing->interpose(Vector3(x, y, layer), target);
-        }
     }
 }

@@ -107,7 +107,8 @@ void Map::setSpecificOpacity(const Vector3 coord, const unsigned int opacity) {
         m_dynamicShader.updateOpacityOfSpecific(coord);
 }
 
-void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,const unsigned int opacity) {
+void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+                             const unsigned int opacity) {
     setSpecificOpacity(Vector3(x, y, z), opacity);
 }
 
@@ -126,7 +127,6 @@ void Map::setGroupOpacity(const unsigned int opacity) {
 }
 
 void Map::setPosition(const Vector2 pos) {
-
     Vector2 tempPos;
     tempPos = m_data.getPosition();
 

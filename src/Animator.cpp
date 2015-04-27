@@ -4,7 +4,10 @@ Animator::Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &sha
                                                                                        m_timer(),
                                                                                        m_speed(150),
                                                                                        m_animations(),
-                                                                                       m_mapTilegroup(mapTilegroup),                                                                                       m_shader(shader) {}
+                                                                                       m_mapTilegroup(mapTilegroup),                                                                                       m_shader(shader)
+{
+
+}
 
 void Animator::resizeAnimationsDataList(const unsigned int size) {
     m_tileAnimationsData.resize(size);
@@ -115,8 +118,6 @@ void Animator::apply() {
                     m_shader.updateTileFromAnim(Vector3(x, y, z),
                                         m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
             }
-
-
 }
 
 unsigned int Animator::getSpeed() const {
@@ -124,7 +125,6 @@ unsigned int Animator::getSpeed() const {
 }
 
 void Animator::updateTileAt(const Vector3 coord) {
-
     for(std::size_t i(0); i<m_animations.size(); i++) {
         if(m_animations[i].x==m_mapData.getTempConf().at(coord.x, coord.y, coord.z))
         {

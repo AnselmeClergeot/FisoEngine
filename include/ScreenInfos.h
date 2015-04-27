@@ -32,6 +32,15 @@ class ScreenInfos
         ScreenInfos();
 
         /**
+        * \fn ScreenInfos(const unsigned int screenW, const unsigned int screenH)
+        * \brief The constructor with windows dimensions
+        *
+        * \param screenW The window width
+        * \param screenH The windows height
+        */
+        ScreenInfos(const unsigned int screenW, const unsigned int screenH);
+
+        /**
         * \fn void setWindowResolution(const Vector2 res)
         * \brief To set the run window dimensions
         *

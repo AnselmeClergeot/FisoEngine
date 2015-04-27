@@ -1,7 +1,13 @@
 #include "TileGroupData.h"
 
-TileGroupData::TileGroupData(MapData &mapData) : m_tileset(), m_tiles(), m_config(), m_mapData(mapData), m_opacity(255)
-{}
+TileGroupData::TileGroupData(MapData &mapData) : m_tileset(),
+                                                 m_tiles(),
+                                                 m_config(),
+                                                 m_mapData(mapData),
+                                                 m_opacity(255)
+{
+
+}
 
 sf::Texture &TileGroupData::getTileset() {
     return m_tileset;
@@ -22,7 +28,7 @@ void TileGroupData::setConfiguration(Matrix3d &config) {
 void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
     m_config.at(coord.x, coord.y, coord.z) = index;
 
-    //If the tile set is the invisible one, reset the opacity:
+    //If the tile set is the invisible one, reset the opacity
     if(index==m_mapData.getInvisibleTile())
         resetOpacityOf(coord);
 

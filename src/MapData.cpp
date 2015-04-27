@@ -1,9 +1,16 @@
 #include "MapData.h"
 
-MapData::MapData() : m_tempConf(), m_permConf(),
-                 m_size(), m_position(),
-                 m_tileSize(), m_tileBaseHeight(0), m_invisibleTile(0), m_translucentTiles()
-{}
+MapData::MapData() : m_tempConf(),
+                     m_permConf(),
+                     m_size(),
+                     m_position(),
+                     m_tileSize(),
+                     m_tileBaseHeight(0),
+                     m_invisibleTile(0),
+                     m_translucentTiles()
+{
+
+}
 
 void MapData::setSize(const Vector2 size) {
     m_size = size;

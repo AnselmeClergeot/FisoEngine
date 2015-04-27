@@ -1,9 +1,11 @@
 #include "DynamicShader.h"
 
 DynamicShader::DynamicShader(MapData &mapData, TileGroup &mapTg, TileGroup &shadowsTg) : m_mapData(mapData),
-                                                                                       m_mapTg(mapTg),
-                                                                                       m_shadowsTg(shadowsTg)
-{}
+                                                                                         m_mapTg(mapTg),
+                                                                                         m_shadowsTg(shadowsTg)
+{
+
+}
 
 void DynamicShader::updateShading(const Vector3 coord) {
     for(int z(coord.z-1); z>-1; z--)
@@ -58,7 +60,6 @@ void DynamicShader::updateOpacityOfType(const unsigned int type) {
 }
 
 void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
-
     if(haveShadowVisible(coord))
     m_shadowsTg.setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, getShadowZ(coord)),
     (int)((float)m_mapTg.getTileOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z))/
@@ -91,5 +92,6 @@ bool DynamicShader::haveShadowVisible(const Vector3 tileCoord) {
 
 void DynamicShader::updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX) {
     if(haveShadowVisible(tileCoord))
-    m_shadowsTg.setTileTilesetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
+    m_shadowsTg.setTileTilesetX(m_mapData.getTempConf().get3dIter(tileCoord.x, tileCoord.y,
+                                                                  getShadowZ(tileCoord)), animX);
 }

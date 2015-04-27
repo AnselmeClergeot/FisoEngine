@@ -1,7 +1,9 @@
 #include "ShadowsSystemStates.h"
 
 ShadowsSystemStates::ShadowsSystemStates() : m_on(false), m_initialized(false)
-{}
+{
+
+}
 
 void ShadowsSystemStates::setOn(bool on) {
     if(m_initialized)
