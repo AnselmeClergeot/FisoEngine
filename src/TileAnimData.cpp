@@ -15,18 +15,20 @@ void TileAnimData::setKind(const AnimKind kind) {
         m_status = false;
     if(m_kind==Global)
         m_status = true;
+
+    resetX();
 }
 
 void TileAnimData::setDirection(const AnimDirection direction) {
     m_direction = direction;
-    if(direction==Left)
-        m_x = m_length-1;
-    if(direction==Right)
-        m_x = 0;
+
+    resetX();
 }
 
 void TileAnimData::setStatus(const bool status) {
     m_status = status;
+
+    resetX();
 }
 
 void TileAnimData::setLength(const unsigned int length) {
@@ -63,8 +65,9 @@ void TileAnimData::updateX() {
                     m_x++;
                 else
                 {
-                    resetX();
-                    if(m_kind==Single)
+                    if(m_kind==Global)
+                        resetX();
+                    else if(m_kind==Single)
                         m_status = false;
                 }
 
@@ -76,8 +79,9 @@ void TileAnimData::updateX() {
                     m_x--;
                 else
                 {
-                    resetX();
-                    if(m_kind==Single)
+                    if(m_kind==Global)
+                        resetX();
+                    else if(m_kind==Single)
                         m_status = false;
                 }
 
@@ -86,9 +90,9 @@ void TileAnimData::updateX() {
 }
 
 void TileAnimData::resetX() {
-    if(m_direction==Left)
-        m_x = m_length-1;
+        if(m_direction==Left)
+            m_x = m_length-1;
 
-    if(m_direction==Right)
-        m_x = 0;
+        if(m_direction==Right)
+            m_x = 0;
 }
