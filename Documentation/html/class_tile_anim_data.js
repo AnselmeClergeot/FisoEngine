@@ -16,5 +16,6 @@ var class_tile_anim_data =
     [ "m_kind", "class_tile_anim_data.html#ae0a0d47e214ead851ed3445dbc0a9b60", null ],
     [ "m_length", "class_tile_anim_data.html#abdefd9cf6a01ca4e50259ce643ff4c76", null ],
     [ "m_status", "class_tile_anim_data.html#a8e6ca4f33a8c8c7bdef02c2d1eaf1eee", null ],
+    [ "m_waitStatus", "class_tile_anim_data.html#a6f1ac7cab5831778639cf364e613bc50", null ],
     [ "m_x", "class_tile_anim_data.html#afd31a1d67389cef0d3d0e550ac5cdcbe", null ]
 ];

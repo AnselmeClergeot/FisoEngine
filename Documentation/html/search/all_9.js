@@ -52,6 +52,7 @@ var searchData=
   ['m_5ftimer',['m_timer',['../class_animator.html#ace1fd2e6bb427cb1b9ae18e86cb93706',1,'Animator']]],
   ['m_5ftranslucenttiles',['m_translucentTiles',['../class_map_data.html#abb68187d15ae8285e22b11025f5eb2ca',1,'MapData']]],
   ['m_5fw',['m_w',['../class_matrix3d.html#ab2f91a88acd27cd205795de42d97f1eb',1,'Matrix3d']]],
+  ['m_5fwaitstatus',['m_waitStatus',['../class_tile_anim_data.html#a6f1ac7cab5831778639cf364e613bc50',1,'TileAnimData']]],
   ['m_5fwindowres',['m_windowRes',['../class_screen_infos.html#a2994f81aa3dcf56323868632dff579df',1,'ScreenInfos']]],
   ['m_5fx',['m_x',['../class_tile_anim_data.html#afd31a1d67389cef0d3d0e550ac5cdcbe',1,'TileAnimData']]],
   ['map',['Map',['../class_map.html',1,'Map'],['../class_map.html#a476844ea4fe51b0f67c0622e93e17c88',1,'Map::Map()']]],

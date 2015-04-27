@@ -141,6 +141,8 @@ class TileAnimData
 
         bool m_status; /*!< The playing status of the animation */
 
+        bool m_waitStatus; /*!< The waiting status for the next frame */
+
         unsigned int m_length; /*!< The length of the animation in frames*/
 };
 
