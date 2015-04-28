@@ -10,8 +10,8 @@ Entity::Entity(MapData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
                                                               m_texture(),
                                                               m_sprite(),
                                                               m_drawState(false),
-                                                              m_mapData(&mapData),
-                                                              m_screenInfos(&screenInfos)
+                                                              m_mapData(mapData),
+                                                              m_screenInfos(screenInfos)
 {
 
 }
@@ -61,7 +61,7 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition, m_baseCoord, *m_screenInfos))
+    if(isVisible(m_pixelPosition, m_baseCoord, m_screenInfos))
         target.draw(m_sprite);
 }
 
@@ -70,8 +70,8 @@ void Entity::setDrawState(const bool state) {
 }
 
 void Entity::calculateTilePosition() {
-    m_tilePosition.x = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, *m_mapData).x;
-    m_tilePosition.y = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, *m_mapData).y;
+    m_tilePosition.x = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, m_mapData).x;
+    m_tilePosition.y = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, m_mapData).y;
 }
 
 void Entity::setLayer(const unsigned int layer) {

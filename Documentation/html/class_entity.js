@@ -24,9 +24,9 @@ var class_entity =
     [ "m_baseCoord", "class_entity.html#ad28521df441cf9cfc65ae6d76a0f49c4", null ],
     [ "m_dimensions", "class_entity.html#a55e574aa58b63f8dd296c689cd7c29e7", null ],
     [ "m_drawState", "class_entity.html#a49186b6b08b65ad4900451c65449d4fa", null ],
-    [ "m_mapData", "class_entity.html#a0325a0b352668153610cfc14053e44bf", null ],
+    [ "m_mapData", "class_entity.html#a4bb63c7b9f4d2ce92c7ac06c379b3a80", null ],
     [ "m_pixelPosition", "class_entity.html#ae72905bd7e9cc601d271eb344a3b76ad", null ],
-    [ "m_screenInfos", "class_entity.html#a9067af38f24cc91c5664da3f6c3f7610", null ],
+    [ "m_screenInfos", "class_entity.html#a98b2408dab5d9e8c4eae837f0c0beddc", null ],
     [ "m_sprite", "class_entity.html#a349c6abf10608375164c13b3c39c6fb3", null ],
     [ "m_texture", "class_entity.html#a00a30736951509b87b772931412b56dd", null ],
     [ "m_tilePosition", "class_entity.html#a7996082e0526ec2fcff15104a9a3a252", null ]

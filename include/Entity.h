@@ -225,9 +225,9 @@ class Entity
 
         bool m_drawState; /* !< The entity draw state*/
 
-        std::unique_ptr<MapData> m_mapData; /* !< The pointer to the MapData to get useful data*/
+        MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 
-        std::unique_ptr<ScreenInfos> m_screenInfos; /* !< The pointer to the ScreenInfos to get screen data*/
+        ScreenInfos& m_screenInfos; /* !< The pointer to the ScreenInfos to get screen data*/
 };
 
 #endif // ENTITY_H
