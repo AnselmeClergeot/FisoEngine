@@ -156,9 +156,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a4ba85b1f4d5786f2d1b61ef4ecd1b238">getGroupOpacity</a> () const </td></tr>
 <tr class="memdesc:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of the entire <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> if set.  <a href="#a4ba85b1f4d5786f2d1b61ef4ecd1b238">More...</a><br /></td></tr>
 <tr class="separator:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afecee5db4af165fc9eecff4bb23c89a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#afecee5db4af165fc9eecff4bb23c89a4">setTileTilesetX</a> (const unsigned int index, const unsigned int x)</td></tr>
-<tr class="memdesc:afecee5db4af165fc9eecff4bb23c89a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the X tileset coordinate of a specific tile from its 1D index.  <a href="#afecee5db4af165fc9eecff4bb23c89a4">More...</a><br /></td></tr>
-<tr class="separator:afecee5db4af165fc9eecff4bb23c89a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c1767da3b58d634bd4826bc2c3da26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a30c1767da3b58d634bd4826bc2c3da26">setTileTilesetX</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const unsigned int x)</td></tr>
+<tr class="memdesc:a30c1767da3b58d634bd4826bc2c3da26"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the X tileset coordinate of a specific tile from its coordinates.  <a href="#a30c1767da3b58d634bd4826bc2c3da26">More...</a><br /></td></tr>
+<tr class="separator:a30c1767da3b58d634bd4826bc2c3da26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -460,15 +460,15 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afecee5db4af165fc9eecff4bb23c89a4"></a>
+<a class="anchor" id="a30c1767da3b58d634bd4826bc2c3da26"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void TileGroup::setTileTilesetX </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -484,10 +484,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set the X tileset coordinate of a specific tile from its 1D index. </p>
+<p>To set the X tileset coordinate of a specific tile from its coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>The 1D coordinate of the tile </td></tr>
+    <tr><td class="paramname">coord</td><td>The 3D coordinate of the tile </td></tr>
     <tr><td class="paramname">x</td><td>The x tileset coordinate of the tile </td></tr>
   </table>
   </dd>
@@ -624,7 +624,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_group.html">TileGroup</a></li>
-    <li class="footer">Generated on Tue Apr 28 2015 15:08:12 for MoteurRedesign by
+    <li class="footer">Generated on Wed Apr 29 2015 22:59:51 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

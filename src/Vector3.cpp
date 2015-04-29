@@ -1,19 +1,13 @@
 #include "Vector3.h"
 
 Vector3::Vector3() : x(0), y(0), z(0)
-{
-
-}
+{ }
 
 Vector3::Vector3(const int x, const int y, const int z) : x(x), y(y), z(z)
-{
-
-}
+{ }
 
 Vector3::Vector3(const Vector3 &vec) : x(vec.x), y(vec.y), z(vec.z)
-{
-
-}
+{ }
 
 Vector3& Vector3::operator=(const Vector3 &vec) {
     x = vec.x;

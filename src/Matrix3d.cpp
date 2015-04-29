@@ -1,14 +1,10 @@
 #include "Matrix3d.h"
 
 Matrix3d::Matrix3d() : m_w(0), m_h(0), m_d(0), m_data(0)
-{
-
-}
+{ }
 
 Matrix3d::Matrix3d(const Matrix3d &matrix) : m_w(matrix.m_w), m_h(matrix.m_h), m_d(matrix.m_d), m_data(matrix.m_data)
-{
-
-}
+{ }
 
 Matrix3d& Matrix3d::operator=(const Matrix3d &matrix) {
     m_w = matrix.m_w;
@@ -19,28 +15,31 @@ Matrix3d& Matrix3d::operator=(const Matrix3d &matrix) {
     return *this;
 }
 
-Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d) : m_w(w),
-                                                                                       m_h(h),
-                                                                                       m_d(d),
-                                                                                       m_data(w*h*d)
-{
+Matrix3d::Matrix3d(const unsigned int w,
+                   const unsigned int h,
+                   const unsigned int d) : m_w(w),
+                                           m_h(h),
+                                           m_d(d),
+                                           m_data(w*h*d)
+{ }
 
-}
+Matrix3d::Matrix3d(const unsigned int w,
+                   const unsigned int h,
+                   const unsigned int d,
+                   const unsigned int fill) : m_w(w),
+                                              m_h(h),
+                                              m_d(d),
+                                              m_data(w*h*d, fill)
+{ }
 
-Matrix3d::Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill)
-    : m_w(w),
-      m_h(h),
-      m_d(d),
-      m_data(w*h*d, fill)
-{
-
-}
-
-void Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill) {
-        m_w = w;
-        m_h = h;
-        m_d = d;
-        m_data.resize(w*h*d, fill);
+void Matrix3d::resize(const unsigned int w,
+                      const unsigned int h,
+                      const unsigned int d,
+                      const unsigned int fill) {
+    m_w = w;
+    m_h = h;
+    m_d = d;
+    m_data.resize(w*h*d, fill);
 }
 
 void Matrix3d::clear() {

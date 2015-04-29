@@ -141,14 +141,14 @@ class TileGroup
         unsigned int getGroupOpacity() const;
 
         /**
-        * \fn void setTileTilesetX(const unsigned int index, const unsigned int x)
-        * \brief To set the X tileset coordinate of a specific tile from its 1D index
+        * \fn void setTileTilesetX(const Vector3 coord, const unsigned int x)
+        * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
-        * \param index The 1D coordinate of the tile
+        * \param coord The 3D coordinate of the tile
         * \param x The x tileset coordinate of the tile
         * \return void
         */
-        void setTileTilesetX(const unsigned int index, const unsigned int x);
+        void setTileTilesetX(const Vector3 coord, const unsigned int x);
 
     private:
 

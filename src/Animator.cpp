@@ -1,13 +1,17 @@
 #include "Animator.h"
 
-Animator::Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader) : m_tileAnimationsData(),                                                                                       m_mapData(mapData),
-                                                                                       m_timer(),
-                                                                                       m_speed(150),
-                                                                                       m_animations(),
-                                                                                       m_mapTilegroup(mapTilegroup),                                                                                       m_shader(shader)
-{
-
-}
+Animator::Animator(MapData &mapData,
+                   TileGroup &mapTilegroup,
+                   DynamicShader &shader,
+                   ShadowsSystemStates &shadowsStates,
+                   ScreenInfos &screenInfos) : m_tileAnimationsData(),                                               m_mapData(mapData),
+                                               m_timer(),
+                                               m_speed(150),
+                                               m_animations(),
+                                               m_mapTilegroup(mapTilegroup),                                               m_shader(shader),
+                                               m_shadowsStates(shadowsStates),
+                                               m_screenInfos(screenInfos)
+{ }
 
 void Animator::resizeAnimationsDataList(const unsigned int size) {
     m_tileAnimationsData.resize(size);
@@ -43,7 +47,8 @@ void Animator::next() {
 }
 
 void Animator::setSingleAnimKind(const unsigned int tile) {
-    for(std::size_t i(0); i<m_animations.size(); i++) {
+    for(std::size_t i(0); i<m_animations.size(); i++)
+    {
         if(m_animations[i].x==tile)
             m_animations[i].z = 1;
     }
@@ -56,7 +61,8 @@ void Animator::setSingleAnimKind(const unsigned int tile) {
 }
 
 void Animator::setGlobalAnimKind(const unsigned int tile) {
-    for(std::size_t i(0); i<m_animations.size(); i++) {
+    for(std::size_t i(0); i<m_animations.size(); i++)
+    {
         if(m_animations[i].x==tile)
             m_animations[i].z = 0;
     }
@@ -102,22 +108,22 @@ void Animator::stopAnimation(const unsigned int x, const unsigned int y, const u
 }
 
 void Animator::apply() {
-    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
-    {
-        if(m_mapData.getTempConf().at(i)!=m_mapData.getInvisibleTile() &&
-           m_tileAnimationsData[i].getLength()>1)
-        m_mapTilegroup.setTileTilesetX(i, m_tileAnimationsData[i].getX());
-    }
-
     for(int x(0); x<m_mapData.getSize().x; x++)
         for(int y(0); y<m_mapData.getSize().x; y++)
             for(int z(0); z<m_mapData.getSize().y; z++)
-            {
-                if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
-                   m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getLength()>1)
-                    m_shader.updateTileFromAnim(Vector3(x, y, z),
-                                        m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
-            }
+    {
+        if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
+           m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getLength()>1 &&
+           isVisible(toIsometricPosition(Vector3(x, y, z), m_mapData), m_mapData.getTileSize(), m_screenInfos))
+        {
+            m_mapTilegroup.setTileTilesetX(Vector3(x, y, z),
+                                           m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
+
+            if(m_shadowsStates.isOn())
+                m_shader.updateTileFromAnim(Vector3(x, y, z),
+                                            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
+        }
+    }
 }
 
 unsigned int Animator::getSpeed() const {
@@ -125,32 +131,28 @@ unsigned int Animator::getSpeed() const {
 }
 
 void Animator::updateTileAt(const Vector3 coord) {
-    for(std::size_t i(0); i<m_animations.size(); i++) {
+    for(std::size_t i(0); i<m_animations.size(); i++)
+    {
         if(m_animations[i].x==m_mapData.getTempConf().at(coord.x, coord.y, coord.z))
         {
             if(m_animations[i].z==0)
             {
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-                setKind(Global);
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-                setStatus(true);
+                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(Global);
+                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(true);
             }
 
             if(m_animations[i].z==1)
             {
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-                setKind(Single);
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-                setStatus(false);
+                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(Single);
+                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(false);
             }
+
             m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
             setLength(m_animations[i].y);
 
-            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-            resetX();
+            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].resetX();
 
-            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-            setDirection(Right);
+            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setDirection(Right);
 
             return;
         }
@@ -158,8 +160,7 @@ void Animator::updateTileAt(const Vector3 coord) {
 }
 
 unsigned int Animator::getFrameAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-           getX();
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getX();
 }
 
 unsigned int Animator::getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
@@ -167,8 +168,7 @@ unsigned int Animator::getFrameAt(const unsigned int x, const unsigned int y, co
 }
 
 bool Animator::getStatusAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-    getStatus();
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getStatus();
 }
 
 bool Animator::getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
@@ -176,8 +176,7 @@ bool Animator::getStatusAt(const unsigned int x, const unsigned int y, const uns
 }
 
 AnimKind Animator::getKindAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-    getKind();
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getKind();
 }
 
 AnimKind Animator::getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
@@ -185,8 +184,7 @@ AnimKind Animator::getKindAt(const unsigned int x, const unsigned int y, const u
 }
 
 AnimDirection Animator::getDirectionAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-    getDirection();
+    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getDirection();
 }
 
 AnimDirection Animator::getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
@@ -205,6 +203,7 @@ AnimKind Animator::getAnimKindOfTile(const unsigned int tile) const {
     assert(tileIsAnimated(tile));
 
     for(std::size_t i(0); i<m_animations.size(); i++)
+    {
         if(m_animations[i].x==tile)
         {
             if(m_animations[i].z==0)
@@ -212,14 +211,15 @@ AnimKind Animator::getAnimKindOfTile(const unsigned int tile) const {
             else
                 return Single;
         }
+    }
 }
 
 bool Animator::tileIsAnimated(const unsigned int tile) const {
-    bool animated(false);
-
     for(std::size_t i(0); i<m_animations.size(); i++)
+    {
         if(m_animations[i].x==tile)
-            animated = true;
+            return true;
+    }
 
-    return animated;
+    return false;
 }

@@ -2,9 +2,7 @@
 #include "ioFuncs.h"
 
 TileGroupLoader::TileGroupLoader(TileGroupData &data) : m_tilesetPath(""), m_data(data)
-{
-
-}
+{ }
 
 void TileGroupLoader::setTilesetPath(const std::string path) {
     if(fileExists(path))

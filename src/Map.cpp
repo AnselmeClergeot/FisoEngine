@@ -1,17 +1,16 @@
 #include "Map.h"
 
-Map::Map(ScreenInfos &screenInfos)
-    : m_screenInfos(screenInfos),
-      m_data(),
-      m_configsLoader(m_data), m_configsSaver(m_data),
-      m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
-      m_shadowsStates(),
-      m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
-      m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-      m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-      m_entityContainer(m_data, m_screenInfos),
-      m_interposing(m_entityContainer),
-      m_animator(m_data, m_tileGroup, m_dynamicShader)
+Map::Map(ScreenInfos &screenInfos) : m_screenInfos(screenInfos),
+                                     m_data(),
+                                     m_configsLoader(m_data), m_configsSaver(m_data),
+                                     m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
+                                     m_shadowsStates(),
+                                     m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
+                                     m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
+                                     m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
+                                     m_entityContainer(m_data, m_screenInfos),
+                                     m_interposing(m_entityContainer),
+                                     m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_screenInfos)
 {}
 
 void Map::init() {
@@ -137,7 +136,7 @@ void Map::setPosition(const Vector2 pos) {
         m_entityContainer.entityAt(i).move(m_data.getPosition()-tempPos);
 
     if(m_shadowsStates.isInitialized())
-      m_shadowsTilegroup.updatePosition();
+        m_shadowsTilegroup.updatePosition();
 }
 
 void Map::setPosition(const unsigned int x, const unsigned int y) {

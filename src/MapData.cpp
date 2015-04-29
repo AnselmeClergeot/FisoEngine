@@ -8,9 +8,7 @@ MapData::MapData() : m_tempConf(),
                      m_tileBaseHeight(0),
                      m_invisibleTile(0),
                      m_translucentTiles()
-{
-
-}
+{ }
 
 void MapData::setSize(const Vector2 size) {
     m_size = size;

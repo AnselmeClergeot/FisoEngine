@@ -5,9 +5,7 @@ TileGroupData::TileGroupData(MapData &mapData) : m_tileset(),
                                                  m_config(),
                                                  m_mapData(mapData),
                                                  m_opacity(255)
-{
-
-}
+{ }
 
 sf::Texture &TileGroupData::getTileset() {
     return m_tileset;
@@ -99,6 +97,8 @@ void TileGroupData::resetOpacityOf(const Vector3 coord) {
     setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z), 255);
 }
 
-void TileGroupData::setTileTilesetX(const unsigned int index, unsigned int x) {
-    frameTile(index, Vector2(x, m_config.at(index)));
+void TileGroupData::setTileTilesetX(const Vector3 coord, unsigned int x) {
+    frameTile(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z),
+              Vector2(x,
+                      m_config.at(coord.x, coord.y, coord.z)));
 }

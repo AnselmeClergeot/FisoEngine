@@ -1,6 +1,6 @@
 var class_animator =
 [
-    [ "Animator", "class_animator.html#a3fd18cbdd31e56fcb3adbacacbc14a87", null ],
+    [ "Animator", "class_animator.html#a6972e24c72e08b5dc8b1e94aa15debd7", null ],
     [ "apply", "class_animator.html#a71c4490110de839e621b8aebea8bf703", null ],
     [ "getAnimKindOfTile", "class_animator.html#ac8d773e96e800cd4584e6063db01d908", null ],
     [ "getAnimLengthOfTile", "class_animator.html#ae91b34b83e032e8d81420e28a6e88630", null ],
@@ -33,7 +33,9 @@ var class_animator =
     [ "m_animations", "class_animator.html#ab48d4739ec6029b40c005a65af16e4c1", null ],
     [ "m_mapData", "class_animator.html#ad38c649dae0de1504880c34637775920", null ],
     [ "m_mapTilegroup", "class_animator.html#a6eca5ba086acdcae6333e2cc767abc1c", null ],
+    [ "m_screenInfos", "class_animator.html#aac16d8c271ea770b9dd095eb495d3002", null ],
     [ "m_shader", "class_animator.html#a2473f0dfb648cc09c2924c60e7c05ca8", null ],
+    [ "m_shadowsStates", "class_animator.html#a54922bb9861dff00607d5ad808ef2234", null ],
     [ "m_speed", "class_animator.html#a443e9449fdbd90fb948865e7043ebffc", null ],
     [ "m_tileAnimationsData", "class_animator.html#a796ee260f316cd20e6f08d73fb609d2c", null ],
     [ "m_timer", "class_animator.html#ace1fd2e6bb427cb1b9ae18e86cb93706", null ]

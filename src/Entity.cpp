@@ -3,18 +3,17 @@
 #include "ioFuncs.h"
 #include "DrawingFuncs.h"
 
-Entity::Entity(MapData &mapData, ScreenInfos &screenInfos) : m_tilePosition(),
-                                                              m_pixelPosition(),
-                                                              m_dimensions(),
-                                                              m_baseCoord(),
-                                                              m_texture(),
-                                                              m_sprite(),
-                                                              m_drawState(false),
-                                                              m_mapData(mapData),
-                                                              m_screenInfos(screenInfos)
-{
-
-}
+Entity::Entity(MapData &mapData,
+               ScreenInfos &screenInfos) :  m_tilePosition(),
+                                            m_pixelPosition(),
+                                            m_dimensions(),
+                                            m_baseCoord(),
+                                            m_texture(),
+                                            m_sprite(),
+                                            m_drawState(false),
+                                            m_mapData(mapData),
+                                            m_screenInfos(screenInfos)
+{ }
 
 void Entity::setDimensions(const Vector2 dim) {
     m_dimensions = dim;
@@ -57,11 +56,12 @@ void Entity::move(const unsigned int rx, const unsigned int ry) {
 void Entity::setImagePath(const std::string path) {
     if(fileExists(path))
         m_texture.loadFromFile(path);
+
     m_sprite.setTexture(m_texture);
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition, m_baseCoord, m_screenInfos))
+    if(isVisible(m_pixelPosition, m_dimensions, m_screenInfos))
         target.draw(m_sprite);
 }
 

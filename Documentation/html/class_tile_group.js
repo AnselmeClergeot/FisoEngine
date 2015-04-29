@@ -10,7 +10,7 @@ var class_tile_group =
     [ "setSpecificOpacity", "class_tile_group.html#a24389ba3b3f2280db8da5a96c239fe40", null ],
     [ "setTileAt", "class_tile_group.html#a846ee36426cb4073be74ba854f102b37", null ],
     [ "setTilesetPath", "class_tile_group.html#a376127f2384a264df026295850f38d62", null ],
-    [ "setTileTilesetX", "class_tile_group.html#afecee5db4af165fc9eecff4bb23c89a4", null ],
+    [ "setTileTilesetX", "class_tile_group.html#a30c1767da3b58d634bd4826bc2c3da26", null ],
     [ "setTypeOpacity", "class_tile_group.html#a6576f454e5d3df8a2794d53f59e9c179", null ],
     [ "updatePosition", "class_tile_group.html#a8b40485381f2206c04effcf4c7a9abd2", null ],
     [ "m_data", "class_tile_group.html#a8b0fe9666636904cbb0c71ca1921a7b3", null ],

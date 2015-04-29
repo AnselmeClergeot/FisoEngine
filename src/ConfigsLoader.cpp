@@ -2,9 +2,7 @@
 #include "ioFuncs.h"
 
 ConfigsLoader::ConfigsLoader(MapData &data) : m_data(data), m_paths()
-{
-
-}
+{ }
 
 void ConfigsLoader::addLoadFile(const std::string path) {
     if(fileExists(path))

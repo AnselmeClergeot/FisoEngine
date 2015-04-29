@@ -1,9 +1,7 @@
 #include "Timer.h"
 
 Timer::Timer() : m_clock(), m_milliseconds(0)
-{
-
-}
+{ }
 
 void Timer::restart() {
     m_clock = clock();

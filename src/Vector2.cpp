@@ -1,19 +1,13 @@
 #include "Vector2.h"
 
 Vector2::Vector2() : x(0), y(0)
-{
-
-}
+{ }
 
 Vector2::Vector2(const int x, const int y) : x(x), y(y)
-{
-
-}
+{ }
 
 Vector2::Vector2(const Vector2 &vec) : x(vec.x), y(vec.y)
-{
-
-}
+{ }
 
 Vector2& Vector2::operator=(const Vector2 &vec) {
     x = vec.x;

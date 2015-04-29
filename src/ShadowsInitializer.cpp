@@ -1,12 +1,11 @@
 #include "ShadowsInitializer.h"
 
-ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup, ShadowsSystemStates &states, MapData &mapData)
-    : m_tileGroup(tilegroup),
-      m_mapData(mapData),
-      m_states(states)
-{
-
-}
+ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup,
+                                       ShadowsSystemStates &states,
+                                       MapData &mapData) : m_tileGroup(tilegroup),
+                                                           m_mapData(mapData),
+                                                           m_states(states)
+{ }
 
 void ShadowsInitializer::initialize() {
     Matrix3d tempConf;
@@ -38,9 +37,7 @@ void ShadowsInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d &te
             break;
         }
         else
-        {
             tempConf.at(coord.x, coord.y, z) = m_mapData.getInvisibleTile();
-        }
     }
 
     for(int z(coord.z); z<m_mapData.getSize().y; z++)

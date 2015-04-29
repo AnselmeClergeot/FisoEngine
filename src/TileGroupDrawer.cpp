@@ -1,13 +1,12 @@
 #include "TileGroupDrawer.h"
 #include "DrawingFuncs.h"
 
-TileGroupDrawer::TileGroupDrawer(MapData &mapData, TileGroupData &data, ScreenInfos &screenInfos)
-    : m_mapData(mapData),
-      m_data(data),
-      m_screenInfos(screenInfos)
-{
-
-}
+TileGroupDrawer::TileGroupDrawer(MapData &mapData,
+                                 TileGroupData &data,
+                                 ScreenInfos &screenInfos) : m_mapData(mapData),
+                                                             m_data(data),
+                                                             m_screenInfos(screenInfos)
+{ }
 
 void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
                            const EntitiesInterposing *interposing) const {
@@ -21,7 +20,6 @@ void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
             target.draw(m_data.spriteAt(Vector3(x, y, layer)));
         }
 
-        //If the TileGroup is the map main TileGroup
         if(interposing!=0)
             interposing->interpose(Vector3(x, y, layer), target);
     }

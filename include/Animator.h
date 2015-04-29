@@ -17,6 +17,8 @@
 #include "Timer.h"
 #include "Vector3.h"
 #include "DynamicShader.h"
+#include "ShadowsSystemStates.h"
+#include "DrawingFuncs.h"
 
 /**
  * \class Animator
@@ -31,14 +33,18 @@ class Animator
 
     public:
         /**
-        * \fn Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader)
+        * \fn Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
+                 ShadowsSystemStates &shadowsStates, ScreenInfos &screenInfos)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
         * \param mapTilegroup Reference to the map tilegroup to animate its tiles
         * \param shader Reference to the map dynamic shader to animate shadows
+        * \param shadowsStates Reference to the ShadowsSystemStates
+        * \param screenInfos Reference to the ScreenInfos to call isVisible() function
         */
-        Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader);
+        Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
+                 ShadowsSystemStates &shadowsStates, ScreenInfos &screenInfos);
 
         /**
         * \fn void setAnimation(const unsigned tile, const unsigned int length)
@@ -326,6 +332,10 @@ class Animator
         TileGroup &m_mapTilegroup; /*!< The reference to the map tilegroup to animate */
 
         DynamicShader &m_shader; /*!< The reference to the dynamic shader to call shadows animation */
+
+        ShadowsSystemStates &m_shadowsStates; /*!< The reference to the ShadowsSystemStates */
+
+        ScreenInfos &m_screenInfos; /*!< The reference to the ScreenInfos */
 };
 
 #endif // ANIMATOR_H

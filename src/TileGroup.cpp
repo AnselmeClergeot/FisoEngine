@@ -1,9 +1,10 @@
 #include "TileGroup.h"
 
-TileGroup::TileGroup(MapData &mapData, ScreenInfos &screenInfos) : m_data(mapData),
-                                                                   m_loader(m_data),
-                                                                   m_drawer(mapData, m_data, screenInfos)
-{}
+TileGroup::TileGroup(MapData &mapData,
+                     ScreenInfos &screenInfos) : m_data(mapData),
+                                                 m_loader(m_data),
+                                                 m_drawer(mapData, m_data, screenInfos)
+{ }
 
 void TileGroup::setTilesetPath(const std::string path) {
     m_loader.setTilesetPath(path);
@@ -52,6 +53,6 @@ unsigned int TileGroup::getGroupOpacity() const {
     return m_data.getGroupOpacity();
 }
 
-void TileGroup::setTileTilesetX(const unsigned int index, const unsigned int x) {
-    m_data.setTileTilesetX(index, x);
+void TileGroup::setTileTilesetX(const Vector3 coord, const unsigned int x) {
+    m_data.setTileTilesetX(coord, x);
 }
