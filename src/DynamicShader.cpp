@@ -85,9 +85,10 @@ bool DynamicShader::haveShadowVisible(const Vector3 tileCoord) {
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, z)))
             return true;
     }
+    return false;
 }
 
 void DynamicShader::updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX) {
     if(haveShadowVisible(tileCoord))
-        m_shadowsTg.setTileTilesetX(tileCoord, animX);
+        m_shadowsTg.setTileTilesetX(Vector3(tileCoord.x, tileCoord.y, getShadowZ(tileCoord)), animX);
 }
