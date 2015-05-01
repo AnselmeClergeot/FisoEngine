@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['get2dfromindex',['get2dFromIndex',['../class_matrix3d.html#a6bf38997fd36a783c323d32b705306ac',1,'Matrix3d']]],
-  ['get2diter',['get2dIter',['../class_matrix3d.html#ad150ad4d1785fadcbe59ca73a6c51d9f',1,'Matrix3d']]],
   ['get3diter',['get3dIter',['../class_matrix3d.html#aa63027cb355575cfd0cc48394d65352b',1,'Matrix3d']]],
   ['getanimkindoftile',['getAnimKindOfTile',['../class_animator.html#ac8d773e96e800cd4584e6063db01d908',1,'Animator']]],
   ['getanimlengthoftile',['getAnimLengthOfTile',['../class_animator.html#ae91b34b83e032e8d81420e28a6e88630',1,'Animator']]],

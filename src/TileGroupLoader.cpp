@@ -27,8 +27,10 @@ void TileGroupLoader::setTilesTileset() {
 }
 
 void TileGroupLoader::setTilesRect() {
-    for(std::size_t i(0); i<m_data.getTileNumber(); i++)
-        m_data.updateTileFromConfig(i);
+    for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+                m_data.updateTileFromConfig(Vector3(x, y, z));
 }
 
 void TileGroupLoader::initialize() {

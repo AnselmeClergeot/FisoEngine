@@ -114,23 +114,23 @@ class TileGroupData
         void setTilePosition(const Vector3 coord);
 
         /**
-        * \fn void updateTileFromConfig(const unsigned int index)
+        * \fn void updateTileFromConfig(const Vector3 coord)
         * \brief To update a specific tile appearance from the TileGroup configuration
         *
-        * \param index The 1D tile coordinate
+        * \param coord The 3D tile coordinates
         * \return void
         */
-        void updateTileFromConfig(const unsigned int index);
+        void updateTileFromConfig(const Vector3 coord);
 
         /**
-        * \fn void frameTile(const unsigned int index, const Vector2 coord)
+        * \fn void frameTile(const Vector3 coord, const Vector2 tilesetCoord)
         * \brief To frame a specific tile with 2D tileset coordinates
         *
-        * \param index The 1D tile coordinate
-        * \param coord The tileset coordinates in tiles
+        * \param coord The 3D tile coordinates
+        * \param tilesetCoord The tileset coordinates in tiles
         * \return void
         */
-        void frameTile(const unsigned int index, const Vector2 coord);
+        void frameTile(const Vector3 coord, const Vector2 tilesetCoord);
 
         /**
         * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)

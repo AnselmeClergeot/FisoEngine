@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('class_matrix3d.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_matrix3d-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -163,18 +164,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae38563f10b427252b830a7fd8dc1370f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ae38563f10b427252b830a7fd8dc1370f">getD</a> () const </td></tr>
 <tr class="memdesc:ae38563f10b427252b830a7fd8dc1370f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix depth.  <a href="#ae38563f10b427252b830a7fd8dc1370f">More...</a><br /></td></tr>
 <tr class="separator:ae38563f10b427252b830a7fd8dc1370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa63027cb355575cfd0cc48394d65352b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aa63027cb355575cfd0cc48394d65352b">get3dIter</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
-<tr class="memdesc:aa63027cb355575cfd0cc48394d65352b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the 1D index from 3D coordinates.  <a href="#aa63027cb355575cfd0cc48394d65352b">More...</a><br /></td></tr>
-<tr class="separator:aa63027cb355575cfd0cc48394d65352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ad150ad4d1785fadcbe59ca73a6c51d9f">get2dIter</a> (const unsigned int x, const unsigned int y)</td></tr>
-<tr class="memdesc:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a 1D index from 2D coordinates.  <a href="#ad150ad4d1785fadcbe59ca73a6c51d9f">More...</a><br /></td></tr>
-<tr class="separator:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bf38997fd36a783c323d32b705306ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a6bf38997fd36a783c323d32b705306ac">get2dFromIndex</a> (const unsigned int index)</td></tr>
-<tr class="memdesc:a6bf38997fd36a783c323d32b705306ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a a 2D coordinates from 1D index.  <a href="#a6bf38997fd36a783c323d32b705306ac">More...</a><br /></td></tr>
-<tr class="separator:a6bf38997fd36a783c323d32b705306ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a807d7ebc51dd759911fc60c8ce0c4c5f">getData</a> () const </td></tr>
 <tr class="memdesc:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix entire data in std::vector.  <a href="#a807d7ebc51dd759911fc60c8ce0c4c5f">More...</a><br /></td></tr>
 <tr class="separator:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa63027cb355575cfd0cc48394d65352b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aa63027cb355575cfd0cc48394d65352b">get3dIter</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
+<tr class="memdesc:aa63027cb355575cfd0cc48394d65352b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the 1D index from 3D coordinates.  <a href="#aa63027cb355575cfd0cc48394d65352b">More...</a><br /></td></tr>
+<tr class="separator:aa63027cb355575cfd0cc48394d65352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -408,76 +406,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6bf38997fd36a783c323d32b705306ac"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get2dFromIndex </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get a a 2D coordinates from 1D index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>The 1D index </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The 2D coordinates </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ad150ad4d1785fadcbe59ca73a6c51d9f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get2dIter </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get a 1D index from 2D coordinates. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The x coordinate </td></tr>
-    <tr><td class="paramname">y</td><td>The y coordinate </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The 1D index </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="aa63027cb355575cfd0cc48394d65352b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get3dIter </td>
@@ -503,6 +439,11 @@ template&lt;typename T &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>To get the 1D index from 3D coordinates. </p>
@@ -844,7 +785,7 @@ template&lt;typename T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_matrix3d.html">Matrix3d</a></li>
-    <li class="footer">Generated on Fri May 1 2015 18:29:42 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 18:45:36 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

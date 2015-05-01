@@ -159,6 +159,16 @@ class Matrix3d
         unsigned int getD() const;
 
         /**
+        * \fn std::vector<T> getData() const
+        * \brief To get the matrix entire data in std::vector
+        *
+        * \return The data vector
+        */
+        std::vector<T> getData() const;
+
+    private:
+
+        /**
         * \fn unsigned int get3dIter(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the 1D index from 3D coordinates
         *
@@ -169,34 +179,6 @@ class Matrix3d
         */
         unsigned int get3dIter(const unsigned int x, const unsigned int y, const unsigned int z);
 
-        /**
-        * \fn unsigned int get2dIter(const unsigned int x, const unsigned int y)
-        * \brief To get a 1D index from 2D coordinates
-        *
-        * \param x The x coordinate
-        * \param y The y coordinate
-        * \return The 1D index
-        */
-        unsigned int get2dIter(const unsigned int x, const unsigned int y);
-
-        /**
-        * \fn Vector2 get2dFromIndex(const unsigned int index)
-        * \brief To get a a 2D coordinates from 1D index
-        *
-        * \param index The 1D index
-        * \return The 2D coordinates
-        */
-        Vector2 get2dFromIndex(const unsigned int index);
-
-        /**
-        * \fn std::vector<T> getData() const
-        * \brief To get the matrix entire data in std::vector
-        *
-        * \return The data vector
-        */
-        std::vector<T> getData() const;
-
-    private:
         unsigned int m_w, /*!< The matrix width */
 
         m_h, /*!< The matrix height */
@@ -272,7 +254,7 @@ void Matrix3d<T>::clear() {
 template<typename T>
 T &Matrix3d<T>::at(const unsigned int x, const unsigned int y, const unsigned int z) {
     assert(x<m_w && y<m_h && z<m_d);
-    return m_data[x + m_w * (y + m_w* z)];
+    return m_data[get3dIter(x, y, z)];
 }
 
 template<typename T>
@@ -304,16 +286,6 @@ unsigned int Matrix3d<T>::getD() const {
 template<typename T>
 unsigned int Matrix3d<T>::get3dIter(const unsigned int x, const unsigned int y, const unsigned int z) {
     return x + m_w * (y + m_w* z);
-}
-
-template<typename T>
-unsigned int Matrix3d<T>::get2dIter(const unsigned int x, const unsigned int y) {
-    return x * m_w + y;
-}
-
-template<typename T>
-Vector2 Matrix3d<T>::get2dFromIndex(const unsigned int index) {
-    return Vector2(div(index, m_w).quot, div(index, m_w).rem);
 }
 
 template<typename T>

@@ -31,7 +31,7 @@ void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
         resetOpacityOf(coord);
 
     //Updating appearance of this tile
-    updateTileFromConfig(m_config.get3dIter(coord.x, coord.y, coord.z));
+    updateTileFromConfig(coord);
 }
 
 sf::Sprite &TileGroupData::spriteAt(const Vector3 coord) {
@@ -54,15 +54,15 @@ void TileGroupData::setTilePosition(const Vector3 coord) {
     setPosition(toIsometricPosition(coord, m_mapData).x, toIsometricPosition(coord, m_mapData).y);
 }
 
-void TileGroupData::updateTileFromConfig(const unsigned int index) {
-    frameTile(index, Vector2(0, m_config.at(index)));
+void TileGroupData::updateTileFromConfig(const Vector3 coord) {
+    frameTile(coord, Vector2(0, m_config.at(coord.x, coord.y, coord.z)));
 }
 
-void TileGroupData::frameTile(const unsigned int index, const Vector2 coord) {
-    m_tiles.at(index).setTextureRect(sf::IntRect(coord.x*m_mapData.getTileSize().x,
-                                              coord.y*m_mapData.getTileSize().y,
-                                              m_mapData.getTileSize().x,
-                                              m_mapData.getTileSize().y));
+void TileGroupData::frameTile(const Vector3 coord, const Vector2 tilesetCoord) {
+    m_tiles.at(coord.x, coord.y, coord.z).setTextureRect(sf::IntRect(tilesetCoord.x*m_mapData.getTileSize().x,
+                                                         tilesetCoord.y*m_mapData.getTileSize().y,
+                                                         m_mapData.getTileSize().x,
+                                                         m_mapData.getTileSize().y));
 }
 
 void TileGroupData::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
@@ -99,7 +99,5 @@ void TileGroupData::resetOpacityOf(const Vector3 coord) {
 }
 
 void TileGroupData::setTileTilesetX(const Vector3 coord, unsigned int x) {
-    frameTile(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z),
-              Vector2(x,
-                      m_config.at(coord.x, coord.y, coord.z)));
+    frameTile(coord, Vector2(x, m_config.at(coord.x, coord.y, coord.z)));
 }

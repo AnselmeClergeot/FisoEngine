@@ -44,7 +44,7 @@ var searchData=
   ['m_5ftempconf',['m_tempConf',['../class_map_data.html#ad63fd7380de84d6892a5477adbcd4121',1,'MapData']]],
   ['m_5ftileanimationsdata',['m_tileAnimationsData',['../class_animator.html#a7fdfcdbf44cc7984b0f4dc32be9572c5',1,'Animator']]],
   ['m_5ftilebaseheight',['m_tileBaseHeight',['../class_map_data.html#a18f744d8dbb5eb763a928a1d6bbd1c5c',1,'MapData']]],
-  ['m_5ftilegroup',['m_tileGroup',['../class_shadows_initializer.html#acfbdb504b9b103cdcf2d880d483ee426',1,'ShadowsInitializer::m_tileGroup()'],['../class_map.html#aec09f05479fcae584f21c236478c3815',1,'Map::m_tileGroup()'],['../class_shadows_interface.html#a59882fe43df88cfd8eb88879a4921a78',1,'ShadowsInterface::m_tilegroup()']]],
+  ['m_5ftilegroup',['m_tilegroup',['../class_shadows_interface.html#a59882fe43df88cfd8eb88879a4921a78',1,'ShadowsInterface::m_tilegroup()'],['../class_shadows_initializer.html#acfbdb504b9b103cdcf2d880d483ee426',1,'ShadowsInitializer::m_tileGroup()'],['../class_map.html#aec09f05479fcae584f21c236478c3815',1,'Map::m_tileGroup()']]],
   ['m_5ftiles',['m_tiles',['../class_tile_group_data.html#a2d84d05ed0f1855f4e41405868190545',1,'TileGroupData']]],
   ['m_5ftileset',['m_tileset',['../class_tile_group_data.html#ad8fe744d3ddf0a337311340f86b4e7ff',1,'TileGroupData']]],
   ['m_5ftilesetpath',['m_tilesetPath',['../class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676',1,'TileGroupLoader']]],
