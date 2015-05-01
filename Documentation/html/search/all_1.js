@@ -7,5 +7,6 @@ var searchData=
   ['configsloader_2eh',['ConfigsLoader.h',['../_configs_loader_8h.html',1,'']]],
   ['configssaver',['ConfigsSaver',['../class_configs_saver.html',1,'ConfigsSaver'],['../class_configs_saver.html#a40aa7de27b9493586a1812677b655f6a',1,'ConfigsSaver::ConfigsSaver()']]],
   ['configssaver_2eh',['ConfigsSaver.h',['../_configs_saver_8h.html',1,'']]],
+  ['create',['create',['../class_map.html#ae5603659568705f8c8b20e4015a1377d',1,'Map']]],
   ['createentity',['createEntity',['../class_entities_container.html#a37910e9c493278ad71746a163d08e1c1',1,'EntitiesContainer']]]
 ];

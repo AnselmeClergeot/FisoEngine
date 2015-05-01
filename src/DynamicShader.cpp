@@ -63,9 +63,8 @@ void DynamicShader::updateOpacityOfType(const unsigned int type) {
 
 void DynamicShader::updateOpacityOfSpecific(const Vector3 coord) {
     if(haveShadowVisible(coord))
-    m_shadowsTg.setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, getShadowZ(coord)),
-                                   (int)((float)m_mapTg.getTileOpacity(m_mapData.getTempConf().
-                                    get3dIter(coord.x, coord.y, coord.z))/(float)255*m_shadowsTg.getGroupOpacity()));
+    m_shadowsTg.setTileOpacity(Vector3(coord.x, coord.y, getShadowZ(coord)),
+                                   (int)((float)m_mapTg.getTileOpacity(coord)/(float)255*m_shadowsTg.getGroupOpacity()));
 }
 
 unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {

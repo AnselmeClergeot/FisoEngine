@@ -13,7 +13,7 @@ Map::Map(ScreenInfos &screenInfos) : m_screenInfos(screenInfos),
                                      m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_screenInfos)
 {}
 
-void Map::init() {
+void Map::create() {
     m_configsLoader.load();
     m_tileGroup.setConfiguration(m_data.getTempConf());
     m_tileGroup.initialize();
@@ -22,7 +22,7 @@ void Map::init() {
 }
 
 void Map::reload() {
-    init();
+    create();
 
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
@@ -99,16 +99,16 @@ void Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned i
     setTileAt(Vector3(x, y, z), tile, modifConf, modifDraw);
 }
 
-void Map::setSpecificOpacity(const Vector3 coord, const unsigned int opacity) {
-    m_tileGroup.setSpecificOpacity(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z), opacity);
+void Map::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
+    m_tileGroup.setTileOpacity(coord, opacity);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfSpecific(coord);
 }
 
-void Map::setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+void Map::setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
                              const unsigned int opacity) {
-    setSpecificOpacity(Vector3(x, y, z), opacity);
+    setTileOpacity(Vector3(x, y, z), opacity);
 }
 
 void Map::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
@@ -206,7 +206,7 @@ unsigned int Map::getGroupOpacity() const {
 }
 
 unsigned int Map::getTileOpacity(const Vector3 coord) {
-    return m_tileGroup.getTileOpacity(m_data.getTempConf().get3dIter(coord.x, coord.y, coord.z));
+    return m_tileGroup.getTileOpacity(coord);
 }
 
 unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z) {

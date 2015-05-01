@@ -113,15 +113,15 @@ $(document).ready(function(){initNavTree('class_tile_group.html','');});
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#af4be2fd858da6803480440170b116376">draw</a>(sf::RenderTarget &amp;target, const unsigned int layer, const EntitiesInterposing *interposing=0) const </td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#a4ba85b1f4d5786f2d1b61ef4ecd1b238">getGroupOpacity</a>() const </td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a3b33c0bf476113fc86e02f2706d4d3ba">getTileOpacity</a>(const unsigned int index) const </td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a2309567090b97e4b88e92ecca1cf9f93">getTileOpacity</a>(const Vector3 coord) const </td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#a31237f1f668fd0f912429e94009b8c99">initialize</a>()</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a8b0fe9666636904cbb0c71ca1921a7b3">m_data</a></td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#ae2d9360edbb3232d1d6da82b1c2651f5">m_drawer</a></td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a3618846fdc13d5fab8f833139f1e7d36">m_loader</a></td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#ae3a7fcb7c5ba107e03e91467433f043d">setConfiguration</a>(Matrix3d&lt; unsigned int &gt; &amp;matrix)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#ab338e592c7ff7c3ac54ba6552d387330">setGroupOpacity</a>(const unsigned int opacity)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_tile_group.html#a24389ba3b3f2280db8da5a96c239fe40">setSpecificOpacity</a>(const unsigned int index, const unsigned int opacity)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a846ee36426cb4073be74ba854f102b37">setTileAt</a>(const Vector3 coord, const unsigned int index)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_group.html#a846ee36426cb4073be74ba854f102b37">setTileAt</a>(const Vector3 coord, const unsigned int index)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a02db1a48c8946c813b26d8a6cfd6435e">setTileOpacity</a>(const Vector3 coord, const unsigned int opacity)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#a376127f2384a264df026295850f38d62">setTilesetPath</a>(const std::string path)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_tile_group.html#a30c1767da3b58d634bd4826bc2c3da26">setTileTilesetX</a>(const Vector3 coord, const unsigned int x)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_tile_group.html#a6576f454e5d3df8a2794d53f59e9c179">setTypeOpacity</a>(const unsigned int tile, const unsigned int opacity)</td><td class="entry"><a class="el" href="class_tile_group.html">TileGroup</a></td><td class="entry"></td></tr>
@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('class_tile_group.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri May 1 2015 11:07:18 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 18:00:20 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

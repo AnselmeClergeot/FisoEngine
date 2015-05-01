@@ -125,9 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a476844ea4fe51b0f67c0622e93e17c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a476844ea4fe51b0f67c0622e93e17c88">Map</a> (<a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
 <tr class="memdesc:a476844ea4fe51b0f67c0622e93e17c88"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> class constructor.  <a href="#a476844ea4fe51b0f67c0622e93e17c88">More...</a><br /></td></tr>
 <tr class="separator:a476844ea4fe51b0f67c0622e93e17c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a387c6842c05596b004e2735b8cbf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae3a387c6842c05596b004e2735b8cbf5">init</a> ()</td></tr>
-<tr class="memdesc:ae3a387c6842c05596b004e2735b8cbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by user to create the map itself.  <a href="#ae3a387c6842c05596b004e2735b8cbf5">More...</a><br /></td></tr>
-<tr class="separator:ae3a387c6842c05596b004e2735b8cbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5603659568705f8c8b20e4015a1377d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae5603659568705f8c8b20e4015a1377d">create</a> ()</td></tr>
+<tr class="memdesc:ae5603659568705f8c8b20e4015a1377d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by user to create the map.  <a href="#ae5603659568705f8c8b20e4015a1377d">More...</a><br /></td></tr>
+<tr class="separator:ae5603659568705f8c8b20e4015a1377d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26792fc7049fda00bcef05e6aafb0af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af26792fc7049fda00bcef05e6aafb0af">reload</a> ()</td></tr>
 <tr class="memdesc:af26792fc7049fda00bcef05e6aafb0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by user to reload the map from new configuration.  <a href="#af26792fc7049fda00bcef05e6aafb0af">More...</a><br /></td></tr>
 <tr class="separator:af26792fc7049fda00bcef05e6aafb0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,12 +167,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af69f8918fe0b163148545f999fb53d90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#af69f8918fe0b163148545f999fb53d90">setTileAt</a> (const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile, bool modifConf, bool modifDraw)</td></tr>
 <tr class="memdesc:af69f8918fe0b163148545f999fb53d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the tile at specific map coordinates from a tile number.  <a href="#af69f8918fe0b163148545f999fb53d90">More...</a><br /></td></tr>
 <tr class="separator:af69f8918fe0b163148545f999fb53d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9adc06773fa47f515379caeb1e0f7d0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9adc06773fa47f515379caeb1e0f7d0f">setSpecificOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const unsigned int opacity)</td></tr>
-<tr class="memdesc:a9adc06773fa47f515379caeb1e0f7d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile.  <a href="#a9adc06773fa47f515379caeb1e0f7d0f">More...</a><br /></td></tr>
-<tr class="separator:a9adc06773fa47f515379caeb1e0f7d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378b6c56186fbe429ff2829d5330a05c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a378b6c56186fbe429ff2829d5330a05c">setSpecificOpacity</a> (const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int opacity)</td></tr>
-<tr class="memdesc:a378b6c56186fbe429ff2829d5330a05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile.  <a href="#a378b6c56186fbe429ff2829d5330a05c">More...</a><br /></td></tr>
-<tr class="separator:a378b6c56186fbe429ff2829d5330a05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31c44cbcba5b150e249e8af5806a762"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab31c44cbcba5b150e249e8af5806a762">setTileOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const unsigned int opacity)</td></tr>
+<tr class="memdesc:ab31c44cbcba5b150e249e8af5806a762"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile.  <a href="#ab31c44cbcba5b150e249e8af5806a762">More...</a><br /></td></tr>
+<tr class="separator:ab31c44cbcba5b150e249e8af5806a762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17a0b0968cf1ede76cfb1372a991ca1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ac17a0b0968cf1ede76cfb1372a991ca1">setTileOpacity</a> (const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int opacity)</td></tr>
+<tr class="memdesc:ac17a0b0968cf1ede76cfb1372a991ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile.  <a href="#ac17a0b0968cf1ede76cfb1372a991ca1">More...</a><br /></td></tr>
+<tr class="separator:ac17a0b0968cf1ede76cfb1372a991ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03fd9742ee962a212a244e9ad6de0c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a03fd9742ee962a212a244e9ad6de0c09">setTypeOpacity</a> (const unsigned int tile, const unsigned int opacity)</td></tr>
 <tr class="memdesc:a03fd9742ee962a212a244e9ad6de0c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of all tiles of a specific number.  <a href="#a03fd9742ee962a212a244e9ad6de0c09">More...</a><br /></td></tr>
 <tr class="separator:a03fd9742ee962a212a244e9ad6de0c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,6 +366,24 @@ Private Attributes</h2></td></tr>
 
 <p>To access the map tiles animator to operate with the system. </p>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the map animator </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5603659568705f8c8b20e4015a1377d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function called by user to create the map. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -746,24 +764,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae3a387c6842c05596b004e2735b8cbf5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Map::init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Function called by user to create the map itself. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a6d7baee69ab5150ce681b6ec39ff4640"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1040,92 +1040,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9adc06773fa47f515379caeb1e0f7d0f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Map::setSpecificOpacity </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
-          <td class="paramname"><em>coord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>opacity</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the opacity of a specific tile. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coord</td><td>The 3D coordinates of the tile </td></tr>
-    <tr><td class="paramname">opacity</td><td>The opacity from 0 to 255 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a378b6c56186fbe429ff2829d5330a05c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Map::setSpecificOpacity </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>opacity</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the opacity of a specific tile. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The x coordinate of the tile </td></tr>
-    <tr><td class="paramname">y</td><td>The y coordinate of the tile </td></tr>
-    <tr><td class="paramname">z</td><td>The z coordinate of the tile </td></tr>
-    <tr><td class="paramname">opacity</td><td>The opacity from 0 to 255 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="af1a890b45361ac88dcbcbec1dcd6f5ce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1258,6 +1172,92 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>The base height </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab31c44cbcba5b150e249e8af5806a762"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::setTileOpacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>opacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the opacity of a specific tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>The 3D coordinates of the tile </td></tr>
+    <tr><td class="paramname">opacity</td><td>The opacity from 0 to 255 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac17a0b0968cf1ede76cfb1372a991ca1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::setTileOpacity </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>opacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the opacity of a specific tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x coordinate of the tile </td></tr>
+    <tr><td class="paramname">y</td><td>The y coordinate of the tile </td></tr>
+    <tr><td class="paramname">z</td><td>The z coordinate of the tile </td></tr>
+    <tr><td class="paramname">opacity</td><td>The opacity from 0 to 255 </td></tr>
   </table>
   </dd>
 </dl>
@@ -1689,7 +1689,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_map.html">Map</a></li>
-    <li class="footer">Generated on Fri May 1 2015 11:07:18 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 18:00:20 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

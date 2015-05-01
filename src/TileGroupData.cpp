@@ -65,8 +65,9 @@ void TileGroupData::frameTile(const unsigned int index, const Vector2 coord) {
                                               m_mapData.getTileSize().y));
 }
 
-void TileGroupData::setSpecificOpacity(const unsigned int index, const unsigned int opacity) {
-    m_tiles[index].setColor(sf::Color(255, 255, 255, opacity));
+void TileGroupData::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
+    m_tiles[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+    setColor(sf::Color(255, 255, 255, opacity));
 }
 
 void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
@@ -85,8 +86,8 @@ void TileGroupData::applyGroupOpacity() {
         m_tiles[i].setColor(sf::Color(255, 255, 255, m_opacity));
 }
 
-unsigned int TileGroupData::getTileOpacity(const unsigned int index) const {
-    return m_tiles[index].getColor().a;
+unsigned int TileGroupData::getTileOpacity(const Vector3 coord) const {
+    return m_tiles[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getColor().a;
 }
 
 unsigned int TileGroupData::getGroupOpacity() const {
@@ -94,7 +95,7 @@ unsigned int TileGroupData::getGroupOpacity() const {
 }
 
 void TileGroupData::resetOpacityOf(const Vector3 coord) {
-    setSpecificOpacity(m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z), 255);
+    setTileOpacity(coord, 255);
 }
 
 void TileGroupData::setTileTilesetX(const Vector3 coord, unsigned int x) {

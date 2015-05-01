@@ -28,8 +28,8 @@ void TileGroup::updatePosition() {
     m_data.updatePosition();
 }
 
-void TileGroup::setSpecificOpacity(const unsigned int index, const unsigned int opacity) {
-    m_data.setSpecificOpacity(index, opacity);
+void TileGroup::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
+    m_data.setTileOpacity(coord, opacity);
 }
 
 void TileGroup::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
@@ -45,8 +45,8 @@ void TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
     m_drawer.draw(target, layer, interposing);
 }
 
-unsigned int TileGroup::getTileOpacity(const unsigned int index) const {
-    return m_data.getTileOpacity(index);
+unsigned int TileGroup::getTileOpacity(const Vector3 coord) const {
+    return m_data.getTileOpacity(coord);
 }
 
 unsigned int TileGroup::getGroupOpacity() const {

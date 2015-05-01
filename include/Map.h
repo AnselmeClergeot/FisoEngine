@@ -46,12 +46,12 @@ class Map : public sf::Drawable
         Map(ScreenInfos &screenInfos);
 
         /**
-        * \fn void init()
-        * \brief Function called by user to create the map itself
+        * \fn void create()
+        * \brief Function called by user to create the map
         *
         * \return void
         */
-        void init();
+        void create();
 
         /**
         * \fn void reload()
@@ -178,18 +178,18 @@ class Map : public sf::Drawable
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
 
         /**
-        * \fn void setSpecificOpacity(const Vector3 coord, const unsigned int opacity)
+        * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile
         *
         * \param coord The 3D coordinates of the tile
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setSpecificOpacity(const Vector3 coord, const unsigned int opacity);
+        void setTileOpacity(const Vector3 coord, const unsigned int opacity);
 
         /**
-        * \fn void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
-                                      const unsigned int opacity)
+        * \fn void setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+                                const unsigned int opacity)
         * \brief To set the opacity of a specific tile
         *
         * \param x The x coordinate of the tile
@@ -198,7 +198,7 @@ class Map : public sf::Drawable
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setSpecificOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+        void setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
                                 const unsigned int opacity);
 
         /**

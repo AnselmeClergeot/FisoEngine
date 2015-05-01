@@ -81,14 +81,14 @@ class TileGroup
         void updatePosition();
 
         /**
-        * \fn void setSpecificOpacity(const unsigned int index, const unsigned int opacity)
+        * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile from 1D index
         *
-        * \param index The tile 1D index
+        * \param coord The tile 3D coordinates
         * \param opacity The opacity value, from 0 to 255
         * \return void
         */
-        void setSpecificOpacity(const unsigned int index, const unsigned int opacity);
+        void setTileOpacity(const Vector3 coord, const unsigned int opacity);
 
         /**
         * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
@@ -124,13 +124,13 @@ class TileGroup
                   const EntitiesInterposing *interposing = 0) const;
 
         /**
-        * \fn unsigned int getTileOpacity(const unsigned int index) const
-        * \brief To get the opacity of a specific tile at 1D index
+        * \fn unsigned int getTileOpacity(const Vector3 coord) const
+        * \brief To get the opacity of a specific tile at 3D coordinates
         *
-        * \param index The tile 1D coordinate
+        * \param coord The tile 3D coordinates
         * \return The opacity value of the tile, from 0 to 255
         */
-        unsigned int getTileOpacity(const unsigned int index) const;
+        unsigned int getTileOpacity(const Vector3 coord) const;
 
         /**
         * \fn unsigned int getGroupOpacity() const

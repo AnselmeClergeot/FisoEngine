@@ -138,9 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b40485381f2206c04effcf4c7a9abd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a8b40485381f2206c04effcf4c7a9abd2">updatePosition</a> ()</td></tr>
 <tr class="memdesc:a8b40485381f2206c04effcf4c7a9abd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">To update the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> position from the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> position.  <a href="#a8b40485381f2206c04effcf4c7a9abd2">More...</a><br /></td></tr>
 <tr class="separator:a8b40485381f2206c04effcf4c7a9abd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24389ba3b3f2280db8da5a96c239fe40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a24389ba3b3f2280db8da5a96c239fe40">setSpecificOpacity</a> (const unsigned int index, const unsigned int opacity)</td></tr>
-<tr class="memdesc:a24389ba3b3f2280db8da5a96c239fe40"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile from 1D index.  <a href="#a24389ba3b3f2280db8da5a96c239fe40">More...</a><br /></td></tr>
-<tr class="separator:a24389ba3b3f2280db8da5a96c239fe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02db1a48c8946c813b26d8a6cfd6435e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a02db1a48c8946c813b26d8a6cfd6435e">setTileOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const unsigned int opacity)</td></tr>
+<tr class="memdesc:a02db1a48c8946c813b26d8a6cfd6435e"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of a specific tile from 1D index.  <a href="#a02db1a48c8946c813b26d8a6cfd6435e">More...</a><br /></td></tr>
+<tr class="separator:a02db1a48c8946c813b26d8a6cfd6435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6576f454e5d3df8a2794d53f59e9c179"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a6576f454e5d3df8a2794d53f59e9c179">setTypeOpacity</a> (const unsigned int tile, const unsigned int opacity)</td></tr>
 <tr class="memdesc:a6576f454e5d3df8a2794d53f59e9c179"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of all the tiles of the same type.  <a href="#a6576f454e5d3df8a2794d53f59e9c179">More...</a><br /></td></tr>
 <tr class="separator:a6576f454e5d3df8a2794d53f59e9c179"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,9 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4be2fd858da6803480440170b116376"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#af4be2fd858da6803480440170b116376">draw</a> (sf::RenderTarget &amp;target, const unsigned int layer, const <a class="el" href="class_entities_interposing.html">EntitiesInterposing</a> *interposing=0) const </td></tr>
 <tr class="memdesc:af4be2fd858da6803480440170b116376"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific layer of the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#af4be2fd858da6803480440170b116376">More...</a><br /></td></tr>
 <tr class="separator:af4be2fd858da6803480440170b116376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b33c0bf476113fc86e02f2706d4d3ba"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a3b33c0bf476113fc86e02f2706d4d3ba">getTileOpacity</a> (const unsigned int index) const </td></tr>
-<tr class="memdesc:a3b33c0bf476113fc86e02f2706d4d3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of a specific tile at 1D index.  <a href="#a3b33c0bf476113fc86e02f2706d4d3ba">More...</a><br /></td></tr>
-<tr class="separator:a3b33c0bf476113fc86e02f2706d4d3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2309567090b97e4b88e92ecca1cf9f93"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a2309567090b97e4b88e92ecca1cf9f93">getTileOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord) const </td></tr>
+<tr class="memdesc:a2309567090b97e4b88e92ecca1cf9f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of a specific tile at 3D coordinates.  <a href="#a2309567090b97e4b88e92ecca1cf9f93">More...</a><br /></td></tr>
+<tr class="separator:a2309567090b97e4b88e92ecca1cf9f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group.html#a4ba85b1f4d5786f2d1b61ef4ecd1b238">getGroupOpacity</a> () const </td></tr>
 <tr class="memdesc:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of the entire <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> if set.  <a href="#a4ba85b1f4d5786f2d1b61ef4ecd1b238">More...</a><br /></td></tr>
 <tr class="separator:a4ba85b1f4d5786f2d1b61ef4ecd1b238"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,24 +270,24 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b33c0bf476113fc86e02f2706d4d3ba"></a>
+<a class="anchor" id="a2309567090b97e4b88e92ecca1cf9f93"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int TileGroup::getTileOpacity </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To get the opacity of a specific tile at 1D index. </p>
+<p>To get the opacity of a specific tile at 3D coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>The tile 1D coordinate </td></tr>
+    <tr><td class="paramname">coord</td><td>The tile 3D coordinates </td></tr>
   </table>
   </dd>
 </dl>
@@ -363,42 +363,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a24389ba3b3f2280db8da5a96c239fe40"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TileGroup::setSpecificOpacity </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>opacity</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the opacity of a specific tile from 1D index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>The tile 1D index </td></tr>
-    <tr><td class="paramname">opacity</td><td>The opacity value, from 0 to 255 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a846ee36426cb4073be74ba854f102b37"></a>
 <div class="memitem">
 <div class="memproto">
@@ -428,6 +392,42 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">coord</td><td>The tile coordinates </td></tr>
     <tr><td class="paramname">index</td><td>The tileset Y index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02db1a48c8946c813b26d8a6cfd6435e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileGroup::setTileOpacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>opacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the opacity of a specific tile from 1D index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>The tile 3D coordinates </td></tr>
+    <tr><td class="paramname">opacity</td><td>The opacity value, from 0 to 255 </td></tr>
   </table>
   </dd>
 </dl>
@@ -624,7 +624,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_group.html">TileGroup</a></li>
-    <li class="footer">Generated on Fri May 1 2015 11:07:18 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 18:00:20 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

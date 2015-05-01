@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['init',['init',['../class_shadows_interface.html#a36d6cf696d0ba47c9e600553ec29762a',1,'ShadowsInterface::init()'],['../class_map.html#ae3a387c6842c05596b004e2735b8cbf5',1,'Map::init()']]],
+  ['init',['init',['../class_shadows_interface.html#a36d6cf696d0ba47c9e600553ec29762a',1,'ShadowsInterface']]],
   ['initialize',['initialize',['../class_tile_group.html#a31237f1f668fd0f912429e94009b8c99',1,'TileGroup::initialize()'],['../class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a',1,'TileGroupLoader::initialize()'],['../class_shadows_initializer.html#a14ed5db07a770e960c53191681c84b21',1,'ShadowsInitializer::initialize()']]],
   ['interpose',['interpose',['../class_entities_interposing.html#a838479fcaecdefe6f0e42ed2b335df5d',1,'EntitiesInterposing']]],
   ['isinitialized',['isInitialized',['../class_shadows_system_states.html#adb135ac30834e594acfd95d032a39123',1,'ShadowsSystemStates']]],
