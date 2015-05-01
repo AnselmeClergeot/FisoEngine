@@ -1,7 +1,9 @@
 #include "TileGroupLoader.h"
 #include "ioFuncs.h"
 
-TileGroupLoader::TileGroupLoader(TileGroupData &data) : m_tilesetPath(""), m_data(data)
+TileGroupLoader::TileGroupLoader(TileGroupData &data, MapData &mapData) : m_mapData(mapData),
+                                                                          m_tilesetPath(""),
+                                                                          m_data(data)
 { }
 
 void TileGroupLoader::setTilesetPath(const std::string path) {
@@ -14,7 +16,9 @@ void TileGroupLoader::loadTileset() {
 }
 
 void TileGroupLoader::resizeTileList() {
-    m_data.getTiles().resize(m_data.getTileNumber());
+    m_data.getTiles().resize(m_mapData.getTempConf().getW(),
+                             m_mapData.getTempConf().getH(),
+                             m_mapData.getTempConf().getD());
 }
 
 void TileGroupLoader::setTilesTileset() {

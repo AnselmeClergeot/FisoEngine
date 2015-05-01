@@ -121,9 +121,9 @@ $(document).ready(function(){initNavTree('class_tile_group_loader.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa09b53fcdccb4ad4ceb21127f480020"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#afa09b53fcdccb4ad4ceb21127f480020">TileGroupLoader</a> (<a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;data)</td></tr>
-<tr class="memdesc:afa09b53fcdccb4ad4ceb21127f480020"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#afa09b53fcdccb4ad4ceb21127f480020">More...</a><br /></td></tr>
-<tr class="separator:afa09b53fcdccb4ad4ceb21127f480020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab579762eecdaa5f5b096971c9d0f0007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#ab579762eecdaa5f5b096971c9d0f0007">TileGroupLoader</a> (<a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;data, <a class="el" href="class_map_data.html">MapData</a> &amp;mapData)</td></tr>
+<tr class="memdesc:ab579762eecdaa5f5b096971c9d0f0007"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ab579762eecdaa5f5b096971c9d0f0007">More...</a><br /></td></tr>
+<tr class="separator:ab579762eecdaa5f5b096971c9d0f0007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2839e49a0d1d9eaeac855f250b6c174"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">setTilesetPath</a> (const std::string path)</td></tr>
 <tr class="memdesc:ac2839e49a0d1d9eaeac855f250b6c174"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the tileset image of the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#ac2839e49a0d1d9eaeac855f250b6c174">More...</a><br /></td></tr>
 <tr class="separator:ac2839e49a0d1d9eaeac855f250b6c174"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +148,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a4df869869f0951587310d692d6c820cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">m_mapData</a></td></tr>
+<tr class="separator:a4df869869f0951587310d692d6c820cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42faa98d4a8110a5f0becf09d12d676"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">m_tilesetPath</a></td></tr>
 <tr class="separator:ab42faa98d4a8110a5f0becf09d12d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bddc1daff108f69d7893d06ef01ed16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">m_data</a></td></tr>
@@ -157,7 +159,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>This class is charged to load <a class="el" href="class_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> stuff. </p>
 <p><a class="el" href="class_tile_group_loader.html" title="This class is charged to load TileGroupData stuff. ">TileGroupLoader</a> is charged to load the <a class="el" href="class_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> stuff such as the tileset, and setting it to all tiles, etc. It also frames the tiles before the first drawing call. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afa09b53fcdccb4ad4ceb21127f480020"></a>
+<a class="anchor" id="ab579762eecdaa5f5b096971c9d0f0007"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -165,8 +167,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">TileGroupLoader::TileGroupLoader </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td>
+          <td class="paramname"><em>mapData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -175,6 +187,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Reference to the <a class="el" href="class_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> to load </td></tr>
+    <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> to load </td></tr>
   </table>
   </dd>
 </dl>
@@ -351,6 +364,27 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4df869869f0951587310d692d6c820cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_map_data.html">MapData</a>&amp; TileGroupLoader::m_mapData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> </p>
+
+</div>
+</div>
 <a class="anchor" id="ab42faa98d4a8110a5f0becf09d12d676"></a>
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +416,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_group_loader.html">TileGroupLoader</a></li>
-    <li class="footer">Generated on Fri May 1 2015 18:00:20 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 18:29:42 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

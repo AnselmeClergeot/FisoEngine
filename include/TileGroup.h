@@ -130,7 +130,7 @@ class TileGroup
         * \param coord The tile 3D coordinates
         * \return The opacity value of the tile, from 0 to 255
         */
-        unsigned int getTileOpacity(const Vector3 coord) const;
+        unsigned int getTileOpacity(const Vector3 coord);
 
         /**
         * \fn unsigned int getGroupOpacity() const

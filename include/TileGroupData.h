@@ -44,12 +44,12 @@ class TileGroupData
         sf::Texture &getTileset();
 
         /**
-        * \fn std::vector<sf::Sprite> &getTiles()
+        * \fn Matrix3d<sf::Sprite> &getTiles()
         * \brief To get the list of tiles [SPECIFIC TO SFML]
         *
         * \return The vector of sprites
         */
-        std::vector<sf::Sprite> &getTiles();
+        Matrix3d<sf::Sprite> &getTiles();
 
         /**
         * \fn unsigned int getTileNumber() const
@@ -170,13 +170,13 @@ class TileGroupData
         void applyGroupOpacity();
 
         /**
-        * \fn unsigned int getTileOpacity(const Vector3 coord) const
+        * \fn unsigned int getTileOpacity(const Vector3 coord)
         * \brief To get the opacity of a specific tile at 3D coordinates
         *
         * \param coord The tile 3D coordinates
         * \return The opacity value of the tile, from 0 to 255
         */
-        unsigned int getTileOpacity(const Vector3 coord) const;
+        unsigned int getTileOpacity(const Vector3 coord);
 
         /**
         * \fn unsigned int getGroupOpacity() const
@@ -209,7 +209,7 @@ class TileGroupData
 
         sf::Texture m_tileset; /*!< The tileset texture [SPECIFIC TO SFML] */
 
-        std::vector<sf::Sprite> m_tiles;  /*!<  The vector of tile sprites [SPECIFIC TO SFML]*/
+        Matrix3d<sf::Sprite> m_tiles;  /*!<  The Matrix3d of tile sprites [SPECIFIC TO SFML]*/
 
         Matrix3d<unsigned int> m_config;  /*!< The TileGroup configuration*/
 

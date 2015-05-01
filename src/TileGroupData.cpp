@@ -11,7 +11,7 @@ sf::Texture &TileGroupData::getTileset() {
     return m_tileset;
 }
 
-std::vector<sf::Sprite> &TileGroupData::getTiles() {
+Matrix3d<sf::Sprite> &TileGroupData::getTiles() {
     return m_tiles;
 }
 
@@ -35,11 +35,11 @@ void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
 }
 
 sf::Sprite &TileGroupData::spriteAt(const Vector3 coord) {
-    return m_tiles[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)];
+    return m_tiles.at(coord.x, coord.y, coord.z);
 }
 
 sf::Sprite &TileGroupData::spriteAt(const unsigned int index) {
-    return m_tiles[index];
+    return m_tiles.at(index);
 }
 
 void TileGroupData::updatePosition() {
@@ -50,7 +50,7 @@ void TileGroupData::updatePosition() {
 }
 
 void TileGroupData::setTilePosition(const Vector3 coord) {
-    m_tiles[m_config.get3dIter(coord.x, coord.y, coord.z)].
+    m_tiles.at(coord.x, coord.y, coord.z).
     setPosition(toIsometricPosition(coord, m_mapData).x, toIsometricPosition(coord, m_mapData).y);
 }
 
@@ -59,21 +59,21 @@ void TileGroupData::updateTileFromConfig(const unsigned int index) {
 }
 
 void TileGroupData::frameTile(const unsigned int index, const Vector2 coord) {
-    m_tiles[index].setTextureRect(sf::IntRect(coord.x*m_mapData.getTileSize().x,
+    m_tiles.at(index).setTextureRect(sf::IntRect(coord.x*m_mapData.getTileSize().x,
                                               coord.y*m_mapData.getTileSize().y,
                                               m_mapData.getTileSize().x,
                                               m_mapData.getTileSize().y));
 }
 
 void TileGroupData::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
-    m_tiles[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
+    m_tiles.at(coord.x, coord.y, coord.z).
     setColor(sf::Color(255, 255, 255, opacity));
 }
 
 void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
-    for(std::size_t i(0); i<m_tiles.size(); i++)
+    for(std::size_t i(0); i<m_tiles.getSize(); i++)
         if(m_mapData.getTempConf().at(i)==tile)
-            m_tiles[i].setColor(sf::Color(255, 255, 255, opacity));
+            m_tiles.at(i).setColor(sf::Color(255, 255, 255, opacity));
 }
 
 void TileGroupData::setGroupOpacity(const unsigned int opacity) {
@@ -82,12 +82,12 @@ void TileGroupData::setGroupOpacity(const unsigned int opacity) {
 }
 
 void TileGroupData::applyGroupOpacity() {
-    for(std::size_t i(0); i<m_tiles.size(); i++)
-        m_tiles[i].setColor(sf::Color(255, 255, 255, m_opacity));
+    for(std::size_t i(0); i<m_tiles.getSize(); i++)
+        m_tiles.at(i).setColor(sf::Color(255, 255, 255, m_opacity));
 }
 
-unsigned int TileGroupData::getTileOpacity(const Vector3 coord) const {
-    return m_tiles[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getColor().a;
+unsigned int TileGroupData::getTileOpacity(const Vector3 coord) {
+    return m_tiles.at(coord.x, coord.y, coord.z).getColor().a;
 }
 
 unsigned int TileGroupData::getGroupOpacity() const {

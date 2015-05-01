@@ -2,7 +2,7 @@
 
 TileGroup::TileGroup(MapData &mapData,
                      ScreenInfos &screenInfos) : m_data(mapData),
-                                                 m_loader(m_data),
+                                                 m_loader(m_data, mapData),
                                                  m_drawer(mapData, m_data, screenInfos)
 { }
 
@@ -45,7 +45,7 @@ void TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
     m_drawer.draw(target, layer, interposing);
 }
 
-unsigned int TileGroup::getTileOpacity(const Vector3 coord) const {
+unsigned int TileGroup::getTileOpacity(const Vector3 coord) {
     return m_data.getTileOpacity(coord);
 }
 

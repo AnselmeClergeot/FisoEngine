@@ -12,6 +12,7 @@ var hierarchy =
     [ "Entity", "class_entity.html", null ],
     [ "MapData", "class_map_data.html", null ],
     [ "Matrix3d< T >", "class_matrix3d.html", null ],
+    [ "Matrix3d< sf::Sprite >", "class_matrix3d.html", null ],
     [ "Matrix3d< TileAnimData >", "class_matrix3d.html", null ],
     [ "Matrix3d< unsigned int >", "class_matrix3d.html", null ],
     [ "ScreenInfos", "class_screen_infos.html", null ],

@@ -27,12 +27,13 @@ class TileGroupLoader
     public:
 
         /**
-        * \fn TileGroupLoader(TileGroupData &data)
+        * \fn TileGroupLoader(TileGroupData &data, MapData &mapData)
         * \brief The class constructor
         *
         * \param data Reference to the TileGroupData to load
+        * \param mapData Reference to the MapData to load
         */
-        TileGroupLoader(TileGroupData &data);
+        TileGroupLoader(TileGroupData &data, MapData &mapData);
 
         /**
         * \fn void setTilesetPath(const std::string path)
@@ -85,6 +86,8 @@ class TileGroupLoader
         */
 
         void setTilesRect();
+
+        MapData &m_mapData; /*!<  Reference to the MapData */
 
         std::string m_tilesetPath; /*!<  The tileset fille path */
 

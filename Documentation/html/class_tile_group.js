@@ -3,7 +3,7 @@ var class_tile_group =
     [ "TileGroup", "class_tile_group.html#a54256d8c4cf99ea7442cfe7aec177e89", null ],
     [ "draw", "class_tile_group.html#af4be2fd858da6803480440170b116376", null ],
     [ "getGroupOpacity", "class_tile_group.html#a4ba85b1f4d5786f2d1b61ef4ecd1b238", null ],
-    [ "getTileOpacity", "class_tile_group.html#a2309567090b97e4b88e92ecca1cf9f93", null ],
+    [ "getTileOpacity", "class_tile_group.html#a3f914e9e6123a130d1fd5f2a544c72a3", null ],
     [ "initialize", "class_tile_group.html#a31237f1f668fd0f912429e94009b8c99", null ],
     [ "setConfiguration", "class_tile_group.html#ae3a7fcb7c5ba107e03e91467433f043d", null ],
     [ "setGroupOpacity", "class_tile_group.html#ab338e592c7ff7c3ac54ba6552d387330", null ],
