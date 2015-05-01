@@ -130,15 +130,15 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a851833c50267a975d66558fac8c81008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a851833c50267a975d66558fac8c81008">resizeMatrix</a> (<a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;tempConf)</td></tr>
-<tr class="memdesc:a851833c50267a975d66558fac8c81008"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the temporary shadows configuration.  <a href="#a851833c50267a975d66558fac8c81008">More...</a><br /></td></tr>
-<tr class="separator:a851833c50267a975d66558fac8c81008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a38e68135d1218af13e6a7d88241ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#af8a38e68135d1218af13e6a7d88241ff">fillMatrix</a> (<a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;tempConf)</td></tr>
-<tr class="memdesc:af8a38e68135d1218af13e6a7d88241ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">To call filling the temporary configuration with calculated values.  <a href="#af8a38e68135d1218af13e6a7d88241ff">More...</a><br /></td></tr>
-<tr class="separator:af8a38e68135d1218af13e6a7d88241ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3a33402d4bedb1b6a55421a5d84b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#aed3a33402d4bedb1b6a55421a5d84b6c">calculateShadowInConf</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;tempConf)</td></tr>
-<tr class="memdesc:aed3a33402d4bedb1b6a55421a5d84b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To calculate a generated shadow from a map tile coordinates.  <a href="#aed3a33402d4bedb1b6a55421a5d84b6c">More...</a><br /></td></tr>
-<tr class="separator:aed3a33402d4bedb1b6a55421a5d84b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9fa2105ca47317fb3da8cae8341236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a5b9fa2105ca47317fb3da8cae8341236">resizeMatrix</a> (<a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;tempConf)</td></tr>
+<tr class="memdesc:a5b9fa2105ca47317fb3da8cae8341236"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the temporary shadows configuration.  <a href="#a5b9fa2105ca47317fb3da8cae8341236">More...</a><br /></td></tr>
+<tr class="separator:a5b9fa2105ca47317fb3da8cae8341236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecf5ef66abbd019d591440bbf413aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a7ecf5ef66abbd019d591440bbf413aa5">fillMatrix</a> (<a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;tempConf)</td></tr>
+<tr class="memdesc:a7ecf5ef66abbd019d591440bbf413aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To call filling the temporary configuration with calculated values.  <a href="#a7ecf5ef66abbd019d591440bbf413aa5">More...</a><br /></td></tr>
+<tr class="separator:a7ecf5ef66abbd019d591440bbf413aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4ca9cf2fa325ef9cb799ce777b5364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#aea4ca9cf2fa325ef9cb799ce777b5364">calculateShadowInConf</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;tempConf)</td></tr>
+<tr class="memdesc:aea4ca9cf2fa325ef9cb799ce777b5364"><td class="mdescLeft">&#160;</td><td class="mdescRight">To calculate a generated shadow from a map tile coordinates.  <a href="#aea4ca9cf2fa325ef9cb799ce777b5364">More...</a><br /></td></tr>
+<tr class="separator:aea4ca9cf2fa325ef9cb799ce777b5364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -151,7 +151,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class calculates the shadows configuration at start of the system. </p>
-<p>This class calculates the position of the shadows in a <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> at the shadows system start. Then this <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> is sent to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> to set it for drawing. </p>
+<p>This class calculates the position of the shadows in a <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> at the shadows system start. Then this <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> is sent to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> to set it for drawing. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7c99d7b6bad502e49edab897adeee95a"></a>
 <div class="memitem">
@@ -196,7 +196,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aed3a33402d4bedb1b6a55421a5d84b6c"></a>
+<a class="anchor" id="aea4ca9cf2fa325ef9cb799ce777b5364"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -212,7 +212,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;&#160;</td>
           <td class="paramname"><em>tempConf</em>&#160;</td>
         </tr>
         <tr>
@@ -232,7 +232,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>The tile coordinates </td></tr>
-    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
+    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +240,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af8a38e68135d1218af13e6a7d88241ff"></a>
+<a class="anchor" id="a7ecf5ef66abbd019d591440bbf413aa5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -250,7 +250,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ShadowsInitializer::fillMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;&#160;</td>
           <td class="paramname"><em>tempConf</em></td><td>)</td>
           <td></td>
         </tr>
@@ -265,7 +265,7 @@ Private Attributes</h2></td></tr>
 <p>To call filling the temporary configuration with calculated values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
+    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,7 +291,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a851833c50267a975d66558fac8c81008"></a>
+<a class="anchor" id="a5b9fa2105ca47317fb3da8cae8341236"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -301,7 +301,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ShadowsInitializer::resizeMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;&#160;</td>
           <td class="paramname"><em>tempConf</em></td><td>)</td>
           <td></td>
         </tr>
@@ -316,7 +316,7 @@ Private Attributes</h2></td></tr>
 <p>To resize the temporary shadows configuration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
+    <tr><td class="paramname">tempConf</td><td>The temporary <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> for shadows configuration </td></tr>
   </table>
   </dd>
 </dl>
@@ -398,7 +398,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_shadows_initializer.html">ShadowsInitializer</a></li>
-    <li class="footer">Generated on Wed Apr 29 2015 22:59:51 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 11:07:18 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

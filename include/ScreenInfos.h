@@ -3,7 +3,7 @@
  * \brief Definition of ScreenInfos class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * ScreenInfos.h defines the ScreenInfos class
  *

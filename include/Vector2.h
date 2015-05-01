@@ -3,7 +3,7 @@
  * \brief Definition of Vector2 class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * Vector2.h defines the Vector2 class
  *

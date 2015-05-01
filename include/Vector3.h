@@ -3,7 +3,7 @@
  * \brief Definition of Vector3 class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * Vector3.h defines the Vector3 class
  *

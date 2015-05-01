@@ -3,7 +3,7 @@
  * \brief Definition of TileGroupDrawer class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * TileGroupDrawer.h defines the TileGroupDrawer class
  *

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>MoteurRedesign: Matrix3d Class Reference</title>
+<title>MoteurRedesign: Matrix3d&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,93 +109,101 @@ $(document).ready(function(){initNavTree('class_matrix3d.html','');});
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_matrix3d-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Matrix3d Class Reference</div>  </div>
+<div class="title">Matrix3d&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This class offers simple 3D arrays manipulations.  
+<p>This class is a template class that offers simple 3D arrays manipulations.  
  <a href="class_matrix3d.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_matrix3d_8h_source.html">Matrix3d.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a20d7eaa2d4ac67effdd5458930da6863"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20d7eaa2d4ac67effdd5458930da6863"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a20d7eaa2d4ac67effdd5458930da6863">Matrix3d</a> ()</td></tr>
-<tr class="memdesc:a20d7eaa2d4ac67effdd5458930da6863"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor. <br /></td></tr>
-<tr class="separator:a20d7eaa2d4ac67effdd5458930da6863"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64c55eacb2a6ad6c8309b801e5670d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ab64c55eacb2a6ad6c8309b801e5670d7">Matrix3d</a> (const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;matrix)</td></tr>
-<tr class="memdesc:ab64c55eacb2a6ad6c8309b801e5670d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy constructor.  <a href="#ab64c55eacb2a6ad6c8309b801e5670d7">More...</a><br /></td></tr>
-<tr class="separator:ab64c55eacb2a6ad6c8309b801e5670d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5ef78f59599152867710282a299014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aec5ef78f59599152867710282a299014">operator=</a> (const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;matrix)</td></tr>
-<tr class="memdesc:aec5ef78f59599152867710282a299014"><td class="mdescLeft">&#160;</td><td class="mdescRight">The assignment operator.  <a href="#aec5ef78f59599152867710282a299014">More...</a><br /></td></tr>
-<tr class="separator:aec5ef78f59599152867710282a299014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a899baebd05c88f6877423133b0db57e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a899baebd05c88f6877423133b0db57e5">Matrix3d</a> (const unsigned int w, const unsigned int h, const unsigned int d)</td></tr>
-<tr class="memdesc:a899baebd05c88f6877423133b0db57e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size constructor.  <a href="#a899baebd05c88f6877423133b0db57e5">More...</a><br /></td></tr>
-<tr class="separator:a899baebd05c88f6877423133b0db57e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a56ba8ad0ab9e74e0171f5883b4ced1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a0a56ba8ad0ab9e74e0171f5883b4ced1">Matrix3d</a> (const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill)</td></tr>
-<tr class="memdesc:a0a56ba8ad0ab9e74e0171f5883b4ced1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size constructor with default value.  <a href="#a0a56ba8ad0ab9e74e0171f5883b4ced1">More...</a><br /></td></tr>
-<tr class="separator:a0a56ba8ad0ab9e74e0171f5883b4ced1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd8254120c2249ddc86f90cb68ddbfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#abfd8254120c2249ddc86f90cb68ddbfd">resize</a> (const unsigned int w, const unsigned int h, const unsigned int d, const unsigned int fill)</td></tr>
-<tr class="memdesc:abfd8254120c2249ddc86f90cb68ddbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the matrix with specific size.  <a href="#abfd8254120c2249ddc86f90cb68ddbfd">More...</a><br /></td></tr>
-<tr class="separator:abfd8254120c2249ddc86f90cb68ddbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9afd5eabee108d0b8c856c81d5748415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a9afd5eabee108d0b8c856c81d5748415">clear</a> ()</td></tr>
-<tr class="memdesc:a9afd5eabee108d0b8c856c81d5748415"><td class="mdescLeft">&#160;</td><td class="mdescRight">To clear the matrix.  <a href="#a9afd5eabee108d0b8c856c81d5748415">More...</a><br /></td></tr>
-<tr class="separator:a9afd5eabee108d0b8c856c81d5748415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86af26e4c562cfb015888b01780991e0"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a86af26e4c562cfb015888b01780991e0">at</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
-<tr class="memdesc:a86af26e4c562cfb015888b01780991e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the value at 3D coordinates.  <a href="#a86af26e4c562cfb015888b01780991e0">More...</a><br /></td></tr>
-<tr class="separator:a86af26e4c562cfb015888b01780991e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad44aa85e0adab1e81118f4339d44611a"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ad44aa85e0adab1e81118f4339d44611a">at</a> (const unsigned int index)</td></tr>
-<tr class="memdesc:ad44aa85e0adab1e81118f4339d44611a"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the value at 1D index.  <a href="#ad44aa85e0adab1e81118f4339d44611a">More...</a><br /></td></tr>
-<tr class="separator:ad44aa85e0adab1e81118f4339d44611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a380cad7a70bf9f09d88ce6cf6b5bede6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a380cad7a70bf9f09d88ce6cf6b5bede6">getSize</a> () const </td></tr>
-<tr class="memdesc:a380cad7a70bf9f09d88ce6cf6b5bede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix 1D size.  <a href="#a380cad7a70bf9f09d88ce6cf6b5bede6">More...</a><br /></td></tr>
-<tr class="separator:a380cad7a70bf9f09d88ce6cf6b5bede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a297e3be24f856450f09d631d7ebc555a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a297e3be24f856450f09d631d7ebc555a">getW</a> () const </td></tr>
-<tr class="memdesc:a297e3be24f856450f09d631d7ebc555a"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix width.  <a href="#a297e3be24f856450f09d631d7ebc555a">More...</a><br /></td></tr>
-<tr class="separator:a297e3be24f856450f09d631d7ebc555a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4502c606c07c205546389339af4c17d3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a4502c606c07c205546389339af4c17d3">getH</a> () const </td></tr>
-<tr class="memdesc:a4502c606c07c205546389339af4c17d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix height.  <a href="#a4502c606c07c205546389339af4c17d3">More...</a><br /></td></tr>
-<tr class="separator:a4502c606c07c205546389339af4c17d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cbc3e4bd4421455cb345c20057748ec"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a4cbc3e4bd4421455cb345c20057748ec">getD</a> () const </td></tr>
-<tr class="memdesc:a4cbc3e4bd4421455cb345c20057748ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix depth.  <a href="#a4cbc3e4bd4421455cb345c20057748ec">More...</a><br /></td></tr>
-<tr class="separator:a4cbc3e4bd4421455cb345c20057748ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac200c7bcd2949dd963b82935afd0ac1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aac200c7bcd2949dd963b82935afd0ac1">get3dIter</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
-<tr class="memdesc:aac200c7bcd2949dd963b82935afd0ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the 1D index from 3D coordinates.  <a href="#aac200c7bcd2949dd963b82935afd0ac1">More...</a><br /></td></tr>
-<tr class="separator:aac200c7bcd2949dd963b82935afd0ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0539c9033661c58801856db923bce5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a6f0539c9033661c58801856db923bce5">get2dIter</a> (const unsigned int x, const unsigned int y)</td></tr>
-<tr class="memdesc:a6f0539c9033661c58801856db923bce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a 1D index from 2D coordinates.  <a href="#a6f0539c9033661c58801856db923bce5">More...</a><br /></td></tr>
-<tr class="separator:a6f0539c9033661c58801856db923bce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adccf23d11db2287fc1e41c200bd0ff1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#adccf23d11db2287fc1e41c200bd0ff1f">get2dFromIndex</a> (const unsigned int index)</td></tr>
-<tr class="memdesc:adccf23d11db2287fc1e41c200bd0ff1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a a 2D coordinates from 1D index.  <a href="#adccf23d11db2287fc1e41c200bd0ff1f">More...</a><br /></td></tr>
-<tr class="separator:adccf23d11db2287fc1e41c200bd0ff1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8680083bf1171ed5405e0454dcccfc1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ab8680083bf1171ed5405e0454dcccfc1">getData</a> () const </td></tr>
-<tr class="memdesc:ab8680083bf1171ed5405e0454dcccfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix entire data in std::vector.  <a href="#ab8680083bf1171ed5405e0454dcccfc1">More...</a><br /></td></tr>
-<tr class="separator:ab8680083bf1171ed5405e0454dcccfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02555663eb73127d767e6f8b4062499"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa02555663eb73127d767e6f8b4062499"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aa02555663eb73127d767e6f8b4062499">Matrix3d</a> ()</td></tr>
+<tr class="memdesc:aa02555663eb73127d767e6f8b4062499"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor. <br /></td></tr>
+<tr class="separator:aa02555663eb73127d767e6f8b4062499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee60eb5c9efdcb086b9562def02b7e8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aee60eb5c9efdcb086b9562def02b7e8b">Matrix3d</a> (const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;matrix)</td></tr>
+<tr class="memdesc:aee60eb5c9efdcb086b9562def02b7e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy constructor.  <a href="#aee60eb5c9efdcb086b9562def02b7e8b">More...</a><br /></td></tr>
+<tr class="separator:aee60eb5c9efdcb086b9562def02b7e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1ecd18e66c437e3b357b17ff4d7f76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#afd1ecd18e66c437e3b357b17ff4d7f76">operator=</a> (const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;matrix)</td></tr>
+<tr class="memdesc:afd1ecd18e66c437e3b357b17ff4d7f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The assignment operator.  <a href="#afd1ecd18e66c437e3b357b17ff4d7f76">More...</a><br /></td></tr>
+<tr class="separator:afd1ecd18e66c437e3b357b17ff4d7f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c77e93b754270c3f7a41720ee88019"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a10c77e93b754270c3f7a41720ee88019">Matrix3d</a> (const unsigned int w, const unsigned int h, const unsigned int d)</td></tr>
+<tr class="memdesc:a10c77e93b754270c3f7a41720ee88019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size constructor.  <a href="#a10c77e93b754270c3f7a41720ee88019">More...</a><br /></td></tr>
+<tr class="separator:a10c77e93b754270c3f7a41720ee88019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a494e07174b9b8036bbe9f925adde08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a6a494e07174b9b8036bbe9f925adde08">Matrix3d</a> (const unsigned int w, const unsigned int h, const unsigned int d, const T fill)</td></tr>
+<tr class="memdesc:a6a494e07174b9b8036bbe9f925adde08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size constructor with default value.  <a href="#a6a494e07174b9b8036bbe9f925adde08">More...</a><br /></td></tr>
+<tr class="separator:a6a494e07174b9b8036bbe9f925adde08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeed6b17af0f651ad0676c074ab15de1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#adeed6b17af0f651ad0676c074ab15de1">resize</a> (const unsigned int w, const unsigned int h, const unsigned int d, const T fill)</td></tr>
+<tr class="memdesc:adeed6b17af0f651ad0676c074ab15de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the matrix with specific size and default value.  <a href="#adeed6b17af0f651ad0676c074ab15de1">More...</a><br /></td></tr>
+<tr class="separator:adeed6b17af0f651ad0676c074ab15de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c36d81c486562e0119eceaa7dc27107"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a2c36d81c486562e0119eceaa7dc27107">resize</a> (const unsigned int w, const unsigned int h, const unsigned int d)</td></tr>
+<tr class="memdesc:a2c36d81c486562e0119eceaa7dc27107"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the matrix with specific size.  <a href="#a2c36d81c486562e0119eceaa7dc27107">More...</a><br /></td></tr>
+<tr class="separator:a2c36d81c486562e0119eceaa7dc27107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaa06c9d8d75a25fd6d0881e7dd05ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aafaa06c9d8d75a25fd6d0881e7dd05ff">clear</a> ()</td></tr>
+<tr class="memdesc:aafaa06c9d8d75a25fd6d0881e7dd05ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">To clear the matrix.  <a href="#aafaa06c9d8d75a25fd6d0881e7dd05ff">More...</a><br /></td></tr>
+<tr class="separator:aafaa06c9d8d75a25fd6d0881e7dd05ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1757dd9de7e04457f481aa2ca8ad80ec"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a1757dd9de7e04457f481aa2ca8ad80ec">at</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
+<tr class="memdesc:a1757dd9de7e04457f481aa2ca8ad80ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a reference to the object at 3D coordinates.  <a href="#a1757dd9de7e04457f481aa2ca8ad80ec">More...</a><br /></td></tr>
+<tr class="separator:a1757dd9de7e04457f481aa2ca8ad80ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a2d0500ad774f6904eb44d791dc685"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ac7a2d0500ad774f6904eb44d791dc685">at</a> (const unsigned int index)</td></tr>
+<tr class="memdesc:ac7a2d0500ad774f6904eb44d791dc685"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a reference to the object at 1D index.  <a href="#ac7a2d0500ad774f6904eb44d791dc685">More...</a><br /></td></tr>
+<tr class="separator:ac7a2d0500ad774f6904eb44d791dc685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6fefd1ec63706ce2a757254e7bd351"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a6f6fefd1ec63706ce2a757254e7bd351">getSize</a> () const </td></tr>
+<tr class="memdesc:a6f6fefd1ec63706ce2a757254e7bd351"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix 1D size.  <a href="#a6f6fefd1ec63706ce2a757254e7bd351">More...</a><br /></td></tr>
+<tr class="separator:a6f6fefd1ec63706ce2a757254e7bd351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bde21eccabbf5f24b3d03bdabb3236b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a1bde21eccabbf5f24b3d03bdabb3236b">getW</a> () const </td></tr>
+<tr class="memdesc:a1bde21eccabbf5f24b3d03bdabb3236b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix width.  <a href="#a1bde21eccabbf5f24b3d03bdabb3236b">More...</a><br /></td></tr>
+<tr class="separator:a1bde21eccabbf5f24b3d03bdabb3236b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9c2043eb366af8ef61bcd86f2a9918"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a9a9c2043eb366af8ef61bcd86f2a9918">getH</a> () const </td></tr>
+<tr class="memdesc:a9a9c2043eb366af8ef61bcd86f2a9918"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix height.  <a href="#a9a9c2043eb366af8ef61bcd86f2a9918">More...</a><br /></td></tr>
+<tr class="separator:a9a9c2043eb366af8ef61bcd86f2a9918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38563f10b427252b830a7fd8dc1370f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ae38563f10b427252b830a7fd8dc1370f">getD</a> () const </td></tr>
+<tr class="memdesc:ae38563f10b427252b830a7fd8dc1370f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix depth.  <a href="#ae38563f10b427252b830a7fd8dc1370f">More...</a><br /></td></tr>
+<tr class="separator:ae38563f10b427252b830a7fd8dc1370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63027cb355575cfd0cc48394d65352b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aa63027cb355575cfd0cc48394d65352b">get3dIter</a> (const unsigned int x, const unsigned int y, const unsigned int z)</td></tr>
+<tr class="memdesc:aa63027cb355575cfd0cc48394d65352b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the 1D index from 3D coordinates.  <a href="#aa63027cb355575cfd0cc48394d65352b">More...</a><br /></td></tr>
+<tr class="separator:aa63027cb355575cfd0cc48394d65352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ad150ad4d1785fadcbe59ca73a6c51d9f">get2dIter</a> (const unsigned int x, const unsigned int y)</td></tr>
+<tr class="memdesc:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a 1D index from 2D coordinates.  <a href="#ad150ad4d1785fadcbe59ca73a6c51d9f">More...</a><br /></td></tr>
+<tr class="separator:ad150ad4d1785fadcbe59ca73a6c51d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf38997fd36a783c323d32b705306ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a6bf38997fd36a783c323d32b705306ac">get2dFromIndex</a> (const unsigned int index)</td></tr>
+<tr class="memdesc:a6bf38997fd36a783c323d32b705306ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a a 2D coordinates from 1D index.  <a href="#a6bf38997fd36a783c323d32b705306ac">More...</a><br /></td></tr>
+<tr class="separator:a6bf38997fd36a783c323d32b705306ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a807d7ebc51dd759911fc60c8ce0c4c5f">getData</a> () const </td></tr>
+<tr class="memdesc:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the matrix entire data in std::vector.  <a href="#a807d7ebc51dd759911fc60c8ce0c4c5f">More...</a><br /></td></tr>
+<tr class="separator:a807d7ebc51dd759911fc60c8ce0c4c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab2f91a88acd27cd205795de42d97f1eb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ab2f91a88acd27cd205795de42d97f1eb">m_w</a></td></tr>
-<tr class="separator:ab2f91a88acd27cd205795de42d97f1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81701f7154d5e88d309c1b42aa5b4288"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a81701f7154d5e88d309c1b42aa5b4288">m_h</a></td></tr>
-<tr class="separator:a81701f7154d5e88d309c1b42aa5b4288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad74c399ff843ae28cbada26585086a2"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#aad74c399ff843ae28cbada26585086a2">m_d</a></td></tr>
-<tr class="separator:aad74c399ff843ae28cbada26585086a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada8fa8caf1ec7299d21ef1b684ac436b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ada8fa8caf1ec7299d21ef1b684ac436b">m_data</a></td></tr>
-<tr class="separator:ada8fa8caf1ec7299d21ef1b684ac436b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223bd3460fba86deb8fe7cc00dd80ccb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a223bd3460fba86deb8fe7cc00dd80ccb">m_w</a></td></tr>
+<tr class="separator:a223bd3460fba86deb8fe7cc00dd80ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57baea2006d1908b58cb9adeb222326c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a57baea2006d1908b58cb9adeb222326c">m_h</a></td></tr>
+<tr class="separator:a57baea2006d1908b58cb9adeb222326c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1562dc5ea2681013849386144f1a4def"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#a1562dc5ea2681013849386144f1a4def">m_d</a></td></tr>
+<tr class="separator:a1562dc5ea2681013849386144f1a4def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79d5bfb09b0ff1ca1d94a2534794382"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix3d.html#ab79d5bfb09b0ff1ca1d94a2534794382">m_data</a></td></tr>
+<tr class="separator:ab79d5bfb09b0ff1ca1d94a2534794382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class offers simple 3D arrays manipulations. </p>
-<p><a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> is used to handle 3D arrays. It emulates 1D array into 3D one. For the user it works like a std::vector, but with 3D functionalities. </p>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Matrix3d&lt; T &gt;</h3>
+
+<p>This class is a template class that offers simple 3D arrays manipulations. </p>
+<p><a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> is used to handle 3D arrays of any type. It emulates 1D array into 3D one. For the user it works like a std::vector, but with 3D functionalities. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab64c55eacb2a6ad6c8309b801e5670d7"></a>
+<a class="anchor" id="aee60eb5c9efdcb086b9562def02b7e8b"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Matrix3d::Matrix3d </td>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::<a class="el" href="class_matrix3d.html">Matrix3d</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -212,12 +220,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a899baebd05c88f6877423133b0db57e5"></a>
+<a class="anchor" id="a10c77e93b754270c3f7a41720ee88019"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Matrix3d::Matrix3d </td>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::<a class="el" href="class_matrix3d.html">Matrix3d</a> </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -254,12 +264,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0a56ba8ad0ab9e74e0171f5883b4ced1"></a>
+<a class="anchor" id="a6a494e07174b9b8036bbe9f925adde08"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Matrix3d::Matrix3d </td>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::<a class="el" href="class_matrix3d.html">Matrix3d</a> </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -279,7 +291,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const T&#160;</td>
           <td class="paramname"><em>fill</em>&#160;</td>
         </tr>
         <tr>
@@ -304,12 +316,14 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a86af26e4c562cfb015888b01780991e0"></a>
+<a class="anchor" id="a1757dd9de7e04457f481aa2ca8ad80ec"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int &amp; Matrix3d::at </td>
+          <td class="memname">T &amp; <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::at </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -334,7 +348,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To get the value at 3D coordinates. </p>
+<p>To get a reference to the object at 3D coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x coordinate </td></tr>
@@ -343,16 +357,18 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value at the informed coordinates </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the object at the informed coordinates </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ad44aa85e0adab1e81118f4339d44611a"></a>
+<a class="anchor" id="ac7a2d0500ad774f6904eb44d791dc685"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int &amp; Matrix3d::at </td>
+          <td class="memname">T &amp; <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::at </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -361,23 +377,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To get the value at 1D index. </p>
+<p>To get a reference to the object at 1D index. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>The index </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value at the informed index </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the object at the informed index </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a9afd5eabee108d0b8c856c81d5748415"></a>
+<a class="anchor" id="aafaa06c9d8d75a25fd6d0881e7dd05ff"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Matrix3d::clear </td>
+          <td class="memname">void <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::clear </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -390,12 +408,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adccf23d11db2287fc1e41c200bd0ff1f"></a>
+<a class="anchor" id="a6bf38997fd36a783c323d32b705306ac"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Matrix3d::get2dFromIndex </td>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get2dFromIndex </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -415,12 +435,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6f0539c9033661c58801856db923bce5"></a>
+<a class="anchor" id="ad150ad4d1785fadcbe59ca73a6c51d9f"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::get2dIter </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get2dIter </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -451,12 +473,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aac200c7bcd2949dd963b82935afd0ac1"></a>
+<a class="anchor" id="aa63027cb355575cfd0cc48394d65352b"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::get3dIter </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::get3dIter </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -494,12 +518,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4cbc3e4bd4421455cb345c20057748ec"></a>
+<a class="anchor" id="ae38563f10b427252b830a7fd8dc1370f"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::getD </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::getD </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -512,12 +538,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab8680083bf1171ed5405e0454dcccfc1"></a>
+<a class="anchor" id="a807d7ebc51dd759911fc60c8ce0c4c5f"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; Matrix3d::getData </td>
+          <td class="memname">std::vector&lt; T &gt; <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::getData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -526,16 +554,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>To get the matrix entire data in std::vector. </p>
-<dl class="section return"><dt>Returns</dt><dd>The matrix data </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The data vector </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4502c606c07c205546389339af4c17d3"></a>
+<a class="anchor" id="a9a9c2043eb366af8ef61bcd86f2a9918"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::getH </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::getH </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -548,12 +578,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a380cad7a70bf9f09d88ce6cf6b5bede6"></a>
+<a class="anchor" id="a6f6fefd1ec63706ce2a757254e7bd351"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::getSize </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::getSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -566,12 +598,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a297e3be24f856450f09d631d7ebc555a"></a>
+<a class="anchor" id="a1bde21eccabbf5f24b3d03bdabb3236b"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::getW </td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::getW </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -584,14 +618,16 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec5ef78f59599152867710282a299014"></a>
+<a class="anchor" id="afd1ecd18e66c437e3b357b17ff4d7f76"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a> &amp; Matrix3d::operator= </td>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt; &amp; <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_matrix3d.html">Matrix3d</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -605,16 +641,18 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the set <a class="el" href="class_matrix3d.html" title="This class offers simple 3D arrays manipulations. ">Matrix3d</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the set <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="abfd8254120c2249ddc86f90cb68ddbfd"></a>
+<a class="anchor" id="adeed6b17af0f651ad0676c074ab15de1"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Matrix3d::resize </td>
+          <td class="memname">void <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::resize </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -634,8 +672,54 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const T&#160;</td>
           <td class="paramname"><em>fill</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To resize the matrix with specific size and default value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>The matrix width </td></tr>
+    <tr><td class="paramname">h</td><td>The matrix height </td></tr>
+    <tr><td class="paramname">d</td><td>The matrix depth </td></tr>
+    <tr><td class="paramname">fill</td><td>The default filling value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c36d81c486562e0119eceaa7dc27107"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -651,7 +735,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">w</td><td>The matrix width </td></tr>
     <tr><td class="paramname">h</td><td>The matrix height </td></tr>
     <tr><td class="paramname">d</td><td>The matrix depth </td></tr>
-    <tr><td class="paramname">fill</td><td>The default filling value </td></tr>
   </table>
   </dd>
 </dl>
@@ -660,15 +743,17 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aad74c399ff843ae28cbada26585086a2"></a>
+<a class="anchor" id="a1562dc5ea2681013849386144f1a4def"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::m_d</td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::m_d</td>
         </tr>
       </table>
   </td>
@@ -681,15 +766,17 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ada8fa8caf1ec7299d21ef1b684ac436b"></a>
+<a class="anchor" id="ab79d5bfb09b0ff1ca1d94a2534794382"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; Matrix3d::m_data</td>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::m_data</td>
         </tr>
       </table>
   </td>
@@ -698,19 +785,21 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>&lt; The matrix data </p>
+<p>&lt; The matrix data in a std::vector </p>
 
 </div>
 </div>
-<a class="anchor" id="a81701f7154d5e88d309c1b42aa5b4288"></a>
+<a class="anchor" id="a57baea2006d1908b58cb9adeb222326c"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::m_h</td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::m_h</td>
         </tr>
       </table>
   </td>
@@ -723,15 +812,17 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab2f91a88acd27cd205795de42d97f1eb"></a>
+<a class="anchor" id="a223bd3460fba86deb8fe7cc00dd80ccb"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Matrix3d::m_w</td>
+          <td class="memname">unsigned int <a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; T &gt;::m_w</td>
         </tr>
       </table>
   </td>
@@ -744,9 +835,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_matrix3d_8h_source.html">Matrix3d.h</a></li>
-<li>Matrix3d.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -754,7 +844,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_matrix3d.html">Matrix3d</a></li>
-    <li class="footer">Generated on Wed Apr 29 2015 22:59:51 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 1 2015 11:07:18 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

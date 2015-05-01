@@ -4,7 +4,9 @@ Animator::Animator(MapData &mapData,
                    TileGroup &mapTilegroup,
                    DynamicShader &shader,
                    ShadowsSystemStates &shadowsStates,
-                   ScreenInfos &screenInfos) : m_tileAnimationsData(),                                               m_mapData(mapData),
+                   ScreenInfos &screenInfos) : m_tileAnimationsData(m_mapData.getTempConf().getW(),
+                                                                    m_mapData.getTempConf().getH(),
+                                                                    m_mapData.getTempConf().getD()),                                               m_mapData(mapData),
                                                m_timer(),
                                                m_speed(150),
                                                m_animations(),
@@ -13,19 +15,21 @@ Animator::Animator(MapData &mapData,
                                                m_screenInfos(screenInfos)
 { }
 
-void Animator::resizeAnimationsDataList(const unsigned int size) {
-    m_tileAnimationsData.resize(size);
+void Animator::resizeTileAnimDataList() {
+    m_tileAnimationsData.resize(m_mapData.getTempConf().getW(),
+                                m_mapData.getTempConf().getH(),
+                                m_mapData.getTempConf().getD());
 }
 
 void Animator::setAnimation(const unsigned tile, const unsigned int length) {
     m_animations.push_back(Vector3(tile, length, 0));
 
-    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.getSize(); i++)
     {
         if(m_mapData.getTempConf().at(i)==tile)
         {
-            m_tileAnimationsData[i].setLength(length);
-            m_tileAnimationsData[i].setStatus(true);
+            m_tileAnimationsData.at(i).setLength(length);
+            m_tileAnimationsData.at(i).setStatus(true);
         }
     }
 }
@@ -40,8 +44,8 @@ void Animator::next() {
     {
         m_timer.restart();
 
-        for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
-            m_tileAnimationsData[i].updateX();
+        for(std::size_t i(0); i<m_tileAnimationsData.getSize(); i++)
+            m_tileAnimationsData.at(i).updateX();
     }
     apply();
 }
@@ -53,10 +57,10 @@ void Animator::setSingleAnimKind(const unsigned int tile) {
             m_animations[i].z = 1;
     }
 
-    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.getSize(); i++)
     {
         if(m_mapData.getTempConf().at(i)==tile)
-            m_tileAnimationsData[i].setKind(Single);
+            m_tileAnimationsData.at(i).setKind(Single);
     }
 }
 
@@ -67,15 +71,15 @@ void Animator::setGlobalAnimKind(const unsigned int tile) {
             m_animations[i].z = 0;
     }
 
-    for(std::size_t i(0); i<m_tileAnimationsData.size(); i++)
+    for(std::size_t i(0); i<m_tileAnimationsData.getSize(); i++)
     {
         if(m_mapData.getTempConf().at(i)==tile)
-            m_tileAnimationsData[i].setKind(Global);
+            m_tileAnimationsData.at(i).setKind(Global);
     }
 }
 
 void Animator::setDirectionOf(const Vector3 coord, AnimDirection direction) {
-    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setDirection(direction);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setDirection(direction);
 }
 
 void Animator::setDirectionOf(const unsigned int x, const unsigned int y, const unsigned int z,
@@ -84,7 +88,7 @@ void Animator::setDirectionOf(const unsigned int x, const unsigned int y, const 
 }
 
 void Animator::setKindOf(const Vector3 coord, AnimKind kind) {
-    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(kind);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setKind(kind);
 }
 
 void Animator::setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, AnimKind kind) {
@@ -92,7 +96,7 @@ void Animator::setKindOf(const unsigned int x, const unsigned int y, const unsig
 }
 
 void Animator::launchAnimation(const Vector3 coord) {
-    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(true);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(true);
 }
 
 void Animator::launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
@@ -100,7 +104,7 @@ void Animator::launchAnimation(const unsigned int x, const unsigned int y, const
 }
 
 void Animator::stopAnimation(const Vector3 coord) {
-    m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(false);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(false);
 }
 
 void Animator::stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
@@ -113,15 +117,13 @@ void Animator::apply() {
             for(int z(0); z<m_mapData.getSize().y; z++)
     {
         if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
-           m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getLength()>1 &&
+           m_tileAnimationsData.at(x, y, z).getLength()>1 &&
            isVisible(toIsometricPosition(Vector3(x, y, z), m_mapData), m_mapData.getTileSize(), m_screenInfos))
         {
-            m_mapTilegroup.setTileTilesetX(Vector3(x, y, z),
-                                           m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
+            m_mapTilegroup.setTileTilesetX(Vector3(x, y, z), m_tileAnimationsData.at(x, y, z).getX());
 
             if(m_shadowsStates.isOn())
-                m_shader.updateTileFromAnim(Vector3(x, y, z),
-                                            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(x, y, z)].getX());
+                m_shader.updateTileFromAnim(Vector3(x, y, z), m_tileAnimationsData.at(x, y, z).getX());
         }
     }
 }
@@ -137,57 +139,57 @@ void Animator::updateTileAt(const Vector3 coord) {
         {
             if(m_animations[i].z==0)
             {
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(Global);
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(true);
+                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setKind(Global);
+                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(true);
             }
 
             if(m_animations[i].z==1)
             {
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setKind(Single);
-                m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setStatus(false);
+                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setKind(Single);
+                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(false);
             }
 
-            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].
-            setLength(m_animations[i].y);
-
-            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].resetX();
-
-            m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].setDirection(Right);
+            m_tileAnimationsData.at(coord.x, coord.y, coord.z).setLength(m_animations[i].y);
+            m_tileAnimationsData.at(coord.x, coord.y, coord.z).setDirection(Right);
+            m_tileAnimationsData.at(coord.x, coord.y, coord.z).resetX();
 
             return;
         }
     }
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setLength(1);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setDirection(Right);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).resetX();
 }
 
-unsigned int Animator::getFrameAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getX();
+unsigned int Animator::getFrameAt(const Vector3 coord) {
+    return m_tileAnimationsData.at(coord.x, coord.y, coord.z).getX();
 }
 
-unsigned int Animator::getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+unsigned int Animator::getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) {
     return getFrameAt(Vector3(x, y, z));
 }
 
-bool Animator::getStatusAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getStatus();
+bool Animator::getStatusAt(const Vector3 coord) {
+    return m_tileAnimationsData.at(coord.x, coord.y, coord.z).getStatus();
 }
 
-bool Animator::getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+bool Animator::getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) {
     return getStatusAt(Vector3(x, y, z));
 }
 
-AnimKind Animator::getKindAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getKind();
+AnimKind Animator::getKindAt(const Vector3 coord) {
+    return m_tileAnimationsData.at(coord.x, coord.y, coord.z).getKind();
 }
 
-AnimKind Animator::getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+AnimKind Animator::getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) {
     return getKindAt(Vector3(x, y, z));
 }
 
-AnimDirection Animator::getDirectionAt(const Vector3 coord) const {
-    return m_tileAnimationsData[m_mapData.getTempConf().get3dIter(coord.x, coord.y, coord.z)].getDirection();
+AnimDirection Animator::getDirectionAt(const Vector3 coord) {
+    return m_tileAnimationsData.at(coord.x, coord.y, coord.z).getDirection();
 }
 
-AnimDirection Animator::getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const {
+AnimDirection Animator::getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) {
     return getDirectionAt(Vector3(x, y, z));
 }
 

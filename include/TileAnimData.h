@@ -3,7 +3,7 @@
  * \brief Definition of TileAnimData class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * TileAnimData.h defines the TileAnimData class
  *

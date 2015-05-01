@@ -27,6 +27,8 @@ void TileAnimData::setDirection(const AnimDirection direction) {
 
 void TileAnimData::setStatus(const bool status) {
     m_waitStatus = status;
+    if(status==false)
+        m_status = false;
 
     resetX();
 }
@@ -87,7 +89,6 @@ void TileAnimData::updateX() {
 
             }
         }
-
     m_status = m_waitStatus;
 }
 

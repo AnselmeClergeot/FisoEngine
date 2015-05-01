@@ -3,7 +3,7 @@
  * \brief Definition of Animator class
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * Animator.h defines the Animator class
  *
@@ -45,6 +45,14 @@ class Animator
         */
         Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
                  ShadowsSystemStates &shadowsStates, ScreenInfos &screenInfos);
+
+        /**
+        * \fn void resizeTileAnimDataList()
+        * \brief To resize the TileAnimData Matrix3d from the map Matrix3d
+        *
+        * \return void
+        */
+        void resizeTileAnimDataList();
 
         /**
         * \fn void setAnimation(const unsigned tile, const unsigned int length)
@@ -186,16 +194,16 @@ class Animator
         unsigned int getSpeed() const;
 
         /**
-        * \fn unsigned int getFrameAt(const Vector3 coord) const
+        * \fn unsigned int getFrameAt(const Vector3 coord)
         * \brief To get the animation frame of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation frame of the tile
         */
-        unsigned int getFrameAt(const Vector3 coord) const;
+        unsigned int getFrameAt(const Vector3 coord);
 
         /**
-        * \fn unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \fn unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation frame of a specific tile
         *
         * \param x The tile x coordinate
@@ -203,19 +211,19 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation frame of the tile
         */
-        unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+        unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn bool getStatusAt(const Vector3 coord) const
+        * \fn bool getStatusAt(const Vector3 coord)
         * \brief To get the animation status of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation status of the tile
         */
-        bool getStatusAt(const Vector3 coord) const;
+        bool getStatusAt(const Vector3 coord);
 
         /**
-        * \fn bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \fn bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation status of a specific tile
         *
         * \param x The tile x coordinate
@@ -223,19 +231,19 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation status of the tile
         */
-        bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+        bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn AnimKind getKindAt(const Vector3 coord) const
+        * \fn AnimKind getKindAt(const Vector3 coord)
         * \brief To get the animation kind of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation kind of the tile
         */
-        AnimKind getKindAt(const Vector3 coord) const;
+        AnimKind getKindAt(const Vector3 coord);
 
         /**
-        * \fn AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \fn AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation kind of a specific tile
         *
         * \param x The tile x coordinate
@@ -243,19 +251,19 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation kind of the tile
         */
-        AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+        AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn AnimDirection getDirectionAt(const Vector3 coord) const
+        * \fn AnimDirection getDirectionAt(const Vector3 coord)
         * \brief To get the animation direction of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation direction of the tile
         */
-        AnimDirection getDirectionAt(const Vector3 coord) const;
+        AnimDirection getDirectionAt(const Vector3 coord);
 
         /**
-        * \fn AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \fn AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation direction of a specific tile
         *
         * \param x The tile x coordinate
@@ -263,7 +271,7 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation direction of the tile
         */
-        AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z) const;
+        AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
         * \fn unsigned int getAnimLengthOfTile(const unsigned int tile) const
@@ -275,7 +283,7 @@ class Animator
         unsigned int getAnimLengthOfTile(const unsigned int tile) const;
 
         /**
-        * \fn AnimKind getAnimKindOfTile(const unsigned int tile)
+        * \fn AnimKind getAnimKindOfTile(const unsigned int tile) const
         * \brief To get the kind of the animation of a specific tile type
         *
         * \param tile The tile type from its number
@@ -293,13 +301,6 @@ class Animator
         */
         void apply();
 
-        /**
-        * \fn void resizeAnimationsDataList(const unsigned int size)
-        * \brief To resize the TileAnimData vector
-        *
-        * \return void
-        */
-        void resizeAnimationsDataList(const unsigned int size);
 
         /**
         * \fn void updateTileAt(const Vector3 coord)
@@ -319,7 +320,7 @@ class Animator
         */
         bool tileIsAnimated(const unsigned int tile) const;
 
-        std::vector<TileAnimData> m_tileAnimationsData; /*!< The TileAnimData list */
+        Matrix3d<TileAnimData> m_tileAnimationsData; /*!< The TileAnimData Matrix3d */
 
         MapData &m_mapData; /*!< The reference to the MapData to get needed data */
 

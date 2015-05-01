@@ -3,7 +3,7 @@
  * \brief io functions
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * ioFuncs.h offers io functions useful when loading files
  *

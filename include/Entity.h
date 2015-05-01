@@ -3,7 +3,7 @@
  * \brief Definition of Entity class
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * Entity.h defines the Entity class
  *

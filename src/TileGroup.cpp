@@ -16,7 +16,7 @@ void TileGroup::initialize() {
     m_data.applyGroupOpacity();
 }
 
-void TileGroup::setConfiguration(Matrix3d &matrix) {
+void TileGroup::setConfiguration(Matrix3d<unsigned int> &matrix) {
     m_data.setConfiguration(matrix);
 }
 

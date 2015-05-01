@@ -19,7 +19,7 @@ unsigned int TileGroupData::getTileNumber() const {
     return m_mapData.getTempConf().getSize();
 }
 
-void TileGroupData::setConfiguration(Matrix3d &config) {
+void TileGroupData::setConfiguration(Matrix3d<unsigned int> &config) {
     m_config = config;
 }
 

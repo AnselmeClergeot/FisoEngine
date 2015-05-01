@@ -3,7 +3,7 @@
  * \brief Definition of TileGroup class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * TileGroup.h defines the TileGroup class
  *
@@ -46,13 +46,13 @@ class TileGroup
         void setTilesetPath(const std::string path);
 
         /**
-        * \fn void setConfiguration(Matrix3d &matrix)
-        * \brief To set the TileGroup configuration
+        * \fn void setConfiguration(Matrix3d<unsigned int> &matrix)
+        * \brief To set the TileGroup configuration Matrix3d
         *
-        * \param matrix The TileGroup configuration
+        * \param matrix The TileGroup configuration Matrix3d
         * \return void
         */
-        void setConfiguration(Matrix3d &matrix);
+        void setConfiguration(Matrix3d<unsigned int> &matrix);
 
         /**
         * \fn void setTileAt(const Vector3 coord, const unsigned int index)

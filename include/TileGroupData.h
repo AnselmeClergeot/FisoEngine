@@ -3,7 +3,7 @@
  * \brief Definition of TileGroupData class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * TileGroupData.h defines the TileGroupData class
  *
@@ -60,13 +60,13 @@ class TileGroupData
         unsigned int getTileNumber() const;
 
         /**
-        * \fn void setConfiguration(Matrix3d &config)
-        * \brief To set the TileGroup configuration
+        * \fn void setConfiguration(Matrix3d<unsigned int> &config)
+        * \brief To set the TileGroup configuration Matrix3d
         *
         * \param config The reference to the TileGroup configuration Matrix3d
         * \return void
         */
-        void setConfiguration(Matrix3d &config);
+        void setConfiguration(Matrix3d<unsigned int> &config);
 
         /**
         * \fn void setTileAt(const Vector3 coord, const unsigned int index)
@@ -211,7 +211,7 @@ class TileGroupData
 
         std::vector<sf::Sprite> m_tiles;  /*!<  The vector of tile sprites [SPECIFIC TO SFML]*/
 
-        Matrix3d m_config;  /*!< The TileGroup configuration*/
+        Matrix3d<unsigned int> m_config;  /*!< The TileGroup configuration*/
 
         MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 

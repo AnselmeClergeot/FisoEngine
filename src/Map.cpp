@@ -18,7 +18,7 @@ void Map::init() {
     m_tileGroup.setConfiguration(m_data.getTempConf());
     m_tileGroup.initialize();
 
-    m_animator.resizeAnimationsDataList(m_data.getTempConf().getSize());
+    m_animator.resizeTileAnimDataList();
 }
 
 void Map::reload() {
@@ -27,7 +27,7 @@ void Map::reload() {
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
 
-    m_animator.resizeAnimationsDataList(m_data.getTempConf().getSize());
+    m_animator.resizeTileAnimDataList();
 }
 
 void Map::save() {

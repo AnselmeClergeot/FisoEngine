@@ -3,7 +3,7 @@
  * \brief Definition of Map class
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * Map.h defines the Map class
  *

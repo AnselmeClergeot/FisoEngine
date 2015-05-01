@@ -46,11 +46,11 @@ void MapData::removeTranslucentTile(const unsigned int tile) {
     }
 }
 
-Matrix3d &MapData::getTempConf() {
+Matrix3d<unsigned int> &MapData::getTempConf() {
     return m_tempConf;
 }
 
-Matrix3d &MapData::getPermConf() {
+Matrix3d<unsigned int> &MapData::getPermConf() {
     return m_permConf;
 }
 

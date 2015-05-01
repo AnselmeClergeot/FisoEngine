@@ -3,7 +3,7 @@
  * \brief Definition of Timer class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * Timer.h defines the Timer class
  *

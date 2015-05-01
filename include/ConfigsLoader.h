@@ -3,7 +3,7 @@
  * \brief Definition of ConfigsLoader class
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * ConfigsLoader.h defines the ConfigsLoader class
  *

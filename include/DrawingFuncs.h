@@ -3,7 +3,7 @@
  * \brief Drawing functions
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * DrawingFuncs.h offers functions linked with drawing things on screen
  *

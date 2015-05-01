@@ -3,7 +3,7 @@
  * \brief Definition of MapData class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * MapData.h defines the MapData class
  *
@@ -105,20 +105,20 @@ class MapData
         void removeTranslucentTile(const unsigned int tile);
 
         /**
-        * \fn Matrix3d &getTempConf()
+        * \fn Matrix3d<unsigned int> &getTempConf()
         * \brief To get a reference to the temporary configuration of the map
         *
         * \return The temporary configuration
         */
-        Matrix3d &getTempConf();
+        Matrix3d<unsigned int> &getTempConf();
 
         /**
-        * \fn Matrix3d &getPermConf()
+        * \fn Matrix3d<unsigned int> &getPermConf()
         * \brief To get a reference to the permanent configuration of the map
         *
         * \return The permanent configuration
         */
-        Matrix3d &getPermConf();
+        Matrix3d<unsigned int> &getPermConf();
 
         /**
         * \fn Vector2 getSize() const
@@ -170,9 +170,11 @@ class MapData
 
     private:
 
-        Matrix3d m_tempConf; /*!< The temporary configuration, used for map appearance purpose (shadows, etc.)*/
+        Matrix3d<unsigned int> m_tempConf; /*!< The temporary Map configuration,
+                                                used for map appearance purpose (shadows, etc.)*/
 
-        Matrix3d m_permConf; /*!< The permanent configuration, the one used for saving and loading the map */
+        Matrix3d<unsigned int> m_permConf; /*!< The permanent Map configuration,
+                                                the one used for saving and loading the map */
 
         Vector2 m_size; /*!< The map dimensions */
 

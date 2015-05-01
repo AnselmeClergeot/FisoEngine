@@ -3,7 +3,7 @@
  * \brief Definition of ShadowsSystemStates class
  * \author AnselmeClergeot
  * \version beta
- * \date 25/04/15
+ * \date 01/05/15
  *
  * ShadowsSystemStates.h defines the ShadowsSystemStates class
  *

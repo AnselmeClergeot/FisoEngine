@@ -3,7 +3,7 @@
  * \brief Isometric functions
  * \author AnselmeClergeot
  * \version beta
- * \date 24/04/15
+ * \date 01/05/15
  *
  * IsometricMath.h offers useful isometric functions/calculations
  *
