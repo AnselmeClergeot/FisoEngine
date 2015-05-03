@@ -17,6 +17,11 @@ void Animator::resizeTileAnimDataList() {
     m_tileAnimationsData.resize(m_mapData.getTempConf().getW(),
                                 m_mapData.getTempConf().getH(),
                                 m_mapData.getTempConf().getD());
+
+    for(int x(0); x<m_mapData.getSize().x; x++)
+        for(int y(0); y<m_mapData.getSize().x; y++)
+            for(int z(0); z<m_mapData.getSize().y; z++)
+            updateTileAt(Vector3(x, y, z));
 }
 
 void Animator::setAnimation(const unsigned tile, const unsigned int length) {
