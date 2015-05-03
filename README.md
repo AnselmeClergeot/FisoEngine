@@ -2,7 +2,7 @@
 
 Fiso Engine is C++ a **soft**, **simple** and **tile-based** isometric engine made for being **easily bindable with any graphics library**.<br/>
 During the development, the engine is bind only with <a href="http://www.sfml-dev.org/index-fr.php">SFML</a>. <br/>
-It is still in development and the beta version is released.<br/>
+It is still in development and the beta version has been released.<br/>
 Fiso Engine is under the <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3.0 License</a>.<br/>
 For more informations, you can contact me by mail at anselmedu25@hotmail.com.
 
