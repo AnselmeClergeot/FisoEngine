@@ -26,18 +26,10 @@ void TileGroupLoader::setTilesTileset() {
         m_data.spriteAt(i).setTexture(m_data.getTileset());
 }
 
-void TileGroupLoader::setTilesRect() {
-    for(std::size_t x(0); x<m_mapData.getSize().x; x++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t z(0); z<m_mapData.getSize().y; z++)
-                m_data.updateTileFromConfig(Vector3(x, y, z));
-}
-
 void TileGroupLoader::initialize() {
     loadTileset();
     resizeTileList();
     setTilesTileset();
-    setTilesRect();
 
     //Updating the TileGroup position before the first frame
     m_data.updatePosition();

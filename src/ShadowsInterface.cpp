@@ -19,7 +19,6 @@ void ShadowsInterface::setOpacity(const unsigned int opacity) {
 
 void ShadowsInterface::init() {
     m_initializer.initialize();
-    m_tilegroup.initialize();
 }
 
 void ShadowsInterface::setOn(bool on) {

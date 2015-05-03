@@ -12,8 +12,9 @@ void ShadowsInitializer::initialize() {
 
     resizeMatrix(tempConf);
     fillMatrix(tempConf);
+    m_tileGroup.initialize();
+    m_tileGroup.configureWith(tempConf);
     m_states.setInitialized();
-    m_tileGroup.setConfiguration(tempConf);
 }
 
 void ShadowsInitializer::resizeMatrix(Matrix3d<unsigned int> &tempConf) {

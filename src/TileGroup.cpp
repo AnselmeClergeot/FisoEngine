@@ -16,8 +16,8 @@ void TileGroup::initialize() {
     m_data.applyGroupOpacity();
 }
 
-void TileGroup::setConfiguration(Matrix3d<unsigned int> &matrix) {
-    m_data.setConfiguration(matrix);
+void TileGroup::configureWith(Matrix3d<unsigned int> &matrix) {
+    m_data.configureWith(matrix);
 }
 
 void TileGroup::setTileAt(const Vector3 coord, const unsigned int index) {

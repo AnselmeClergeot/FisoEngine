@@ -46,13 +46,13 @@ class TileGroup
         void setTilesetPath(const std::string path);
 
         /**
-        * \fn void setConfiguration(Matrix3d<unsigned int> &matrix)
+        * \fn void configureWith(Matrix3d<unsigned int> &config)
         * \brief To set the TileGroup configuration Matrix3d
         *
-        * \param matrix The TileGroup configuration Matrix3d
+        * \param config The reference to the TileGroup configuration Matrix3d
         * \return void
         */
-        void setConfiguration(Matrix3d<unsigned int> &matrix);
+        void configureWith(Matrix3d<unsigned int> &config);
 
         /**
         * \fn void setTileAt(const Vector3 coord, const unsigned int index)

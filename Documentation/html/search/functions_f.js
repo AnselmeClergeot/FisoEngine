@@ -8,6 +8,5 @@ var searchData=
   ['updateshadingofall',['updateShadingOfAll',['../class_dynamic_shader.html#a610c510d0f828a6afd3dbb1f386428fc',1,'DynamicShader']]],
   ['updatetileat',['updateTileAt',['../class_animator.html#a2240fb1d98f4c06fdf3882437441dd7f',1,'Animator']]],
   ['updatetilefromanim',['updateTileFromAnim',['../class_dynamic_shader.html#a1f0de1b2871303354179f9f9a05b2f97',1,'DynamicShader']]],
-  ['updatetilefromconfig',['updateTileFromConfig',['../class_tile_group_data.html#a03fac279d63bc0e924e4091579b1075a',1,'TileGroupData']]],
   ['updatex',['updateX',['../class_tile_anim_data.html#a1db17bb65d5ad908538acfbf4643a3fd',1,'TileAnimData']]]
 ];

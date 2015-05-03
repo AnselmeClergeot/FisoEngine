@@ -78,15 +78,6 @@ class TileGroupLoader
         */
         void setTilesTileset();
 
-        /**
-        * \fn void setTilesRect()
-        * \brief To frame all the tiles in the list
-        *
-        * \return void
-        */
-
-        void setTilesRect();
-
         MapData &m_mapData; /*!<  Reference to the MapData */
 
         std::string m_tilesetPath; /*!<  The tileset fille path */

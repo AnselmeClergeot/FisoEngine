@@ -60,13 +60,13 @@ class TileGroupData
         unsigned int getTileNumber() const;
 
         /**
-        * \fn void setConfiguration(Matrix3d<unsigned int> &config)
+        * \fn void configureWith(Matrix3d<unsigned int> &config)
         * \brief To set the TileGroup configuration Matrix3d
         *
         * \param config The reference to the TileGroup configuration Matrix3d
         * \return void
         */
-        void setConfiguration(Matrix3d<unsigned int> &config);
+        void configureWith(Matrix3d<unsigned int> &config);
 
         /**
         * \fn void setTileAt(const Vector3 coord, const unsigned int index)
@@ -112,15 +112,6 @@ class TileGroupData
         * \return void
         */
         void setTilePosition(const Vector3 coord);
-
-        /**
-        * \fn void updateTileFromConfig(const Vector3 coord)
-        * \brief To update a specific tile appearance from the TileGroup configuration
-        *
-        * \param coord The 3D tile coordinates
-        * \return void
-        */
-        void updateTileFromConfig(const Vector3 coord);
 
         /**
         * \fn void frameTile(const Vector3 coord, const Vector2 tilesetCoord)
@@ -210,8 +201,6 @@ class TileGroupData
         sf::Texture m_tileset; /*!< The tileset texture [SPECIFIC TO SFML] */
 
         Matrix3d<sf::Sprite> m_tiles;  /*!<  The Matrix3d of tile sprites [SPECIFIC TO SFML]*/
-
-        Matrix3d<unsigned int> m_config;  /*!< The TileGroup configuration*/
 
         MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 

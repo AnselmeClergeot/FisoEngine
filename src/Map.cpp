@@ -15,8 +15,8 @@ Map::Map(ScreenInfos &screenInfos) : m_screenInfos(screenInfos),
 
 void Map::create() {
     m_configsLoader.load();
-    m_tileGroup.setConfiguration(m_data.getTempConf());
     m_tileGroup.initialize();
+    m_tileGroup.configureWith(m_data.getTempConf());
 
     m_animator.resizeTileAnimDataList();
 }
@@ -26,8 +26,6 @@ void Map::reload() {
 
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
-
-    m_animator.resizeTileAnimDataList();
 }
 
 void Map::save() {

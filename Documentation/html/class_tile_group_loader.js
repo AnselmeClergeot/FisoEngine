@@ -5,7 +5,6 @@ var class_tile_group_loader =
     [ "loadTileset", "class_tile_group_loader.html#a4739568c1353dcdc96d74d48ff537b6a", null ],
     [ "resizeTileList", "class_tile_group_loader.html#a539f3a5205e504cb32dec55d7ee34d7e", null ],
     [ "setTilesetPath", "class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174", null ],
-    [ "setTilesRect", "class_tile_group_loader.html#a1b5e2e839d244ae7ac859505568c8a6f", null ],
     [ "setTilesTileset", "class_tile_group_loader.html#a55df5519547122fb2921ebc470f41cea", null ],
     [ "m_data", "class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16", null ],
     [ "m_mapData", "class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf", null ],

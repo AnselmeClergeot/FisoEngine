@@ -2,7 +2,6 @@
 
 TileGroupData::TileGroupData(MapData &mapData) : m_tileset(),
                                                  m_tiles(),
-                                                 m_config(),
                                                  m_mapData(mapData),
                                                  m_opacity(255)
 { }
@@ -19,19 +18,18 @@ unsigned int TileGroupData::getTileNumber() const {
     return m_mapData.getTempConf().getSize();
 }
 
-void TileGroupData::setConfiguration(Matrix3d<unsigned int> &config) {
-    m_config = config;
+void TileGroupData::configureWith(Matrix3d<unsigned int> &config) {
+    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+            frameTile(Vector3(x, y, z), Vector2(0, config.at(x, y, z)));
 }
 
 void TileGroupData::setTileAt(const Vector3 coord, const unsigned int index) {
-    m_config.at(coord.x, coord.y, coord.z) = index;
-
-    //If the tile set is the invisible one, reset the opacity
     if(index==m_mapData.getInvisibleTile())
         resetOpacityOf(coord);
 
-    //Updating appearance of this tile
-    updateTileFromConfig(coord);
+    frameTile(coord, Vector2(0, index));
 }
 
 sf::Sprite &TileGroupData::spriteAt(const Vector3 coord) {
@@ -52,10 +50,6 @@ void TileGroupData::updatePosition() {
 void TileGroupData::setTilePosition(const Vector3 coord) {
     m_tiles.at(coord.x, coord.y, coord.z).
     setPosition(toIsometricPosition(coord, m_mapData).x, toIsometricPosition(coord, m_mapData).y);
-}
-
-void TileGroupData::updateTileFromConfig(const Vector3 coord) {
-    frameTile(coord, Vector2(0, m_config.at(coord.x, coord.y, coord.z)));
 }
 
 void TileGroupData::frameTile(const Vector3 coord, const Vector2 tilesetCoord) {
@@ -99,5 +93,5 @@ void TileGroupData::resetOpacityOf(const Vector3 coord) {
 }
 
 void TileGroupData::setTileTilesetX(const Vector3 coord, unsigned int x) {
-    frameTile(coord, Vector2(x, m_config.at(coord.x, coord.y, coord.z)));
+    frameTile(coord, Vector2(x, m_mapData.getTempConf().at(coord.x, coord.y, coord.z)));
 }

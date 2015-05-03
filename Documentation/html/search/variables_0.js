@@ -3,7 +3,6 @@ var searchData=
   ['m_5fanimations',['m_animations',['../class_animator.html#ab48d4739ec6029b40c005a65af16e4c1',1,'Animator']]],
   ['m_5fanimator',['m_animator',['../class_map.html#a28f1cab48c8e3f645f6d6f045db4d5c2',1,'Map']]],
   ['m_5fclock',['m_clock',['../class_timer.html#ac77fc4370f797dc20456f0bb9d18e68b',1,'Timer']]],
-  ['m_5fconfig',['m_config',['../class_tile_group_data.html#aea59a666b8adcd09d528ab05e409f04f',1,'TileGroupData']]],
   ['m_5fconfigsloader',['m_configsLoader',['../class_map.html#a8286eb3cda0e5a1dc6e35bb1975bc656',1,'Map']]],
   ['m_5fconfigssaver',['m_configsSaver',['../class_map.html#ab0c149602dd11b1f031ba9d8b6c06d29',1,'Map']]],
   ['m_5fd',['m_d',['../class_matrix3d.html#a1562dc5ea2681013849386144f1a4def',1,'Matrix3d']]],
