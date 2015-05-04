@@ -1,3 +1,5 @@
+<img src="https://github.com/AnselmeClergeot/FisoEngine/blob/master/Goodies/logo_text.png" width="400"></img>
+
 ### Welcome to the Fiso Engine repository!
 
 Fiso Engine is C++ a **soft**, **simple** and **tile-based** isometric engine made for being **easily bindable with any graphics library**.<br/>
