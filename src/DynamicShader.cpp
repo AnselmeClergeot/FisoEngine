@@ -10,7 +10,8 @@ DynamicShader::DynamicShader(MapData &mapData,
 void DynamicShader::updateShading(const Vector3 coord) {
     for(int z(coord.z-1); z>-1; z--)
     {
-        if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)))
+        if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)) &&
+           !m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, coord.z)))
         {
             m_shadowsTg.setTileAt(Vector3(coord.x, coord.y, z),
                                   m_mapData.getTempConf().at(coord.x, coord.y, coord.z));
@@ -72,7 +73,8 @@ unsigned int DynamicShader::getShadowZ(const Vector3 tileCoord) {
 }
 
 bool DynamicShader::haveShadowVisible(const Vector3 tileCoord) {
-    if(tileCoord.z==0)
+    if(tileCoord.z==0 ||
+       m_mapData.isTranslucent(m_mapData.getTempConf().at(tileCoord.x, tileCoord.y, tileCoord.z)))
         return false;
 
     for(int z(tileCoord.z-1); z>-1; z--)
