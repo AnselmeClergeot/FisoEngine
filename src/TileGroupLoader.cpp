@@ -26,11 +26,19 @@ void TileGroupLoader::setTilesTileset() {
         m_data.spriteAt(i).setTexture(m_data.getTileset());
 }
 
+void TileGroupLoader::resizeOpacitiesMatrix3d() {
+    m_data.getOpacities().resize(m_mapData.getTempConf().getW(),
+                                m_mapData.getTempConf().getH(),
+                                m_mapData.getTempConf().getD(),
+                                 255);
+}
+
 void TileGroupLoader::initialize() {
     loadTileset();
     resizeTileList();
+    resizeOpacitiesMatrix3d();
     setTilesTileset();
 
-    //Updating the TileGroup position before the first frame
     m_data.updatePosition();
+    m_data.setGroupOpacity(m_data.getGroupOpacity());
 }

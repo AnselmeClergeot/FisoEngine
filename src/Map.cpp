@@ -1,16 +1,17 @@
 #include "Map.h"
 
-Map::Map(ScreenInfos &screenInfos) : m_screenInfos(screenInfos),
-                                     m_data(),
-                                     m_configsLoader(m_data), m_configsSaver(m_data),
-                                     m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
-                                     m_shadowsStates(),
-                                     m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data),
-                                     m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-                                     m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-                                     m_entityContainer(m_data, m_screenInfos),
-                                     m_interposing(m_entityContainer),
-                                     m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_screenInfos)
+Map::Map(ScreenInfos &screenInfos)
+ : m_screenInfos(screenInfos),
+   m_data(),
+   m_configsLoader(m_data), m_configsSaver(m_data),
+   m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
+   m_shadowsStates(),
+   m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
+   m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data,m_dynamicShader),
+   m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
+   m_entityContainer(m_data, m_screenInfos),
+   m_interposing(m_entityContainer),
+   m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_screenInfos)
 {}
 
 void Map::create() {
@@ -18,11 +19,15 @@ void Map::create() {
     m_tileGroup.initialize();
     m_tileGroup.configureWith(m_data.getTempConf());
 
+    m_tileGroup.reloadOpacities();
     m_animator.resizeTileAnimDataList();
 }
 
 void Map::reload() {
     create();
+
+    m_tileGroup.setGroupOpacity(255);
+    m_tileGroup.reloadOpacities();
 
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
@@ -109,14 +114,14 @@ void Map::setTileOpacity(const unsigned int x,const unsigned int y,const unsigne
     setTileOpacity(Vector3(x, y, z), opacity);
 }
 
-void Map::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
+void Map::setOpacityOfType(const unsigned int tile, const unsigned int opacity) {
     m_tileGroup.setTypeOpacity(tile, opacity);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfType(tile);
 }
 
-void Map::setGroupOpacity(const unsigned int opacity) {
+void Map::setMapOpacity(const unsigned int opacity) {
     m_tileGroup.setGroupOpacity(opacity);
 
     if(m_shadowsStates.isInitialized())
@@ -199,7 +204,7 @@ unsigned int Map::getTileAt(const unsigned int x, const unsigned int y, const un
     return getTileAt(Vector3(x, y, z));
 }
 
-unsigned int Map::getGroupOpacity() const {
+unsigned int Map::getMapOpacity() const {
     return m_tileGroup.getGroupOpacity();
 }
 
@@ -209,6 +214,10 @@ unsigned int Map::getTileOpacity(const Vector3 coord) {
 
 unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z) {
     return getTileOpacity(Vector3(x, y, z));
+}
+
+unsigned int Map::getOpacityOfType(const unsigned int type) const {
+    return m_tileGroup.getOpacityOfType(type);
 }
 
 Vector2 Map::getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const {

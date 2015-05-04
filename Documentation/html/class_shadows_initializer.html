@@ -121,9 +121,9 @@ $(document).ready(function(){initNavTree('class_shadows_initializer.html','');})
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c99d7b6bad502e49edab897adeee95a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a7c99d7b6bad502e49edab897adeee95a">ShadowsInitializer</a> (<a class="el" href="class_tile_group.html">TileGroup</a> &amp;tilegroup, <a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;states, <a class="el" href="class_map_data.html">MapData</a> &amp;mapData)</td></tr>
-<tr class="memdesc:a7c99d7b6bad502e49edab897adeee95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a7c99d7b6bad502e49edab897adeee95a">More...</a><br /></td></tr>
-<tr class="separator:a7c99d7b6bad502e49edab897adeee95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ad0775791f44bdcd30585ec3a4753c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#ad0ad0775791f44bdcd30585ec3a4753c">ShadowsInitializer</a> (<a class="el" href="class_tile_group.html">TileGroup</a> &amp;tilegroup, <a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;states, <a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_dynamic_shader.html">DynamicShader</a> &amp;shader)</td></tr>
+<tr class="memdesc:ad0ad0775791f44bdcd30585ec3a4753c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ad0ad0775791f44bdcd30585ec3a4753c">More...</a><br /></td></tr>
+<tr class="separator:ad0ad0775791f44bdcd30585ec3a4753c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14ed5db07a770e960c53191681c84b21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a14ed5db07a770e960c53191681c84b21">initialize</a> ()</td></tr>
 <tr class="memdesc:a14ed5db07a770e960c53191681c84b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">To call shadows system first calculation.  <a href="#a14ed5db07a770e960c53191681c84b21">More...</a><br /></td></tr>
 <tr class="separator:a14ed5db07a770e960c53191681c84b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,12 +148,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a8e58291f51854afca45b6b51fb417db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb9bb91ad52805ce052a12ab0dfa5b39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#aeb9bb91ad52805ce052a12ab0dfa5b39">m_states</a></td></tr>
 <tr class="separator:aeb9bb91ad52805ce052a12ab0dfa5b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efa62778ba7bd49b48afd4a51be03a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamic_shader.html">DynamicShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shadows_initializer.html#a2efa62778ba7bd49b48afd4a51be03a2">m_shader</a></td></tr>
+<tr class="separator:a2efa62778ba7bd49b48afd4a51be03a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class calculates the shadows configuration at start of the system. </p>
 <p>This class calculates the position of the shadows in a <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> at the shadows system start. Then this <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> is sent to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> to set it for drawing. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7c99d7b6bad502e49edab897adeee95a"></a>
+<a class="anchor" id="ad0ad0775791f44bdcd30585ec3a4753c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -173,7 +175,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td>
-          <td class="paramname"><em>mapData</em>&#160;</td>
+          <td class="paramname"><em>mapData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_dynamic_shader.html">DynamicShader</a> &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -189,6 +197,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">tilegroup</td><td>Reference to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> to send condifuration </td></tr>
     <tr><td class="paramname">states</td><td>Reference to the <a class="el" href="class_shadows_system_states.html" title="This class is the state container of the shadows system. ">ShadowsSystemStates</a> to modify states </td></tr>
     <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> to get useful map data </td></tr>
+    <tr><td class="paramname">shader</td><td>Reference to the <a class="el" href="class_dynamic_shader.html" title="Class that shades the map dynamically. ">DynamicShader</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,6 +355,27 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2efa62778ba7bd49b48afd4a51be03a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamic_shader.html">DynamicShader</a>&amp; ShadowsInitializer::m_shader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The reference to the <a class="el" href="class_dynamic_shader.html" title="Class that shades the map dynamically. ">DynamicShader</a> </p>
+
+</div>
+</div>
 <a class="anchor" id="aeb9bb91ad52805ce052a12ab0dfa5b39"></a>
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +428,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_shadows_initializer.html">ShadowsInitializer</a></li>
-    <li class="footer">Generated on Sun May 3 2015 15:42:08 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 4 2015 12:25:13 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

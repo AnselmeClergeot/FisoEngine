@@ -202,23 +202,23 @@ class Map : public sf::Drawable
                                 const unsigned int opacity);
 
         /**
-        * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
+        * \fn void setOpacityOfType(const unsigned int tile, const unsigned int opacity)
         * \brief To set the opacity of all tiles of a specific number
         *
         * \param tile The tile number
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
+        void setOpacityOfType(const unsigned int tile, const unsigned int opacity);
 
         /**
-        * \fn void setGroupOpacity(const unsigned int opacity)
+        * \fn void setMapOpacity(const unsigned int opacity)
         * \brief To set the opacity of the map tiles
         *
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setGroupOpacity(const unsigned int opacity);
+        void setMapOpacity(const unsigned int opacity);
 
         /**
         * \fn void setPosition(const Vector2 pos)
@@ -338,12 +338,12 @@ class Map : public sf::Drawable
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn unsigned int getGroupOpacity() const
+        * \fn unsigned int getMapOpacity() const
         * \brief To get the opacity of the map if set
         *
         * \return The opacity of the map in an unsigned int, value from 0 to 255
         */
-        unsigned int getGroupOpacity() const;
+        unsigned int getMapOpacity() const;
 
         /**
         * \fn unsigned int getTileOpacity(const Vector3 coord)
@@ -364,6 +364,15 @@ class Map : public sf::Drawable
         * \return The opacity of the tile in an unsigned int, value from 0 to 255
         */
         unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
+
+        /**
+        * \fn unsigned int getOpacityOfType(const unsigned int type) const
+        * \brief To get the opacity of a specific tile type
+        *
+        * \param type The tile type from its number
+        * \return void
+        */
+        unsigned int getOpacityOfType(const unsigned int type) const;
 
         /**
         * \fn Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const
@@ -427,11 +436,11 @@ class Map : public sf::Drawable
 
         ShadowsSystemStates m_shadowsStates; /*!< The shadows system states container */
 
+        DynamicShader m_dynamicShader; /*!< The map dynamic shader */
+
         ShadowsInitializer m_shadowsInitializer; /*!< The shadows system initializer */
 
         ShadowsInterface m_shadowsInterface; /*!< The shadows system interface for user */
-
-        DynamicShader m_dynamicShader; /*!< The map dynamic shader */
 
         EntitiesContainer m_entityContainer; /*!< The entities container to add/create/access entities */
 

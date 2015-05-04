@@ -52,6 +52,14 @@ class TileGroupData
         Matrix3d<sf::Sprite> &getTiles();
 
         /**
+        * \fn Matrix3d<unsigned int> &getOpacities()
+        * \brief To get a reference to the tile opacities values
+        *
+        * \return The Matrix3d of opacities values
+        */
+        Matrix3d<unsigned int> &getOpacities();
+
+        /**
         * \fn unsigned int getTileNumber() const
         * \brief To get the total tile number of the TileGroup
         *
@@ -153,12 +161,31 @@ class TileGroupData
         void setGroupOpacity(const unsigned int opacity);
 
         /**
-        * \fn void applyGroupOpacity();
-        * \brief To apply the entire TileGroup opacity to each tile
+        * \fn void applyOpacityOn(const Vector3 coord)
+        * \brief To apply the opacity value of the Matrix3d on a tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return void
+        */
+        void applyOpacityOn(const Vector3 coord);
+
+        /**
+        * \fn void checkForOpacity(const Vector3 coord, const unsigned int tile)
+        * \brief To eventually set the opacity of the tile which was set
+        *
+        * \param coord The tile 3D coordinates
+        * \param tile The tile number
+        * \return void
+        */
+        void checkForOpacity(const Vector3 coord, const unsigned int tile);
+
+        /**
+        * \fn void reloadOpacities()
+        * \brief To reload the opacities from the types list
         *
         * \return void
         */
-        void applyGroupOpacity();
+        void reloadOpacities();
 
         /**
         * \fn unsigned int getTileOpacity(const Vector3 coord)
@@ -187,14 +214,23 @@ class TileGroupData
         void resetOpacityOf(const Vector3 coord);
 
         /**
-        * \fn void setTileTilesetX(const Vector3 coord, const unsigned int x)
+        * \fn void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord)
         * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
         * \param coord The 3D coordinate of the tile
-        * \param x The x tileset coordinate of the tile
+        * \param tilesetCoord The tileset coordinates
         * \return void
         */
-        void setTileTilesetX(const Vector3 coord, unsigned int x);
+        void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord);
+
+        /**
+        * \fn unsigned int getOpacityOfType(const unsigned int type) const
+        * \brief To get the opacity of a specific tile type
+        *
+        * \param type The tile type from its number
+        * \return void
+        */
+        unsigned int getOpacityOfType(const unsigned int type) const;
 
     private:
 
@@ -204,7 +240,11 @@ class TileGroupData
 
         MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 
-        unsigned int m_opacity;  /*!< The TileGroup opacity set*/
+        Matrix3d<unsigned int> m_tilesOpacities; /*!< The Matrix3d of tiles opacities values*/
+
+        std::vector<Vector2> m_typesOpacities; /*!< The tile types opacities values list */
+
+        unsigned int m_opacity; /*!< The global opacity (if set) */
 };
 
 #endif // TILEGROUPDATA_H

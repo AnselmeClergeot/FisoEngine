@@ -71,6 +71,14 @@ class TileGroupLoader
         void resizeTileList();
 
         /**
+        * \fn void resizeOpacitiesMatrix3d()
+        * \brief To resize the Matrix3d tile opacities values
+        *
+        * \return void
+        */
+        void resizeOpacitiesMatrix3d();
+
+        /**
         * \fn void setTilesTileset()
         * \brief To set the tileset to all the tiles in the list
         *

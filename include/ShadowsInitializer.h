@@ -15,6 +15,7 @@
 #include "ShadowsSystemStates.h"
 #include "MapData.h"
 #include "Matrix3d.h"
+#include "DynamicShader.h"
 
 /**
  * \class ShadowsInitializer
@@ -28,14 +29,21 @@ class ShadowsInitializer
     public:
 
         /**
-        * \fn ShadowsInitializer(TileGroup &tilegroup, ShadowsSystemStates &states, MapData &mapData)
+        * \fn ShadowsInitializer(TileGroup &tilegroup,
+                           ShadowsSystemStates &states,
+                           MapData &mapData,
+                           DynamicShader &shader)
         * \brief The class constructor
         *
         * \param tilegroup Reference to the shadows TileGroup to send condifuration
         * \param states Reference to the ShadowsSystemStates to modify states
         * \param mapData Reference to the MapData to get useful map data
+        * \param shader Reference to the DynamicShader
         */
-        ShadowsInitializer(TileGroup &tilegroup, ShadowsSystemStates &states, MapData &mapData);
+        ShadowsInitializer(TileGroup &tilegroup,
+                           ShadowsSystemStates &states,
+                           MapData &mapData,
+                           DynamicShader &shader);
 
         /**
         * \fn void initialize()
@@ -80,6 +88,8 @@ class ShadowsInitializer
         MapData &m_mapData; /*!< The reference to the MapData to access useful map data */
 
         ShadowsSystemStates &m_states; /*!< The reference to the ShadowsSystemStates  */
+
+        DynamicShader &m_shader; /*!< The reference to the DynamicShader  */
 };
 
 #endif // SHADOWSINITIALIZER_H

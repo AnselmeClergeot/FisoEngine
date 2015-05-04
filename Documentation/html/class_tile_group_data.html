@@ -129,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7691324e975913b0c9c22f97082124f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; sf::Sprite &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#aa7691324e975913b0c9c22f97082124f">getTiles</a> ()</td></tr>
 <tr class="memdesc:aa7691324e975913b0c9c22f97082124f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the list of tiles [SPECIFIC TO SFML].  <a href="#aa7691324e975913b0c9c22f97082124f">More...</a><br /></td></tr>
 <tr class="separator:aa7691324e975913b0c9c22f97082124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2dd68b2bb114c5db44e920e1cbec55b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#ab2dd68b2bb114c5db44e920e1cbec55b">getOpacities</a> ()</td></tr>
+<tr class="memdesc:ab2dd68b2bb114c5db44e920e1cbec55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get a reference to the tile opacities values.  <a href="#ab2dd68b2bb114c5db44e920e1cbec55b">More...</a><br /></td></tr>
+<tr class="separator:ab2dd68b2bb114c5db44e920e1cbec55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f3f93e2289dfa4d5af9e678161288ff"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a5f3f93e2289dfa4d5af9e678161288ff">getTileNumber</a> () const </td></tr>
 <tr class="memdesc:a5f3f93e2289dfa4d5af9e678161288ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the total tile number of the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a5f3f93e2289dfa4d5af9e678161288ff">More...</a><br /></td></tr>
 <tr class="separator:a5f3f93e2289dfa4d5af9e678161288ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +165,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a589cba74822e96daab8e4e528bc08b24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a589cba74822e96daab8e4e528bc08b24">setGroupOpacity</a> (const unsigned int opacity)</td></tr>
 <tr class="memdesc:a589cba74822e96daab8e4e528bc08b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the opacity of all the tiles of the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a589cba74822e96daab8e4e528bc08b24">More...</a><br /></td></tr>
 <tr class="separator:a589cba74822e96daab8e4e528bc08b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625807e222ea4d98b3871ef06568c8f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a625807e222ea4d98b3871ef06568c8f2">applyGroupOpacity</a> ()</td></tr>
-<tr class="memdesc:a625807e222ea4d98b3871ef06568c8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">To apply the entire <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> opacity to each tile.  <a href="#a625807e222ea4d98b3871ef06568c8f2">More...</a><br /></td></tr>
-<tr class="separator:a625807e222ea4d98b3871ef06568c8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ba6de9f02ddb37e81194cb575445e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a15ba6de9f02ddb37e81194cb575445e8">applyOpacityOn</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord)</td></tr>
+<tr class="memdesc:a15ba6de9f02ddb37e81194cb575445e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">To apply the opacity value of the <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> on a tile.  <a href="#a15ba6de9f02ddb37e81194cb575445e8">More...</a><br /></td></tr>
+<tr class="separator:a15ba6de9f02ddb37e81194cb575445e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501a55ce2504d60d8fd96462d29402b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a501a55ce2504d60d8fd96462d29402b6">checkForOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const unsigned int tile)</td></tr>
+<tr class="memdesc:a501a55ce2504d60d8fd96462d29402b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">To eventually set the opacity of the tile which was set.  <a href="#a501a55ce2504d60d8fd96462d29402b6">More...</a><br /></td></tr>
+<tr class="separator:a501a55ce2504d60d8fd96462d29402b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fa282b5b2c63638349ae5955f3f519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#ac5fa282b5b2c63638349ae5955f3f519">reloadOpacities</a> ()</td></tr>
+<tr class="memdesc:ac5fa282b5b2c63638349ae5955f3f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reload the opacities from the types list.  <a href="#ac5fa282b5b2c63638349ae5955f3f519">More...</a><br /></td></tr>
+<tr class="separator:ac5fa282b5b2c63638349ae5955f3f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6fea8468da0f5026df3095953a78b6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a3f6fea8468da0f5026df3095953a78b6">getTileOpacity</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord)</td></tr>
 <tr class="memdesc:a3f6fea8468da0f5026df3095953a78b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of a specific tile at 3D coordinates.  <a href="#a3f6fea8468da0f5026df3095953a78b6">More...</a><br /></td></tr>
 <tr class="separator:a3f6fea8468da0f5026df3095953a78b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,9 +183,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a00e9f85af9f6cf3e7e9d9b36863fda7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a00e9f85af9f6cf3e7e9d9b36863fda7e">resetOpacityOf</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord)</td></tr>
 <tr class="memdesc:a00e9f85af9f6cf3e7e9d9b36863fda7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reset the opacity of a specific tile at 3D coordinates.  <a href="#a00e9f85af9f6cf3e7e9d9b36863fda7e">More...</a><br /></td></tr>
 <tr class="separator:a00e9f85af9f6cf3e7e9d9b36863fda7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dcfe5d696f5e3a461296703318503dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a7dcfe5d696f5e3a461296703318503dd">setTileTilesetX</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, unsigned int x)</td></tr>
-<tr class="memdesc:a7dcfe5d696f5e3a461296703318503dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the X tileset coordinate of a specific tile from its coordinates.  <a href="#a7dcfe5d696f5e3a461296703318503dd">More...</a><br /></td></tr>
-<tr class="separator:a7dcfe5d696f5e3a461296703318503dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a496a41e96c717b96576adef82450f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a75a496a41e96c717b96576adef82450f">setTileTilesetX</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, <a class="el" href="class_vector2.html">Vector2</a> tilesetCoord)</td></tr>
+<tr class="memdesc:a75a496a41e96c717b96576adef82450f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the X tileset coordinate of a specific tile from its coordinates.  <a href="#a75a496a41e96c717b96576adef82450f">More...</a><br /></td></tr>
+<tr class="separator:a75a496a41e96c717b96576adef82450f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af9ff97fe8bd25619ee27827facc676"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a3af9ff97fe8bd25619ee27827facc676">getOpacityOfType</a> (const unsigned int type) const </td></tr>
+<tr class="memdesc:a3af9ff97fe8bd25619ee27827facc676"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the opacity of a specific tile type.  <a href="#a3af9ff97fe8bd25619ee27827facc676">More...</a><br /></td></tr>
+<tr class="separator:a3af9ff97fe8bd25619ee27827facc676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -186,6 +198,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2d84d05ed0f1855f4e41405868190545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c90fe625657fbcd409d34a64a4663d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a7c90fe625657fbcd409d34a64a4663d2">m_mapData</a></td></tr>
 <tr class="separator:a7c90fe625657fbcd409d34a64a4663d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0098c50257e04cd08048c640e92fc754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a0098c50257e04cd08048c640e92fc754">m_tilesOpacities</a></td></tr>
+<tr class="separator:a0098c50257e04cd08048c640e92fc754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43bc7d734c1596363ad52367fdea4f33"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a43bc7d734c1596363ad52367fdea4f33">m_typesOpacities</a></td></tr>
+<tr class="separator:a43bc7d734c1596363ad52367fdea4f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535b48577d2b3e25bc11c3a99a724396"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a535b48577d2b3e25bc11c3a99a724396">m_opacity</a></td></tr>
 <tr class="separator:a535b48577d2b3e25bc11c3a99a724396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -218,20 +234,63 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a625807e222ea4d98b3871ef06568c8f2"></a>
+<a class="anchor" id="a15ba6de9f02ddb37e81194cb575445e8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TileGroupData::applyGroupOpacity </td>
+          <td class="memname">void TileGroupData::applyOpacityOn </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To apply the entire <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> opacity to each tile. </p>
+<p>To apply the opacity value of the <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> on a tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>The tile 3D coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a501a55ce2504d60d8fd96462d29402b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileGroupData::checkForOpacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>tile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To eventually set the opacity of the tile which was set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>The tile 3D coordinates </td></tr>
+    <tr><td class="paramname">tile</td><td>The tile number </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -315,6 +374,49 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab2dd68b2bb114c5db44e920e1cbec55b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt; &amp; TileGroupData::getOpacities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get a reference to the tile opacities values. </p>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> of opacities values </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3af9ff97fe8bd25619ee27827facc676"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int TileGroupData::getOpacityOfType </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the opacity of a specific tile type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The tile type from its number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5f3f93e2289dfa4d5af9e678161288ff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -391,6 +493,24 @@ Private Attributes</h2></td></tr>
 
 <p>To get the tileset texture [SPECIFIC TO SFML]. </p>
 <dl class="section return"><dt>Returns</dt><dd>The tileset texture </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5fa282b5b2c63638349ae5955f3f519"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TileGroupData::reloadOpacities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reload the opacities from the types list. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -541,7 +661,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7dcfe5d696f5e3a461296703318503dd"></a>
+<a class="anchor" id="a75a496a41e96c717b96576adef82450f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -554,8 +674,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>tilesetCoord</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -569,7 +689,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>The 3D coordinate of the tile </td></tr>
-    <tr><td class="paramname">x</td><td>The x tileset coordinate of the tile </td></tr>
+    <tr><td class="paramname">tilesetCoord</td><td>The tileset coordinates </td></tr>
   </table>
   </dd>
 </dl>
@@ -720,7 +840,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> opacity set </p>
+<p>The global opacity (if set) </p>
 
 </div>
 </div>
@@ -766,6 +886,48 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0098c50257e04cd08048c640e92fc754"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt;unsigned int&gt; TileGroupData::m_tilesOpacities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> of tiles opacities values </p>
+
+</div>
+</div>
+<a class="anchor" id="a43bc7d734c1596363ad52367fdea4f33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_vector2.html">Vector2</a>&gt; TileGroupData::m_typesOpacities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The tile types opacities values list </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_tile_group_data_8h_source.html">TileGroupData.h</a></li>
 <li>TileGroupData.cpp</li>
@@ -776,7 +938,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_group_data.html">TileGroupData</a></li>
-    <li class="footer">Generated on Sun May 3 2015 15:42:08 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 4 2015 12:25:13 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

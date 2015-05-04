@@ -2,9 +2,11 @@
 
 ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup,
                                        ShadowsSystemStates &states,
-                                       MapData &mapData) : m_tileGroup(tilegroup),
-                                                           m_mapData(mapData),
-                                                           m_states(states)
+                                       MapData &mapData,
+                                       DynamicShader &shader) : m_tileGroup(tilegroup),
+                                                                m_mapData(mapData),
+                                                                m_states(states),
+                                                                m_shader(shader)
 { }
 
 void ShadowsInitializer::initialize() {
@@ -14,6 +16,8 @@ void ShadowsInitializer::initialize() {
     fillMatrix(tempConf);
     m_tileGroup.initialize();
     m_tileGroup.configureWith(tempConf);
+    m_shader.updateOpacityOfAll();
+
     m_states.setInitialized();
 }
 

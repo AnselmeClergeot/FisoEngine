@@ -32,7 +32,7 @@ void Animator::setAnimation(const unsigned tile, const unsigned int length) {
         if(m_mapData.getTempConf().at(i)==tile)
         {
             m_tileAnimationsData.at(i).setLength(length);
-            m_tileAnimationsData.at(i).setStatus(true);
+            m_tileAnimationsData.at(i).setKind(Global);
         }
     }
 }
@@ -42,7 +42,6 @@ void Animator::setSpeed(const unsigned int speed) {
 }
 
 void Animator::next() {
-
     if(m_timer.getElapsedTime() > m_speed)
     {
         m_timer.restart();
@@ -123,7 +122,8 @@ void Animator::apply() {
            m_tileAnimationsData.at(x, y, z).getLength()>1 &&
            isVisible(toIsometricPosition(Vector3(x, y, z), m_mapData), m_mapData.getTileSize(), m_screenInfos))
         {
-            m_mapTilegroup.setTileTilesetX(Vector3(x, y, z), m_tileAnimationsData.at(x, y, z).getX());
+            m_mapTilegroup.setTileTilesetX(Vector3(x, y, z), Vector2(m_tileAnimationsData.at(x, y, z).getX(),
+                                                                     m_mapData.getTempConf().at(x, y, z)));
 
             if(m_shadowsStates.isOn())
                 m_shader.updateTileFromAnim(Vector3(x, y, z), m_tileAnimationsData.at(x, y, z).getX());
@@ -141,27 +141,20 @@ void Animator::updateTileAt(const Vector3 coord) {
         if(m_animations[i].x==m_mapData.getTempConf().at(coord.x, coord.y, coord.z))
         {
             if(m_animations[i].z==0)
-            {
                 m_tileAnimationsData.at(coord.x, coord.y, coord.z).setKind(Global);
-                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(true);
-            }
 
             if(m_animations[i].z==1)
-            {
                 m_tileAnimationsData.at(coord.x, coord.y, coord.z).setKind(Single);
-                m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(false);
-            }
 
             m_tileAnimationsData.at(coord.x, coord.y, coord.z).setLength(m_animations[i].y);
             m_tileAnimationsData.at(coord.x, coord.y, coord.z).setDirection(Right);
-            m_tileAnimationsData.at(coord.x, coord.y, coord.z).resetX();
 
             return;
         }
     }
+
     m_tileAnimationsData.at(coord.x, coord.y, coord.z).setLength(1);
     m_tileAnimationsData.at(coord.x, coord.y, coord.z).setDirection(Right);
-    m_tileAnimationsData.at(coord.x, coord.y, coord.z).resetX();
 }
 
 unsigned int Animator::getFrameAt(const Vector3 coord) {

@@ -89,6 +89,7 @@ void TileAnimData::updateX() {
 
             }
         }
+
     m_status = m_waitStatus;
 }
 

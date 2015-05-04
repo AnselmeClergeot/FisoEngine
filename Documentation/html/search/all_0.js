@@ -8,6 +8,6 @@ var searchData=
   ['animdirection',['AnimDirection',['../_tile_anim_data_8h.html#ab4bf076cf9f949142a4d7bc0b7705f8d',1,'TileAnimData.h']]],
   ['animkind',['AnimKind',['../_tile_anim_data_8h.html#ab66d2a13153cb38d5a96a97efcf41676',1,'TileAnimData.h']]],
   ['apply',['apply',['../class_animator.html#a71c4490110de839e621b8aebea8bf703',1,'Animator']]],
-  ['applygroupopacity',['applyGroupOpacity',['../class_tile_group_data.html#a625807e222ea4d98b3871ef06568c8f2',1,'TileGroupData']]],
+  ['applyopacityon',['applyOpacityOn',['../class_tile_group_data.html#a15ba6de9f02ddb37e81194cb575445e8',1,'TileGroupData']]],
   ['at',['at',['../class_matrix3d.html#a1757dd9de7e04457f481aa2ca8ad80ec',1,'Matrix3d::at(const unsigned int x, const unsigned int y, const unsigned int z)'],['../class_matrix3d.html#ac7a2d0500ad774f6904eb44d791dc685',1,'Matrix3d::at(const unsigned int index)']]]
 ];

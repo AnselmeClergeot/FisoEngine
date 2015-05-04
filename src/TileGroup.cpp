@@ -12,8 +12,6 @@ void TileGroup::setTilesetPath(const std::string path) {
 
 void TileGroup::initialize() {
     m_loader.initialize();
-    //If the TileGroup opacity was set before initialization
-    m_data.applyGroupOpacity();
 }
 
 void TileGroup::configureWith(Matrix3d<unsigned int> &matrix) {
@@ -40,6 +38,10 @@ void TileGroup::setGroupOpacity(const unsigned int opacity) {
     m_data.setGroupOpacity(opacity);
 }
 
+void TileGroup::reloadOpacities() {
+    m_data.reloadOpacities();
+}
+
 void TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
                      const EntitiesInterposing *interposing) const {
     m_drawer.draw(target, layer, interposing);
@@ -53,6 +55,10 @@ unsigned int TileGroup::getGroupOpacity() const {
     return m_data.getGroupOpacity();
 }
 
-void TileGroup::setTileTilesetX(const Vector3 coord, const unsigned int x) {
-    m_data.setTileTilesetX(coord, x);
+void TileGroup::setTileTilesetX(const Vector3 coord, const Vector2 tilesetCoord) {
+    m_data.setTileTilesetX(coord, tilesetCoord);
+}
+
+unsigned int TileGroup::getOpacityOfType(const unsigned int type) const {
+    return m_data.getOpacityOfType(type);
 }

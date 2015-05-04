@@ -110,6 +110,14 @@ class TileGroup
         void setGroupOpacity(const unsigned int opacity);
 
         /**
+        * \fn void reloadOpacities()
+        * \brief To reload the opacities from the types list
+        *
+        * \return void
+        */
+        void reloadOpacities();
+
+        /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
                   const EntitiesInterposing *interposing = 0) const
         * \brief To draw a specific layer of the TileGroup
@@ -141,14 +149,23 @@ class TileGroup
         unsigned int getGroupOpacity() const;
 
         /**
-        * \fn void setTileTilesetX(const Vector3 coord, const unsigned int x)
+        * \fn void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord)
         * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
         * \param coord The 3D coordinate of the tile
-        * \param x The x tileset coordinate of the tile
+        * \param tilesetCoord The tileset coordinates
         * \return void
         */
-        void setTileTilesetX(const Vector3 coord, const unsigned int x);
+        void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord);
+
+        /**
+        * \fn unsigned int getOpacityOfType(const unsigned int type) const
+        * \brief To get the opacity of a specific tile type
+        *
+        * \param type The tile type from its number
+        * \return void
+        */
+        unsigned int getOpacityOfType(const unsigned int type) const;
 
     private:
 
