@@ -34,7 +34,7 @@ Note: during the development, FisoEngine is only bind with SFML.
 Tile-based means that the world of your game is composed of tiles: a tile is an image that corresponds to a world block, or a floor. Many games are using this kind of world: almost all 2D RPG, turn-based strategy games, etc.
 
 * **Can I use FisoEngine to create big worlds?**
-Yes and no. FisoEngine can't be used to handles worlds as big as Minecraft, but it can handles relatively large worlds which may be widely sufficient for 90% of games. The maximum world size depends of the computer performance, but you can easily manage world reloading for map changing to not loose any performances.
+Yes and no. FisoEngine can't be used to handle open-worlds like minecraft, but can be used for prepared world like "levels" world. You can use dynamic map reloading to not loose any performances.
 
 * **Can I freely modify FisoEngine sources?**
 Yes. You can do every thing you want with the FisoEngine sources untill you redistribuate them under the same circumstances you got them. For more informations, go to the <a href="https://www.gnu.org/copyleft/gpl.html"> GNU GENERAL PUBLIC LICENSE page </a>.
