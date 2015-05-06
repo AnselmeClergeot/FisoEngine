@@ -19,12 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileGroupData.h"
 
-TileGroupData::TileGroupData(MapData &mapData) : m_tileset(),
-                                                 m_tiles(),
-                                                 m_mapData(mapData),
-                                                 m_tilesOpacities(),
-                                                 m_typesOpacities(),
-                                                 m_opacity(255)
+TileGroupData::TileGroupData(MapData &mapData, ScreenInfos &screenInfos) : m_tileset(),
+                                                                           m_tiles(),
+                                                                           m_mapData(mapData),
+                                                                           m_screenInfos(screenInfos),
+                                                                           m_tilesOpacities(),
+                                                                           m_typesOpacities(),
+                                                                           m_opacity(255)
 { }
 
 sf::Texture &TileGroupData::getTileset() {
@@ -173,7 +174,8 @@ void TileGroupData::resetOpacityOf(const Vector3 coord) {
 }
 
 void TileGroupData::setTileTilesetX(const Vector3 coord, const Vector2 tilesetCoord) {
-    frameTile(coord, tilesetCoord);
+    if(isVisible(toIsometricPosition(coord, m_mapData), m_mapData.getTileSize(), m_screenInfos))
+        frameTile(coord, tilesetCoord);
 }
 
 unsigned int TileGroupData::getOpacityOfType(const unsigned int type) const {

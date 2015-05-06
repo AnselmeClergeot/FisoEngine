@@ -120,9 +120,9 @@ $(document).ready(function(){initNavTree('class_tile_group_data.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac3e8c5c205936fe7738109e079ed3eb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#ac3e8c5c205936fe7738109e079ed3eb8">TileGroupData</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData)</td></tr>
-<tr class="memdesc:ac3e8c5c205936fe7738109e079ed3eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ac3e8c5c205936fe7738109e079ed3eb8">More...</a><br /></td></tr>
-<tr class="separator:ac3e8c5c205936fe7738109e079ed3eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327a3939f038b913c2d4dbf32a54f913"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a327a3939f038b913c2d4dbf32a54f913">TileGroupData</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
+<tr class="memdesc:a327a3939f038b913c2d4dbf32a54f913"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a327a3939f038b913c2d4dbf32a54f913">More...</a><br /></td></tr>
+<tr class="separator:a327a3939f038b913c2d4dbf32a54f913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74355d3981ff07dfb8838fc173a519fd"><td class="memItemLeft" align="right" valign="top">sf::Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a74355d3981ff07dfb8838fc173a519fd">getTileset</a> ()</td></tr>
 <tr class="memdesc:a74355d3981ff07dfb8838fc173a519fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the tileset texture [SPECIFIC TO SFML].  <a href="#a74355d3981ff07dfb8838fc173a519fd">More...</a><br /></td></tr>
 <tr class="separator:a74355d3981ff07dfb8838fc173a519fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +198,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2d84d05ed0f1855f4e41405868190545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c90fe625657fbcd409d34a64a4663d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a7c90fe625657fbcd409d34a64a4663d2">m_mapData</a></td></tr>
 <tr class="separator:a7c90fe625657fbcd409d34a64a4663d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad76e3fd79659a15dd6b97e926c1623b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#aad76e3fd79659a15dd6b97e926c1623b">m_screenInfos</a></td></tr>
+<tr class="separator:aad76e3fd79659a15dd6b97e926c1623b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0098c50257e04cd08048c640e92fc754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix3d.html">Matrix3d</a>&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a0098c50257e04cd08048c640e92fc754">m_tilesOpacities</a></td></tr>
 <tr class="separator:a0098c50257e04cd08048c640e92fc754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43bc7d734c1596363ad52367fdea4f33"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_group_data.html#a43bc7d734c1596363ad52367fdea4f33">m_typesOpacities</a></td></tr>
@@ -209,7 +211,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>This class stores all the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> stuff. </p>
 <p><a class="el" href="class_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> class is the data container of <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. It contains all data from configuration to tile images, etc. The class is also charged of setting tile positions, framing tiles and handling their opacities. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac3e8c5c205936fe7738109e079ed3eb8"></a>
+<a class="anchor" id="a327a3939f038b913c2d4dbf32a54f913"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -217,8 +219,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">TileGroupData::TileGroupData </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td>
-          <td class="paramname"><em>mapData</em></td><td>)</td>
+          <td class="paramname"><em>mapData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td>
+          <td class="paramname"><em>screenInfos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -227,6 +239,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> to get useful map data </td></tr>
+    <tr><td class="paramname">screenInfos</td><td>Reference to the map relative <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -844,6 +857,27 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aad76e3fd79659a15dd6b97e926c1623b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_screen_infos.html">ScreenInfos</a>&amp; TileGroupData::m_screenInfos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to the map relative <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> </p>
+
+</div>
+</div>
 <a class="anchor" id="a2d84d05ed0f1855f4e41405868190545"></a>
 <div class="memitem">
 <div class="memproto">
@@ -938,7 +972,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_group_data.html">TileGroupData</a></li>
-    <li class="footer">Generated on Wed May 6 2015 14:42:07 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 6 2015 17:32:20 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

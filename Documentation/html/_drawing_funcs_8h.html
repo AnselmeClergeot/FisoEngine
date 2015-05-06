@@ -112,10 +112,7 @@ $(document).ready(function(){initNavTree('_drawing_funcs_8h.html','');});
 <p>Drawing functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_vector2_8h_source.html">Vector2.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_vector3_8h_source.html">Vector3.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_screen_infos_8h_source.html">ScreenInfos.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_map_data_8h_source.html">MapData.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_tile_group_data_8h_source.html">TileGroupData.h</a>&quot;</code><br />
 </div>
 <p><a href="_drawing_funcs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,9 +121,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a45eb6612696c05b9f41ea588028596c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_drawing_funcs_8h.html#a45eb6612696c05b9f41ea588028596c5">isVisible</a> (const <a class="el" href="class_vector2.html">Vector2</a> position, const <a class="el" href="class_vector2.html">Vector2</a> elementSize, <a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
 <tr class="memdesc:a45eb6612696c05b9f41ea588028596c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To know if an element is visible on the screen.  <a href="#a45eb6612696c05b9f41ea588028596c5">More...</a><br /></td></tr>
 <tr class="separator:a45eb6612696c05b9f41ea588028596c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a380a05505db694e834e8d7f164646a80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_drawing_funcs_8h.html#a380a05505db694e834e8d7f164646a80">tileIsNotHide</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, <a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;tilegroupData)</td></tr>
-<tr class="memdesc:a380a05505db694e834e8d7f164646a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">To know if a tile is not hide behind other tiles.  <a href="#a380a05505db694e834e8d7f164646a80">More...</a><br /></td></tr>
-<tr class="separator:a380a05505db694e834e8d7f164646a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing functions. </p>
@@ -178,56 +172,13 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a380a05505db694e834e8d7f164646a80"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool tileIsNotHide </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_vector3.html">Vector3</a>&#160;</td>
-          <td class="paramname"><em>coord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td>
-          <td class="paramname"><em>mapData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_tile_group_data.html">TileGroupData</a> &amp;&#160;</td>
-          <td class="paramname"><em>tilegroupData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To know if a tile is not hide behind other tiles. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coord</td><td>Coordinate of the tile </td></tr>
-    <tr><td class="paramname">mapData</td><td>Reference to the mapData </td></tr>
-    <tr><td class="paramname">tilegroupData</td><td>Reference to the <a class="el" href="class_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> of the <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the tile is not hide, false otherwise </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_drawing_funcs_8h.html">DrawingFuncs.h</a></li>
-    <li class="footer">Generated on Wed May 6 2015 14:42:07 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

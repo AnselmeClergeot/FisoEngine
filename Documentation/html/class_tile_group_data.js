@@ -1,6 +1,6 @@
 var class_tile_group_data =
 [
-    [ "TileGroupData", "class_tile_group_data.html#ac3e8c5c205936fe7738109e079ed3eb8", null ],
+    [ "TileGroupData", "class_tile_group_data.html#a327a3939f038b913c2d4dbf32a54f913", null ],
     [ "applyOpacityOn", "class_tile_group_data.html#a15ba6de9f02ddb37e81194cb575445e8", null ],
     [ "checkForOpacity", "class_tile_group_data.html#a501a55ce2504d60d8fd96462d29402b6", null ],
     [ "configureWith", "class_tile_group_data.html#af326875698ff2a994fea3adb4e114329", null ],
@@ -25,6 +25,7 @@ var class_tile_group_data =
     [ "updatePosition", "class_tile_group_data.html#a6eb47c1ac93f137ce6d81f0fc65e3c84", null ],
     [ "m_mapData", "class_tile_group_data.html#a7c90fe625657fbcd409d34a64a4663d2", null ],
     [ "m_opacity", "class_tile_group_data.html#a535b48577d2b3e25bc11c3a99a724396", null ],
+    [ "m_screenInfos", "class_tile_group_data.html#aad76e3fd79659a15dd6b97e926c1623b", null ],
     [ "m_tiles", "class_tile_group_data.html#a2d84d05ed0f1855f4e41405868190545", null ],
     [ "m_tileset", "class_tile_group_data.html#ad8fe744d3ddf0a337311340f86b4e7ff", null ],
     [ "m_tilesOpacities", "class_tile_group_data.html#a0098c50257e04cd08048c640e92fc754", null ],

@@ -106,60 +106,78 @@ $(document).ready(function(){initNavTree('_tile_group_loader_8h_source.html','')
 <div class="title">TileGroupLoader.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_tile_group_loader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef TILEGROUPLOADER_H</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define TILEGROUPLOADER_H</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_group_data_8h.html">TileGroupData.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tile_group_loader.html">TileGroupLoader</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_tile_group_loader.html#ab579762eecdaa5f5b096971c9d0f0007">TileGroupLoader</a>(<a class="code" href="class_tile_group_data.html">TileGroupData</a> &amp;data, <a class="code" href="class_map_data.html">MapData</a> &amp;mapData);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">setTilesetPath</a>(<span class="keyword">const</span> std::string path);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a">initialize</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
+<a href="_tile_group_loader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of the FisoEngine sources : a simple C++ tile-based isometric engine.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">For more informations about FisoEngine, see : https://github.com/AnselmeClergeot/FisoEngine.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">You can contact Anselme Clergeot, the developer, at: anselmedu25@hotmail.com.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">(at your option) any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef TILEGROUPLOADER_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define TILEGROUPLOADER_H</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_group_data_8h.html">TileGroupData.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tile_group_loader.html">TileGroupLoader</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_tile_group_loader.html#ab579762eecdaa5f5b096971c9d0f0007">TileGroupLoader</a>(<a class="code" href="class_tile_group_data.html">TileGroupData</a> &amp;data, <a class="code" href="class_map_data.html">MapData</a> &amp;mapData);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a4739568c1353dcdc96d74d48ff537b6a">loadTileset</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a539f3a5205e504cb32dec55d7ee34d7e">resizeTileList</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a782310f2f1707318e5ce100944d0821e">resizeOpacitiesMatrix3d</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a55df5519547122fb2921ebc470f41cea">setTilesTileset</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">   89</a></span>&#160;        <a class="code" href="class_map_data.html">MapData</a> &amp;<a class="code" href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">m_mapData</a>; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">   91</a></span>&#160;        std::string <a class="code" href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">m_tilesetPath</a>; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">   93</a></span>&#160;        <a class="code" href="class_tile_group_data.html">TileGroupData</a> &amp;<a class="code" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">m_data</a>; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // TILEGROUPLOADER_H</span></div>
-<div class="ttc" id="class_map_data_html"><div class="ttname"><a href="class_map_data.html">MapData</a></div><div class="ttdoc">This class is the container of all map data. </div><div class="ttdef"><b>Definition:</b> MapData.h:24</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a4739568c1353dcdc96d74d48ff537b6a"><div class="ttname"><a href="class_tile_group_loader.html#a4739568c1353dcdc96d74d48ff537b6a">TileGroupLoader::loadTileset</a></div><div class="ttdeci">void loadTileset()</div><div class="ttdoc">To load the tileset image from the path informed. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:14</div></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">setTilesetPath</a>(<span class="keyword">const</span> std::string path);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a">initialize</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a4739568c1353dcdc96d74d48ff537b6a">loadTileset</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a539f3a5205e504cb32dec55d7ee34d7e">resizeTileList</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a782310f2f1707318e5ce100944d0821e">resizeOpacitiesMatrix3d</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tile_group_loader.html#a55df5519547122fb2921ebc470f41cea">setTilesTileset</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">  108</a></span>&#160;        <a class="code" href="class_map_data.html">MapData</a> &amp;<a class="code" href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">m_mapData</a>; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">  110</a></span>&#160;        std::string <a class="code" href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">m_tilesetPath</a>; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">  112</a></span>&#160;        <a class="code" href="class_tile_group_data.html">TileGroupData</a> &amp;<a class="code" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">m_data</a>; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // TILEGROUPLOADER_H</span></div>
+<div class="ttc" id="class_map_data_html"><div class="ttname"><a href="class_map_data.html">MapData</a></div><div class="ttdoc">This class is the container of all map data. </div><div class="ttdef"><b>Definition:</b> MapData.h:43</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a4739568c1353dcdc96d74d48ff537b6a"><div class="ttname"><a href="class_tile_group_loader.html#a4739568c1353dcdc96d74d48ff537b6a">TileGroupLoader::loadTileset</a></div><div class="ttdeci">void loadTileset()</div><div class="ttdoc">To load the tileset image from the path informed. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:33</div></div>
 <div class="ttc" id="_tile_group_data_8h_html"><div class="ttname"><a href="_tile_group_data_8h.html">TileGroupData.h</a></div><div class="ttdoc">Definition of TileGroupData class. </div></div>
-<div class="ttc" id="class_tile_group_loader_html_ac2839e49a0d1d9eaeac855f250b6c174"><div class="ttname"><a href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">TileGroupLoader::setTilesetPath</a></div><div class="ttdeci">void setTilesetPath(const std::string path)</div><div class="ttdoc">To set the tileset image of the TileGroup. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:9</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a4df869869f0951587310d692d6c820cf"><div class="ttname"><a href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">TileGroupLoader::m_mapData</a></div><div class="ttdeci">MapData &amp; m_mapData</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:89</div></div>
-<div class="ttc" id="class_tile_group_loader_html_ab42faa98d4a8110a5f0becf09d12d676"><div class="ttname"><a href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">TileGroupLoader::m_tilesetPath</a></div><div class="ttdeci">std::string m_tilesetPath</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:91</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a8bddc1daff108f69d7893d06ef01ed16"><div class="ttname"><a href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">TileGroupLoader::m_data</a></div><div class="ttdeci">TileGroupData &amp; m_data</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:93</div></div>
-<div class="ttc" id="class_tile_group_loader_html_ab579762eecdaa5f5b096971c9d0f0007"><div class="ttname"><a href="class_tile_group_loader.html#ab579762eecdaa5f5b096971c9d0f0007">TileGroupLoader::TileGroupLoader</a></div><div class="ttdeci">TileGroupLoader(TileGroupData &amp;data, MapData &amp;mapData)</div><div class="ttdoc">The class constructor. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:4</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a782310f2f1707318e5ce100944d0821e"><div class="ttname"><a href="class_tile_group_loader.html#a782310f2f1707318e5ce100944d0821e">TileGroupLoader::resizeOpacitiesMatrix3d</a></div><div class="ttdeci">void resizeOpacitiesMatrix3d()</div><div class="ttdoc">To resize the Matrix3d tile opacities values. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:29</div></div>
-<div class="ttc" id="class_tile_group_loader_html"><div class="ttname"><a href="class_tile_group_loader.html">TileGroupLoader</a></div><div class="ttdoc">This class is charged to load TileGroupData stuff. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:25</div></div>
-<div class="ttc" id="class_tile_group_data_html"><div class="ttname"><a href="class_tile_group_data.html">TileGroupData</a></div><div class="ttdoc">This class stores all the TileGroup stuff. </div><div class="ttdef"><b>Definition:</b> TileGroupData.h:26</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a539f3a5205e504cb32dec55d7ee34d7e"><div class="ttname"><a href="class_tile_group_loader.html#a539f3a5205e504cb32dec55d7ee34d7e">TileGroupLoader::resizeTileList</a></div><div class="ttdeci">void resizeTileList()</div><div class="ttdoc">To resize the tile list. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:18</div></div>
-<div class="ttc" id="class_tile_group_loader_html_aacc62726e6528f3d5a613496e1a8e68a"><div class="ttname"><a href="class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a">TileGroupLoader::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">To call TileGroupData loading. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:36</div></div>
-<div class="ttc" id="class_tile_group_loader_html_a55df5519547122fb2921ebc470f41cea"><div class="ttname"><a href="class_tile_group_loader.html#a55df5519547122fb2921ebc470f41cea">TileGroupLoader::setTilesTileset</a></div><div class="ttdeci">void setTilesTileset()</div><div class="ttdoc">To set the tileset to all the tiles in the list. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:24</div></div>
+<div class="ttc" id="class_tile_group_loader_html_ac2839e49a0d1d9eaeac855f250b6c174"><div class="ttname"><a href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">TileGroupLoader::setTilesetPath</a></div><div class="ttdeci">void setTilesetPath(const std::string path)</div><div class="ttdoc">To set the tileset image of the TileGroup. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:28</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a4df869869f0951587310d692d6c820cf"><div class="ttname"><a href="class_tile_group_loader.html#a4df869869f0951587310d692d6c820cf">TileGroupLoader::m_mapData</a></div><div class="ttdeci">MapData &amp; m_mapData</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:108</div></div>
+<div class="ttc" id="class_tile_group_loader_html_ab42faa98d4a8110a5f0becf09d12d676"><div class="ttname"><a href="class_tile_group_loader.html#ab42faa98d4a8110a5f0becf09d12d676">TileGroupLoader::m_tilesetPath</a></div><div class="ttdeci">std::string m_tilesetPath</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:110</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a8bddc1daff108f69d7893d06ef01ed16"><div class="ttname"><a href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">TileGroupLoader::m_data</a></div><div class="ttdeci">TileGroupData &amp; m_data</div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:112</div></div>
+<div class="ttc" id="class_tile_group_loader_html_ab579762eecdaa5f5b096971c9d0f0007"><div class="ttname"><a href="class_tile_group_loader.html#ab579762eecdaa5f5b096971c9d0f0007">TileGroupLoader::TileGroupLoader</a></div><div class="ttdeci">TileGroupLoader(TileGroupData &amp;data, MapData &amp;mapData)</div><div class="ttdoc">The class constructor. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:23</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a782310f2f1707318e5ce100944d0821e"><div class="ttname"><a href="class_tile_group_loader.html#a782310f2f1707318e5ce100944d0821e">TileGroupLoader::resizeOpacitiesMatrix3d</a></div><div class="ttdeci">void resizeOpacitiesMatrix3d()</div><div class="ttdoc">To resize the Matrix3d tile opacities values. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:48</div></div>
+<div class="ttc" id="class_tile_group_loader_html"><div class="ttname"><a href="class_tile_group_loader.html">TileGroupLoader</a></div><div class="ttdoc">This class is charged to load TileGroupData stuff. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.h:44</div></div>
+<div class="ttc" id="class_tile_group_data_html"><div class="ttname"><a href="class_tile_group_data.html">TileGroupData</a></div><div class="ttdoc">This class stores all the TileGroup stuff. </div><div class="ttdef"><b>Definition:</b> TileGroupData.h:47</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a539f3a5205e504cb32dec55d7ee34d7e"><div class="ttname"><a href="class_tile_group_loader.html#a539f3a5205e504cb32dec55d7ee34d7e">TileGroupLoader::resizeTileList</a></div><div class="ttdeci">void resizeTileList()</div><div class="ttdoc">To resize the tile list. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:37</div></div>
+<div class="ttc" id="class_tile_group_loader_html_aacc62726e6528f3d5a613496e1a8e68a"><div class="ttname"><a href="class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a">TileGroupLoader::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">To call TileGroupData loading. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:55</div></div>
+<div class="ttc" id="class_tile_group_loader_html_a55df5519547122fb2921ebc470f41cea"><div class="ttname"><a href="class_tile_group_loader.html#a55df5519547122fb2921ebc470f41cea">TileGroupLoader::setTilesTileset</a></div><div class="ttdeci">void setTilesTileset()</div><div class="ttdoc">To set the tileset to all the tiles in the list. </div><div class="ttdef"><b>Definition:</b> TileGroupLoader.cpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_tile_group_loader_8h.html">TileGroupLoader.h</a></li>
-    <li class="footer">Generated on Wed May 6 2015 14:42:07 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
