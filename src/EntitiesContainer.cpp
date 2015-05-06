@@ -13,6 +13,9 @@ void EntitiesContainer::createEntity() {
 void EntitiesContainer::removeEntity(const unsigned int iter) {
     m_entities.erase(m_entities.begin()+iter);
 }
+void EntitiesContainer::removeAll() {
+    m_entities.clear();
+}
 
 Entity &EntitiesContainer::entityAt(const unsigned int iter) {
     assert(iter<m_entities.size());

@@ -53,6 +53,14 @@ class EntitiesContainer
         void removeEntity(const unsigned int iter);
 
         /**
+        * \fn void removeAll()
+        * \brief To remove all the entities of the map
+        *
+        * \return void
+        */
+        void removeAll();
+
+        /**
         * \fn Entity &entityAt(const unsigned int iter)
         * \brief To get a reference to an entity from its index
         *
