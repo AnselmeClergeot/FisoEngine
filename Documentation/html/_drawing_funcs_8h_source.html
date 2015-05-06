@@ -110,14 +110,26 @@ $(document).ready(function(){initNavTree('_drawing_funcs_8h_source.html','');});
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef DRAWINGFUNCS_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define DRAWINGFUNCS_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector2_8h.html">Vector2.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_screen_infos_8h.html">ScreenInfos.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_drawing_funcs_8h.html#a45eb6612696c05b9f41ea588028596c5">isVisible</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> position, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> elementSize, <a class="code" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // DRAWINGFUNCS_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector3_8h.html">Vector3.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_screen_infos_8h.html">ScreenInfos.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_map_data_8h.html">MapData.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_group_data_8h.html">TileGroupData.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_drawing_funcs_8h.html#a45eb6612696c05b9f41ea588028596c5">isVisible</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> position, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> elementSize, <a class="code" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_drawing_funcs_8h.html#a380a05505db694e834e8d7f164646a80">tileIsNotHide</a>(<span class="keyword">const</span> <a class="code" href="class_vector3.html">Vector3</a> coord, <a class="code" href="class_map_data.html">MapData</a> &amp;mapData, <a class="code" href="class_tile_group_data.html">TileGroupData</a> &amp;tilegroupData);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif // DRAWINGFUNCS_H</span></div>
 <div class="ttc" id="_screen_infos_8h_html"><div class="ttname"><a href="_screen_infos_8h.html">ScreenInfos.h</a></div><div class="ttdoc">Definition of ScreenInfos class. </div></div>
+<div class="ttc" id="class_map_data_html"><div class="ttname"><a href="class_map_data.html">MapData</a></div><div class="ttdoc">This class is the container of all map data. </div><div class="ttdef"><b>Definition:</b> MapData.h:24</div></div>
+<div class="ttc" id="_tile_group_data_8h_html"><div class="ttname"><a href="_tile_group_data_8h.html">TileGroupData.h</a></div><div class="ttdoc">Definition of TileGroupData class. </div></div>
+<div class="ttc" id="_map_data_8h_html"><div class="ttname"><a href="_map_data_8h.html">MapData.h</a></div><div class="ttdoc">Definition of MapData class. </div></div>
+<div class="ttc" id="_drawing_funcs_8h_html_a380a05505db694e834e8d7f164646a80"><div class="ttname"><a href="_drawing_funcs_8h.html#a380a05505db694e834e8d7f164646a80">tileIsNotHide</a></div><div class="ttdeci">bool tileIsNotHide(const Vector3 coord, MapData &amp;mapData, TileGroupData &amp;tilegroupData)</div><div class="ttdoc">To know if a tile is not hide behind other tiles. </div><div class="ttdef"><b>Definition:</b> DrawingFuncs.cpp:10</div></div>
 <div class="ttc" id="_vector2_8h_html"><div class="ttname"><a href="_vector2_8h.html">Vector2.h</a></div><div class="ttdoc">Definition of Vector2 class. </div></div>
 <div class="ttc" id="class_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:21</div></div>
+<div class="ttc" id="class_tile_group_data_html"><div class="ttname"><a href="class_tile_group_data.html">TileGroupData</a></div><div class="ttdoc">This class stores all the TileGroup stuff. </div><div class="ttdef"><b>Definition:</b> TileGroupData.h:26</div></div>
+<div class="ttc" id="class_vector3_html"><div class="ttname"><a href="class_vector3.html">Vector3</a></div><div class="ttdoc">This class is a container of 3 int x, y and z. </div><div class="ttdef"><b>Definition:</b> Vector3.h:21</div></div>
+<div class="ttc" id="_vector3_8h_html"><div class="ttname"><a href="_vector3_8h.html">Vector3.h</a></div><div class="ttdoc">Definition of Vector3 class. </div></div>
 <div class="ttc" id="class_screen_infos_html"><div class="ttname"><a href="class_screen_infos.html">ScreenInfos</a></div><div class="ttdoc">This class is used to inform environment screen data. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:23</div></div>
 <div class="ttc" id="_drawing_funcs_8h_html_a45eb6612696c05b9f41ea588028596c5"><div class="ttname"><a href="_drawing_funcs_8h.html#a45eb6612696c05b9f41ea588028596c5">isVisible</a></div><div class="ttdeci">bool isVisible(const Vector2 position, const Vector2 elementSize, ScreenInfos &amp;screenInfos)</div><div class="ttdoc">To know if an element is visible on the screen. </div><div class="ttdef"><b>Definition:</b> DrawingFuncs.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -126,7 +138,7 @@ $(document).ready(function(){initNavTree('_drawing_funcs_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_drawing_funcs_8h.html">DrawingFuncs.h</a></li>
-    <li class="footer">Generated on Mon May 4 2015 12:25:12 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 6 2015 14:42:06 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

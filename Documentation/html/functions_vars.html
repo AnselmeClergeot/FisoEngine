@@ -79,6 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -128,6 +129,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_animator
 : <a class="el" href="class_map.html#a28f1cab48c8e3f645f6d6f045db4d5c2">Map</a>
 </li>
+<li>m_baseCoord
+: <a class="el" href="class_entity.html#ad28521df441cf9cfc65ae6d76a0f49c4">Entity</a>
+</li>
 <li>m_clock
 : <a class="el" href="class_timer.html#ac77fc4370f797dc20456f0bb9d18e68b">Timer</a>
 </li>
@@ -136,6 +140,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_configsSaver
 : <a class="el" href="class_map.html#ab0c149602dd11b1f031ba9d8b6c06d29">Map</a>
+</li>
+<li>m_container
+: <a class="el" href="class_entities_interposing.html#a21989956e1d34b7556faae76bde68bb0">EntitiesInterposing</a>
 </li>
 <li>m_d
 : <a class="el" href="class_matrix3d.html#a1562dc5ea2681013849386144f1a4def">Matrix3d&lt; T &gt;</a>
@@ -149,11 +156,17 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="class_tile_group_drawer.html#a61defedd4e900b3fed2e65495f917383">TileGroupDrawer</a>
 , <a class="el" href="class_tile_group_loader.html#a8bddc1daff108f69d7893d06ef01ed16">TileGroupLoader</a>
 </li>
+<li>m_dimensions
+: <a class="el" href="class_entity.html#a55e574aa58b63f8dd296c689cd7c29e7">Entity</a>
+</li>
 <li>m_direction
 : <a class="el" href="class_tile_anim_data.html#a4544c1aac239b89cc681729fde1c1d28">TileAnimData</a>
 </li>
 <li>m_drawer
 : <a class="el" href="class_tile_group.html#ae2d9360edbb3232d1d6da82b1c2651f5">TileGroup</a>
+</li>
+<li>m_drawState
+: <a class="el" href="class_entity.html#a49186b6b08b65ad4900451c65449d4fa">Entity</a>
 </li>
 <li>m_dynamicShader
 : <a class="el" href="class_map.html#a163cdccc5f51679c70e8aed3d7e6ee06">Map</a>
@@ -192,6 +205,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="class_animator.html#ad38c649dae0de1504880c34637775920">Animator</a>
 , <a class="el" href="class_dynamic_shader.html#a314f9402958cd2d947fd96065b5e7033">DynamicShader</a>
 , <a class="el" href="class_entities_container.html#adc0f9fe3db7977f2ea7f0c717f969603">EntitiesContainer</a>
+, <a class="el" href="class_entity.html#a4bb63c7b9f4d2ce92c7ac06c379b3a80">Entity</a>
 , <a class="el" href="class_shadows_initializer.html#a8e58291f51854afca45b6b51fb417db7">ShadowsInitializer</a>
 , <a class="el" href="class_tile_group_data.html#a7c90fe625657fbcd409d34a64a4663d2">TileGroupData</a>
 , <a class="el" href="class_tile_group_drawer.html#ad4dbc52f708192eca04de1e7bea00688">TileGroupDrawer</a>
@@ -219,12 +233,16 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_permConf
 : <a class="el" href="class_map_data.html#a0eddfb15bf01c725c17eaf87d0a2809b">MapData</a>
 </li>
+<li>m_pixelPosition
+: <a class="el" href="class_entity.html#ae72905bd7e9cc601d271eb344a3b76ad">Entity</a>
+</li>
 <li>m_position
 : <a class="el" href="class_map_data.html#a1f1a660bdd213032bc4d975b20b47936">MapData</a>
 </li>
 <li>m_screenInfos
 : <a class="el" href="class_animator.html#aac16d8c271ea770b9dd095eb495d3002">Animator</a>
 , <a class="el" href="class_entities_container.html#aeff6d805ab7db1bc366351774e36ee5c">EntitiesContainer</a>
+, <a class="el" href="class_entity.html#a98b2408dab5d9e8c4eae837f0c0beddc">Entity</a>
 , <a class="el" href="class_map.html#ae34fa13c76dcbc881a624cc90860afd5">Map</a>
 , <a class="el" href="class_tile_group_drawer.html#a02ec3504f6ff301662e4fb56ce22bba3">TileGroupDrawer</a>
 </li>
@@ -254,6 +272,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_speed
 : <a class="el" href="class_animator.html#a443e9449fdbd90fb948865e7043ebffc">Animator</a>
 </li>
+<li>m_sprite
+: <a class="el" href="class_entity.html#a349c6abf10608375164c13b3c39c6fb3">Entity</a>
+</li>
 <li>m_states
 : <a class="el" href="class_shadows_initializer.html#aeb9bb91ad52805ce052a12ab0dfa5b39">ShadowsInitializer</a>
 , <a class="el" href="class_shadows_interface.html#a754c57add646df63fbadab2ec32be9a8">ShadowsInterface</a>
@@ -263,6 +284,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_tempConf
 : <a class="el" href="class_map_data.html#ad63fd7380de84d6892a5477adbcd4121">MapData</a>
+</li>
+<li>m_texture
+: <a class="el" href="class_entity.html#a00a30736951509b87b772931412b56dd">Entity</a>
 </li>
 <li>m_tileAnimationsData
 : <a class="el" href="class_animator.html#a7fdfcdbf44cc7984b0f4dc32be9572c5">Animator</a>
@@ -276,6 +300,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_tilegroup
 : <a class="el" href="class_shadows_interface.html#a59882fe43df88cfd8eb88879a4921a78">ShadowsInterface</a>
+</li>
+<li>m_tilePosition
+: <a class="el" href="class_entity.html#a7996082e0526ec2fcff15104a9a3a252">Entity</a>
 </li>
 <li>m_tiles
 : <a class="el" href="class_tile_group_data.html#a2d84d05ed0f1855f4e41405868190545">TileGroupData</a>
@@ -342,7 +369,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 4 2015 12:25:13 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 6 2015 14:42:07 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
