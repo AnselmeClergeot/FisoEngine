@@ -119,8 +119,7 @@ void Animator::apply() {
             for(int z(0); z<m_mapData.getSize().y; z++)
     {
         if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
-           m_tileAnimationsData.at(x, y, z).getLength()>1 &&
-           isVisible(toIsometricPosition(Vector3(x, y, z), m_mapData), m_mapData.getTileSize(), m_screenInfos))
+           m_tileAnimationsData.at(x, y, z).getLength()>1)
         {
             m_mapTilegroup.setTileTilesetX(Vector3(x, y, z), Vector2(m_tileAnimationsData.at(x, y, z).getX(),
                                                                      m_mapData.getTempConf().at(x, y, z)));
