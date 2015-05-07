@@ -21,7 +21,6 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 
 ### Latest development news !
 **The beta release is avalaible! I am looking for testers to experiment this first version!**<br/>
-I am currently working on a performance algorythm to draw only tiles that aren't hide behind other tiles.
 
 ### F.A.Q
 * **Why should I use FisoEngine?**
