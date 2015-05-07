@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('class_animator.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_animator.html">Animator</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#a6972e24c72e08b5dc8b1e94aa15debd7">Animator</a>(MapData &amp;mapData, TileGroup &amp;mapTilegroup, DynamicShader &amp;shader, ShadowsSystemStates &amp;shadowsStates, ScreenInfos &amp;screenInfos)</td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#a21fb2afda0650b92aeae31f5c955b87d">Animator</a>(MapData &amp;mapData, TileGroup &amp;mapTilegroup, DynamicShader &amp;shader, ShadowsSystemStates &amp;shadowsStates, Camera &amp;camera)</td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_animator.html#a71c4490110de839e621b8aebea8bf703">apply</a>()</td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_animator.html#ac8d773e96e800cd4584e6063db01d908">getAnimKindOfTile</a>(const unsigned int tile) const </td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_animator.html#ae91b34b83e032e8d81420e28a6e88630">getAnimLengthOfTile</a>(const unsigned int tile) const </td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
@@ -127,9 +127,9 @@ $(document).ready(function(){initNavTree('class_animator.html','');});
   <tr><td class="entry"><a class="el" href="class_animator.html#a8dbaee454eb9ae88687f5786d03cc745">launchAnimation</a>(const Vector3 coord)</td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_animator.html#ad60c47bf4d7a09f568dc966079a2888b">launchAnimation</a>(const unsigned int x, const unsigned int y, const unsigned int z)</td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_animator.html#ab48d4739ec6029b40c005a65af16e4c1">m_animations</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#ad38c649dae0de1504880c34637775920">m_mapData</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_animator.html#a6eca5ba086acdcae6333e2cc767abc1c">m_mapTilegroup</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#aac16d8c271ea770b9dd095eb495d3002">m_screenInfos</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#a247acbdd655482b9fe3244941f978a52">m_camera</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animator.html#ad38c649dae0de1504880c34637775920">m_mapData</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_animator.html#a6eca5ba086acdcae6333e2cc767abc1c">m_mapTilegroup</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_animator.html#a2473f0dfb648cc09c2924c60e7c05ca8">m_shader</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_animator.html#a54922bb9861dff00607d5ad808ef2234">m_shadowsStates</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_animator.html#a443e9449fdbd90fb948865e7043ebffc">m_speed</a></td><td class="entry"><a class="el" href="class_animator.html">Animator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('class_animator.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -22,9 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 TileGroupDrawer::TileGroupDrawer(MapData &mapData,
                                  TileGroupData &data,
-                                 ScreenInfos &screenInfos) : m_mapData(mapData),
-                                                             m_data(data),
-                                                             m_screenInfos(screenInfos)
+                                 Camera &camera) : m_mapData(mapData),
+                                                   m_data(data),
+                                                   m_camera(camera)
 { }
 
 void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
@@ -32,7 +32,7 @@ void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
     for(std::size_t x(0); x<m_mapData.getSize().x; x++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
     {
-        if(isVisible(toIsometricPosition(Vector3(x, y, layer), m_mapData),m_mapData.getTileSize(), m_screenInfos) &&
+        if(isVisible(toIsometricPosition(Vector3(x, y, layer), m_mapData),m_mapData.getTileSize(), m_camera) &&
            m_mapData.getTempConf().at(x, y, layer)!=m_mapData.getInvisibleTile() &&
            m_data.getTileOpacity(Vector3(x, y, layer))>0)
         {

@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <SFML/Graphics.hpp>
 #include "MapData.h"
 #include "TileGroupData.h"
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "EntitiesInterposing.h"
 
 /**
@@ -47,14 +47,14 @@ class TileGroupDrawer
     public:
 
         /**
-        * \fn TileGroupDrawer(MapData &mapData, TileGroupData &data, ScreenInfos &screenInfos)
+        * \fn TileGroupDrawer(MapData &mapData, TileGroupData &data, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param data Reference to the TileGroupData to get needed data to draw
-        * \param screenInfos Reference to the user ScreenInfos to get useful window data
+        * \param camera Reference to the map camera
         */
-        TileGroupDrawer(MapData &mapData, TileGroupData &data, ScreenInfos &screenInfos);
+        TileGroupDrawer(MapData &mapData, TileGroupData &data, Camera &camera);
 
         /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
@@ -76,7 +76,7 @@ class TileGroupDrawer
 
         TileGroupData &m_data; /*!< Reference to the TileGroupData to get needed data to draw */
 
-        ScreenInfos &m_screenInfos; /*!< Reference to the user ScreenInfos to get useful window data */
+        Camera &m_camera; /*!< Reference to the map camera */
 };
 
 #endif // TILEGROUPDRAWER_H

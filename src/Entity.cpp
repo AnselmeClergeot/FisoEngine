@@ -23,15 +23,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "DrawingFuncs.h"
 
 Entity::Entity(MapData &mapData,
-               ScreenInfos &screenInfos) :  m_tilePosition(),
-                                            m_pixelPosition(),
-                                            m_dimensions(),
-                                            m_baseCoord(),
-                                            m_texture(),
-                                            m_sprite(),
-                                            m_drawState(false),
-                                            m_mapData(mapData),
-                                            m_screenInfos(screenInfos)
+               Camera &camera) :  m_tilePosition(),
+                                  m_pixelPosition(),
+                                  m_dimensions(),
+                                  m_baseCoord(),
+                                  m_texture(),
+                                  m_sprite(),
+                                  m_drawState(false),
+                                  m_mapData(mapData),
+                                  m_camera(camera)
 { }
 
 void Entity::setDimensions(const Vector2 dim) {
@@ -80,7 +80,7 @@ void Entity::setImagePath(const std::string path) {
 }
 
 void Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition, m_dimensions, m_screenInfos))
+    if(isVisible(m_pixelPosition, m_dimensions, m_camera))
         target.draw(m_sprite);
 }
 

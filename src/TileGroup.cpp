@@ -20,9 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroup.h"
 
 TileGroup::TileGroup(MapData &mapData,
-                     ScreenInfos &screenInfos) : m_data(mapData, screenInfos),
-                                                 m_loader(m_data, mapData),
-                                                 m_drawer(mapData, m_data, screenInfos)
+                     Camera &camera) : m_data(mapData, camera),
+                                       m_loader(m_data, mapData),
+                                       m_drawer(mapData, m_data, camera)
 { }
 
 void TileGroup::setTilesetPath(const std::string path) {

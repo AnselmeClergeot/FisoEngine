@@ -4,6 +4,10 @@ var files =
     [ "Animator.h", "_animator_8h.html", [
       [ "Animator", "class_animator.html", "class_animator" ]
     ] ],
+    [ "Camera.cpp", "_camera_8cpp.html", null ],
+    [ "Camera.h", "_camera_8h.html", [
+      [ "Camera", "class_camera.html", "class_camera" ]
+    ] ],
     [ "ConfigsLoader.cpp", "_configs_loader_8cpp.html", null ],
     [ "ConfigsLoader.h", "_configs_loader_8h.html", [
       [ "ConfigsLoader", "class_configs_loader.html", "class_configs_loader" ]
@@ -45,10 +49,6 @@ var files =
     ] ],
     [ "Matrix3d.h", "_matrix3d_8h.html", [
       [ "Matrix3d", "class_matrix3d.html", "class_matrix3d" ]
-    ] ],
-    [ "ScreenInfos.cpp", "_screen_infos_8cpp.html", null ],
-    [ "ScreenInfos.h", "_screen_infos_8h.html", [
-      [ "ScreenInfos", "class_screen_infos.html", "class_screen_infos" ]
     ] ],
     [ "ShadowsInitializer.cpp", "_shadows_initializer_8cpp.html", null ],
     [ "ShadowsInitializer.h", "_shadows_initializer_8h.html", [

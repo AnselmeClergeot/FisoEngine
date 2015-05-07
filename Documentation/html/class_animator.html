@@ -122,9 +122,9 @@ $(document).ready(function(){initNavTree('class_animator.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6972e24c72e08b5dc8b1e94aa15debd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#a6972e24c72e08b5dc8b1e94aa15debd7">Animator</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_tile_group.html">TileGroup</a> &amp;mapTilegroup, <a class="el" href="class_dynamic_shader.html">DynamicShader</a> &amp;shader, <a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;shadowsStates, <a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
-<tr class="memdesc:a6972e24c72e08b5dc8b1e94aa15debd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a6972e24c72e08b5dc8b1e94aa15debd7">More...</a><br /></td></tr>
-<tr class="separator:a6972e24c72e08b5dc8b1e94aa15debd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fb2afda0650b92aeae31f5c955b87d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#a21fb2afda0650b92aeae31f5c955b87d">Animator</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_tile_group.html">TileGroup</a> &amp;mapTilegroup, <a class="el" href="class_dynamic_shader.html">DynamicShader</a> &amp;shader, <a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;shadowsStates, <a class="el" href="class_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a21fb2afda0650b92aeae31f5c955b87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a21fb2afda0650b92aeae31f5c955b87d">More...</a><br /></td></tr>
+<tr class="separator:a21fb2afda0650b92aeae31f5c955b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadb13889f7617b82167d21a031b7f148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#aadb13889f7617b82167d21a031b7f148">resizeTileAnimDataList</a> ()</td></tr>
 <tr class="memdesc:aadb13889f7617b82167d21a031b7f148"><td class="mdescLeft">&#160;</td><td class="mdescRight">To resize the <a class="el" href="class_tile_anim_data.html" title="This class represents a tile animation. ">TileAnimData</a> <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a> from the map <a class="el" href="class_matrix3d.html" title="This class is a template class that offers simple 3D arrays manipulations. ">Matrix3d</a>.  <a href="#aadb13889f7617b82167d21a031b7f148">More...</a><br /></td></tr>
 <tr class="separator:aadb13889f7617b82167d21a031b7f148"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,8 +231,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2473f0dfb648cc09c2924c60e7c05ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54922bb9861dff00607d5ad808ef2234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shadows_system_states.html">ShadowsSystemStates</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#a54922bb9861dff00607d5ad808ef2234">m_shadowsStates</a></td></tr>
 <tr class="separator:a54922bb9861dff00607d5ad808ef2234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac16d8c271ea770b9dd095eb495d3002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#aac16d8c271ea770b9dd095eb495d3002">m_screenInfos</a></td></tr>
-<tr class="separator:aac16d8c271ea770b9dd095eb495d3002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247acbdd655482b9fe3244941f978a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animator.html#a247acbdd655482b9fe3244941f978a52">m_camera</a></td></tr>
+<tr class="separator:a247acbdd655482b9fe3244941f978a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -243,7 +243,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Class that animates the map tiles. </p>
 <p>This class is the user interface to the animations system. It is also charged to animates world tiles and shadows. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a6972e24c72e08b5dc8b1e94aa15debd7"></a>
+<a class="anchor" id="a21fb2afda0650b92aeae31f5c955b87d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -274,8 +274,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td>
-          <td class="paramname"><em>screenInfos</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -292,7 +292,7 @@ Friends</h2></td></tr>
     <tr><td class="paramname">mapTilegroup</td><td>Reference to the map tilegroup to animate its tiles </td></tr>
     <tr><td class="paramname">shader</td><td>Reference to the map dynamic shader to animate shadows </td></tr>
     <tr><td class="paramname">shadowsStates</td><td>Reference to the <a class="el" href="class_shadows_system_states.html" title="This class is the state container of the shadows system. ">ShadowsSystemStates</a> </td></tr>
-    <tr><td class="paramname">screenInfos</td><td>Reference to the <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> to call <a class="el" href="_drawing_funcs_8h.html#a45eb6612696c05b9f41ea588028596c5" title="To know if an element is visible on the screen. ">isVisible()</a> function </td></tr>
+    <tr><td class="paramname">camera</td><td>Reference to the map camera </td></tr>
   </table>
   </dd>
 </dl>
@@ -1230,6 +1230,27 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a247acbdd655482b9fe3244941f978a52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>&amp; Animator::m_camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The reference to the map camera </p>
+
+</div>
+</div>
 <a class="anchor" id="ad38c649dae0de1504880c34637775920"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1269,27 +1290,6 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The reference to the map tilegroup to animate </p>
-
-</div>
-</div>
-<a class="anchor" id="aac16d8c271ea770b9dd095eb495d3002"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_screen_infos.html">ScreenInfos</a>&amp; Animator::m_screenInfos</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The reference to the <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> </p>
 
 </div>
 </div>
@@ -1408,7 +1408,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_animator.html">Animator</a></li>
-    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -23,13 +23,15 @@ Animator::Animator(MapData &mapData,
                    TileGroup &mapTilegroup,
                    DynamicShader &shader,
                    ShadowsSystemStates &shadowsStates,
-                   ScreenInfos &screenInfos) : m_tileAnimationsData(),                                               m_mapData(mapData),
-                                               m_timer(),
-                                               m_speed(150),
-                                               m_animations(),
-                                               m_mapTilegroup(mapTilegroup),                                               m_shader(shader),
-                                               m_shadowsStates(shadowsStates),
-                                               m_screenInfos(screenInfos)
+                   Camera &camera) : m_tileAnimationsData(),
+                                     m_mapData(mapData),
+                                     m_timer(),
+                                     m_speed(150),
+                                     m_animations(),
+                                     m_mapTilegroup(mapTilegroup),
+                                     m_shader(shader),
+                                     m_shadowsStates(shadowsStates),
+                                     m_camera(camera)
 { }
 
 void Animator::resizeTileAnimDataList() {

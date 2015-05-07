@@ -1,6 +1,6 @@
 var class_entity =
 [
-    [ "Entity", "class_entity.html#a15e3bdd0c396e2e1d8b0a4bdf3d7f151", null ],
+    [ "Entity", "class_entity.html#ac15ed6b8641db66809c537ff56f34849", null ],
     [ "calculateTilePosition", "class_entity.html#ac67132ee903817cd472ffc2d8233bf20", null ],
     [ "draw", "class_entity.html#ad2a7d060e691a22af74f185aa139e9ec", null ],
     [ "getBaseCoord", "class_entity.html#a7cddb657c18afa9f817a1ea2a8f5dca2", null ],
@@ -22,11 +22,11 @@ var class_entity =
     [ "setPixelPosition", "class_entity.html#aa9bc3027a4196593da3966106cccdc9e", null ],
     [ "EntitiesInterposing", "class_entity.html#a219c3e12db2aa69c69d56a08447e82db", null ],
     [ "m_baseCoord", "class_entity.html#ad28521df441cf9cfc65ae6d76a0f49c4", null ],
+    [ "m_camera", "class_entity.html#ab058c075ac4140088cf80f6bd7e260f6", null ],
     [ "m_dimensions", "class_entity.html#a55e574aa58b63f8dd296c689cd7c29e7", null ],
     [ "m_drawState", "class_entity.html#a49186b6b08b65ad4900451c65449d4fa", null ],
     [ "m_mapData", "class_entity.html#a4bb63c7b9f4d2ce92c7ac06c379b3a80", null ],
     [ "m_pixelPosition", "class_entity.html#ae72905bd7e9cc601d271eb344a3b76ad", null ],
-    [ "m_screenInfos", "class_entity.html#a98b2408dab5d9e8c4eae837f0c0beddc", null ],
     [ "m_sprite", "class_entity.html#a349c6abf10608375164c13b3c39c6fb3", null ],
     [ "m_texture", "class_entity.html#a00a30736951509b87b772931412b56dd", null ],
     [ "m_tilePosition", "class_entity.html#a7996082e0526ec2fcff15104a9a3a252", null ]

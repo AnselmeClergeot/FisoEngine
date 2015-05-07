@@ -19,9 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "DrawingFuncs.h"
 
-bool isVisible(const Vector2 position, const Vector2 elementSize, ScreenInfos &screenInfos) {
+bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera) {
     return (position.x+elementSize.x>0 &&
             position.y+elementSize.y>0 &&
-            position.x < screenInfos.getWindowResolution().x &&
-            position.y < screenInfos.getWindowResolution().y);
+            position.x < camera.getViewDimensions().x &&
+            position.y < camera.getViewDimensions().y);
 }

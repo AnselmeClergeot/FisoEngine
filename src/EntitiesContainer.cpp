@@ -20,13 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "EntitiesContainer.h"
 
 EntitiesContainer::EntitiesContainer(MapData &mapData,
-                                     ScreenInfos &screenInfos) : m_entities(),
-                                                                 m_mapData(mapData),
-                                                                 m_screenInfos(screenInfos)
+                                     Camera &camera) : m_entities(),
+                                                       m_mapData(mapData),
+                                                       m_camera(camera)
 { }
 
 void EntitiesContainer::createEntity() {
-    m_entities.push_back(std::unique_ptr<Entity>(new Entity(m_mapData, m_screenInfos)));
+    m_entities.push_back(std::unique_ptr<Entity>(new Entity(m_mapData, m_camera)));
 }
 
 void EntitiesContainer::removeEntity(const unsigned int iter) {

@@ -1,6 +1,6 @@
 var class_tile_group =
 [
-    [ "TileGroup", "class_tile_group.html#a54256d8c4cf99ea7442cfe7aec177e89", null ],
+    [ "TileGroup", "class_tile_group.html#aa5389f2ca8951fd5f2ba123e3a55f48b", null ],
     [ "configureWith", "class_tile_group.html#a4a2a46c0848490a928f321f8660307d7", null ],
     [ "draw", "class_tile_group.html#af4be2fd858da6803480440170b116376", null ],
     [ "getGroupOpacity", "class_tile_group.html#a4ba85b1f4d5786f2d1b61ef4ecd1b238", null ],

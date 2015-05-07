@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <SFML/Graphics.hpp>
 #include "Vector2.h"
 #include "Vector3.h"
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "MapData.h"
 
 /**
@@ -52,13 +52,13 @@ class Entity
     public:
 
         /**
-        * \fn Entity(MapData &mapData, ScreenInfos &screenInfos)
+        * \fn Entity(MapData &mapData, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful data
-        * \param screenInfos Reference to the user ScreenInfos to get useful screen data
+        * \param camera Reference to the map camera
         */
-        Entity(MapData &mapData, ScreenInfos &screenInfos);
+        Entity(MapData &mapData, Camera &camera);
 
         /**
         * \fn void setDimensions(const Vector2 dim)
@@ -246,7 +246,7 @@ class Entity
 
         MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 
-        ScreenInfos& m_screenInfos; /* !< The pointer to the ScreenInfos to get screen data*/
+        Camera& m_camera; /* !< The pointer to the map camera */
 };
 
 #endif // ENTITY_H

@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef ENTITIESCONTAINER_H
 #define ENTITIESCONTAINER_H
 #include "MapData.h"
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "Entity.h"
 
 /**
@@ -46,13 +46,13 @@ class EntitiesContainer
     public:
 
         /**
-        * \fn EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos)
+        * \fn EntitiesContainer(MapData &mapData, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
-        * \param screenInfos Reference to the ScreenInfos of the user to get useful screen data
+        * \param camera Reference to the map camera
         */
-        EntitiesContainer(MapData &mapData, ScreenInfos &screenInfos);
+        EntitiesContainer(MapData &mapData, Camera &camera);
 
         /**
         * \fn void createEntity()
@@ -102,7 +102,7 @@ class EntitiesContainer
 
         MapData &m_mapData; /*!< The reference to the MapData to get useful data */
 
-        ScreenInfos &m_screenInfos; /*!< The reference to the user ScreenInfos to get useful screen data */
+        Camera &m_camera; /*!< The reference to the map camera */
 };
 
 #endif // ENTITIESCONTAINER_H

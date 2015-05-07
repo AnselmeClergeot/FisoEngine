@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>MoteurRedesign: ScreenInfos.h Source File</title>
+<title>MoteurRedesign: Camera.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('_screen_infos_8h_source.html','');});
+$(document).ready(function(){initNavTree('_camera_8h_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -103,10 +103,10 @@ $(document).ready(function(){initNavTree('_screen_infos_8h_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ScreenInfos.h</div>  </div>
+<div class="title">Camera.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_screen_infos_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="_camera_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">This file is part of the FisoEngine sources : a simple C++ tile-based isometric engine.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">For more informations about FisoEngine, see : https://github.com/AnselmeClergeot/FisoEngine.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">You can contact Anselme Clergeot, the developer, at: anselmedu25@hotmail.com.</span></div>
@@ -125,44 +125,44 @@ $(document).ready(function(){initNavTree('_screen_infos_8h_source.html','');});
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef SCREENINFOS_H</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define SCREENINFOS_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef CAMERA_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define CAMERA_H</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector2_8h.html">Vector2.h</a>&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_screen_infos.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_screen_infos.html">ScreenInfos</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> screenW, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> screenH);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> res);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">setWindowResolution</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">getWindowResolution</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">   91</a></span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">m_windowRes</a>; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // SCREENINFOS_H</span></div>
-<div class="ttc" id="class_screen_infos_html_a029999321a9b71df3289ad05dce0f39c"><div class="ttname"><a href="class_screen_infos.html#a029999321a9b71df3289ad05dce0f39c">ScreenInfos::setWindowResolution</a></div><div class="ttdeci">void setWindowResolution(const Vector2 res)</div><div class="ttdoc">To set the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:28</div></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_camera.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> viewW, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> viewH);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a8eabe8212cb88eafb80b0e1213ab3be2">setViewDimensions</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> dim);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a8eabe8212cb88eafb80b0e1213ab3be2">setViewDimensions</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> w, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_camera.html#aa091a8937355d64125cf72d41f35dbec">getViewDimensions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">   90</a></span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">m_viewDimensions</a>; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // CAMERA_H</span></div>
+<div class="ttc" id="class_camera_html_aa091a8937355d64125cf72d41f35dbec"><div class="ttname"><a href="class_camera.html#aa091a8937355d64125cf72d41f35dbec">Camera::getViewDimensions</a></div><div class="ttdeci">Vector2 getViewDimensions() const </div><div class="ttdoc">To get the camera view dimensions. </div><div class="ttdef"><b>Definition:</b> Camera.cpp:36</div></div>
+<div class="ttc" id="class_camera_html_ada3edcaa265760b191317d0193c0db1f"><div class="ttname"><a href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">Camera::m_viewDimensions</a></div><div class="ttdeci">Vector2 m_viewDimensions</div><div class="ttdef"><b>Definition:</b> Camera.h:90</div></div>
+<div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">This class is the class instantiated by the user to handle a world camera. </div><div class="ttdef"><b>Definition:</b> Camera.h:41</div></div>
+<div class="ttc" id="class_camera_html_a8eabe8212cb88eafb80b0e1213ab3be2"><div class="ttname"><a href="class_camera.html#a8eabe8212cb88eafb80b0e1213ab3be2">Camera::setViewDimensions</a></div><div class="ttdeci">void setViewDimensions(const Vector2 dim)</div><div class="ttdoc">To set the camera view width and height. </div><div class="ttdef"><b>Definition:</b> Camera.cpp:28</div></div>
+<div class="ttc" id="class_camera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdoc">The class default constructor. </div><div class="ttdef"><b>Definition:</b> Camera.cpp:22</div></div>
 <div class="ttc" id="_vector2_8h_html"><div class="ttname"><a href="_vector2_8h.html">Vector2.h</a></div><div class="ttdoc">Definition of Vector2 class. </div></div>
 <div class="ttc" id="class_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:40</div></div>
-<div class="ttc" id="class_screen_infos_html_a2994f81aa3dcf56323868632dff579df"><div class="ttname"><a href="class_screen_infos.html#a2994f81aa3dcf56323868632dff579df">ScreenInfos::m_windowRes</a></div><div class="ttdeci">Vector2 m_windowRes</div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:91</div></div>
-<div class="ttc" id="class_screen_infos_html_ad788d4730035f096a879a263f176a233"><div class="ttname"><a href="class_screen_infos.html#ad788d4730035f096a879a263f176a233">ScreenInfos::ScreenInfos</a></div><div class="ttdeci">ScreenInfos()</div><div class="ttdoc">The class default constructor. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:22</div></div>
-<div class="ttc" id="class_screen_infos_html_a0fd28929a25df5a3686961e5c42124d5"><div class="ttname"><a href="class_screen_infos.html#a0fd28929a25df5a3686961e5c42124d5">ScreenInfos::getWindowResolution</a></div><div class="ttdeci">Vector2 getWindowResolution() const </div><div class="ttdoc">To get the run window dimensions. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.cpp:36</div></div>
-<div class="ttc" id="class_screen_infos_html"><div class="ttname"><a href="class_screen_infos.html">ScreenInfos</a></div><div class="ttdoc">This class is used to inform environment screen data. </div><div class="ttdef"><b>Definition:</b> ScreenInfos.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_screen_infos_8h.html">ScreenInfos.h</a></li>
-    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_camera_8h.html">Camera.h</a></li>
+    <li class="footer">Generated on Thu May 7 2015 18:38:30 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

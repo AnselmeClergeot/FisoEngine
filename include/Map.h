@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef MAP_H
 #define MAP_H
 #include <SFML/Graphics.hpp>
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "MapData.h"
 #include "ConfigsLoader.h"
 #include "ConfigsSaver.h"
@@ -57,12 +57,12 @@ class Map : public sf::Drawable
     public:
 
         /**
-        * \fn Map(ScreenInfos &screenInfos)
+        * \fn Map(Camera &camera)
         * \brief Map class constructor
         *
-        * \param screenInfos Reference to the ScreenInfo class instantiated by the user
+        * \param camera Reference to the map camera
         */
-        Map(ScreenInfos &screenInfos);
+        Map(Camera &camera);
 
         /**
         * \fn void create()
@@ -441,7 +441,7 @@ class Map : public sf::Drawable
 
     private:
 
-        ScreenInfos &m_screenInfos; /*!< The reference to the relative ScreenInfos */
+        Camera &m_camera; /*!< The reference to the map camera */
 
         MapData m_data; /*!< The map data container */
 

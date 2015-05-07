@@ -19,18 +19,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Map.h"
 
-Map::Map(ScreenInfos &screenInfos)
- : m_screenInfos(screenInfos),
+Map::Map(Camera &camera)
+ : m_camera(camera),
    m_data(),
    m_configsLoader(m_data), m_configsSaver(m_data),
-   m_tileGroup(m_data, m_screenInfos), m_shadowsTilegroup(m_data, m_screenInfos),
+   m_tileGroup(m_data, m_camera), m_shadowsTilegroup(m_data, m_camera),
    m_shadowsStates(),
    m_dynamicShader(m_data, m_tileGroup, m_shadowsTilegroup),
-   m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data,m_dynamicShader),
+   m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data, m_dynamicShader),
    m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
-   m_entityContainer(m_data, m_screenInfos),
+   m_entityContainer(m_data, m_camera),
    m_interposing(m_entityContainer),
-   m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_screenInfos)
+   m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_camera)
 {}
 
 void Map::create() {

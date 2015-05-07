@@ -1,6 +1,6 @@
 var class_map =
 [
-    [ "Map", "class_map.html#a476844ea4fe51b0f67c0622e93e17c88", null ],
+    [ "Map", "class_map.html#ae4d4a2764bcea1841603eb1f1d9a3a7b", null ],
     [ "addLayerFile", "class_map.html#a290ab3a02d38981b3cca69dd6e289214", null ],
     [ "addTranslucentTile", "class_map.html#a8d15c1042fce7972432c80162b0a5041", null ],
     [ "animator", "class_map.html#a40cd9037675af95dcb2b309d91cb98c0", null ],
@@ -42,13 +42,13 @@ var class_map =
     [ "setTileSize", "class_map.html#acb1034357ac997d5bacd2aadf401613c", null ],
     [ "shadows", "class_map.html#a7efc1a5a56430aa4e3f2227286aa2dba", null ],
     [ "m_animator", "class_map.html#a28f1cab48c8e3f645f6d6f045db4d5c2", null ],
+    [ "m_camera", "class_map.html#a13c0362d7eb54e742af271485417cf37", null ],
     [ "m_configsLoader", "class_map.html#a8286eb3cda0e5a1dc6e35bb1975bc656", null ],
     [ "m_configsSaver", "class_map.html#ab0c149602dd11b1f031ba9d8b6c06d29", null ],
     [ "m_data", "class_map.html#abc6223af42cc685c8199796bd888322c", null ],
     [ "m_dynamicShader", "class_map.html#a163cdccc5f51679c70e8aed3d7e6ee06", null ],
     [ "m_entityContainer", "class_map.html#a49de6f084968845e7dc428eb449b95e5", null ],
     [ "m_interposing", "class_map.html#a68a2e587244d3595b184a1e96f92a646", null ],
-    [ "m_screenInfos", "class_map.html#ae34fa13c76dcbc881a624cc90860afd5", null ],
     [ "m_shadowsInitializer", "class_map.html#afed473b49d231d6bcbef04b85607908f", null ],
     [ "m_shadowsInterface", "class_map.html#a1aa6a533758d4efacf5fead183583512", null ],
     [ "m_shadowsStates", "class_map.html#a5fb8e56c15347e4d075b9acd6bbaeda3", null ],

@@ -17,22 +17,22 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ScreenInfos.h"
+#include "Camera.h"
 
-ScreenInfos::ScreenInfos() : m_windowRes(1980, 1080)
+Camera::Camera() : m_viewDimensions(1980, 1080)
 { }
 
-ScreenInfos::ScreenInfos(const unsigned int screenW, const unsigned int screenH) : m_windowRes(screenW, screenH)
+Camera::Camera(const unsigned int viewW, const unsigned int viewH) : m_viewDimensions(viewW, viewH)
 { }
 
-void ScreenInfos::setWindowResolution(const Vector2 res) {
-    m_windowRes = res;
+void Camera::setViewDimensions(const Vector2 dim) {
+    m_viewDimensions = dim;
 }
 
-void ScreenInfos::setWindowResolution(const unsigned int w, const unsigned int h) {
-    setWindowResolution(Vector2(w, h));
+void Camera::setViewDimensions(const unsigned int w, const unsigned int h) {
+    setViewDimensions(Vector2(w, h));
 }
 
-Vector2 ScreenInfos::getWindowResolution() const {
-    return m_windowRes;
+Vector2 Camera::getViewDimensions() const {
+    return m_viewDimensions;
 }

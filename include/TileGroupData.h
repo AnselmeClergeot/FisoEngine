@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TILEGROUPDATA_H
 #include <SFML/Graphics.hpp>
 #include "MapData.h"
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "Matrix3d.h"
 #include "IsometricMath.h"
 #include "DrawingFuncs.h"
@@ -49,13 +49,13 @@ class TileGroupData
     public:
 
         /**
-        * \fn TileGroupData(MapData &mapData, ScreenInfos &screenInfos)
+        * \fn TileGroupData(MapData &mapData, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
-        * \param screenInfos Reference to the map relative ScreenInfos
+        * \param camera Reference to the map camera
         */
-        TileGroupData(MapData &mapData, ScreenInfos &screenInfos);
+        TileGroupData(MapData &mapData, Camera &camera);
 
         /**
         * \fn sf::Texture &getTileset()
@@ -262,7 +262,7 @@ class TileGroupData
 
         MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 
-        ScreenInfos &m_screenInfos; /*!< Reference to the map relative ScreenInfos*/
+        Camera &m_camera; /*!< Reference to the map camera */
 
         Matrix3d<unsigned int> m_tilesOpacities; /*!< The Matrix3d of tiles opacities values*/
 

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['screeninfos_2ecpp',['ScreenInfos.cpp',['../_screen_infos_8cpp.html',1,'']]],
-  ['screeninfos_2eh',['ScreenInfos.h',['../_screen_infos_8h.html',1,'']]],
   ['shadowsinitializer_2ecpp',['ShadowsInitializer.cpp',['../_shadows_initializer_8cpp.html',1,'']]],
   ['shadowsinitializer_2eh',['ShadowsInitializer.h',['../_shadows_initializer_8h.html',1,'']]],
   ['shadowsinterface_2ecpp',['ShadowsInterface.cpp',['../_shadows_interface_8cpp.html',1,'']]],

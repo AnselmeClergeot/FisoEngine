@@ -53,17 +53,17 @@ class Animator
     public:
         /**
         * \fn Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
-                 ShadowsSystemStates &shadowsStates, ScreenInfos &screenInfos)
+                 ShadowsSystemStates &shadowsStates, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
         * \param mapTilegroup Reference to the map tilegroup to animate its tiles
         * \param shader Reference to the map dynamic shader to animate shadows
         * \param shadowsStates Reference to the ShadowsSystemStates
-        * \param screenInfos Reference to the ScreenInfos to call isVisible() function
+        * \param camera Reference to the map camera
         */
         Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
-                 ShadowsSystemStates &shadowsStates, ScreenInfos &screenInfos);
+                 ShadowsSystemStates &shadowsStates, Camera &camera);
 
         /**
         * \fn void resizeTileAnimDataList()
@@ -355,7 +355,7 @@ class Animator
 
         ShadowsSystemStates &m_shadowsStates; /*!< The reference to the ShadowsSystemStates */
 
-        ScreenInfos &m_screenInfos; /*!< The reference to the ScreenInfos */
+        Camera &m_camera; /*!< The reference to the map camera */
 };
 
 #endif // ANIMATOR_H

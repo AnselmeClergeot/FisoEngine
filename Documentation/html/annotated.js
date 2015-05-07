@@ -1,6 +1,7 @@
 var annotated =
 [
     [ "Animator", "class_animator.html", "class_animator" ],
+    [ "Camera", "class_camera.html", "class_camera" ],
     [ "ConfigsLoader", "class_configs_loader.html", "class_configs_loader" ],
     [ "ConfigsSaver", "class_configs_saver.html", "class_configs_saver" ],
     [ "DynamicShader", "class_dynamic_shader.html", "class_dynamic_shader" ],
@@ -10,7 +11,6 @@ var annotated =
     [ "Map", "class_map.html", "class_map" ],
     [ "MapData", "class_map_data.html", "class_map_data" ],
     [ "Matrix3d", "class_matrix3d.html", "class_matrix3d" ],
-    [ "ScreenInfos", "class_screen_infos.html", "class_screen_infos" ],
     [ "ShadowsInitializer", "class_shadows_initializer.html", "class_shadows_initializer" ],
     [ "ShadowsInterface", "class_shadows_interface.html", "class_shadows_interface" ],
     [ "ShadowsSystemStates", "class_shadows_system_states.html", "class_shadows_system_states" ],

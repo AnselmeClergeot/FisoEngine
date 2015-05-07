@@ -1,10 +1,10 @@
 var searchData=
 [
   ['reload',['reload',['../class_map.html#af26792fc7049fda00bcef05e6aafb0af',1,'Map']]],
-  ['reloadopacities',['reloadOpacities',['../class_tile_group_data.html#ac5fa282b5b2c63638349ae5955f3f519',1,'TileGroupData::reloadOpacities()'],['../class_tile_group.html#a8691d52697733d32b6995348774c4ff8',1,'TileGroup::reloadOpacities()']]],
+  ['reloadopacities',['reloadOpacities',['../class_tile_group.html#a8691d52697733d32b6995348774c4ff8',1,'TileGroup::reloadOpacities()'],['../class_tile_group_data.html#ac5fa282b5b2c63638349ae5955f3f519',1,'TileGroupData::reloadOpacities()']]],
   ['removeall',['removeAll',['../class_entities_container.html#acb4d1fb08b082559f6f403fa637a1abb',1,'EntitiesContainer']]],
   ['removeentity',['removeEntity',['../class_entities_container.html#a53a358f021a292a3a8641a3b88019b9b',1,'EntitiesContainer']]],
-  ['removetranslucenttile',['removeTranslucentTile',['../class_map_data.html#a31a2463b2a56e83e857d6e2a7d939649',1,'MapData::removeTranslucentTile()'],['../class_map.html#a42ee8c478366a1644f404e22c6406fb9',1,'Map::removeTranslucentTile()']]],
+  ['removetranslucenttile',['removeTranslucentTile',['../class_map.html#a42ee8c478366a1644f404e22c6406fb9',1,'Map::removeTranslucentTile()'],['../class_map_data.html#a31a2463b2a56e83e857d6e2a7d939649',1,'MapData::removeTranslucentTile()']]],
   ['resetlayerfiles',['resetLayerFiles',['../class_map.html#a5b410217c5c07c74c4cf0df1c63b9223',1,'Map']]],
   ['resetlayerlist',['resetLayerList',['../class_configs_loader.html#a182536f6e24f92b2a59b3a625d3566ad',1,'ConfigsLoader::resetLayerList()'],['../class_configs_saver.html#a6971d4530a07af804642965f4b378f3b',1,'ConfigsSaver::resetLayerList()']]],
   ['resetopacityof',['resetOpacityOf',['../class_tile_group_data.html#a00e9f85af9f6cf3e7e9d9b36863fda7e',1,'TileGroupData']]],

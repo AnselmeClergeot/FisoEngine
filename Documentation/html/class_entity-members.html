@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('class_entity.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#ac67132ee903817cd472ffc2d8233bf20">calculateTilePosition</a>()</td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_entity.html#ad2a7d060e691a22af74f185aa139e9ec">draw</a>(sf::RenderTarget &amp;target) const </td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a219c3e12db2aa69c69d56a08447e82db">EntitiesInterposing</a> class</td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_entity.html#a15e3bdd0c396e2e1d8b0a4bdf3d7f151">Entity</a>(MapData &amp;mapData, ScreenInfos &amp;screenInfos)</td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_entity.html#ac15ed6b8641db66809c537ff56f34849">Entity</a>(MapData &amp;mapData, Camera &amp;camera)</td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a7cddb657c18afa9f817a1ea2a8f5dca2">getBaseCoord</a>() const </td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_entity.html#a0961c88437723d02daa61517071e0bd2">getDimensions</a>() const </td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#ab438207f605405179373ce64b9ddd32e">getDrawingState</a>() const </td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
@@ -122,11 +122,11 @@ $(document).ready(function(){initNavTree('class_entity.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a2f33265575ef9bb7c4dcc09fb0bb997f">getSprite</a>()</td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_entity.html#a153d2d300e8903d125e7d59ab7382d23">getTilePosition</a>() const </td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#ad28521df441cf9cfc65ae6d76a0f49c4">m_baseCoord</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_entity.html#a55e574aa58b63f8dd296c689cd7c29e7">m_dimensions</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a49186b6b08b65ad4900451c65449d4fa">m_drawState</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_entity.html#a4bb63c7b9f4d2ce92c7ac06c379b3a80">m_mapData</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_entity.html#ae72905bd7e9cc601d271eb344a3b76ad">m_pixelPosition</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_entity.html#a98b2408dab5d9e8c4eae837f0c0beddc">m_screenInfos</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_entity.html#ab058c075ac4140088cf80f6bd7e260f6">m_camera</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a55e574aa58b63f8dd296c689cd7c29e7">m_dimensions</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_entity.html#a49186b6b08b65ad4900451c65449d4fa">m_drawState</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a4bb63c7b9f4d2ce92c7ac06c379b3a80">m_mapData</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_entity.html#ae72905bd7e9cc601d271eb344a3b76ad">m_pixelPosition</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a349c6abf10608375164c13b3c39c6fb3">m_sprite</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_entity.html#a00a30736951509b87b772931412b56dd">m_texture</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_entity.html#a7996082e0526ec2fcff15104a9a3a252">m_tilePosition</a></td><td class="entry"><a class="el" href="class_entity.html">Entity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('class_entity.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 6 2015 17:32:20 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

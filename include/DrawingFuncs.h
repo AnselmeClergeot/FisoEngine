@@ -31,17 +31,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef DRAWINGFUNCS_H
 #define DRAWINGFUNCS_H
 #include "Vector2.h"
-#include "ScreenInfos.h"
+#include "Camera.h"
 
 /**
-* \fn bool isVisible(const Vector2 position, const Vector2 elementSize, ScreenInfos &screenInfos)
+* \fn bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera)
 * \brief To know if an element is visible on the screen
 *
 * \param position Position of the element
 * \param elementSize Dimensions of the element
-* \param screenInfos Reference to the map screenInfos to get needed data like window size
+* \param camera Reference to the map camera
 * \return true if visible or false if not visible
 */
-bool isVisible(const Vector2 position, const Vector2 elementSize, ScreenInfos &screenInfos);
+bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera);
 
 #endif // DRAWINGFUNCS_H

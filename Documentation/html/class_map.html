@@ -128,9 +128,9 @@ Inheritance diagram for Map:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a476844ea4fe51b0f67c0622e93e17c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a476844ea4fe51b0f67c0622e93e17c88">Map</a> (<a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
-<tr class="memdesc:a476844ea4fe51b0f67c0622e93e17c88"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> class constructor.  <a href="#a476844ea4fe51b0f67c0622e93e17c88">More...</a><br /></td></tr>
-<tr class="separator:a476844ea4fe51b0f67c0622e93e17c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d4a2764bcea1841603eb1f1d9a3a7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae4d4a2764bcea1841603eb1f1d9a3a7b">Map</a> (<a class="el" href="class_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:ae4d4a2764bcea1841603eb1f1d9a3a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> class constructor.  <a href="#ae4d4a2764bcea1841603eb1f1d9a3a7b">More...</a><br /></td></tr>
+<tr class="separator:ae4d4a2764bcea1841603eb1f1d9a3a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5603659568705f8c8b20e4015a1377d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae5603659568705f8c8b20e4015a1377d">create</a> ()</td></tr>
 <tr class="memdesc:ae5603659568705f8c8b20e4015a1377d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by user to create the map.  <a href="#ae5603659568705f8c8b20e4015a1377d">More...</a><br /></td></tr>
 <tr class="separator:ae5603659568705f8c8b20e4015a1377d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,8 +254,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae34fa13c76dcbc881a624cc90860afd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae34fa13c76dcbc881a624cc90860afd5">m_screenInfos</a></td></tr>
-<tr class="separator:ae34fa13c76dcbc881a624cc90860afd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c0362d7eb54e742af271485417cf37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a13c0362d7eb54e742af271485417cf37">m_camera</a></td></tr>
+<tr class="separator:a13c0362d7eb54e742af271485417cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6223af42cc685c8199796bd888322c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_data.html">MapData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#abc6223af42cc685c8199796bd888322c">m_data</a></td></tr>
 <tr class="separator:abc6223af42cc685c8199796bd888322c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8286eb3cda0e5a1dc6e35bb1975bc656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_configs_loader.html">ConfigsLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a8286eb3cda0e5a1dc6e35bb1975bc656">m_configsLoader</a></td></tr>
@@ -285,15 +285,15 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class used by user to manipulate an isometric map. </p>
 <p><a class="el" href="class_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> is the class that user instantiates to handle and draw an isometric map. It gives access to different other map events like animations, entity system... </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a476844ea4fe51b0f67c0622e93e17c88"></a>
+<a class="anchor" id="ae4d4a2764bcea1841603eb1f1d9a3a7b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Map::Map </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td>
-          <td class="paramname"><em>screenInfos</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -302,7 +302,7 @@ Private Attributes</h2></td></tr>
 <p><a class="el" href="class_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> class constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">screenInfos</td><td>Reference to the ScreenInfo class instantiated by the user </td></tr>
+    <tr><td class="paramname">camera</td><td>Reference to the map camera </td></tr>
   </table>
   </dd>
 </dl>
@@ -1461,6 +1461,27 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a13c0362d7eb54e742af271485417cf37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>&amp; Map::m_camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The reference to the map camera </p>
+
+</div>
+</div>
 <a class="anchor" id="a8286eb3cda0e5a1dc6e35bb1975bc656"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1587,27 +1608,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae34fa13c76dcbc881a624cc90860afd5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_screen_infos.html">ScreenInfos</a>&amp; Map::m_screenInfos</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The reference to the relative <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> </p>
-
-</div>
-</div>
 <a class="anchor" id="afed473b49d231d6bcbef04b85607908f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1723,7 +1723,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_map.html">Map</a></li>
-    <li class="footer">Generated on Wed May 6 2015 17:32:20 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

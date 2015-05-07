@@ -120,9 +120,9 @@ $(document).ready(function(){initNavTree('class_entities_container.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a17a2ce55ad74e1b3f1912e00fa651d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#a2a17a2ce55ad74e1b3f1912e00fa651d">EntitiesContainer</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;screenInfos)</td></tr>
-<tr class="memdesc:a2a17a2ce55ad74e1b3f1912e00fa651d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a2a17a2ce55ad74e1b3f1912e00fa651d">More...</a><br /></td></tr>
-<tr class="separator:a2a17a2ce55ad74e1b3f1912e00fa651d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f64c352c2f7bfb7319fcd3632770eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#ad1f64c352c2f7bfb7319fcd3632770eb">EntitiesContainer</a> (<a class="el" href="class_map_data.html">MapData</a> &amp;mapData, <a class="el" href="class_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:ad1f64c352c2f7bfb7319fcd3632770eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ad1f64c352c2f7bfb7319fcd3632770eb">More...</a><br /></td></tr>
+<tr class="separator:ad1f64c352c2f7bfb7319fcd3632770eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37910e9c493278ad71746a163d08e1c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#a37910e9c493278ad71746a163d08e1c1">createEntity</a> ()</td></tr>
 <tr class="memdesc:a37910e9c493278ad71746a163d08e1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To add an entity to the list.  <a href="#a37910e9c493278ad71746a163d08e1c1">More...</a><br /></td></tr>
 <tr class="separator:a37910e9c493278ad71746a163d08e1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,14 +145,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5b10f950486cce8508d5063387b8db1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0f9fe3db7977f2ea7f0c717f969603"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#adc0f9fe3db7977f2ea7f0c717f969603">m_mapData</a></td></tr>
 <tr class="separator:adc0f9fe3db7977f2ea7f0c717f969603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeff6d805ab7db1bc366351774e36ee5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#aeff6d805ab7db1bc366351774e36ee5c">m_screenInfos</a></td></tr>
-<tr class="separator:aeff6d805ab7db1bc366351774e36ee5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0a313bd7844c74cc401d9578ef9f2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entities_container.html#ada0a313bd7844c74cc401d9578ef9f2d">m_camera</a></td></tr>
+<tr class="separator:ada0a313bd7844c74cc401d9578ef9f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that contains the map entities and cares of adding/deleting entities. </p>
 <p>This class is the user interface to add/delete/access entities of the map. It is also for other classes the container of the entities. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2a17a2ce55ad74e1b3f1912e00fa651d"></a>
+<a class="anchor" id="ad1f64c352c2f7bfb7319fcd3632770eb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -165,8 +165,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_screen_infos.html">ScreenInfos</a> &amp;&#160;</td>
-          <td class="paramname"><em>screenInfos</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -180,7 +180,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> to get needed data </td></tr>
-    <tr><td class="paramname">screenInfos</td><td>Reference to the <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> of the user to get useful screen data </td></tr>
+    <tr><td class="paramname">camera</td><td>Reference to the map camera </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,6 +293,27 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ada0a313bd7844c74cc401d9578ef9f2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a>&amp; EntitiesContainer::m_camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The reference to the map camera </p>
+
+</div>
+</div>
 <a class="anchor" id="a5b10f950486cce8508d5063387b8db1e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -335,27 +356,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeff6d805ab7db1bc366351774e36ee5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_screen_infos.html">ScreenInfos</a>&amp; EntitiesContainer::m_screenInfos</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The reference to the user <a class="el" href="class_screen_infos.html" title="This class is used to inform environment screen data. ">ScreenInfos</a> to get useful screen data </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_entities_container_8h_source.html">EntitiesContainer.h</a></li>
 <li><a class="el" href="_entities_container_8cpp.html">EntitiesContainer.cpp</a></li>
@@ -366,7 +366,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_entities_container.html">EntitiesContainer</a></li>
-    <li class="footer">Generated on Wed May 6 2015 17:32:19 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

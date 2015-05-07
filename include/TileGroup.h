@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifndef TILEGROUP_H
 #define TILEGROUP_H
-#include "ScreenInfos.h"
+#include "Camera.h"
 #include "TileGroupData.h"
 #include "TileGroupLoader.h"
 #include "TileGroupDrawer.h"
@@ -47,13 +47,13 @@ class TileGroup
     public:
 
         /**
-        * \fn TileGroup(MapData &mapData, ScreenInfos &screenInfos)
+        * \fn TileGroup(MapData &mapData, Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
-        * \param screenInfos Reference to the user ScreenInfos to get useful window data
+        * \param camera Reference to the map camera
         */
-        TileGroup(MapData &mapData, ScreenInfos &screenInfos);
+        TileGroup(MapData &mapData, Camera &camera);
 
         /**
         * \fn void setTilesetPath(const std::string path)

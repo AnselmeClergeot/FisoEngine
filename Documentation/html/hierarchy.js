@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Animator", "class_animator.html", null ],
+    [ "Camera", "class_camera.html", null ],
     [ "ConfigsLoader", "class_configs_loader.html", null ],
     [ "ConfigsSaver", "class_configs_saver.html", null ],
     [ "Drawable", null, [
@@ -15,7 +16,6 @@ var hierarchy =
     [ "Matrix3d< sf::Sprite >", "class_matrix3d.html", null ],
     [ "Matrix3d< TileAnimData >", "class_matrix3d.html", null ],
     [ "Matrix3d< unsigned int >", "class_matrix3d.html", null ],
-    [ "ScreenInfos", "class_screen_infos.html", null ],
     [ "ShadowsInitializer", "class_shadows_initializer.html", null ],
     [ "ShadowsInterface", "class_shadows_interface.html", null ],
     [ "ShadowsSystemStates", "class_shadows_system_states.html", null ],
