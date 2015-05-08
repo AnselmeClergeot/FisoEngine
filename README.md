@@ -22,6 +22,9 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 ### Latest development news !
 **The beta release is avalaible! I am looking for testers to experiment this first version!**<br/>
 
+### On which feature are you currently working ?
+I am adding a camera system to the engine! ScreenInfos is know Camera and the user will have to operate directly on its Camera instance to manipulate views.
+
 ### F.A.Q
 * **Why should I use FisoEngine?**
 The advantage of FisoEngine over others isometric engines, is that it is not an ISOMETRIC GAME ENGINE but only an ISOMETRIC ENGINE focused on offering isometric events on a way that you can create YOUR game with YOUR gameplay and add YOUR functionalities without being limited to the engine itself. So if you have a game idea that meets these requirements: "isometric", "tile-based", don't hesitate to use the engine.
