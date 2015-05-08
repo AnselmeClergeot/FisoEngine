@@ -17,6 +17,7 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Tile global animations (water, etc.)
 * Tile single animations (door, etc.)
 * Map object entities (for players, etc.)
+* Simple camera system
 * Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
 ### Latest development news !
