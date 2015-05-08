@@ -198,6 +198,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_entities
 : <a class="el" href="class_entities_container.html#a5b10f950486cce8508d5063387b8db1e">EntitiesContainer</a>
 </li>
+<li>m_entitiesContainer
+: <a class="el" href="class_camera.html#a87365a11b36cb28f04c6128adfb4214d">Camera</a>
+</li>
 <li>m_entityContainer
 : <a class="el" href="class_map.html#a49de6f084968845e7dc428eb449b95e5">Map</a>
 </li>
@@ -240,6 +243,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>m_mapTilegroup
 : <a class="el" href="class_animator.html#a6eca5ba086acdcae6333e2cc767abc1c">Animator</a>
+, <a class="el" href="class_camera.html#ab0d0321cb290d54ee08cb1c60c5aa3c9">Camera</a>
 </li>
 <li>m_milliseconds
 : <a class="el" href="class_timer.html#a54da152b1fbaee5cdfd816df72365144">Timer</a>
@@ -281,7 +285,8 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_dynamic_shader.html#a41308f8ff6e83d8eb116e91d2a424e5c">DynamicShader</a>
 </li>
 <li>m_shadowsTilegroup
-: <a class="el" href="class_map.html#a5c2dbf5d8a90ba960ffecc164e8cc0d6">Map</a>
+: <a class="el" href="class_camera.html#a0f563eb4313284785b0901298a2b9dac">Camera</a>
+, <a class="el" href="class_map.html#a5c2dbf5d8a90ba960ffecc164e8cc0d6">Map</a>
 </li>
 <li>m_size
 : <a class="el" href="class_map_data.html#a3a85b211e62dd34a5c0ab67ab2a71d21">MapData</a>
@@ -345,6 +350,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_typesOpacities
 : <a class="el" href="class_tile_group_data.html#a43bc7d734c1596363ad52367fdea4f33">TileGroupData</a>
 </li>
+<li>m_viewCenter
+: <a class="el" href="class_camera.html#a141d92a4ecece00d8140bc2627c9a067">Camera</a>
+</li>
 <li>m_viewDimensions
 : <a class="el" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">Camera</a>
 </li>
@@ -359,18 +367,22 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>Map
 : <a class="el" href="class_animator.html#ad2f32e921244459f7cc6d50355429cc6">Animator</a>
+, <a class="el" href="class_camera.html#ad2f32e921244459f7cc6d50355429cc6">Camera</a>
 , <a class="el" href="class_map.html#ae4d4a2764bcea1841603eb1f1d9a3a7b">Map</a>
 </li>
 <li>MapData()
 : <a class="el" href="class_map_data.html#aca1581fc02ec46b4da7ed9b83c04a116">MapData</a>
 </li>
 <li>Matrix3d()
-: <a class="el" href="class_matrix3d.html#a6a494e07174b9b8036bbe9f925adde08">Matrix3d&lt; T &gt;</a>
+: <a class="el" href="class_matrix3d.html#aa02555663eb73127d767e6f8b4062499">Matrix3d&lt; T &gt;</a>
 </li>
 <li>move()
 : <a class="el" href="class_entity.html#ae4d6a7cce49170040559bab0820a8e05">Entity</a>
 , <a class="el" href="class_map.html#ab3382360e0affb45c6d92004bef53219">Map</a>
 , <a class="el" href="class_map_data.html#a7a1504889eed42cc73fbc13cee004e7f">MapData</a>
+</li>
+<li>moveViewCenter()
+: <a class="el" href="class_camera.html#a16701a6f0c2abfb3e596e7ca918e0f95">Camera</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -378,7 +390,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 8 2015 18:05:02 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

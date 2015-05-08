@@ -39,9 +39,9 @@ void Animator::resizeTileAnimDataList() {
                                 m_mapData.getTempConf().getH(),
                                 m_mapData.getTempConf().getD());
 
-    for(int x(0); x<m_mapData.getSize().x; x++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int z(0); z<m_mapData.getSize().y; z++)
+    for(int x(0); x<m_tileAnimationsData.getW(); x++)
+        for(int y(0); y<m_tileAnimationsData.getH(); y++)
+            for(int z(0); z<m_tileAnimationsData.getD(); z++)
             updateTileAt(Vector3(x, y, z));
 }
 
@@ -135,9 +135,9 @@ void Animator::stopAnimation(const unsigned int x, const unsigned int y, const u
 }
 
 void Animator::apply() {
-    for(int x(0); x<m_mapData.getSize().x; x++)
-        for(int y(0); y<m_mapData.getSize().x; y++)
-            for(int z(0); z<m_mapData.getSize().y; z++)
+    for(int x(0); x<m_tileAnimationsData.getW(); x++)
+        for(int y(0); y<m_tileAnimationsData.getH(); y++)
+            for(int z(0); z<m_tileAnimationsData.getD(); z++)
     {
         if(m_mapData.getTempConf().at(x, y, z)!=m_mapData.getInvisibleTile() &&
            m_tileAnimationsData.at(x, y, z).getLength()>1)

@@ -169,12 +169,12 @@ class Entity
         Vector2 getDimensions() const;
 
         /**
-        * \fn Vector2 getPixelPosition() const
-        * \brief To get the entity pixel-position
+        * \fn Vector2 getPosition() const
+        * \brief To get the entity position
         *
-        * \return The entity pixel-position in a Vector2
+        * \return The entity position in a Vector2
         */
-        Vector2 getPixelPosition() const;
+        Vector2 getPosition() const;
 
         /**
         * \fn sf::Sprite &getSprite()
@@ -193,23 +193,23 @@ class Entity
         bool getDrawingState() const;
 
         /**
-        * \fn void setPixelPosition(const Vector2 pos)
-        * \brief To set the position of the entity in pixels
+        * \fn void setPosition(const Vector2 pos)
+        * \brief To set the position of the entity
         *
         * \param pos The position in pixels
         * \return void
         */
-        void setPixelPosition(const Vector2 pos);
+        void setPosition(const Vector2 pos);
 
         /**
-        * \fn void setPixelPosition(const unsigned int x, const unsigned int y)
-        * \brief To set the position of the entity in pixels
+        * \fn void setPosition(const unsigned int x, const unsigned int y)
+        * \brief To set the position of the entity
         *
         * \param x The x position in pixel
         * \param y The y position in pixel
         * \return void
         */
-        void setPixelPosition(const unsigned int x, const unsigned int y);
+        void setPosition(const unsigned int x, const unsigned int y);
 
         /**
         * \fn void calculateTilePosition()

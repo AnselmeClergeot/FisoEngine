@@ -29,8 +29,8 @@ TileGroupDrawer::TileGroupDrawer(MapData &mapData,
 
 void TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
                            const EntitiesInterposing *interposing) const {
-    for(std::size_t x(0); x<m_mapData.getSize().x; x++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
+    for(std::size_t x(0); x<m_data.getTiles().getW(); x++)
+        for(std::size_t y(0); y<m_data.getTiles().getH(); y++)
     {
         if(isVisible(toIsometricPosition(Vector3(x, y, layer), m_mapData),m_mapData.getTileSize(), m_camera) &&
            m_mapData.getTempConf().at(x, y, layer)!=m_mapData.getInvisibleTile() &&

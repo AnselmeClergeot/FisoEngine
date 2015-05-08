@@ -33,6 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Vector2.h"
 #include "Vector3.h"
 #include "MapData.h"
+#include "Camera.h"
 
 /**
 * \fn Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data)
@@ -45,14 +46,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data);
 
 /**
-* \fn Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer, const MapData &map_data)
+* \fn Vector2 getTileCoordAtPixels(const Vector2 pixels,
+                             const unsigned int layer,
+                             const MapData &map_data,
+                             const Camera *camera = 0)
 * \brief To get the map-coordinates pointed by 2D screen coordinates
 *
 * \param pixels The screen coordinates
 * \param layer The layer to base on for calculations
 * \param map_data The reference to the MapData to get useful data
+* \param camera The pointer to the map Camera
 * \return The map tile coordinates
 */
-Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer, const MapData &map_data);
+Vector2 getTileCoordAtPixels(const Vector2 pixels,
+                             const unsigned int layer,
+                             const MapData &map_data,
+                             const Camera *camera = 0);
 
 #endif // ISOMETRICMATH_H

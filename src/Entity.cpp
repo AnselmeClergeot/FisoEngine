@@ -32,7 +32,9 @@ Entity::Entity(MapData &mapData,
                                   m_drawState(false),
                                   m_mapData(mapData),
                                   m_camera(camera)
-{ }
+{
+    setPosition(m_pixelPosition);
+}
 
 void Entity::setDimensions(const Vector2 dim) {
     m_dimensions = dim;
@@ -52,20 +54,21 @@ void Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
     m_baseCoord.y = y;
 }
 
-void Entity::setPixelPosition(const Vector2 pos) {
+void Entity::setPosition(const Vector2 pos) {
     m_pixelPosition = pos;
-    m_sprite.setPosition(pos.x, pos.y);
+    m_sprite.setPosition(pos.x+m_camera.getViewDimensions().x/2-m_camera.getViewCenter().x,
+                         pos.y+m_camera.getViewDimensions().y/2-m_camera.getViewCenter().y);
 
     calculateTilePosition();
 }
 
-void Entity::setPixelPosition(const unsigned int x, const unsigned int y) {
-    setPixelPosition(Vector2(x, y));
+void Entity::setPosition(const unsigned int x, const unsigned int y) {
+    setPosition(Vector2(x, y));
 }
 
 void Entity::move(const Vector2 rate) {
+    setPosition(m_pixelPosition);
     m_pixelPosition += rate;
-    setPixelPosition(m_pixelPosition);
 }
 
 void Entity::move(const unsigned int rx, const unsigned int ry) {
@@ -109,7 +112,7 @@ Vector2 Entity::getDimensions() const {
     return m_dimensions;
 }
 
-Vector2 Entity::getPixelPosition() const {
+Vector2 Entity::getPosition() const {
     return m_pixelPosition;
 }
 

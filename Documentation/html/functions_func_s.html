@@ -158,6 +158,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>setDrawState()
 : <a class="el" href="class_entity.html#aa629a52bad6165e0cb0e1ce2215692b2">Entity</a>
 </li>
+<li>setEntitiesContainer()
+: <a class="el" href="class_camera.html#af43b3a013f3df014290dbfa41f144df1">Camera</a>
+</li>
 <li>setGlobalAnimKind()
 : <a class="el" href="class_animator.html#af876b560ec040dfcc03b68c71093893c">Animator</a>
 </li>
@@ -200,11 +203,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>setOpacityOfType()
 : <a class="el" href="class_map.html#a1654cfc9d82b8abe25db956e32af3bef">Map</a>
 </li>
-<li>setPixelPosition()
-: <a class="el" href="class_entity.html#a1543c2b7a0d8986266b52e23569e683f">Entity</a>
-</li>
 <li>setPosition()
-: <a class="el" href="class_map.html#afa11bf00ef44595e304f4018efbe6ad4">Map</a>
+: <a class="el" href="class_entity.html#a0026101976d9c63103e47187b2265a91">Entity</a>
+, <a class="el" href="class_map.html#af9f3d7a96dda730d63cabbfad84cd663">Map</a>
 , <a class="el" href="class_map_data.html#a577976918e92b4ad446bdcba9e987327">MapData</a>
 </li>
 <li>setSingleAnimKind()
@@ -220,13 +221,16 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_tile_anim_data.html#ade1194966d794eb40637bffbf445ab5e">TileAnimData</a>
 </li>
 <li>setTileAt()
-: <a class="el" href="class_map.html#af69f8918fe0b163148545f999fb53d90">Map</a>
+: <a class="el" href="class_map.html#af1a890b45361ac88dcbcbec1dcd6f5ce">Map</a>
 , <a class="el" href="class_tile_group.html#a846ee36426cb4073be74ba854f102b37">TileGroup</a>
 , <a class="el" href="class_tile_group_data.html#af1d23e967f4cc04953600a6017af876d">TileGroupData</a>
 </li>
 <li>setTileBaseHeight()
 : <a class="el" href="class_map.html#a4a988065e7b49f92bcaceaefefea232e">Map</a>
 , <a class="el" href="class_map_data.html#a31b6bb493fcb6af80d42a0b6fcc769db">MapData</a>
+</li>
+<li>setTileGroups()
+: <a class="el" href="class_camera.html#af6550690e5843d383e49152fd47769a8">Camera</a>
 </li>
 <li>setTileOpacity()
 : <a class="el" href="class_map.html#ab31c44cbcba5b150e249e8af5806a762">Map</a>
@@ -245,7 +249,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="class_tile_group_loader.html#ac2839e49a0d1d9eaeac855f250b6c174">TileGroupLoader</a>
 </li>
 <li>setTileSize()
-: <a class="el" href="class_map.html#acb1034357ac997d5bacd2aadf401613c">Map</a>
+: <a class="el" href="class_map.html#a45266fbcbd916137c8c3e1c72ed5f82d">Map</a>
 , <a class="el" href="class_map_data.html#ad9e93f4cb638d19a08d4482535f156bd">MapData</a>
 </li>
 <li>setTilesTileset()
@@ -259,8 +263,11 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_tile_group.html#a6576f454e5d3df8a2794d53f59e9c179">TileGroup</a>
 , <a class="el" href="class_tile_group_data.html#aed5f2042797b3c63ce4da6d92642a249">TileGroupData</a>
 </li>
+<li>setViewCenter()
+: <a class="el" href="class_camera.html#abacfd2bcf87a7594ef2a910c4aaf734f">Camera</a>
+</li>
 <li>setViewDimensions()
-: <a class="el" href="class_camera.html#a8eabe8212cb88eafb80b0e1213ab3be2">Camera</a>
+: <a class="el" href="class_camera.html#ad6d5cf9d63d3e893d339abad5a45d6d0">Camera</a>
 </li>
 <li>shadows()
 : <a class="el" href="class_map.html#a7efc1a5a56430aa4e3f2227286aa2dba">Map</a>
@@ -275,10 +282,10 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="class_shadows_system_states.html#af2a511be86cad15da6735f62282c3585">ShadowsSystemStates</a>
 </li>
 <li>spriteAt()
-: <a class="el" href="class_tile_group_data.html#ace7be6437f9da2492eadb3676729f3d2">TileGroupData</a>
+: <a class="el" href="class_tile_group_data.html#a80a74ec1b2f3a43efa80cc08ce71f142">TileGroupData</a>
 </li>
 <li>stopAnimation()
-: <a class="el" href="class_animator.html#a0479feb5aa986a587fde1cc911a01653">Animator</a>
+: <a class="el" href="class_animator.html#a6214097314da89c2288b96007960c116">Animator</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -286,7 +293,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 8 2015 18:05:02 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

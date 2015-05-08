@@ -113,8 +113,20 @@ $(document).ready(function(){initNavTree('class_camera.html','');});
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>()</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_camera.html#ab0cfa95d540c58878671999f164e6a3e">Camera</a>(const unsigned int viewW, const unsigned int viewH)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#aa091a8937355d64125cf72d41f35dbec">getViewDimensions</a>() const </td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">m_viewDimensions</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a19db90825cddd0abebe88e2213cea939">getViewCenter</a>() const </td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#aa091a8937355d64125cf72d41f35dbec">getViewDimensions</a>() const </td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a87365a11b36cb28f04c6128adfb4214d">m_entitiesContainer</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#ab0d0321cb290d54ee08cb1c60c5aa3c9">m_mapTilegroup</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a0f563eb4313284785b0901298a2b9dac">m_shadowsTilegroup</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#a141d92a4ecece00d8140bc2627c9a067">m_viewCenter</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">m_viewDimensions</a></td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#ad2f32e921244459f7cc6d50355429cc6">Map</a> class</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a0b3e8ba514f2ba8f17f723176fdec7aa">moveViewCenter</a>(const Vector2 rate)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#a16701a6f0c2abfb3e596e7ca918e0f95">moveViewCenter</a>(const unsigned int rx, const unsigned int ry)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#af43b3a013f3df014290dbfa41f144df1">setEntitiesContainer</a>(EntitiesContainer &amp;container)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#af6550690e5843d383e49152fd47769a8">setTileGroups</a>(TileGroup &amp;map, TileGroup &amp;shadows)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a5865ac574ec159450d33f6973c3aeadd">setViewCenter</a>(const Vector2 center)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_camera.html#abacfd2bcf87a7594ef2a910c4aaf734f">setViewCenter</a>(const unsigned int centerX, const unsigned int centerY)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_camera.html#a8eabe8212cb88eafb80b0e1213ab3be2">setViewDimensions</a>(const Vector2 dim)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_camera.html#ad6d5cf9d63d3e893d339abad5a45d6d0">setViewDimensions</a>(const unsigned int w, const unsigned int h)</td><td class="entry"><a class="el" href="class_camera.html">Camera</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
@@ -122,7 +134,7 @@ $(document).ready(function(){initNavTree('class_camera.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 8 2015 18:05:01 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

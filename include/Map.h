@@ -441,7 +441,7 @@ class Map : public sf::Drawable
 
     private:
 
-        Camera &m_camera; /*!< The reference to the map camera */
+        Camera &m_camera; /*!< The pointer to the map camera */
 
         MapData m_data; /*!< The map data container */
 

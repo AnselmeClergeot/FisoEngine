@@ -106,7 +106,9 @@ $(document).ready(function(){initNavTree('class_camera.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_camera-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Camera Class Reference</div>  </div>
@@ -132,14 +134,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6d5cf9d63d3e893d339abad5a45d6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#ad6d5cf9d63d3e893d339abad5a45d6d0">setViewDimensions</a> (const unsigned int w, const unsigned int h)</td></tr>
 <tr class="memdesc:ad6d5cf9d63d3e893d339abad5a45d6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the camera view width and height.  <a href="#ad6d5cf9d63d3e893d339abad5a45d6d0">More...</a><br /></td></tr>
 <tr class="separator:ad6d5cf9d63d3e893d339abad5a45d6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5865ac574ec159450d33f6973c3aeadd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a5865ac574ec159450d33f6973c3aeadd">setViewCenter</a> (const <a class="el" href="class_vector2.html">Vector2</a> center)</td></tr>
+<tr class="memdesc:a5865ac574ec159450d33f6973c3aeadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the camera view center coordinates.  <a href="#a5865ac574ec159450d33f6973c3aeadd">More...</a><br /></td></tr>
+<tr class="separator:a5865ac574ec159450d33f6973c3aeadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacfd2bcf87a7594ef2a910c4aaf734f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#abacfd2bcf87a7594ef2a910c4aaf734f">setViewCenter</a> (const unsigned int centerX, const unsigned int centerY)</td></tr>
+<tr class="memdesc:abacfd2bcf87a7594ef2a910c4aaf734f"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the camera view center coordinates.  <a href="#abacfd2bcf87a7594ef2a910c4aaf734f">More...</a><br /></td></tr>
+<tr class="separator:abacfd2bcf87a7594ef2a910c4aaf734f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3e8ba514f2ba8f17f723176fdec7aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a0b3e8ba514f2ba8f17f723176fdec7aa">moveViewCenter</a> (const <a class="el" href="class_vector2.html">Vector2</a> rate)</td></tr>
+<tr class="memdesc:a0b3e8ba514f2ba8f17f723176fdec7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">To move the view center.  <a href="#a0b3e8ba514f2ba8f17f723176fdec7aa">More...</a><br /></td></tr>
+<tr class="separator:a0b3e8ba514f2ba8f17f723176fdec7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16701a6f0c2abfb3e596e7ca918e0f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a16701a6f0c2abfb3e596e7ca918e0f95">moveViewCenter</a> (const unsigned int rx, const unsigned int ry)</td></tr>
+<tr class="memdesc:a16701a6f0c2abfb3e596e7ca918e0f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">To move the view center.  <a href="#a16701a6f0c2abfb3e596e7ca918e0f95">More...</a><br /></td></tr>
+<tr class="separator:a16701a6f0c2abfb3e596e7ca918e0f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa091a8937355d64125cf72d41f35dbec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#aa091a8937355d64125cf72d41f35dbec">getViewDimensions</a> () const </td></tr>
 <tr class="memdesc:aa091a8937355d64125cf72d41f35dbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the camera view dimensions.  <a href="#aa091a8937355d64125cf72d41f35dbec">More...</a><br /></td></tr>
 <tr class="separator:aa091a8937355d64125cf72d41f35dbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19db90825cddd0abebe88e2213cea939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a19db90825cddd0abebe88e2213cea939">getViewCenter</a> () const </td></tr>
+<tr class="memdesc:a19db90825cddd0abebe88e2213cea939"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the camera view center coordinates.  <a href="#a19db90825cddd0abebe88e2213cea939">More...</a><br /></td></tr>
+<tr class="separator:a19db90825cddd0abebe88e2213cea939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af6550690e5843d383e49152fd47769a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#af6550690e5843d383e49152fd47769a8">setTileGroups</a> (<a class="el" href="class_tile_group.html">TileGroup</a> &amp;map, <a class="el" href="class_tile_group.html">TileGroup</a> &amp;shadows)</td></tr>
+<tr class="memdesc:af6550690e5843d383e49152fd47769a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the TileGroups pointers.  <a href="#af6550690e5843d383e49152fd47769a8">More...</a><br /></td></tr>
+<tr class="separator:af6550690e5843d383e49152fd47769a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43b3a013f3df014290dbfa41f144df1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#af43b3a013f3df014290dbfa41f144df1">setEntitiesContainer</a> (<a class="el" href="class_entities_container.html">EntitiesContainer</a> &amp;container)</td></tr>
+<tr class="memdesc:af43b3a013f3df014290dbfa41f144df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the <a class="el" href="class_entities_container.html" title="Class that contains the map entities and cares of adding/deleting entities. ">EntitiesContainer</a> pointer.  <a href="#af43b3a013f3df014290dbfa41f144df1">More...</a><br /></td></tr>
+<tr class="separator:af43b3a013f3df014290dbfa41f144df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ada3edcaa265760b191317d0193c0db1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#ada3edcaa265760b191317d0193c0db1f">m_viewDimensions</a></td></tr>
 <tr class="separator:ada3edcaa265760b191317d0193c0db1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141d92a4ecece00d8140bc2627c9a067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a141d92a4ecece00d8140bc2627c9a067">m_viewCenter</a></td></tr>
+<tr class="separator:a141d92a4ecece00d8140bc2627c9a067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d0321cb290d54ee08cb1c60c5aa3c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_group.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#ab0d0321cb290d54ee08cb1c60c5aa3c9">m_mapTilegroup</a></td></tr>
+<tr class="separator:ab0d0321cb290d54ee08cb1c60c5aa3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f563eb4313284785b0901298a2b9dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_group.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a0f563eb4313284785b0901298a2b9dac">m_shadowsTilegroup</a></td></tr>
+<tr class="separator:a0f563eb4313284785b0901298a2b9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87365a11b36cb28f04c6128adfb4214d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entities_container.html">EntitiesContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a87365a11b36cb28f04c6128adfb4214d">m_entitiesContainer</a></td></tr>
+<tr class="separator:a87365a11b36cb28f04c6128adfb4214d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ad2f32e921244459f7cc6d50355429cc6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#ad2f32e921244459f7cc6d50355429cc6">Map</a></td></tr>
+<tr class="separator:ad2f32e921244459f7cc6d50355429cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is the class instantiated by the user to handle a world camera. </p>
@@ -198,6 +237,24 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a19db90825cddd0abebe88e2213cea939"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Camera::getViewCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the camera view center coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>The camera view center coordinates in pixels </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa091a8937355d64125cf72d41f35dbec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -213,6 +270,205 @@ Private Attributes</h2></td></tr>
 
 <p>To get the camera view dimensions. </p>
 <dl class="section return"><dt>Returns</dt><dd>The camera view dimensions in pixels </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b3e8ba514f2ba8f17f723176fdec7aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::moveViewCenter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>rate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To move the view center. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rate</td><td>The move rate in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16701a6f0c2abfb3e596e7ca918e0f95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::moveViewCenter </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>rx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>ry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To move the view center. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rx</td><td>The x move rate in pixels </td></tr>
+    <tr><td class="paramname">ry</td><td>The y move rate in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af43b3a013f3df014290dbfa41f144df1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setEntitiesContainer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entities_container.html">EntitiesContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To set the <a class="el" href="class_entities_container.html" title="Class that contains the map entities and cares of adding/deleting entities. ">EntitiesContainer</a> pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>reference to the map <a class="el" href="class_entities_container.html" title="Class that contains the map entities and cares of adding/deleting entities. ">EntitiesContainer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af6550690e5843d383e49152fd47769a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setTileGroups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tile_group.html">TileGroup</a> &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tile_group.html">TileGroup</a> &amp;&#160;</td>
+          <td class="paramname"><em>shadows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To set the TileGroups pointers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>reference to the map <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </td></tr>
+    <tr><td class="paramname">shadows</td><td>reference to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5865ac574ec159450d33f6973c3aeadd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setViewCenter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>center</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the camera view center coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The camera view center in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abacfd2bcf87a7594ef2a910c4aaf734f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camera::setViewCenter </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>centerX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>centerY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the camera view center coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerX</td><td>The camera view center X coordinate </td></tr>
+    <tr><td class="paramname">centerY</td><td>The camera view center Y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -277,7 +533,112 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ad2f32e921244459f7cc6d50355429cc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_map.html">Map</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a87365a11b36cb28f04c6128adfb4214d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_entities_container.html">EntitiesContainer</a>* Camera::m_entitiesContainer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The pointer to the map <a class="el" href="class_entities_container.html" title="Class that contains the map entities and cares of adding/deleting entities. ">EntitiesContainer</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="ab0d0321cb290d54ee08cb1c60c5aa3c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tile_group.html">TileGroup</a>* Camera::m_mapTilegroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The pointer to the map <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f563eb4313284785b0901298a2b9dac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tile_group.html">TileGroup</a> * Camera::m_shadowsTilegroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The pointer to the shadows <a class="el" href="class_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a141d92a4ecece00d8140bc2627c9a067"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2.html">Vector2</a> Camera::m_viewCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The center of the camera view </p>
+
+</div>
+</div>
 <a class="anchor" id="ada3edcaa265760b191317d0193c0db1f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +670,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_camera.html">Camera</a></li>
-    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 8 2015 18:05:01 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -31,7 +31,10 @@ Map::Map(Camera &camera)
    m_entityContainer(m_data, m_camera),
    m_interposing(m_entityContainer),
    m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_camera)
-{}
+{
+    m_camera.setTileGroups(m_tileGroup, m_shadowsTilegroup);
+    m_camera.setEntitiesContainer(m_entityContainer);
+}
 
 void Map::create() {
     m_configsLoader.load();
@@ -240,7 +243,7 @@ unsigned int Map::getOpacityOfType(const unsigned int type) const {
 }
 
 Vector2 Map::getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const {
-    return ::getTileCoordAtPixels(pixels, layer, m_data);
+    return ::getTileCoordAtPixels(pixels, layer, m_data, &m_camera);
 }
 
 Vector2 Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const {

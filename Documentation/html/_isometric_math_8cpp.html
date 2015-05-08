@@ -115,12 +115,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a5d0ae7f608ef27b0b58bc29e34baff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_isometric_math_8cpp.html#a0a5d0ae7f608ef27b0b58bc29e34baff">toIsometricPosition</a> (const <a class="el" href="class_vector3.html">Vector3</a> coord, const <a class="el" href="class_map_data.html">MapData</a> &amp;map_data)</td></tr>
 <tr class="memdesc:a0a5d0ae7f608ef27b0b58bc29e34baff"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the tile screen position from its map-coordinates.  <a href="#a0a5d0ae7f608ef27b0b58bc29e34baff">More...</a><br /></td></tr>
 <tr class="separator:a0a5d0ae7f608ef27b0b58bc29e34baff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe711b37a147e4d1742c082317397dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_isometric_math_8cpp.html#abe711b37a147e4d1742c082317397dd7">getTileCoordAtPixels</a> (const <a class="el" href="class_vector2.html">Vector2</a> pixels, const unsigned int layer, const <a class="el" href="class_map_data.html">MapData</a> &amp;map_data)</td></tr>
-<tr class="memdesc:abe711b37a147e4d1742c082317397dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the map-coordinates pointed by 2D screen coordinates.  <a href="#abe711b37a147e4d1742c082317397dd7">More...</a><br /></td></tr>
-<tr class="separator:abe711b37a147e4d1742c082317397dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6cb761c614c84e37a26793403c10e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_isometric_math_8cpp.html#aae6cb761c614c84e37a26793403c10e5">getTileCoordAtPixels</a> (const <a class="el" href="class_vector2.html">Vector2</a> pixels, const unsigned int layer, const <a class="el" href="class_map_data.html">MapData</a> &amp;map_data, const <a class="el" href="class_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:aae6cb761c614c84e37a26793403c10e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the map-coordinates pointed by 2D screen coordinates.  <a href="#aae6cb761c614c84e37a26793403c10e5">More...</a><br /></td></tr>
+<tr class="separator:aae6cb761c614c84e37a26793403c10e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="abe711b37a147e4d1742c082317397dd7"></a>
+<a class="anchor" id="aae6cb761c614c84e37a26793403c10e5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -140,7 +140,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_map_data.html">MapData</a> &amp;&#160;</td>
-          <td class="paramname"><em>map_data</em>&#160;</td>
+          <td class="paramname"><em>map_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -156,6 +162,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">pixels</td><td>The screen coordinates </td></tr>
     <tr><td class="paramname">layer</td><td>The layer to base on for calculations </td></tr>
     <tr><td class="paramname">map_data</td><td>The reference to the <a class="el" href="class_map_data.html" title="This class is the container of all map data. ">MapData</a> to get useful data </td></tr>
+    <tr><td class="paramname">camera</td><td>The pointer to the map <a class="el" href="class_camera.html" title="This class is the class instantiated by the user to handle a world camera. ">Camera</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -205,7 +212,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_isometric_math_8cpp.html">IsometricMath.cpp</a></li>
-    <li class="footer">Generated on Thu May 7 2015 18:38:31 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 8 2015 18:05:01 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

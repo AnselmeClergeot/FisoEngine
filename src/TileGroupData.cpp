@@ -45,9 +45,9 @@ unsigned int TileGroupData::getTileNumber() const {
 }
 
 void TileGroupData::configureWith(Matrix3d<unsigned int> &config) {
-    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t x(0); x<m_tiles.getW(); x++)
+        for(std::size_t y(0); y<m_tiles.getH(); y++)
+            for(std::size_t z(0); z<m_tiles.getD(); z++)
                 frameTile(Vector3(x, y, z), Vector2(0, config.at(x, y, z)));
 }
 
@@ -69,15 +69,18 @@ sf::Sprite &TileGroupData::spriteAt(const unsigned int index) {
 }
 
 void TileGroupData::updatePosition() {
-    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+    for(std::size_t x(0); x<m_tiles.getW(); x++)
+        for(std::size_t y(0); y<m_tiles.getH(); y++)
+            for(std::size_t z(0); z<m_tiles.getD(); z++)
                 setTilePosition(Vector3(x, y, z));
 }
 
 void TileGroupData::setTilePosition(const Vector3 coord) {
     m_tiles.at(coord.x, coord.y, coord.z).
-    setPosition(toIsometricPosition(coord, m_mapData).x, toIsometricPosition(coord, m_mapData).y);
+    setPosition(toIsometricPosition(coord, m_mapData).x+
+                    m_camera.getViewDimensions().x/2-m_camera.getViewCenter().x,
+                toIsometricPosition(coord, m_mapData).y+
+                    m_camera.getViewDimensions().y/2-m_camera.getViewCenter().y);
 }
 
 void TileGroupData::frameTile(const Vector3 coord, const Vector2 tilesetCoord) {
@@ -114,9 +117,10 @@ void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int o
         }
     }
 
-    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+
+        for(std::size_t x(0); x<m_tilesOpacities.getW(); x++)
+            for(std::size_t y(0); y<m_tilesOpacities.getH(); y++)
+                for(std::size_t z(0); z<m_tilesOpacities.getD(); z++)
                 if(m_mapData.getTempConf().at(x, y, z)==tile)
                 {
                     m_tilesOpacities.at(x, y, z) = opacity;
@@ -127,9 +131,9 @@ void TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int o
 void TileGroupData::setGroupOpacity(const unsigned int opacity) {
     m_opacity = opacity;
 
-    for(std::size_t z(0); z<m_tiles.getD(); z++)
-        for(std::size_t y(0); y<m_tiles.getH(); y++)
-            for(std::size_t x(0); x<m_tiles.getW(); x++)
+    for(std::size_t x(0); x<m_tilesOpacities.getW(); x++)
+        for(std::size_t y(0); y<m_tilesOpacities.getH(); y++)
+            for(std::size_t z(0); z<m_tilesOpacities.getD(); z++)
             {
                 m_tilesOpacities.at(x, y, z) = opacity;
                 applyOpacityOn(Vector3(x, y, z));
@@ -155,9 +159,9 @@ void TileGroupData::checkForOpacity(const Vector3 coord, const unsigned int tile
 }
 
 void TileGroupData::reloadOpacities() {
-    for(std::size_t z(0); z<m_mapData.getSize().y; z++)
+    for(std::size_t x(0); x<m_mapData.getSize().x; x++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t x(0); x<m_mapData.getSize().x; x++)
+            for(std::size_t z(0); z<m_mapData.getSize().y; z++)
                 checkForOpacity(Vector3(x, y, z), m_mapData.getTempConf().at(x, y, z));
 }
 
