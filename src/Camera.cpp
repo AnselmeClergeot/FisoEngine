@@ -53,7 +53,7 @@ void Camera::setViewCenter(const Vector2 center) {
         m_shadowsTilegroup->updatePosition();
 
         for(int i(0); i<m_entitiesContainer->getEntitiesNumber(); i++)
-            m_entitiesContainer->entityAt(i).setPosition(m_entitiesContainer->entityAt(0).getPosition());
+            m_entitiesContainer->entityAt(i).setPosition(m_entitiesContainer->entityAt(i).getPosition());
     }
 }
 
