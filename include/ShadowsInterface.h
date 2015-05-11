@@ -33,6 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ShadowsInitializer.h"
 #include "TileGroup.h"
 
+namespace fe {
 /**
  * \class ShadowsInterface
  * \brief This class is the user interface with the shadows system
@@ -104,5 +105,6 @@ class ShadowsInterface
 
         TileGroup &m_tilegroup; /*!< Reference to the shadows TileGroup  to act directly on it when needed*/
 };
+}
 
 #endif // SHADOWSINTERFACE_H

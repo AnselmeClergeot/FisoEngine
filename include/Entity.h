@@ -39,6 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Camera.h"
 #include "MapData.h"
 
+namespace fe {
 /**
  * \class Entity
  * \brief Class that contains all entity data
@@ -248,5 +249,6 @@ class Entity
 
         Camera& m_camera; /* !< The pointer to the map camera */
 };
+}
 
 #endif // ENTITY_H

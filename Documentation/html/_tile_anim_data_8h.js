@@ -1,12 +1,12 @@
 var _tile_anim_data_8h =
 [
-    [ "TileAnimData", "class_tile_anim_data.html", "class_tile_anim_data" ],
-    [ "AnimDirection", "_tile_anim_data_8h.html#ab4bf076cf9f949142a4d7bc0b7705f8d", [
-      [ "Right", "_tile_anim_data_8h.html#ab4bf076cf9f949142a4d7bc0b7705f8dad48f7af8c070184f3774c8e85854eb66", null ],
-      [ "Left", "_tile_anim_data_8h.html#ab4bf076cf9f949142a4d7bc0b7705f8da9d4d8b0b72fc2659da772d761a3c5ecb", null ]
+    [ "TileAnimData", "classfe_1_1_tile_anim_data.html", "classfe_1_1_tile_anim_data" ],
+    [ "AnimDirection", "_tile_anim_data_8h.html#ab3facb2cbee4186cdcd076ae4975b2c8", [
+      [ "Right", "_tile_anim_data_8h.html#ab3facb2cbee4186cdcd076ae4975b2c8a4881918320fbcbae110b064e39066c14", null ],
+      [ "Left", "_tile_anim_data_8h.html#ab3facb2cbee4186cdcd076ae4975b2c8a57b2f92ceab039dbfd41d87fcb1cdd3b", null ]
     ] ],
-    [ "AnimKind", "_tile_anim_data_8h.html#ab66d2a13153cb38d5a96a97efcf41676", [
-      [ "Global", "_tile_anim_data_8h.html#ab66d2a13153cb38d5a96a97efcf41676a03ddcda8467f404189c984dc13409aa8", null ],
-      [ "Single", "_tile_anim_data_8h.html#ab66d2a13153cb38d5a96a97efcf41676a68168ddfb80052045df470955d649258", null ]
+    [ "AnimKind", "_tile_anim_data_8h.html#a6553d0aacd3ec123dea43ced8cff5d7b", [
+      [ "Global", "_tile_anim_data_8h.html#a6553d0aacd3ec123dea43ced8cff5d7bab5536151415c4d2cc1e26c35732fe013", null ],
+      [ "Single", "_tile_anim_data_8h.html#a6553d0aacd3ec123dea43ced8cff5d7ba001aa3c1b5654989e0891ae4427de92c", null ]
     ] ]
 ];

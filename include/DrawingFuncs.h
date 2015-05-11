@@ -33,6 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Vector2.h"
 #include "Camera.h"
 
+namespace fe {
+
 /**
 * \fn bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera)
 * \brief To know if an element is visible on the screen
@@ -43,5 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * \return true if visible or false if not visible
 */
 bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera);
+
+}
 
 #endif // DRAWINGFUNCS_H

@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileGroup.h"
 
+using namespace fe;
+
 TileGroup::TileGroup(MapData &mapData,
                      Camera &camera) : m_data(mapData, camera),
                                        m_loader(m_data, mapData),

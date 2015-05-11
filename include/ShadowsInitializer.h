@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Matrix3d.h"
 #include "DynamicShader.h"
 
+namespace fe {
 /**
  * \class ShadowsInitializer
  * \brief This class calculates the shadows configuration at start of the system
@@ -110,5 +111,6 @@ class ShadowsInitializer
 
         DynamicShader &m_shader; /*!< The reference to the DynamicShader  */
 };
+}
 
 #endif // SHADOWSINITIALIZER_H

@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef VECTOR2_H
 #define VECTOR2_H
 
+namespace fe {
 /**
  * \class Vector2
  * \brief This class is a container of 2 int x and y
@@ -127,4 +128,5 @@ Vector2 operator-(const Vector2 &v1, const Vector2 &v2);
 */
 bool operator==(const Vector2 &v1, const Vector2 &v2);
 
+}
 #endif // VECTOR2_H

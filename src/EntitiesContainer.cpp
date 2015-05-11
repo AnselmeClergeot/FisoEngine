@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "EntitiesContainer.h"
 
+using namespace fe;
+
 EntitiesContainer::EntitiesContainer(MapData &mapData,
                                      Camera &camera) : m_entities(),
                                                        m_mapData(mapData),

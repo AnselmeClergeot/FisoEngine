@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <fstream>
 #include "TileGroupData.h"
 
+namespace fe {
 /**
  * \class TileGroupLoader
  * \brief This class is charged to load TileGroupData stuff
@@ -111,5 +112,6 @@ class TileGroupLoader
 
         TileGroupData &m_data; /*!<  The reference to the TileGroupData to load */
 };
+}
 
 #endif // TILEGROUPLOADER_H

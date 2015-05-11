@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Camera.h"
 #include "EntitiesInterposing.h"
 
+namespace fe {
 /**
  * \class TileGroupDrawer
  * \brief This class is charged to draw the TileGroup
@@ -78,5 +79,6 @@ class TileGroupDrawer
 
         Camera &m_camera; /*!< Reference to the map camera */
 };
+}
 
 #endif // TILEGROUPDRAWER_H

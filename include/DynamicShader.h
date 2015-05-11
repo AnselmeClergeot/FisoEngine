@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroup.h"
 #include "Vector3.h"
 
+namespace fe {
 /**
  * \class DynamicShader
  * \brief Class that shades the map dynamically
@@ -133,5 +134,6 @@ class DynamicShader
 
         TileGroup &m_shadowsTg; /*!< The reference to the shadows TileGroup to modify*/
 };
+}
 
 #endif // DYNAMICSHADER_H

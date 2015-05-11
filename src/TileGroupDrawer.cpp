@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupDrawer.h"
 #include "DrawingFuncs.h"
 
+using namespace fe;
+
 TileGroupDrawer::TileGroupDrawer(MapData &mapData,
                                  TileGroupData &data,
                                  Camera &camera) : m_mapData(mapData),

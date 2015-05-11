@@ -39,6 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ShadowsSystemStates.h"
 #include "DrawingFuncs.h"
 
+namespace fe {
 /**
  * \class Animator
  * \brief Class that animates the map tiles
@@ -357,5 +358,6 @@ class Animator
 
         Camera &m_camera; /*!< The reference to the map camera */
 };
+}
 
 #endif // ANIMATOR_H

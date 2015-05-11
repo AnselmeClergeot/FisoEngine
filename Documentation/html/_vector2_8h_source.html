@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -128,50 +129,53 @@ $(document).ready(function(){initNavTree('_vector2_8h_source.html','');});
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef VECTOR2_H</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define VECTOR2_H</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_vector2.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vector2.html">Vector2</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_vector2.html#a22104d1809be26a419ef1f959e3761bf">Vector2</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_vector2.html#a22104d1809be26a419ef1f959e3761bf">Vector2</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_vector2.html#a13cc252330d618e32ef0fc063d2c7a08">x</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_vector2.html#a0ac4e1861754c11801150e0bbb2d0866">y</a>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="class_vector2.html#a22104d1809be26a419ef1f959e3761bf">Vector2</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a>&amp; <a class="code" href="class_vector2.html#a8616c1cc8b4f386f3592df8648190695">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vector2.html#a108ab44fd77ca4dae9887f32e2992d44">operator+=</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_vector2.html#aec5a7380fec38bfbbdc24548d375c926">operator-=</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_vector2.html#a0ac4e1861754c11801150e0bbb2d0866">   95</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_vector2.html#a13cc252330d618e32ef0fc063d2c7a08">x</a>, </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_vector2.html#a0ac4e1861754c11801150e0bbb2d0866">y</a>; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="_vector2_8h.html#a63e74f57546a0537d6fc8eed7ea1ddc9">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="_vector2_8h.html#a0feca9ade3edd654f44ab6073ba3f15f">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_vector2_8h.html#aa38bb4b46db942c551effedb13fe8c9d">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif // VECTOR2_H</span></div>
-<div class="ttc" id="_vector2_8h_html_a0feca9ade3edd654f44ab6073ba3f15f"><div class="ttname"><a href="_vector2_8h.html#a0feca9ade3edd654f44ab6073ba3f15f">operator-</a></div><div class="ttdeci">Vector2 operator-(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The - operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:54</div></div>
-<div class="ttc" id="class_vector2_html_a8616c1cc8b4f386f3592df8648190695"><div class="ttname"><a href="class_vector2.html#a8616c1cc8b4f386f3592df8648190695">Vector2::operator=</a></div><div class="ttdeci">Vector2 &amp; operator=(const Vector2 &amp;vec)</div><div class="ttdoc">The copy constructor. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:31</div></div>
-<div class="ttc" id="class_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:40</div></div>
-<div class="ttc" id="_vector2_8h_html_a63e74f57546a0537d6fc8eed7ea1ddc9"><div class="ttname"><a href="_vector2_8h.html#a63e74f57546a0537d6fc8eed7ea1ddc9">operator+</a></div><div class="ttdeci">Vector2 operator+(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The + operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:48</div></div>
-<div class="ttc" id="_vector2_8h_html_aa38bb4b46db942c551effedb13fe8c9d"><div class="ttname"><a href="_vector2_8h.html#aa38bb4b46db942c551effedb13fe8c9d">operator==</a></div><div class="ttdeci">bool operator==(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The == operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:60</div></div>
-<div class="ttc" id="class_vector2_html_a13cc252330d618e32ef0fc063d2c7a08"><div class="ttname"><a href="class_vector2.html#a13cc252330d618e32ef0fc063d2c7a08">Vector2::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> Vector2.h:95</div></div>
-<div class="ttc" id="class_vector2_html_a108ab44fd77ca4dae9887f32e2992d44"><div class="ttname"><a href="class_vector2.html#a108ab44fd77ca4dae9887f32e2992d44">Vector2::operator+=</a></div><div class="ttdeci">void operator+=(const Vector2 &amp;vec)</div><div class="ttdoc">The += operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:38</div></div>
-<div class="ttc" id="class_vector2_html_aec5a7380fec38bfbbdc24548d375c926"><div class="ttname"><a href="class_vector2.html#aec5a7380fec38bfbbdc24548d375c926">Vector2::operator-=</a></div><div class="ttdeci">void operator-=(const Vector2 &amp;vec)</div><div class="ttdoc">The -= operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:43</div></div>
-<div class="ttc" id="class_vector2_html_a0ac4e1861754c11801150e0bbb2d0866"><div class="ttname"><a href="class_vector2.html#a0ac4e1861754c11801150e0bbb2d0866">Vector2::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> Vector2.h:95</div></div>
-<div class="ttc" id="class_vector2_html_a22104d1809be26a419ef1f959e3761bf"><div class="ttname"><a href="class_vector2.html#a22104d1809be26a419ef1f959e3761bf">Vector2::Vector2</a></div><div class="ttdeci">Vector2()</div><div class="ttdoc">The default class constructor. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:22</div></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefe.html">fe</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classfe_1_1_vector2.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfe_1_1_vector2.html">Vector2</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classfe_1_1_vector2.html#a4dd8669ac1f68dc5bd77b2661941609e">Vector2</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classfe_1_1_vector2.html#a4dd8669ac1f68dc5bd77b2661941609e">Vector2</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classfe_1_1_vector2.html#ae7f917510a5b94fa585f1f95dbe9a9c1">x</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classfe_1_1_vector2.html#a768154c72d34ecc8dec746c77c37192a">y</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classfe_1_1_vector2.html#a4dd8669ac1f68dc5bd77b2661941609e">Vector2</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;vec);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classfe_1_1_vector2.html">Vector2</a>&amp; <a class="code" href="classfe_1_1_vector2.html#a0b2c86cf96ed87643cd97a236ce573ce">operator=</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;vec);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_vector2.html#aa2355fcdfc66aa1ca16ce949a15ec888">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;vec);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_vector2.html#a3033ee355d9979af7426aaa0dc18e52b">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;vec);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classfe_1_1_vector2.html#a768154c72d34ecc8dec746c77c37192a">   96</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classfe_1_1_vector2.html#ae7f917510a5b94fa585f1f95dbe9a9c1">x</a>, </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="classfe_1_1_vector2.html#a768154c72d34ecc8dec746c77c37192a">y</a>; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<a class="code" href="classfe_1_1_vector2.html">Vector2</a> <a class="code" href="namespacefe.html#a9ba34f85c4ca7d274f908017a89f6ef6">operator+</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v2);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="classfe_1_1_vector2.html">Vector2</a> <a class="code" href="namespacefe.html#abefa6f704f33bdd68cb7d472fe9ee2ee">operator-</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v2);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacefe.html#a7d1defd528d7723a168def68cf88fcff">operator==</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> &amp;v2);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif // VECTOR2_H</span></div>
+<div class="ttc" id="classfe_1_1_vector2_html_aa2355fcdfc66aa1ca16ce949a15ec888"><div class="ttname"><a href="classfe_1_1_vector2.html#aa2355fcdfc66aa1ca16ce949a15ec888">fe::Vector2::operator+=</a></div><div class="ttdeci">void operator+=(const Vector2 &amp;vec)</div><div class="ttdoc">The += operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:40</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html_a768154c72d34ecc8dec746c77c37192a"><div class="ttname"><a href="classfe_1_1_vector2.html#a768154c72d34ecc8dec746c77c37192a">fe::Vector2::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> Vector2.h:96</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html_a4dd8669ac1f68dc5bd77b2661941609e"><div class="ttname"><a href="classfe_1_1_vector2.html#a4dd8669ac1f68dc5bd77b2661941609e">fe::Vector2::Vector2</a></div><div class="ttdeci">Vector2()</div><div class="ttdoc">The default class constructor. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:24</div></div>
+<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Animator.h:42</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html_ae7f917510a5b94fa585f1f95dbe9a9c1"><div class="ttname"><a href="classfe_1_1_vector2.html#ae7f917510a5b94fa585f1f95dbe9a9c1">fe::Vector2::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> Vector2.h:96</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html_a0b2c86cf96ed87643cd97a236ce573ce"><div class="ttname"><a href="classfe_1_1_vector2.html#a0b2c86cf96ed87643cd97a236ce573ce">fe::Vector2::operator=</a></div><div class="ttdeci">Vector2 &amp; operator=(const Vector2 &amp;vec)</div><div class="ttdoc">The copy constructor. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:33</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html_a3033ee355d9979af7426aaa0dc18e52b"><div class="ttname"><a href="classfe_1_1_vector2.html#a3033ee355d9979af7426aaa0dc18e52b">fe::Vector2::operator-=</a></div><div class="ttdeci">void operator-=(const Vector2 &amp;vec)</div><div class="ttdoc">The -= operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:45</div></div>
+<div class="ttc" id="namespacefe_html_abefa6f704f33bdd68cb7d472fe9ee2ee"><div class="ttname"><a href="namespacefe.html#abefa6f704f33bdd68cb7d472fe9ee2ee">fe::operator-</a></div><div class="ttdeci">Vector2 operator-(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The - operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:56</div></div>
+<div class="ttc" id="namespacefe_html_a9ba34f85c4ca7d274f908017a89f6ef6"><div class="ttname"><a href="namespacefe.html#a9ba34f85c4ca7d274f908017a89f6ef6">fe::operator+</a></div><div class="ttdeci">Vector2 operator+(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The + operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:50</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html"><div class="ttname"><a href="classfe_1_1_vector2.html">fe::Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:41</div></div>
+<div class="ttc" id="namespacefe_html_a7d1defd528d7723a168def68cf88fcff"><div class="ttname"><a href="namespacefe.html#a7d1defd528d7723a168def68cf88fcff">fe::operator==</a></div><div class="ttdeci">bool operator==(const Vector2 &amp;v1, const Vector2 &amp;v2)</div><div class="ttdoc">The == operator. </div><div class="ttdef"><b>Definition:</b> Vector2.cpp:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_vector2_8h.html">Vector2.h</a></li>
-    <li class="footer">Generated on Mon May 11 2015 16:41:55 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 11 2015 18:40:44 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

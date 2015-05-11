@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Map.h"
 
+using namespace fe;
+
 Map::Map(Camera &camera)
  : m_camera(camera),
    m_data(),

@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Animator.h"
 
+using namespace fe;
+
 Animator::Animator(MapData &mapData,
                    TileGroup &mapTilegroup,
                    DynamicShader &shader,

@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Vector2.h"
 #include <algorithm>
 
+namespace fe {
 /**
  * \class MapData
  * \brief This class is the container of all map data
@@ -207,5 +208,6 @@ class MapData
 
         std::vector<unsigned int> m_translucentTiles; /*!< The list of translucent tiles number */
 };
+}
 
 #endif // MAPDATA_H

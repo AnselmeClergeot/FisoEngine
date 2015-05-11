@@ -33,6 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <fstream>
 #include "MapData.h"
 
+namespace fe {
 /**
  * \class ConfigsLoader
  * \brief Class that charges map configurations
@@ -114,5 +115,5 @@ class ConfigsLoader
 
         std::vector<std::string> m_paths; /*!< The layer files path list */
 };
-
+}
 #endif // CONFIGSLOADER_H

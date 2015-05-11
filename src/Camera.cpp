@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroup.h"
 #include "EntitiesContainer.h"
 
+using namespace fe;
+
 Camera::Camera() : m_viewDimensions(1980, 1080),
                    m_viewCenter(1980/2, 1080/2),
                    m_mapTilegroup(nullptr),

@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef VECTOR3_H
 #define VECTOR3_H
 
+namespace fe {
 /**
  * \class Vector3
  * \brief This class is a container of 3 int x, y and z
@@ -129,4 +130,7 @@ Vector3 operator-(const Vector3 &v1, const Vector3 &v2);
 * \return True if v1==v2, false otherwise
 */
 bool operator==(const Vector3 &v1, const Vector3 &v2);
+
+}
+
 #endif // VECTOR3_H

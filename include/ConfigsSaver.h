@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <cstdlib>
 #include "MapData.h"
 
+namespace fe {
 /**
  * \class ConfigsSaver
  * \brief Class that saves map configurations
@@ -85,5 +86,6 @@ class ConfigsSaver
 
         std::vector<std::string> m_paths; /*!< The layer files path list */
 };
+}
 
 #endif // CONFIGSSAVER_H

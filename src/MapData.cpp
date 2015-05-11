@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "MapData.h"
 
+using namespace fe;
+
 MapData::MapData() : m_tempConf(),
                      m_permConf(),
                      m_size(),

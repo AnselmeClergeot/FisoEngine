@@ -35,6 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupLoader.h"
 #include "TileGroupDrawer.h"
 
+namespace fe {
 /**
  * \class TileGroup
  * \brief This class offers an isometric tile-map manipulation
@@ -194,5 +195,6 @@ class TileGroup
 
         TileGroupDrawer m_drawer; /*!< The TileGroupDrawer */
 };
+}
 
 #endif // TILEGROUP_H

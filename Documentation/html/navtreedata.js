@@ -1,6 +1,15 @@
 var NAVTREE =
 [
   [ "MoteurRedesign", "index.html", [
+    [ "Namespaces", null, [
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -16,9 +25,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -27,8 +34,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animator_8cpp.html",
-"class_map.html#a5b410217c5c07c74c4cf0df1c63b9223",
-"functions_i.html"
+"classfe_1_1_map.html#a6c5689457ddb7f468f1c6356beb66312",
+"functions_u.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

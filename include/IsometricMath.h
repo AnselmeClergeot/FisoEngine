@@ -35,6 +35,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "MapData.h"
 #include "Camera.h"
 
+namespace fe {
+
 /**
 * \fn Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data)
 * \brief To get the tile screen position from its map-coordinates
@@ -62,5 +64,7 @@ Vector2 getTileCoordAtPixels(const Vector2 pixels,
                              const unsigned int layer,
                              const MapData &map_data,
                              const Camera *camera = 0);
+
+}
 
 #endif // ISOMETRICMATH_H

@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdlib.h>
 #include "Vector2.h"
 
+namespace fe {
 /**
  * \class Matrix3d
  * \brief This class is a template class that offers simple 3D arrays manipulations.
@@ -310,6 +311,8 @@ unsigned int Matrix3d<T>::get3dIter(const unsigned int x, const unsigned int y, 
 template<typename T>
 std::vector<T> Matrix3d<T>::getData() const {
     return m_data;
+}
+
 }
 
 #endif // MATRIX3D_H

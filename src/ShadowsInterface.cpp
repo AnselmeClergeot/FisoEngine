@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsInterface.h"
 
+using namespace fe;
+
 ShadowsInterface::ShadowsInterface(ShadowsInitializer &initializer,
                                    ShadowsSystemStates &states,
                                    TileGroup &tilegroup) : m_initializer(initializer),

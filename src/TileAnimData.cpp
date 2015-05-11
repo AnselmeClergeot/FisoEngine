@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileAnimData.h"
 
+using namespace fe;
+
 TileAnimData::TileAnimData() : m_kind(Global),
                                m_direction(Right),
                                m_x(0),

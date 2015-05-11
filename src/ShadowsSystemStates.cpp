@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsSystemStates.h"
 
+using namespace fe;
+
 ShadowsSystemStates::ShadowsSystemStates() : m_on(false),
                                              m_initialized(false)
 { }

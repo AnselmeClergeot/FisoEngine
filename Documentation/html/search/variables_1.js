@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../class_vector2.html#a13cc252330d618e32ef0fc063d2c7a08',1,'Vector2::x()'],['../class_vector3.html#a835b1348557509b2b8b75deb98e59119',1,'Vector3::x()']]]
+  ['x',['x',['../classfe_1_1_vector2.html#ae7f917510a5b94fa585f1f95dbe9a9c1',1,'fe::Vector2::x()'],['../classfe_1_1_vector3.html#a3018b76cd3d08614679ec59a1abf182c',1,'fe::Vector3::x()']]]
 ];

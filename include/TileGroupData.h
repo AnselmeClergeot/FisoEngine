@@ -37,6 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "IsometricMath.h"
 #include "DrawingFuncs.h"
 
+namespace fe {
 /**
  * \class TileGroupData
  * \brief This class stores all the TileGroup stuff
@@ -270,5 +271,6 @@ class TileGroupData
 
         unsigned int m_opacity; /*!< The global opacity (if set) */
 };
+}
 
 #endif // TILEGROUPDATA_H

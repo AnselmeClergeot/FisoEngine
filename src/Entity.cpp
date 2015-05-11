@@ -22,6 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ioFuncs.h"
 #include "DrawingFuncs.h"
 
+using namespace fe;
+
 Entity::Entity(MapData &mapData,
                Camera &camera) :  m_tilePosition(),
                                   m_pixelPosition(),

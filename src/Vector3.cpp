@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Vector3.h"
 
+using namespace fe;
+
 Vector3::Vector3() : x(0), y(0), z(0)
 { }
 
@@ -48,18 +50,18 @@ void Vector3::operator-=(const Vector3 &vec) {
     z-=vec.z;
 }
 
-Vector3 operator+(const Vector3 &v1, const Vector3 &v2) {
+Vector3 fe::operator+(const Vector3 &v1, const Vector3 &v2) {
     Vector3 res(v1);
     res+=v2;
     return res;
 }
 
-Vector3 operator-(const Vector3 &v1, const Vector3 &v2) {
+Vector3 fe::operator-(const Vector3 &v1, const Vector3 &v2) {
     Vector3 res(v1);
     res-=v2;
     return res;
 }
 
-bool operator==(const Vector3 &v1, const Vector3 &v2) {
+bool fe::operator==(const Vector3 &v1, const Vector3 &v2) {
     return (v1.x==v2.x && v1.y==v2.y && v1.z==v2.z);
 }

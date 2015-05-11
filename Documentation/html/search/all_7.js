@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['init',['init',['../class_shadows_interface.html#a36d6cf696d0ba47c9e600553ec29762a',1,'ShadowsInterface']]],
-  ['initialize',['initialize',['../class_shadows_initializer.html#a14ed5db07a770e960c53191681c84b21',1,'ShadowsInitializer::initialize()'],['../class_tile_group.html#a31237f1f668fd0f912429e94009b8c99',1,'TileGroup::initialize()'],['../class_tile_group_loader.html#aacc62726e6528f3d5a613496e1a8e68a',1,'TileGroupLoader::initialize()']]],
-  ['interpose',['interpose',['../class_entities_interposing.html#a838479fcaecdefe6f0e42ed2b335df5d',1,'EntitiesInterposing']]],
+  ['init',['init',['../classfe_1_1_shadows_interface.html#a3381f679611f218ddceb417241231170',1,'fe::ShadowsInterface']]],
+  ['initialize',['initialize',['../classfe_1_1_shadows_initializer.html#a81ab8fc9d0f0111c09021c8a740a583e',1,'fe::ShadowsInitializer::initialize()'],['../classfe_1_1_tile_group.html#a31237f1f668fd0f912429e94009b8c99',1,'fe::TileGroup::initialize()'],['../classfe_1_1_tile_group_loader.html#af84ef697c83813200e1f89393c07d03c',1,'fe::TileGroupLoader::initialize()']]],
+  ['interpose',['interpose',['../classfe_1_1_entities_interposing.html#a2055c17bfafdfdd85a361db8026cf7f0',1,'fe::EntitiesInterposing']]],
   ['iofuncs_2ecpp',['ioFuncs.cpp',['../io_funcs_8cpp.html',1,'']]],
   ['iofuncs_2eh',['ioFuncs.h',['../io_funcs_8h.html',1,'']]],
-  ['isinitialized',['isInitialized',['../class_shadows_system_states.html#adb135ac30834e594acfd95d032a39123',1,'ShadowsSystemStates']]],
+  ['isinitialized',['isInitialized',['../classfe_1_1_shadows_system_states.html#a3bde6f47648f1a3c1dba98ba7a3b853b',1,'fe::ShadowsSystemStates']]],
   ['isometricmath_2ecpp',['IsometricMath.cpp',['../_isometric_math_8cpp.html',1,'']]],
   ['isometricmath_2eh',['IsometricMath.h',['../_isometric_math_8h.html',1,'']]],
-  ['ison',['isOn',['../class_shadows_system_states.html#a4d3de774b9f76e8ac386b4aa9a3f7e92',1,'ShadowsSystemStates']]],
-  ['istranslucent',['isTranslucent',['../class_map.html#a6d7baee69ab5150ce681b6ec39ff4640',1,'Map::isTranslucent()'],['../class_map_data.html#aeb676ed3462ce0bd3c4f84f71b800689',1,'MapData::isTranslucent()']]],
-  ['isvisible',['isVisible',['../_drawing_funcs_8cpp.html#a3e2f9366104ce8e365728c712dc8b5ab',1,'isVisible(const Vector2 position, const Vector2 elementSize, Camera &amp;camera):&#160;DrawingFuncs.cpp'],['../_drawing_funcs_8h.html#a3e2f9366104ce8e365728c712dc8b5ab',1,'isVisible(const Vector2 position, const Vector2 elementSize, Camera &amp;camera):&#160;DrawingFuncs.cpp']]]
+  ['ison',['isOn',['../classfe_1_1_shadows_system_states.html#a174b49687175e2f2b041daf5d59de0b8',1,'fe::ShadowsSystemStates']]],
+  ['istranslucent',['isTranslucent',['../classfe_1_1_map.html#a9504d9d501328cd5eebe9158004060aa',1,'fe::Map::isTranslucent()'],['../classfe_1_1_map_data.html#aae508c2fcf952d630d2f7408e1070c14',1,'fe::MapData::isTranslucent()']]],
+  ['isvisible',['isVisible',['../namespacefe.html#a2cfcc791fb58d44188c11b1830580485',1,'fe']]]
 ];

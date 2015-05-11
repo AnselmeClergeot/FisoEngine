@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -129,36 +130,39 @@ $(document).ready(function(){initNavTree('_timer_8h_source.html','');});
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define TIMER_H</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_timer.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_timer.html">Timer</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_timer.html#aa3f7871196bb56202af2bc982bfbfff6">restart</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;<a class="code" href="class_timer.html#ab49cfec54a17b048b77ee69c5dfe4864">getElapsedTime</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_timer.html#ac77fc4370f797dc20456f0bb9d18e68b">   70</a></span>&#160;        clock_t <a class="code" href="class_timer.html#ac77fc4370f797dc20456f0bb9d18e68b">m_clock</a>; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_timer.html#a54da152b1fbaee5cdfd816df72365144">   72</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_timer.html#a54da152b1fbaee5cdfd816df72365144">m_milliseconds</a>; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // TIMER_H</span></div>
-<div class="ttc" id="class_timer_html_a5f16e8da27d2a5a5242dead46de05d97"><div class="ttname"><a href="class_timer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdoc">The class default constructor. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:22</div></div>
-<div class="ttc" id="class_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">This class is an extremely simple timer. </div><div class="ttdef"><b>Definition:</b> Timer.h:41</div></div>
-<div class="ttc" id="class_timer_html_aa3f7871196bb56202af2bc982bfbfff6"><div class="ttname"><a href="class_timer.html#aa3f7871196bb56202af2bc982bfbfff6">Timer::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">To restart the Timer. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:25</div></div>
-<div class="ttc" id="class_timer_html_ac77fc4370f797dc20456f0bb9d18e68b"><div class="ttname"><a href="class_timer.html#ac77fc4370f797dc20456f0bb9d18e68b">Timer::m_clock</a></div><div class="ttdeci">clock_t m_clock</div><div class="ttdef"><b>Definition:</b> Timer.h:70</div></div>
-<div class="ttc" id="class_timer_html_a54da152b1fbaee5cdfd816df72365144"><div class="ttname"><a href="class_timer.html#a54da152b1fbaee5cdfd816df72365144">Timer::m_milliseconds</a></div><div class="ttdeci">unsigned int m_milliseconds</div><div class="ttdef"><b>Definition:</b> Timer.h:72</div></div>
-<div class="ttc" id="class_timer_html_ab49cfec54a17b048b77ee69c5dfe4864"><div class="ttname"><a href="class_timer.html#ab49cfec54a17b048b77ee69c5dfe4864">Timer::getElapsedTime</a></div><div class="ttdeci">const unsigned int &amp; getElapsedTime()</div><div class="ttdoc">To get the elapsed time since last restart. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:31</div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefe.html">fe</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classfe_1_1_timer.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfe_1_1_timer.html">Timer</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classfe_1_1_timer.html#a2baa7633c57fd5683e92b49a2237def1">Timer</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_timer.html#ada3c62696f15b72ed9ea31da86ce09d5">restart</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;<a class="code" href="classfe_1_1_timer.html#ae6047949661c5fc66ce36fda42c873dc">getElapsedTime</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classfe_1_1_timer.html#aaeaaf29f62ae16523787a797d22dc8ed">   71</a></span>&#160;        clock_t <a class="code" href="classfe_1_1_timer.html#aaeaaf29f62ae16523787a797d22dc8ed">m_clock</a>; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classfe_1_1_timer.html#a7c6a9c84097cc68704c6c2165bd5cfad">   73</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classfe_1_1_timer.html#a7c6a9c84097cc68704c6c2165bd5cfad">m_milliseconds</a>; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // TIMER_H</span></div>
+<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Animator.h:42</div></div>
+<div class="ttc" id="classfe_1_1_timer_html_a2baa7633c57fd5683e92b49a2237def1"><div class="ttname"><a href="classfe_1_1_timer.html#a2baa7633c57fd5683e92b49a2237def1">fe::Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdoc">The class default constructor. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:24</div></div>
+<div class="ttc" id="classfe_1_1_timer_html_ada3c62696f15b72ed9ea31da86ce09d5"><div class="ttname"><a href="classfe_1_1_timer.html#ada3c62696f15b72ed9ea31da86ce09d5">fe::Timer::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">To restart the Timer. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:27</div></div>
+<div class="ttc" id="classfe_1_1_timer_html_ae6047949661c5fc66ce36fda42c873dc"><div class="ttname"><a href="classfe_1_1_timer.html#ae6047949661c5fc66ce36fda42c873dc">fe::Timer::getElapsedTime</a></div><div class="ttdeci">const unsigned int &amp; getElapsedTime()</div><div class="ttdoc">To get the elapsed time since last restart. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:33</div></div>
+<div class="ttc" id="classfe_1_1_timer_html"><div class="ttname"><a href="classfe_1_1_timer.html">fe::Timer</a></div><div class="ttdoc">This class is an extremely simple timer. </div><div class="ttdef"><b>Definition:</b> Timer.h:42</div></div>
+<div class="ttc" id="classfe_1_1_timer_html_a7c6a9c84097cc68704c6c2165bd5cfad"><div class="ttname"><a href="classfe_1_1_timer.html#a7c6a9c84097cc68704c6c2165bd5cfad">fe::Timer::m_milliseconds</a></div><div class="ttdeci">unsigned int m_milliseconds</div><div class="ttdef"><b>Definition:</b> Timer.h:73</div></div>
+<div class="ttc" id="classfe_1_1_timer_html_aaeaaf29f62ae16523787a797d22dc8ed"><div class="ttname"><a href="classfe_1_1_timer.html#aaeaaf29f62ae16523787a797d22dc8ed">fe::Timer::m_clock</a></div><div class="ttdeci">clock_t m_clock</div><div class="ttdef"><b>Definition:</b> Timer.h:71</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_timer_8h.html">Timer.h</a></li>
-    <li class="footer">Generated on Mon May 11 2015 16:41:55 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 11 2015 18:40:44 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

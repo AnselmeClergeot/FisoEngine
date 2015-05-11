@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Camera.h"
 #include "Entity.h"
 
+namespace fe {
 /**
  * \class EntitiesContainer
  * \brief Class that contains the map entities and cares of adding/deleting entities
@@ -104,5 +105,6 @@ class EntitiesContainer
 
         Camera &m_camera; /*!< The reference to the map camera */
 };
+}
 
 #endif // ENTITIESCONTAINER_H

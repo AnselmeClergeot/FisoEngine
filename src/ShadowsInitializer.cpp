@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsInitializer.h"
 
+using namespace fe;
+
 ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup,
                                        ShadowsSystemStates &states,
                                        MapData &mapData,

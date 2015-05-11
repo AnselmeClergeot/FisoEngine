@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['fileexists',['fileExists',['../io_funcs_8cpp.html#a14146449c6b3cb21679b09ce09c8c6f6',1,'fileExists(const std::string path):&#160;ioFuncs.cpp'],['../io_funcs_8h.html#a14146449c6b3cb21679b09ce09c8c6f6',1,'fileExists(const std::string path):&#160;ioFuncs.cpp']]],
-  ['fillmatrix',['fillMatrix',['../class_shadows_initializer.html#a7ecf5ef66abbd019d591440bbf413aa5',1,'ShadowsInitializer']]],
-  ['frametile',['frameTile',['../class_tile_group_data.html#a26d521351ff9b7c7d671b70c30fb06f9',1,'TileGroupData']]]
+  ['fe',['fe',['../namespacefe.html',1,'']]],
+  ['fileexists',['fileExists',['../namespacefe.html#ad469fc164bde1f1f48ca534f7c8bc486',1,'fe']]],
+  ['fillmatrix',['fillMatrix',['../classfe_1_1_shadows_initializer.html#ad94ea20b4315b0ef9ae14a89a7c547e6',1,'fe::ShadowsInitializer']]],
+  ['frametile',['frameTile',['../classfe_1_1_tile_group_data.html#a85a76167f0d4890abeb793fd1e7f9bd4',1,'fe::TileGroupData']]]
 ];

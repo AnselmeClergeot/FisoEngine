@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENTITIESINTERPOSING_H
 #include "EntitiesContainer.h"
 
+namespace fe {
 /**
  * \class EntitiesInterposing
  * \brief Class that interposes the entities into the map tiles
@@ -64,5 +65,6 @@ class EntitiesInterposing
         //The entity container, to access all the entities
         EntitiesContainer &m_container; /* !< Reference to the EntitiesContainer to access the entities*/
 };
+}
 
 #endif // ENTITIESINTERPOSING_H

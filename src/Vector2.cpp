@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Vector2.h"
 
+using namespace fe;
+
 Vector2::Vector2() : x(0), y(0)
 { }
 
@@ -45,18 +47,18 @@ void Vector2::operator-=(const Vector2 &vec) {
     y-=vec.y;
 }
 
-Vector2 operator+(const Vector2& v1, const Vector2 &v2) {
+Vector2 fe::operator+(const Vector2& v1, const Vector2 &v2) {
     Vector2 res(v1);
     res+=v2;
     return res;
 }
 
-Vector2 operator-(const Vector2& v1, const Vector2 &v2) {
+Vector2 fe::operator-(const Vector2& v1, const Vector2 &v2) {
     Vector2 res(v1);
     res-=v2;
     return res;
 }
 
-bool operator==(const Vector2& v1, const Vector2 &v2) {
+bool fe::operator==(const Vector2& v1, const Vector2 &v2) {
     return(v1.x==v2.x && v1.y==v2.y);
 }

@@ -1,7 +1,7 @@
 var _vector2_8h =
 [
-    [ "Vector2", "class_vector2.html", "class_vector2" ],
-    [ "operator+", "_vector2_8h.html#a63e74f57546a0537d6fc8eed7ea1ddc9", null ],
-    [ "operator-", "_vector2_8h.html#a0feca9ade3edd654f44ab6073ba3f15f", null ],
-    [ "operator==", "_vector2_8h.html#aa38bb4b46db942c551effedb13fe8c9d", null ]
+    [ "Vector2", "classfe_1_1_vector2.html", "classfe_1_1_vector2" ],
+    [ "operator+", "_vector2_8h.html#a9ba34f85c4ca7d274f908017a89f6ef6", null ],
+    [ "operator-", "_vector2_8h.html#abefa6f704f33bdd68cb7d472fe9ee2ee", null ],
+    [ "operator==", "_vector2_8h.html#a7d1defd528d7723a168def68cf88fcff", null ]
 ];

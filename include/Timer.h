@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TIMER_H
 #include <time.h>
 
+namespace fe {
 /**
  * \class Timer
  * \brief This class is an extremely simple timer
@@ -71,5 +72,6 @@ class Timer
 
         unsigned int m_milliseconds; /*!< The elapsed time  */
 };
+}
 
 #endif // TIMER_H

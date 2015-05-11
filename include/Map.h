@@ -45,6 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "IsometricMath.h"
 #include "Animator.h"
 
+namespace fe {
 /**
  * \class Map
  * \brief Class used by user to manipulate an isometric map
@@ -467,5 +468,6 @@ class Map : public sf::Drawable
 
         Animator m_animator; /*!< The map tiles animator */
 };
+}
 
 #endif // MAP_H

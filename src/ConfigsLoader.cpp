@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ConfigsLoader.h"
 #include "ioFuncs.h"
 
+using namespace fe;
+
 ConfigsLoader::ConfigsLoader(MapData &data) : m_data(data), m_paths()
 { }
 

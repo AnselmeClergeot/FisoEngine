@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ioFuncs.h"
 
-bool fileExists(const std::string path) {
+bool fe::fileExists(const std::string path) {
     std::ifstream file(path.c_str());
 
     if(!file.good())

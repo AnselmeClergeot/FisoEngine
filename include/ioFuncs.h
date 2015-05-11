@@ -34,6 +34,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <fstream>
 #include <cstdlib>
 
+namespace fe {
+
 /**
 * \fn bool fileExists(const std::string path)
 * \brief To know if a file exists
@@ -42,5 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * \return True if file exists and false otherwise
 */
 bool fileExists(const std::string path);
+
+}
 
 #endif // IOFUNCS_H

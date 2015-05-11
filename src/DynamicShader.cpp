@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "DynamicShader.h"
 
+using namespace fe;
+
 DynamicShader::DynamicShader(MapData &mapData,
                              TileGroup &mapTg,
                              TileGroup &shadowsTg) : m_mapData(mapData),

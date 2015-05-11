@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SHADOWSSYSTEMSTATES_H
 #define SHADOWSSYSTEMSTATES_H
 
+namespace fe {
 /**
  * \class ShadowsSystemStates
  * \brief This class is the state container of the shadows system.
@@ -87,5 +88,6 @@ class ShadowsSystemStates
 
         m_initialized; /*!< The initialized or not state */
 };
+}
 
 #endif // SHADOWSSYSTEMSTATES_H

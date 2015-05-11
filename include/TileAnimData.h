@@ -32,6 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TILEANIMDATA_H
 #include "Vector2.h"
 
+namespace fe {
+
 /*!  AnimKind defines the tile animation type*/
 enum AnimKind {Global /*!< A global animation kind like water, etc. */,
                Single /*!< A single animation kind like door, explosion, etc. */ };
@@ -164,5 +166,6 @@ class TileAnimData
 
         unsigned int m_length; /*!< The length of the animation in frames*/
 };
+}
 
 #endif // TILEANIMDATA_H

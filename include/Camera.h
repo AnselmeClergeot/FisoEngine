@@ -32,6 +32,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CAMERA_H
 #include <memory>
 #include "Vector2.h"
+
+namespace fe {
+
 class TileGroup;
 class EntitiesContainer;
 
@@ -166,5 +169,6 @@ class Camera
 
         std::unique_ptr<EntitiesContainer> m_entitiesContainer; /*!< The pointer to the map EntitiesContainer */
 };
+}
 
 #endif // CAMERA_H

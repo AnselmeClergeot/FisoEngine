@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupLoader.h"
 #include "ioFuncs.h"
 
+using namespace fe;
+
 TileGroupLoader::TileGroupLoader(TileGroupData &data, MapData &mapData) : m_mapData(mapData),
                                                                           m_tilesetPath(""),
                                                                           m_data(data)
