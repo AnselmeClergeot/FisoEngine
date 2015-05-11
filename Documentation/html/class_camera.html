@@ -168,12 +168,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ada3edcaa265760b191317d0193c0db1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a141d92a4ecece00d8140bc2627c9a067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a141d92a4ecece00d8140bc2627c9a067">m_viewCenter</a></td></tr>
 <tr class="separator:a141d92a4ecece00d8140bc2627c9a067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0d0321cb290d54ee08cb1c60c5aa3c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_group.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#ab0d0321cb290d54ee08cb1c60c5aa3c9">m_mapTilegroup</a></td></tr>
-<tr class="separator:ab0d0321cb290d54ee08cb1c60c5aa3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f563eb4313284785b0901298a2b9dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tile_group.html">TileGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a0f563eb4313284785b0901298a2b9dac">m_shadowsTilegroup</a></td></tr>
-<tr class="separator:a0f563eb4313284785b0901298a2b9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87365a11b36cb28f04c6128adfb4214d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entities_container.html">EntitiesContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a87365a11b36cb28f04c6128adfb4214d">m_entitiesContainer</a></td></tr>
-<tr class="separator:a87365a11b36cb28f04c6128adfb4214d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c0b5a8531465e5c1db564fb69e3837"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_tile_group.html">TileGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a29c0b5a8531465e5c1db564fb69e3837">m_mapTilegroup</a></td></tr>
+<tr class="separator:a29c0b5a8531465e5c1db564fb69e3837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd73bb468435b3f9399964af80b4965"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_tile_group.html">TileGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a0fd73bb468435b3f9399964af80b4965">m_shadowsTilegroup</a></td></tr>
+<tr class="separator:a0fd73bb468435b3f9399964af80b4965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259cca8abb9d209b0dace9f0c2f3bb09"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_entities_container.html">EntitiesContainer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a259cca8abb9d209b0dace9f0c2f3bb09">m_entitiesContainer</a></td></tr>
+<tr class="separator:a259cca8abb9d209b0dace9f0c2f3bb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -555,7 +555,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a87365a11b36cb28f04c6128adfb4214d"></a>
+<a class="anchor" id="a259cca8abb9d209b0dace9f0c2f3bb09"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -563,7 +563,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_entities_container.html">EntitiesContainer</a>* Camera::m_entitiesContainer</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_entities_container.html">EntitiesContainer</a>&gt; Camera::m_entitiesContainer</td>
         </tr>
       </table>
   </td>
@@ -576,7 +576,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab0d0321cb290d54ee08cb1c60c5aa3c9"></a>
+<a class="anchor" id="a29c0b5a8531465e5c1db564fb69e3837"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -584,7 +584,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tile_group.html">TileGroup</a>* Camera::m_mapTilegroup</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_tile_group.html">TileGroup</a>&gt; Camera::m_mapTilegroup</td>
         </tr>
       </table>
   </td>
@@ -597,7 +597,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0f563eb4313284785b0901298a2b9dac"></a>
+<a class="anchor" id="a0fd73bb468435b3f9399964af80b4965"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -605,7 +605,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tile_group.html">TileGroup</a> * Camera::m_shadowsTilegroup</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_tile_group.html">TileGroup</a>&gt; Camera::m_shadowsTilegroup</td>
         </tr>
       </table>
   </td>
@@ -670,7 +670,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_camera.html">Camera</a></li>
-    <li class="footer">Generated on Fri May 8 2015 18:05:01 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 11 2015 16:41:55 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

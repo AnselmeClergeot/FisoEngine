@@ -23,14 +23,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Camera::Camera() : m_viewDimensions(1980, 1080),
                    m_viewCenter(1980/2, 1080/2),
-                   m_mapTilegroup(0),
-                   m_shadowsTilegroup(0)
+                   m_mapTilegroup(nullptr),
+                   m_shadowsTilegroup(nullptr)
 { }
 
 Camera::Camera(const unsigned int viewW, const unsigned int viewH) : m_viewDimensions(viewW, viewH),
                                                                      m_viewCenter(viewW/2, viewH/2),
-                                                                     m_mapTilegroup(0),
-                                                                     m_shadowsTilegroup(0)
+                                                                     m_mapTilegroup(nullptr),
+                                                                     m_shadowsTilegroup(nullptr)
 { }
 
 void Camera::setViewDimensions(const Vector2 dim) {
@@ -79,10 +79,10 @@ Vector2 Camera::getViewCenter() const {
 }
 
 void Camera::setTileGroups(TileGroup &map, TileGroup &shadows) {
-    m_mapTilegroup = &map;
-    m_shadowsTilegroup = &shadows;
+    m_mapTilegroup = std::unique_ptr<TileGroup>(&map);
+    m_shadowsTilegroup = std::unique_ptr<TileGroup>(&shadows);
 }
 
 void Camera::setEntitiesContainer(EntitiesContainer &container) {
-    m_entitiesContainer = &container;
+    m_entitiesContainer = std::unique_ptr<EntitiesContainer>(&container);
 }

@@ -30,6 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifndef CAMERA_H
 #define CAMERA_H
+#include <memory>
 #include "Vector2.h"
 class TileGroup;
 class EntitiesContainer;
@@ -160,10 +161,10 @@ class Camera
 
         Vector2 m_viewCenter; /*!< The center of the camera view */
 
-        TileGroup *m_mapTilegroup, /*!< The pointer to the map TileGroup */
-                  *m_shadowsTilegroup; /*!< The pointer to the shadows TileGroup */
+        std::unique_ptr<TileGroup> m_mapTilegroup, /*!< The pointer to the map TileGroup */
+                                   m_shadowsTilegroup; /*!< The pointer to the shadows TileGroup */
 
-        EntitiesContainer *m_entitiesContainer; /*!< The pointer to the map EntitiesContainer */
+        std::unique_ptr<EntitiesContainer> m_entitiesContainer; /*!< The pointer to the map EntitiesContainer */
 };
 
 #endif // CAMERA_H
