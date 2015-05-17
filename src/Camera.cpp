@@ -27,6 +27,12 @@ fe::Camera::Camera() : m_viewDimensions(1980, 1080),
                        m_shadowsTilegroup(nullptr)
 { }
 
+fe::Camera::~Camera() {
+    m_mapTilegroup.release();
+    m_shadowsTilegroup.release();
+    m_entitiesContainer.release();
+}
+
 fe::Camera::Camera(const unsigned int viewW, const unsigned int viewH) : m_viewDimensions(viewW, viewH),
                                                                          m_viewCenter(viewW/2, viewH/2),
                                                                          m_mapTilegroup(nullptr),

@@ -58,6 +58,13 @@ class Camera
         Camera();
 
         /**
+        * \fn ~Camera()
+        * \brief The class default destructor
+        *
+        */
+        ~Camera();
+
+        /**
         * \fn Camera(const unsigned int viewW, const unsigned int viewH)
         * \brief The constructor with camera view size
         *

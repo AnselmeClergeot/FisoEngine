@@ -1,6 +1,7 @@
 var classfe_1_1_camera =
 [
     [ "Camera", "classfe_1_1_camera.html#a1ed2d14df975f325aa9f7622c95001d2", null ],
+    [ "~Camera", "classfe_1_1_camera.html#af64f9d2a0084a9edc22d3f948f21b1ee", null ],
     [ "Camera", "classfe_1_1_camera.html#a574f4197994f308e407cbb3d57053554", null ],
     [ "getViewCenter", "classfe_1_1_camera.html#a5e72b43ff27ea93c186554c18bc69778", null ],
     [ "getViewDimensions", "classfe_1_1_camera.html#a07dfd7cf50c590b6a771a040d42ab44f", null ],
