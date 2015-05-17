@@ -1,6 +1,7 @@
 var classfe_1_1_entities_container =
 [
     [ "EntitiesContainer", "classfe_1_1_entities_container.html#ad7c206662e88f24f75940c158771c6e3", null ],
+    [ "~EntitiesContainer", "classfe_1_1_entities_container.html#a0b52a9f6a4252a03fe763bf3574b83e9", null ],
     [ "createEntity", "classfe_1_1_entities_container.html#a263b80cc63ce672772d3041fafe97601", null ],
     [ "entityAt", "classfe_1_1_entities_container.html#ae604899195e149a2d3e79d777e8ca3f8", null ],
     [ "getEntitiesNumber", "classfe_1_1_entities_container.html#a6746787e128f6f7101aa17a67453bc79", null ],

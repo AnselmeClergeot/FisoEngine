@@ -25,6 +25,11 @@ fe::EntitiesContainer::EntitiesContainer(fe::MapData &mapData,
                                                                m_camera(camera)
 { }
 
+fe::EntitiesContainer::~EntitiesContainer() {
+    for(std::size_t i(0); i<m_entities.size(); i++)
+        m_entities[i].release();
+}
+
 void fe::EntitiesContainer::createEntity() {
     m_entities.push_back(std::unique_ptr<fe::Entity>(new fe::Entity(m_mapData, m_camera)));
 }

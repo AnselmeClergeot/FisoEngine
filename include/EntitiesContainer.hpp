@@ -56,6 +56,13 @@ class EntitiesContainer
         EntitiesContainer(fe::MapData &mapData, fe::Camera &camera);
 
         /**
+        * \fn ~EntitiesContainer()
+        * \brief The class destructor
+        *
+        */
+        ~EntitiesContainer();
+
+        /**
         * \fn void createEntity()
         * \brief To add an entity to the list
         *
