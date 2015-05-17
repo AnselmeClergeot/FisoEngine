@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ioFuncs.h"
+#include "ioFuncs.hpp"
 
 bool fe::fileExists(const std::string path) {
     std::ifstream file(path.c_str());

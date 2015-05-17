@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "TileGroupData.h"
+#include "TileGroupData.hpp"
 
 fe::TileGroupData::TileGroupData(fe::MapData &mapData,
                                  fe::Camera &camera) : m_tileset(),

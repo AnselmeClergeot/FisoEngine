@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "EntitiesContainer.h"
+#include "EntitiesContainer.hpp"
 
 fe::EntitiesContainer::EntitiesContainer(fe::MapData &mapData,
                                          fe::Camera &camera) : m_entities(),

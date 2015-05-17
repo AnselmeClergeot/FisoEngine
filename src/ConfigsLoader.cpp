@@ -17,8 +17,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ConfigsLoader.h"
-#include "ioFuncs.h"
+#include "ConfigsLoader.hpp"
+#include "ioFuncs.hpp"
 
 fe::ConfigsLoader::ConfigsLoader(fe::MapData &data) : m_data(data), m_paths()
 { }

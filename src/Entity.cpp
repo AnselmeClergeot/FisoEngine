@@ -17,10 +17,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "Entity.h"
-#include "IsometricMath.h"
-#include "ioFuncs.h"
-#include "DrawingFuncs.h"
+#include "Entity.hpp"
+#include "IsometricMath.hpp"
+#include "ioFuncs.hpp"
+#include "DrawingFuncs.hpp"
 
 fe::Entity::Entity(fe::MapData &mapData,
                    fe::Camera &camera) :  m_tilePosition(),

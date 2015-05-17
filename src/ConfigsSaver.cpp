@@ -17,8 +17,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ConfigsSaver.h"
-#include "ioFuncs.h"
+#include "ConfigsSaver.hpp"
+#include "ioFuncs.hpp"
 
 fe::ConfigsSaver::ConfigsSaver(fe::MapData &data) : m_data(data), m_paths()
 { }
