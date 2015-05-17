@@ -49,10 +49,10 @@ class ShadowsInitializer
     public:
 
         /**
-        * \fn ShadowsInitializer(TileGroup &tilegroup,
-                           ShadowsSystemStates &states,
-                           MapData &mapData,
-                           DynamicShader &shader)
+        * \fn ShadowsInitializer(fe::TileGroup &tilegroup,
+                                 fe::ShadowsSystemStates &states,
+                                 fe::MapData &mapData,
+                                 fe::DynamicShader &shader)
         * \brief The class constructor
         *
         * \param tilegroup Reference to the shadows TileGroup to send condifuration
@@ -60,10 +60,10 @@ class ShadowsInitializer
         * \param mapData Reference to the MapData to get useful map data
         * \param shader Reference to the DynamicShader
         */
-        ShadowsInitializer(TileGroup &tilegroup,
-                           ShadowsSystemStates &states,
-                           MapData &mapData,
-                           DynamicShader &shader);
+        ShadowsInitializer(fe::TileGroup &tilegroup,
+                           fe::ShadowsSystemStates &states,
+                           fe::MapData &mapData,
+                           fe::DynamicShader &shader);
 
         /**
         * \fn void initialize()
@@ -76,40 +76,40 @@ class ShadowsInitializer
     private:
 
         /**
-        * \fn void resizeMatrix(Matrix3d<unsigned int> &tempConf)
+        * \fn void resizeMatrix(fe::Matrix3d<unsigned int> &tempConf)
         * \brief To resize the temporary shadows configuration
         *
         * \param tempConf The temporary Matrix3d for shadows configuration
         * \return void
         */
-        void resizeMatrix(Matrix3d<unsigned int> &tempConf);
+        void resizeMatrix(fe::Matrix3d<unsigned int> &tempConf);
 
         /**
-        * \fn void fillMatrix(Matrix3d<unsigned int> &tempConf)
+        * \fn void fillMatrix(fe::Matrix3d<unsigned int> &tempConf)
         * \brief To call filling the temporary configuration with calculated values
         *
         * \param tempConf The temporary Matrix3d for shadows configuration
         * \return void
         */
-        void fillMatrix(Matrix3d<unsigned int> &tempConf);
+        void fillMatrix(fe::Matrix3d<unsigned int> &tempConf);
 
         /**
-        * \fn void calculateShadowInConf(const Vector3 coord, Matrix3d<unsigned int> &tempConf)
+        * \fn void calculateShadowInConf(const fe::Vector3 coord, fe::Matrix3d<unsigned int> &tempConf)
         * \brief To calculate a generated shadow from a map tile coordinates
         *
         * \param coord The tile coordinates
         * \param tempConf The temporary Matrix3d for shadows configuration
         * \return void
         */
-        void calculateShadowInConf(const Vector3 coord, Matrix3d<unsigned int> &tempConf);
+        void calculateShadowInConf(const fe::Vector3 coord, fe::Matrix3d<unsigned int> &tempConf);
 
-        TileGroup &m_tileGroup; /*!< The reference to the shadows TileGroup */
+        fe::TileGroup &m_tileGroup; /*!< The reference to the shadows TileGroup */
 
-        MapData &m_mapData; /*!< The reference to the MapData to access useful map data */
+        fe::MapData &m_mapData; /*!< The reference to the MapData to access useful map data */
 
-        ShadowsSystemStates &m_states; /*!< The reference to the ShadowsSystemStates  */
+        fe::ShadowsSystemStates &m_states; /*!< The reference to the ShadowsSystemStates  */
 
-        DynamicShader &m_shader; /*!< The reference to the DynamicShader  */
+        fe::DynamicShader &m_shader; /*!< The reference to the DynamicShader  */
 };
 }
 

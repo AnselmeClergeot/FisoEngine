@@ -59,39 +59,39 @@ class Vector2
         Vector2(const int x, const int y);
 
         /**
-        * \fn Vector2(const Vector2 &vec)
+        * \fn Vector2(const fe::Vector2 &vec)
         * \brief The copy constructor
         *
         * \param vec The copy model
         */
-        Vector2(const Vector2 &vec);
+        Vector2(const fe::Vector2 &vec);
 
         /**
-        * \fn Vector2& operator=(const Vector2 &vec)
+        * \fn fe::Vector2& operator=(const fe::Vector2 &vec)
         * \brief The copy constructor
         *
         * \param vec The copy model
         * \return Reference to the set Vector2
         */
-        Vector2& operator=(const Vector2 &vec);
+        fe::Vector2& operator=(const fe::Vector2 &vec);
 
         /**
-        * \fn void operator+=(const Vector2 &vec)
+        * \fn void operator+=(const fe::Vector2 &vec)
         * \brief The += operator
         *
         * \param vec The model to add to the Vector2
         * \return void
         */
-        void operator+=(const Vector2 &vec);
+        void operator+=(const fe::Vector2 &vec);
 
         /**
-        * \fn void operator-=(const Vector2 &vec)
+        * \fn void operator-=(const fe::Vector2 &vec)
         * \brief The -= operator
         *
         * \param vec The model to subtract to the Vector2
         * \return void
         */
-        void operator-=(const Vector2 &vec);
+        void operator-=(const fe::Vector2 &vec);
 
         int x, /*!< The x element */
 
@@ -99,34 +99,34 @@ class Vector2
 };
 
 /**
-* \fn Vector2 operator+(const Vector2 &v1, const Vector2 &v2)
+* \fn fe::Vector2 operator+(const fe::Vector2 &v1, const fe::Vector2 &v2)
 * \brief The + operator
 *
 * \param v1 The first addition member
 * \param v2 The second addition member
 * \return The result Vector2
 */
-Vector2 operator+(const Vector2 &v1, const Vector2 &v2);
+fe::Vector2 operator+(const fe::Vector2 &v1, const fe::Vector2 &v2);
 
 /**
-* \fn Vector2 operator-(const Vector2 &v1, const Vector2 &v2)
+* \fn fe::Vector2 operator-(const fe::Vector2 &v1, const fe::Vector2 &v2)
 * \brief The - operator
 *
 * \param v1 The first subtraction member
 * \param v2 The second subtraction member
 * \return The result Vector2
 */
-Vector2 operator-(const Vector2 &v1, const Vector2 &v2);
+fe::Vector2 operator-(const fe::Vector2 &v1, const fe::Vector2 &v2);
 
 /**
-* \fn bool operator==(const Vector2 &v1, const Vector2 &v2)
+* \fn bool operator==(const fe::Vector2 &v1, const fe::Vector2 &v2)
 * \brief The == operator
 *
 * \param v1 The first comparison member
 * \param v2 The second comparison member
 * \return True if v1==v2, false otherwise
 */
-bool operator==(const Vector2 &v1, const Vector2 &v2);
+bool operator==(const fe::Vector2 &v1, const fe::Vector2 &v2);
 
 }
 #endif // VECTOR2_H

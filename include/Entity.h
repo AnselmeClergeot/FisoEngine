@@ -53,22 +53,22 @@ class Entity
     public:
 
         /**
-        * \fn Entity(MapData &mapData, Camera &camera)
+        * \fn Entity(fe::MapData &mapData, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful data
         * \param camera Reference to the map camera
         */
-        Entity(MapData &mapData, Camera &camera);
+        Entity(fe::MapData &mapData, fe::Camera &camera);
 
         /**
-        * \fn void setDimensions(const Vector2 dim)
+        * \fn void setDimensions(const fe::Vector2 dim)
         * \brief To set the entity dimensions
         *
         * \param dim The entity dimensions in pixels
         * \return void
         */
-        void setDimensions(const Vector2 dim);
+        void setDimensions(const fe::Vector2 dim);
 
         /**
         * \fn void setDimensions(const unsigned int w, const unsigned int h)
@@ -81,13 +81,13 @@ class Entity
         void setDimensions(const unsigned int w, const unsigned int h);
 
         /**
-        * \fn void setBaseCoord(const Vector2 coord)
+        * \fn void setBaseCoord(const fe::Vector2 coord)
         * \brief To set the base coordinate of the entity
         *
         * \param coord The entity base coordinates relative to the top-left entity corner
         * \return void
         */
-        void setBaseCoord(const Vector2 coord);
+        void setBaseCoord(const fe::Vector2 coord);
 
         /**
         * \fn void setBaseCoord(const unsigned int x, const unsigned int y)
@@ -100,13 +100,13 @@ class Entity
         void setBaseCoord(const unsigned int x, const unsigned int y);
 
         /**
-        * \fn void move(const Vector2 rate)
+        * \fn void move(const fe::Vector2 rate)
         * \brief To move the entity relatively from its position
         *
         * \param rate The move rate in pixels
         * \return void
         */
-        void move(const Vector2 rate);
+        void move(const fe::Vector2 rate);
 
         /**
         * \fn void move(const unsigned int rx, const unsigned int ry)
@@ -146,36 +146,36 @@ class Entity
         void setLayer(const unsigned int layer);
 
         /**
-        * \fn Vector3 getTilePosition() const
+        * \fn fe::Vector3 getTilePosition() const
         * \brief To get the entity tile position
         *
         * \return The entity position in tile coordinates relative to the map, into a Vector3
         */
-        Vector3 getTilePosition() const;
+        fe::Vector3 getTilePosition() const;
 
         /**
-        * \fn Vector2 getBaseCoord() const
+        * \fn fe::Vector2 getBaseCoord() const
         * \brief To get the entity base coordinates
         *
         * \return The entity base coordinates in a Vector2
         */
-        Vector2 getBaseCoord() const;
+        fe::Vector2 getBaseCoord() const;
 
         /**
-        * \fn Vector2 getDimensions() const
+        * \fn fe::Vector2 getDimensions() const
         * \brief To get the entity dimensions
         *
         * \return The entity dimensions in pixels in a Vector2
         */
-        Vector2 getDimensions() const;
+        fe::Vector2 getDimensions() const;
 
         /**
-        * \fn Vector2 getPosition() const
+        * \fn fe::Vector2 getPosition() const
         * \brief To get the entity position
         *
         * \return The entity position in a Vector2
         */
-        Vector2 getPosition() const;
+        fe::Vector2 getPosition() const;
 
         /**
         * \fn sf::Sprite &getSprite()
@@ -194,13 +194,13 @@ class Entity
         bool getDrawingState() const;
 
         /**
-        * \fn void setPosition(const Vector2 pos)
+        * \fn void setPosition(const fe::Vector2 pos)
         * \brief To set the position of the entity
         *
         * \param pos The position in pixels
         * \return void
         */
-        void setPosition(const Vector2 pos);
+        void setPosition(const fe::Vector2 pos);
 
         /**
         * \fn void setPosition(const unsigned int x, const unsigned int y)
@@ -231,13 +231,13 @@ class Entity
         */
         void draw(sf::RenderTarget& target) const;
 
-        Vector3 m_tilePosition; /* !< The entity tile position*/
+        fe::Vector3 m_tilePosition; /* !< The entity tile position*/
 
-        Vector2 m_pixelPosition; /* !< The entity pixels position*/
+        fe::Vector2 m_pixelPosition; /* !< The entity pixels position*/
 
-        Vector2 m_dimensions; /* !< The entity dimensions*/
+        fe::Vector2 m_dimensions; /* !< The entity dimensions*/
 
-        Vector2 m_baseCoord; /* !< The entity base coordinates*/
+        fe::Vector2 m_baseCoord; /* !< The entity base coordinates*/
 
         sf::Texture m_texture; /* !< The entity texture [SPECIFIC TO SFML]*/
 
@@ -245,9 +245,9 @@ class Entity
 
         bool m_drawState; /* !< The entity draw state*/
 
-        MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
+        fe::MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 
-        Camera& m_camera; /* !< The pointer to the map camera */
+        fe::Camera& m_camera; /* !< The pointer to the map camera */
 };
 }
 

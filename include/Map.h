@@ -58,12 +58,12 @@ class Map : public sf::Drawable
     public:
 
         /**
-        * \fn Map(Camera &camera)
+        * \fn Map(fe::Camera &camera)
         * \brief Map class constructor
         *
         * \param camera Reference to the map camera
         */
-        Map(Camera &camera);
+        Map(fe::Camera &camera);
 
         /**
         * \fn void create()
@@ -171,7 +171,7 @@ class Map : public sf::Drawable
         void removeTranslucentTile(const unsigned int tile);
 
         /**
-        * \fn void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw)
+        * \fn void setTileAt(const fe::Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw)
         * \brief To set the tile at specific map coordinates from a tile number
         *
         * \param coord The coordinate of the tile
@@ -180,7 +180,7 @@ class Map : public sf::Drawable
         * \param modifDraw If the map appearance has to be modified?
         * \return void
         */
-        void setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);
+        void setTileAt(const fe::Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw);
 
         /**
         * \fn void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z,
@@ -198,14 +198,14 @@ class Map : public sf::Drawable
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
 
         /**
-        * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)
+        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile
         *
         * \param coord The 3D coordinates of the tile
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setTileOpacity(const Vector3 coord, const unsigned int opacity);
+        void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
 
         /**
         * \fn void setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
@@ -218,7 +218,7 @@ class Map : public sf::Drawable
         * \param opacity The opacity from 0 to 255
         * \return void
         */
-        void setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+        void setTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z,
                                 const unsigned int opacity);
 
         /**
@@ -241,13 +241,13 @@ class Map : public sf::Drawable
         void setMapOpacity(const unsigned int opacity);
 
         /**
-        * \fn void setPosition(const Vector2 pos)
+        * \fn void setPosition(const fe::Vector2 pos)
         * \brief To set the map position
         *
         * \param pos The position of the map relatively to the top-left screen corner
         * \return void
         */
-        void setPosition(const Vector2 pos);
+        void setPosition(const fe::Vector2 pos);
 
         /**
         * \fn void setPosition(const unsigned int x, const unsigned int y)
@@ -260,13 +260,13 @@ class Map : public sf::Drawable
         void setPosition(const unsigned int x, const unsigned int y);
 
         /**
-        * \fn void move(const Vector2 rate)
+        * \fn void move(const fe::Vector2 rate)
         * \brief To move the map relatively to its position
         *
         * \param rate The move rate in pixels
         * \return void
         */
-        void move(const Vector2 rate);
+        void move(const fe::Vector2 rate);
 
         /**
         * \fn void move(const unsigned int rx, const unsigned int ry)
@@ -289,28 +289,28 @@ class Map : public sf::Drawable
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
         /**
-        * \fn Vector3 getDimensions() const
+        * \fn fe::Vector3 getDimensions() const
         * \brief To get the map dimensions
         *
         * \return map dimensions in a Vector3
         */
-        Vector3 getDimensions() const;
+        fe::Vector3 getDimensions() const;
 
         /**
-        * \fn Vector2 getPosition() const
+        * \fn fe::Vector2 getPosition() const
         * \brief To get the map position
         *
         * \return map position in a Vector2
         */
-        Vector2 getPosition() const;
+        fe::Vector2 getPosition() const;
 
         /**
-        * \fn Vector2 getTileSize() const
+        * \fn fe::Vector2 getTileSize() const
         * \brief To get the map tiles dimensions
         *
         * \return tile dimensions in a Vector2
         */
-        Vector2 getTileSize() const;
+        fe::Vector2 getTileSize() const;
 
         /**
         * \fn unsigned int getTileBaseHeight() const
@@ -338,13 +338,13 @@ class Map : public sf::Drawable
         bool isTranslucent(const unsigned int tile) const;
 
         /**
-        * \fn unsigned int getTileAt(const Vector3 coord)
+        * \fn unsigned int getTileAt(const fe::Vector3 coord)
         * \brief To get the number of a map tile at specific coordinates
         *
         * \param coord The coordinates of the tile
         * \return The number of the tile in an unsigned int
         */
-        unsigned int getTileAt(const Vector3 coord);
+        unsigned int getTileAt(const fe::Vector3 coord);
 
         /**
         * \fn unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -366,13 +366,13 @@ class Map : public sf::Drawable
         unsigned int getMapOpacity() const;
 
         /**
-        * \fn unsigned int getTileOpacity(const Vector3 coord)
+        * \fn unsigned int getTileOpacity(const fe::Vector3 coord)
         * \brief To get the opacity of a map tile at specific coordinates
         *
         * \param coord The coordinates of the tile
         * \return The opacity of the tile in an unsigned int, value from 0 to 255
         */
-        unsigned int getTileOpacity(const Vector3 coord);
+        unsigned int getTileOpacity(const fe::Vector3 coord);
 
         /**
         * \fn unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -395,17 +395,17 @@ class Map : public sf::Drawable
         unsigned int getOpacityOfType(const unsigned int type) const;
 
         /**
-        * \fn Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const
+        * \fn fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const
         * \brief To get the map-relative tile coordinates pointed by 2D screen coordinates
         *
         * \param pixels The screen coordinates
         * \param layer The map layer number to base on to process calculations
         * \return The map-relative tile coordinates in a Vector2
         */
-        Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const;
+        fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const;
 
         /**
-        * \fn Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py,
+        * \fn fe::Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py,
                                            const unsigned int layer) const
         * \brief To get the map-relative tile coordinates pointed by 2D screen coordinates
         *
@@ -414,59 +414,59 @@ class Map : public sf::Drawable
         * \param layer The map layer number to base on to process calculations
         * \return The map-relative tile coordinates in a Vector2
         */
-        Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
+        fe::Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
 
         /**
-        * \fn ShadowsInterface &shadows()
+        * \fn fe::ShadowsInterface &shadows()
         * \brief To access the shadows system interface
         *
         * \return A reference to the shadows system interface
         */
-        ShadowsInterface &shadows();
+        fe::ShadowsInterface &shadows();
 
         /**
-        * \fn EntitiesContainer &entities()
+        * \fn fe::EntitiesContainer &entities()
         * \brief To access the entities container to add/delete/access objects
         *
         * \return A reference to the entities container
         */
-        EntitiesContainer &entities();
+        fe::EntitiesContainer &entities();
 
         /**
-        * \fn Animator &animator()
+        * \fn fe::Animator &animator()
         * \brief To access the map tiles animator to operate with the system
         *
         * \return A reference to the map animator
         */
-        Animator &animator();
+        fe::Animator &animator();
 
     private:
 
-        Camera &m_camera; /*!< The pointer to the map camera */
+        fe::Camera &m_camera; /*!< The pointer to the map camera */
 
-        MapData m_data; /*!< The map data container */
+        fe::MapData m_data; /*!< The map data container */
 
-        ConfigsLoader m_configsLoader; /*!< The map configuration loader */
+        fe::ConfigsLoader m_configsLoader; /*!< The map configuration loader */
 
-        ConfigsSaver m_configsSaver; /*!< The map configuration saver */
+        fe::ConfigsSaver m_configsSaver; /*!< The map configuration saver */
 
-        TileGroup m_tileGroup; /*!< The map base tilegroup (map tiles only) */
+        fe::TileGroup m_tileGroup; /*!< The map base tilegroup (map tiles only) */
 
-        TileGroup m_shadowsTilegroup; /*!< The map shadows tilegroup (shadows images only) */
+        fe::TileGroup m_shadowsTilegroup; /*!< The map shadows tilegroup (shadows images only) */
 
-        ShadowsSystemStates m_shadowsStates; /*!< The shadows system states container */
+        fe::ShadowsSystemStates m_shadowsStates; /*!< The shadows system states container */
 
-        DynamicShader m_dynamicShader; /*!< The map dynamic shader */
+        fe::DynamicShader m_dynamicShader; /*!< The map dynamic shader */
 
-        ShadowsInitializer m_shadowsInitializer; /*!< The shadows system initializer */
+        fe::ShadowsInitializer m_shadowsInitializer; /*!< The shadows system initializer */
 
-        ShadowsInterface m_shadowsInterface; /*!< The shadows system interface for user */
+        fe::ShadowsInterface m_shadowsInterface; /*!< The shadows system interface for user */
 
-        EntitiesContainer m_entityContainer; /*!< The entities container to add/create/access entities */
+        fe::EntitiesContainer m_entityContainer; /*!< The entities container to add/create/access entities */
 
-        EntitiesInterposing m_interposing; /*!< The class that interposes entities into the map */
+        fe::EntitiesInterposing m_interposing; /*!< The class that interposes entities into the map */
 
-        Animator m_animator; /*!< The map tiles animator */
+        fe::Animator m_animator; /*!< The map tiles animator */
 };
 }
 

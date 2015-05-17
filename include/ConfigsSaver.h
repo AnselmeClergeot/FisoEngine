@@ -48,13 +48,13 @@ class ConfigsSaver
     public:
 
         /**
-        * \fn ConfigsSaver(MapData &data)
+        * \fn ConfigsSaver(fe::MapData &data)
         * \brief The class constructor
         *
         * \param data Reference to the MapData to get needed data
         * \return void
         */
-        ConfigsSaver(MapData &data);
+        ConfigsSaver(fe::MapData &data);
 
         /**
         * \fn void addLoadFile(const std::string path)
@@ -82,7 +82,7 @@ class ConfigsSaver
 
     private:
 
-        MapData &m_data; /*!< Reference to the MapData to get needed data */
+        fe::MapData &m_data; /*!< Reference to the MapData to get needed data */
 
         std::vector<std::string> m_paths; /*!< The layer files path list */
 };

@@ -22,41 +22,39 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ioFuncs.h"
 #include "DrawingFuncs.h"
 
-using namespace fe;
-
-Entity::Entity(MapData &mapData,
-               Camera &camera) :  m_tilePosition(),
-                                  m_pixelPosition(),
-                                  m_dimensions(),
-                                  m_baseCoord(),
-                                  m_texture(),
-                                  m_sprite(),
-                                  m_drawState(false),
-                                  m_mapData(mapData),
-                                  m_camera(camera)
+fe::Entity::Entity(fe::MapData &mapData,
+                   fe::Camera &camera) :  m_tilePosition(),
+                                          m_pixelPosition(),
+                                          m_dimensions(),
+                                          m_baseCoord(),
+                                          m_texture(),
+                                          m_sprite(),
+                                          m_drawState(false),
+                                          m_mapData(mapData),
+                                          m_camera(camera)
 {
     setPosition(m_pixelPosition);
 }
 
-void Entity::setDimensions(const Vector2 dim) {
+void fe::Entity::setDimensions(const fe::Vector2 dim) {
     m_dimensions = dim;
 }
 
-void Entity::setDimensions(const unsigned int w, const unsigned int h) {
+void fe::Entity::setDimensions(const unsigned int w, const unsigned int h) {
     m_dimensions.x = w;
     m_dimensions.y = h;
 }
 
-void Entity::setBaseCoord(const Vector2 coord) {
+void fe::Entity::setBaseCoord(const fe::Vector2 coord) {
     m_baseCoord = coord;
 }
 
-void Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
+void fe::Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
     m_baseCoord.x = x;
     m_baseCoord.y = y;
 }
 
-void Entity::setPosition(const Vector2 pos) {
+void fe::Entity::setPosition(const fe::Vector2 pos) {
     m_pixelPosition = pos;
     m_sprite.setPosition(pos.x+m_camera.getViewDimensions().x/2-m_camera.getViewCenter().x,
                          pos.y+m_camera.getViewDimensions().y/2-m_camera.getViewCenter().y);
@@ -64,64 +62,64 @@ void Entity::setPosition(const Vector2 pos) {
     calculateTilePosition();
 }
 
-void Entity::setPosition(const unsigned int x, const unsigned int y) {
-    setPosition(Vector2(x, y));
+void fe::Entity::setPosition(const unsigned int x, const unsigned int y) {
+    setPosition(fe::Vector2(x, y));
 }
 
-void Entity::move(const Vector2 rate) {
+void fe::Entity::move(const fe::Vector2 rate) {
     setPosition(m_pixelPosition);
     m_pixelPosition += rate;
 }
 
-void Entity::move(const unsigned int rx, const unsigned int ry) {
-    move(Vector2(rx, ry));
+void fe::Entity::move(const unsigned int rx, const unsigned int ry) {
+    move(fe::Vector2(rx, ry));
 }
 
-void Entity::setImagePath(const std::string path) {
+void fe::Entity::setImagePath(const std::string path) {
     if(fileExists(path))
         m_texture.loadFromFile(path);
 
     m_sprite.setTexture(m_texture);
 }
 
-void Entity::draw(sf::RenderTarget& target) const {
+void fe::Entity::draw(sf::RenderTarget& target) const {
     if(isVisible(m_pixelPosition, m_dimensions, m_camera))
         target.draw(m_sprite);
 }
 
-void Entity::setDrawState(const bool state) {
+void fe::Entity::setDrawState(const bool state) {
     m_drawState = state;
 }
 
-void Entity::calculateTilePosition() {
+void fe::Entity::calculateTilePosition() {
     m_tilePosition.x = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, m_mapData).x;
     m_tilePosition.y = getTileCoordAtPixels(m_pixelPosition+m_baseCoord, m_tilePosition.z, m_mapData).y;
 }
 
-void Entity::setLayer(const unsigned int layer) {
+void fe::Entity::setLayer(const unsigned int layer) {
     m_tilePosition.z = layer;
 }
 
-Vector3 Entity::getTilePosition() const {
+fe::Vector3 fe::Entity::getTilePosition() const {
     return m_tilePosition;
 }
 
-Vector2 Entity::getBaseCoord() const {
+fe::Vector2 fe::Entity::getBaseCoord() const {
     return m_baseCoord;
 }
 
-Vector2 Entity::getDimensions() const {
+fe::Vector2 fe::Entity::getDimensions() const {
     return m_dimensions;
 }
 
-Vector2 Entity::getPosition() const {
+fe::Vector2 fe::Entity::getPosition() const {
     return m_pixelPosition;
 }
 
-sf::Sprite &Entity::getSprite() {
+sf::Sprite &fe::Entity::getSprite() {
     return m_sprite;
 }
 
-bool Entity::getDrawingState() const {
+bool fe::Entity::getDrawingState() const {
     return m_drawState;
 }

@@ -19,25 +19,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsSystemStates.h"
 
-using namespace fe;
 
-ShadowsSystemStates::ShadowsSystemStates() : m_on(false),
-                                             m_initialized(false)
+
+fe::ShadowsSystemStates::ShadowsSystemStates() : m_on(false),
+                                                 m_initialized(false)
 { }
 
-void ShadowsSystemStates::setOn(bool on) {
+void fe::ShadowsSystemStates::setOn(bool on) {
     if(m_initialized)
         m_on = on;
 }
 
-void ShadowsSystemStates::setInitialized() {
+void fe::ShadowsSystemStates::setInitialized() {
     m_initialized = true;
 }
 
-bool ShadowsSystemStates::isOn() const {
+bool fe::ShadowsSystemStates::isOn() const {
     return m_on;
 }
 
-bool ShadowsSystemStates::isInitialized() const {
+bool fe::ShadowsSystemStates::isInitialized() const {
     return m_initialized;
 }

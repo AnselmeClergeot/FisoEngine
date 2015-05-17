@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "DrawingFuncs.h"
 
-using namespace fe;
+
 
 bool fe::isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera) {
     return (position.x+elementSize.x + camera.getViewDimensions().x/2-camera.getViewCenter().x >0 &&

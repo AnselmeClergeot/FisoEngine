@@ -48,18 +48,18 @@ class TileGroupDrawer
     public:
 
         /**
-        * \fn TileGroupDrawer(MapData &mapData, TileGroupData &data, Camera &camera)
+        * \fn TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param data Reference to the TileGroupData to get needed data to draw
         * \param camera Reference to the map camera
         */
-        TileGroupDrawer(MapData &mapData, TileGroupData &data, Camera &camera);
+        TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera);
 
         /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const EntitiesInterposing *interposing = 0) const
+                  const fe::EntitiesInterposing *interposing = 0) const
         * \brief To draw a specific layer of the TileGroup
         *
         * \param target The target on which to draw the tiles [SPECIFIC SFML]
@@ -69,15 +69,15 @@ class TileGroupDrawer
         * \return void
         */
         void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const EntitiesInterposing *interposing = 0) const;
+                  const fe::EntitiesInterposing *interposing = 0) const;
 
     private:
 
-        MapData &m_mapData; /*!< Reference to the MapData to get useful map data */
+        fe::MapData &m_mapData; /*!< Reference to the MapData to get useful map data */
 
-        TileGroupData &m_data; /*!< Reference to the TileGroupData to get needed data to draw */
+        fe::TileGroupData &m_data; /*!< Reference to the TileGroupData to get needed data to draw */
 
-        Camera &m_camera; /*!< Reference to the map camera */
+        fe::Camera &m_camera; /*!< Reference to the map camera */
 };
 }
 

@@ -53,40 +53,40 @@ class MapData
         MapData();
 
         /**
-        * \fn void setSize(const Vector2 size)
+        * \fn void setSize(const fe::Vector2 size)
         * \brief To set the map dimensions
         *
         * \param size The width and the layer number of the map
         * \return void
         */
-        void setSize(const Vector2 size);
+        void setSize(const fe::Vector2 size);
 
         /**
-        * \fn void setPosition(const Vector2 position)
+        * \fn void setPosition(const fe::Vector2 position)
         * \brief To set the map position
         *
         * \param position The map position in pixels
         * \return void
         */
-        void setPosition(const Vector2 position);
+        void setPosition(const fe::Vector2 position);
 
         /**
-        * \fn void move(const Vector2 rate)
+        * \fn void move(const fe::Vector2 rate)
         * \brief To move the map position relatively to its position
         *
         * \param rate The move rate in pixels
         * \return void
         */
-        void move(const Vector2 rate);
+        void move(const fe::Vector2 rate);
 
         /**
-        * \fn void setTileSize(const Vector2 size)
+        * \fn void setTileSize(const fe::Vector2 size)
         * \brief To set the map tiles dimensions
         *
         * \param size The tile dimensions in pixels
         * \return void
         */
-        void setTileSize(const Vector2 size);
+        void setTileSize(const fe::Vector2 size);
 
         /**
         * \fn void setTileBaseHeight(const unsigned int h)
@@ -125,44 +125,44 @@ class MapData
         void removeTranslucentTile(const unsigned int tile);
 
         /**
-        * \fn Matrix3d<unsigned int> &getTempConf()
+        * \fn fe::Matrix3d<unsigned int> &getTempConf()
         * \brief To get a reference to the temporary configuration of the map
         *
         * \return The temporary configuration
         */
-        Matrix3d<unsigned int> &getTempConf();
+        fe::Matrix3d<unsigned int> &getTempConf();
 
         /**
-        * \fn Matrix3d<unsigned int> &getPermConf()
+        * \fn fe::Matrix3d<unsigned int> &getPermConf()
         * \brief To get a reference to the permanent configuration of the map
         *
         * \return The permanent configuration
         */
-        Matrix3d<unsigned int> &getPermConf();
+        fe::Matrix3d<unsigned int> &getPermConf();
 
         /**
-        * \fn Vector2 getSize() const
+        * \fn fe::Vector2 getSize() const
         * \brief To get the map size
         *
         * \return The width and the layer number of the map
         */
-        Vector2 getSize() const;
+        fe::Vector2 getSize() const;
 
         /**
-        * \fn Vector2 getPosition() const
+        * \fn fe::Vector2 getPosition() const
         * \brief To get the map position
         *
         * \return The map position in pixels
         */
-        Vector2 getPosition() const;
+        fe::Vector2 getPosition() const;
 
         /**
-        * \fn Vector2 getTileSize() const
+        * \fn fe::Vector2 getTileSize() const
         * \brief To get the map tiles dimensions
         *
         * \return The map tiles dimensions in pixels
         */
-        Vector2 getTileSize() const;
+        fe::Vector2 getTileSize() const;
 
         /**
         * \fn unsigned int getTileBaseHeight() const
@@ -190,17 +190,17 @@ class MapData
 
     private:
 
-        Matrix3d<unsigned int> m_tempConf; /*!< The temporary Map configuration,
+        fe::Matrix3d<unsigned int> m_tempConf; /*!< The temporary Map configuration,
                                                 used for map appearance purpose (shadows, etc.)*/
 
-        Matrix3d<unsigned int> m_permConf; /*!< The permanent Map configuration,
+        fe::Matrix3d<unsigned int> m_permConf; /*!< The permanent Map configuration,
                                                 the one used for saving and loading the map */
 
-        Vector2 m_size; /*!< The map dimensions */
+        fe::Vector2 m_size; /*!< The map dimensions */
 
-        Vector2 m_position; /*!< The map position */
+        fe::Vector2 m_position; /*!< The map position */
 
-        Vector2 m_tileSize; /*!< The map tiles dimensions */
+        fe::Vector2 m_tileSize; /*!< The map tiles dimensions */
 
         unsigned int m_tileBaseHeight; /*!< The map tiles base height */
 

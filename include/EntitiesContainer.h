@@ -47,13 +47,13 @@ class EntitiesContainer
     public:
 
         /**
-        * \fn EntitiesContainer(MapData &mapData, Camera &camera)
+        * \fn EntitiesContainer(fe::MapData &mapData, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
         * \param camera Reference to the map camera
         */
-        EntitiesContainer(MapData &mapData, Camera &camera);
+        EntitiesContainer(fe::MapData &mapData, fe::Camera &camera);
 
         /**
         * \fn void createEntity()
@@ -81,13 +81,13 @@ class EntitiesContainer
         void removeAll();
 
         /**
-        * \fn Entity &entityAt(const unsigned int iter)
+        * \fn fe::Entity &entityAt(const unsigned int iter)
         * \brief To get a reference to an entity from its index
         *
         * \param iter The entity index
         * \return The wanted entity (Entity)
         */
-        Entity &entityAt(const unsigned int iter);
+        fe::Entity &entityAt(const unsigned int iter);
 
         /**
         * \fn unsigned int getEntitiesNumber() const
@@ -99,11 +99,11 @@ class EntitiesContainer
 
     private:
 
-        std::vector<std::unique_ptr<Entity>> m_entities; /*!< The entities vector */
+        std::vector<std::unique_ptr<fe::Entity>> m_entities; /*!< The entities vector */
 
-        MapData &m_mapData; /*!< The reference to the MapData to get useful data */
+        fe::MapData &m_mapData; /*!< The reference to the MapData to get useful data */
 
-        Camera &m_camera; /*!< The reference to the map camera */
+        fe::Camera &m_camera; /*!< The reference to the map camera */
 };
 }
 

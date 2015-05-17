@@ -53,8 +53,8 @@ class Animator
 
     public:
         /**
-        * \fn Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
-                 ShadowsSystemStates &shadowsStates, Camera &camera)
+        * \fn Animator(fe::MapData &mapData, fe::TileGroup &mapTilegroup, fe::DynamicShader &shader,
+                 fe::ShadowsSystemStates &shadowsStates, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
@@ -63,8 +63,8 @@ class Animator
         * \param shadowsStates Reference to the ShadowsSystemStates
         * \param camera Reference to the map camera
         */
-        Animator(MapData &mapData, TileGroup &mapTilegroup, DynamicShader &shader,
-                 ShadowsSystemStates &shadowsStates, Camera &camera);
+        Animator(fe::MapData &mapData, fe::TileGroup &mapTilegroup, fe::DynamicShader &shader,
+                 fe::ShadowsSystemStates &shadowsStates, fe::Camera &camera);
 
         /**
         * \fn void resizeTileAnimDataList()
@@ -120,18 +120,18 @@ class Animator
         void setGlobalAnimKind(const unsigned int tile);
 
         /**
-        * \fn void setDirectionOf(const Vector3 coord, const AnimDirection direction)
+        * \fn void setDirectionOf(const fe::Vector3 coord, const fe::AnimDirection direction)
         * \brief To set the direction of the animation of a tile at specific coordinates
         *
         * \param coord The tile coordinates
         * \param direction The animation direction
         * \return void
         */
-        void setDirectionOf(const Vector3 coord, const AnimDirection direction);
+        void setDirectionOf(const fe::Vector3 coord, const fe::AnimDirection direction);
 
         /**
         * \fn void setDirectionOf(const unsigned int x, const unsigned int y, const unsigned int z,
-                                  const AnimDirection direction)
+                                  const fe::AnimDirection direction)
         * \brief To set the direction of the animation of a tile at specific coordinates
         *
         * \param x The tile x coordinate
@@ -141,20 +141,20 @@ class Animator
         * \return void
         */
         void setDirectionOf(const unsigned int x, const unsigned int y, const unsigned int z,
-                            const AnimDirection direction);
+                            const fe::AnimDirection direction);
 
         /**
-        * \fn void setKindOf(const Vector3 coord, const AnimKind kind)
+        * \fn void setKindOf(const fe::Vector3 coord, const fe::AnimKind kind)
         * \brief To set the animation kind of the tile at specific coordinates
         *
         * \param coord The tile coordinates
         * \param kind The animation kind
         * \return void
         */
-        void setKindOf(const Vector3 coord, const AnimKind kind);
+        void setKindOf(const fe::Vector3 coord, const fe::AnimKind kind);
 
         /**
-        * \fn void setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, const AnimKind kind)
+        * \fn void setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, const fe::AnimKind kind)
         * \brief To set the animation kind of the tile at specific coordinates
         *
         * \param x The tile x coordinate
@@ -163,16 +163,16 @@ class Animator
         * \param kind The animation kind
         * \return void
         */
-        void setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, const AnimKind kind);
+        void setKindOf(const unsigned int x, const unsigned int y, const unsigned int z, const fe::AnimKind kind);
 
         /**
-        * \fn void launchAnimation(const Vector3 coord)
+        * \fn void launchAnimation(const fe::Vector3 coord)
         * \brief To launch the animation of a tile at specific coordinates
         *
         * \param coord The tile coordinates
         * \return void
         */
-        void launchAnimation(const Vector3 coord);
+        void launchAnimation(const fe::Vector3 coord);
 
         /**
         * \fn void launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -186,13 +186,13 @@ class Animator
         void launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn void stopAnimation(const Vector3 coord)
+        * \fn void stopAnimation(const fe::Vector3 coord)
         * \brief To stop the animation of a tile at specific coordinates
         *
         * \param coord The tile coordinates
         * \return void
         */
-        void stopAnimation(const Vector3 coord);
+        void stopAnimation(const fe::Vector3 coord);
 
         /**
         * \fn void stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -214,13 +214,13 @@ class Animator
         unsigned int getSpeed() const;
 
         /**
-        * \fn unsigned int getFrameAt(const Vector3 coord)
+        * \fn unsigned int getFrameAt(const fe::Vector3 coord)
         * \brief To get the animation frame of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation frame of the tile
         */
-        unsigned int getFrameAt(const Vector3 coord);
+        unsigned int getFrameAt(const fe::Vector3 coord);
 
         /**
         * \fn unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -234,13 +234,13 @@ class Animator
         unsigned int getFrameAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn bool getStatusAt(const Vector3 coord)
+        * \fn bool getStatusAt(const fe::Vector3 coord)
         * \brief To get the animation status of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation status of the tile
         */
-        bool getStatusAt(const Vector3 coord);
+        bool getStatusAt(const fe::Vector3 coord);
 
         /**
         * \fn bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z)
@@ -254,16 +254,16 @@ class Animator
         bool getStatusAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn AnimKind getKindAt(const Vector3 coord)
+        * \fn fe::AnimKind getKindAt(const fe::Vector3 coord)
         * \brief To get the animation kind of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation kind of the tile
         */
-        AnimKind getKindAt(const Vector3 coord);
+        fe::AnimKind getKindAt(const fe::Vector3 coord);
 
         /**
-        * \fn AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z)
+        * \fn fe::AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation kind of a specific tile
         *
         * \param x The tile x coordinate
@@ -271,19 +271,19 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation kind of the tile
         */
-        AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z);
+        fe::AnimKind getKindAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn AnimDirection getDirectionAt(const Vector3 coord)
+        * \fn fe::AnimDirection getDirectionAt(const fe::Vector3 coord)
         * \brief To get the animation direction of a specific tile
         *
         * \param coord The tile 3D coordinates
         * \return The animation direction of the tile
         */
-        AnimDirection getDirectionAt(const Vector3 coord);
+        fe::AnimDirection getDirectionAt(const fe::Vector3 coord);
 
         /**
-        * \fn AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z)
+        * \fn fe::AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z)
         * \brief To get the animation direction of a specific tile
         *
         * \param x The tile x coordinate
@@ -291,7 +291,7 @@ class Animator
         * \param z The tile z coordinate
         * \return The animation direction of the tile
         */
-        AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z);
+        fe::AnimDirection getDirectionAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
         * \fn unsigned int getAnimLengthOfTile(const unsigned int tile) const
@@ -303,13 +303,13 @@ class Animator
         unsigned int getAnimLengthOfTile(const unsigned int tile) const;
 
         /**
-        * \fn AnimKind getAnimKindOfTile(const unsigned int tile) const
+        * \fn fe::AnimKind getAnimKindOfTile(const unsigned int tile) const
         * \brief To get the kind of the animation of a specific tile type
         *
         * \param tile The tile type from its number
         * \return The animation kind
         */
-        AnimKind getAnimKindOfTile(const unsigned int tile) const;
+        fe::AnimKind getAnimKindOfTile(const unsigned int tile) const;
 
     private:
 
@@ -323,13 +323,13 @@ class Animator
 
 
         /**
-        * \fn void updateTileAt(const Vector3 coord)
+        * \fn void updateTileAt(const fe::Vector3 coord)
         * \brief To update the TileAnimData concerned by map 3D coordinates (if tile number has changed)
         *
         * \param coord The tile coordinate to update
         * \return void
         */
-        void updateTileAt(const Vector3 coord);
+        void updateTileAt(const fe::Vector3 coord);
 
         /**
         * \fn bool tileIsAnimated(const unsigned int tile) const
@@ -340,23 +340,23 @@ class Animator
         */
         bool tileIsAnimated(const unsigned int tile) const;
 
-        Matrix3d<TileAnimData> m_tileAnimationsData; /*!< The TileAnimData Matrix3d */
+        fe::Matrix3d<fe::TileAnimData> m_tileAnimationsData; /*!< The TileAnimData Matrix3d */
 
-        MapData &m_mapData; /*!< The reference to the MapData to get needed data */
+        fe::MapData &m_mapData; /*!< The reference to the MapData to get needed data */
 
-        Timer m_timer; /*!< The animations timer */
+        fe::Timer m_timer; /*!< The animations timer */
 
         unsigned int m_speed; /*!< The animations speed */
 
-        std::vector<Vector3> m_animations; /*!< The container of the global animations data*/
+        std::vector<fe::Vector3> m_animations; /*!< The container of the global animations data*/
 
-        TileGroup &m_mapTilegroup; /*!< The reference to the map tilegroup to animate */
+        fe::TileGroup &m_mapTilegroup; /*!< The reference to the map tilegroup to animate */
 
-        DynamicShader &m_shader; /*!< The reference to the dynamic shader to call shadows animation */
+        fe::DynamicShader &m_shader; /*!< The reference to the dynamic shader to call shadows animation */
 
-        ShadowsSystemStates &m_shadowsStates; /*!< The reference to the ShadowsSystemStates */
+        fe::ShadowsSystemStates &m_shadowsStates; /*!< The reference to the ShadowsSystemStates */
 
-        Camera &m_camera; /*!< The reference to the map camera */
+        fe::Camera &m_camera; /*!< The reference to the map camera */
 };
 }
 

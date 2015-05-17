@@ -20,21 +20,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ConfigsSaver.h"
 #include "ioFuncs.h"
 
-using namespace fe;
-
-ConfigsSaver::ConfigsSaver(MapData &data) : m_data(data), m_paths()
+fe::ConfigsSaver::ConfigsSaver(fe::MapData &data) : m_data(data), m_paths()
 { }
 
-void ConfigsSaver::addLoadFile(const std::string path) {
+void fe::ConfigsSaver::addLoadFile(const std::string path) {
     if(fileExists(path))
         m_paths.push_back(path);
 }
 
-void ConfigsSaver::resetLayerList() {
+void fe::ConfigsSaver::resetLayerList() {
     m_paths.clear();
 }
 
-void ConfigsSaver::save() {
+void fe::ConfigsSaver::save() {
     std::ofstream file;
 
     for(std::size_t z(0); z<m_paths.size(); z++)

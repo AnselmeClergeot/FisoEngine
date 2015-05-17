@@ -20,33 +20,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ConfigsLoader.h"
 #include "ioFuncs.h"
 
-using namespace fe;
-
-ConfigsLoader::ConfigsLoader(MapData &data) : m_data(data), m_paths()
+fe::ConfigsLoader::ConfigsLoader(fe::MapData &data) : m_data(data), m_paths()
 { }
 
-void ConfigsLoader::addLoadFile(const std::string path) {
+void fe::ConfigsLoader::addLoadFile(const std::string path) {
     if(fileExists(path))
         m_paths.push_back(path);
 }
 
-void ConfigsLoader::resetLayerList() {
+void fe::ConfigsLoader::resetLayerList() {
         m_paths.clear();
 }
 
-void ConfigsLoader::load() {
+void fe::ConfigsLoader::load() {
     loadMapSize();
     resizeMatrices();
     loadMatrices();
     equalizeMatrices();
 }
 
-void ConfigsLoader::resizeMatrices() {
+void fe::ConfigsLoader::resizeMatrices() {
     m_data.getTempConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y, 0);
     m_data.getPermConf().resize(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y, 0);
 }
 
-void ConfigsLoader::loadMapSize() {
+void fe::ConfigsLoader::loadMapSize() {
     std::ifstream file;
     file.open(m_paths[0].c_str());
 
@@ -58,10 +56,10 @@ void ConfigsLoader::loadMapSize() {
 
     file.close();
 
-    m_data.setSize(Vector2(width, m_paths.size()));
+    m_data.setSize(fe::Vector2(width, m_paths.size()));
 }
 
-void ConfigsLoader::loadMatrices() {
+void fe::ConfigsLoader::loadMatrices() {
     std::ifstream file;
     std::string line("");
 
@@ -89,6 +87,6 @@ void ConfigsLoader::loadMatrices() {
     }
 }
 
-void ConfigsLoader::equalizeMatrices() {
+void fe::ConfigsLoader::equalizeMatrices() {
     m_data.getTempConf() = m_data.getPermConf();
 }

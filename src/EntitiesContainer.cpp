@@ -19,30 +19,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "EntitiesContainer.h"
 
-using namespace fe;
-
-EntitiesContainer::EntitiesContainer(MapData &mapData,
-                                     Camera &camera) : m_entities(),
-                                                       m_mapData(mapData),
-                                                       m_camera(camera)
+fe::EntitiesContainer::EntitiesContainer(fe::MapData &mapData,
+                                         fe::Camera &camera) : m_entities(),
+                                                               m_mapData(mapData),
+                                                               m_camera(camera)
 { }
 
-void EntitiesContainer::createEntity() {
-    m_entities.push_back(std::unique_ptr<Entity>(new Entity(m_mapData, m_camera)));
+void fe::EntitiesContainer::createEntity() {
+    m_entities.push_back(std::unique_ptr<fe::Entity>(new fe::Entity(m_mapData, m_camera)));
 }
 
-void EntitiesContainer::removeEntity(const unsigned int iter) {
+void fe::EntitiesContainer::removeEntity(const unsigned int iter) {
     m_entities.erase(m_entities.begin()+iter);
 }
-void EntitiesContainer::removeAll() {
+void fe::EntitiesContainer::removeAll() {
     m_entities.clear();
 }
 
-Entity &EntitiesContainer::entityAt(const unsigned int iter) {
+fe::Entity &fe::EntitiesContainer::entityAt(const unsigned int iter) {
     assert(iter<m_entities.size());
     return *m_entities[iter];
 }
 
-unsigned int EntitiesContainer::getEntitiesNumber() const {
+unsigned int fe::EntitiesContainer::getEntitiesNumber() const {
     return m_entities.size();
 }

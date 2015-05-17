@@ -48,13 +48,13 @@ class TileGroup
     public:
 
         /**
-        * \fn TileGroup(MapData &mapData, Camera &camera)
+        * \fn TileGroup(fe::MapData &mapData, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param camera Reference to the map camera
         */
-        TileGroup(MapData &mapData, Camera &camera);
+        TileGroup(fe::MapData &mapData, fe::Camera &camera);
 
         /**
         * \fn void setTilesetPath(const std::string path)
@@ -66,23 +66,23 @@ class TileGroup
         void setTilesetPath(const std::string path);
 
         /**
-        * \fn void configureWith(Matrix3d<unsigned int> &config)
+        * \fn void configureWith(fe::Matrix3d<unsigned int> &config)
         * \brief To set the TileGroup configuration Matrix3d
         *
         * \param config The reference to the TileGroup configuration Matrix3d
         * \return void
         */
-        void configureWith(Matrix3d<unsigned int> &config);
+        void configureWith(fe::Matrix3d<unsigned int> &config);
 
         /**
-        * \fn void setTileAt(const Vector3 coord, const unsigned int index)
+        * \fn void setTileAt(const fe::Vector3 coord, const unsigned int index)
         * \brief To set the tile at 3D coordinates with a tileset coordinate
         *
         * \param coord The tile coordinates
         * \param index The tileset Y index
         * \return void
         */
-        void setTileAt(const Vector3 coord, const unsigned int index);
+        void setTileAt(const fe::Vector3 coord, const unsigned int index);
 
         /**
         * \fn void initialize()
@@ -101,14 +101,14 @@ class TileGroup
         void updatePosition();
 
         /**
-        * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)
+        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile from 1D index
         *
         * \param coord The tile 3D coordinates
         * \param opacity The opacity value, from 0 to 255
         * \return void
         */
-        void setTileOpacity(const Vector3 coord, const unsigned int opacity);
+        void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
 
         /**
         * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
@@ -139,7 +139,7 @@ class TileGroup
 
         /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const EntitiesInterposing *interposing = 0) const
+                  const fe::EntitiesInterposing *interposing = 0) const
         * \brief To draw a specific layer of the TileGroup
         *
         * \param target The target on which to draw the tiles [SPECIFIC SFML]
@@ -149,16 +149,16 @@ class TileGroup
         * \return void
         */
         void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const EntitiesInterposing *interposing = 0) const;
+                  const fe::EntitiesInterposing *interposing = 0) const;
 
         /**
-        * \fn unsigned int getTileOpacity(const Vector3 coord) const
+        * \fn unsigned int getTileOpacity(const fe::Vector3 coord) const
         * \brief To get the opacity of a specific tile at 3D coordinates
         *
         * \param coord The tile 3D coordinates
         * \return The opacity value of the tile, from 0 to 255
         */
-        unsigned int getTileOpacity(const Vector3 coord);
+        unsigned int getTileOpacity(const fe::Vector3 coord);
 
         /**
         * \fn unsigned int getGroupOpacity() const
@@ -169,14 +169,14 @@ class TileGroup
         unsigned int getGroupOpacity() const;
 
         /**
-        * \fn void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord)
+        * \fn void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord)
         * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
         * \param coord The 3D coordinate of the tile
         * \param tilesetCoord The tileset coordinates
         * \return void
         */
-        void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord);
+        void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord);
 
         /**
         * \fn unsigned int getOpacityOfType(const unsigned int type) const
@@ -189,11 +189,11 @@ class TileGroup
 
     private:
 
-        TileGroupData m_data; /*!< The TileGroupData */
+        fe::TileGroupData m_data; /*!< The TileGroupData */
 
-        TileGroupLoader m_loader; /*!< The TileGroupLoader */
+        fe::TileGroupLoader m_loader; /*!< The TileGroupLoader */
 
-        TileGroupDrawer m_drawer; /*!< The TileGroupDrawer */
+        fe::TileGroupDrawer m_drawer; /*!< The TileGroupDrawer */
 };
 }
 

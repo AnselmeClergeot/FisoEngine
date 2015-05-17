@@ -61,22 +61,22 @@ class TileAnimData
         TileAnimData();
 
         /**
-        * \fn void setKind(const AnimKind kind)
+        * \fn void setKind(const fe::AnimKind kind)
         * \brief To set the kind of the animation
         *
         * \param kind The animation kind
         * \return void
         */
-        void setKind(const AnimKind kind);
+        void setKind(const fe::AnimKind kind);
 
         /**
-        * \fn void setDirection(const AnimDirection direction)
+        * \fn void setDirection(const fe::AnimDirection direction)
         * \brief To set the animation direction
         *
         * \param direction The animation direction
         * \return void
         */
-        void setDirection(const AnimDirection direction);
+        void setDirection(const fe::AnimDirection direction);
 
         /**
         * \fn void setLength(const unsigned int length)
@@ -113,20 +113,20 @@ class TileAnimData
         void resetX();
 
         /**
-        * \fn AnimKind getKind() const
+        * \fn fe::AnimKind getKind() const
         * \brief To get the kind of the animation
         *
         * \return The animation kind
         */
-        AnimKind getKind() const;
+        fe::AnimKind getKind() const;
 
         /**
-        * \fn AnimDirection getDirection() const
+        * \fn fe::AnimDirection getDirection() const
         * \brief To get the direction of the animation
         *
         * \return The animation direction
         */
-        AnimDirection getDirection() const;
+        fe::AnimDirection getDirection() const;
 
         /**
         * \fn unsigned int getLength() const
@@ -154,9 +154,9 @@ class TileAnimData
 
     private:
 
-        AnimKind m_kind; /*!< The kind of the animation */
+        fe::AnimKind m_kind; /*!< The kind of the animation */
 
-        AnimDirection m_direction; /*!< The direction of the animation */
+        fe::AnimDirection m_direction; /*!< The direction of the animation */
 
         unsigned int m_x; /*!< The present frame of the animation */
 

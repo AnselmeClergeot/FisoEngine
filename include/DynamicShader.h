@@ -46,23 +46,23 @@ class DynamicShader
     public:
 
         /**
-        * \fn DynamicShader(MapData &mapData, TileGroup &mapTg, TileGroup &shadowsTg)
+        * \fn DynamicShader(fe::MapData &mapData, fe::TileGroup &mapTg, fe::TileGroup &shadowsTg)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
         * \param mapTg Reference to the map TileGroup to get tiles informations
         * \param shadowsTg Reference to the shadows TileGroup to modify
         */
-        DynamicShader(MapData &mapData, TileGroup &mapTg, TileGroup &shadowsTg);
+        DynamicShader(fe::MapData &mapData, fe::TileGroup &mapTg, fe::TileGroup &shadowsTg);
 
         /**
-        * \fn void updateShading(const Vector3 coord)
+        * \fn void updateShading(const fe::Vector3 coord)
         * \brief To update the shading of a specific map tile
         *
         * \param coord The tile coordinates
         * \return void
         */
-        void updateShading(const Vector3 coord);
+        void updateShading(const fe::Vector3 coord);
 
         /**
         * \fn void updateShadingOfAll()
@@ -90,49 +90,49 @@ class DynamicShader
         void updateOpacityOfType(const unsigned int type);
 
         /**
-        * \fn void updateOpacityOfSpecific(const Vector3 coord)
+        * \fn void updateOpacityOfSpecific(const fe::Vector3 coord)
         * \brief To update the shadows of a specific type, to update shadow opacity
         *
         * \param coord The tile coordinates
         * \return void
         */
-        void updateOpacityOfSpecific(const Vector3 coord);
+        void updateOpacityOfSpecific(const fe::Vector3 coord);
 
         /**
-        * \fn void updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX)
+        * \fn void updateTileFromAnim(const fe::Vector3 tileCoord, const unsigned int animX)
         * \brief To update the shadow of a specific tile to link with the animation state of this tile
         *
         * \param tileCoord The tile coordinates
         * \param animX The animation frame of the tile
         * \return void
         */
-        void updateTileFromAnim(const Vector3 tileCoord, const unsigned int animX);
+        void updateTileFromAnim(const fe::Vector3 tileCoord, const unsigned int animX);
 
     private:
 
         /**
-        * \fn unsigned int getShadowZ(const Vector3 tileCoord)
+        * \fn unsigned int getShadowZ(const fe::Vector3 tileCoord)
         * \brief To get the shadow z coordinate from a specific tile coordinates
         *
         * \param tileCoord The tile coordinates
         * \return The z coordinate of the engendered shadow in an unsigned int
         */
-        unsigned int getShadowZ(const Vector3 tileCoord);
+        unsigned int getShadowZ(const fe::Vector3 tileCoord);
 
         /**
-        * \fn bool haveShadowVisible(const Vector3 tileCoord)
+        * \fn bool haveShadowVisible(const fe::Vector3 tileCoord)
         * \brief To know if a tile have a shadow taking in account the depth
         *
         * \param tileCoord The tile coordinates
         * \return True if the tile have a shadow, false otherwise
         */
-        bool haveShadowVisible(const Vector3 tileCoord);
+        bool haveShadowVisible(const fe::Vector3 tileCoord);
 
-        MapData &m_mapData; /*!< The reference to the MapData to get needed data*/
+        fe::MapData &m_mapData; /*!< The reference to the MapData to get needed data*/
 
-        TileGroup &m_mapTg; /*!< The reference to the map TileGroup to access tile images data*/
+        fe::TileGroup &m_mapTg; /*!< The reference to the map TileGroup to access tile images data*/
 
-        TileGroup &m_shadowsTg; /*!< The reference to the shadows TileGroup to modify*/
+        fe::TileGroup &m_shadowsTg; /*!< The reference to the shadows TileGroup to modify*/
 };
 }
 

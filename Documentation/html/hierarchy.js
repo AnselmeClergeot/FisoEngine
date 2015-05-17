@@ -13,7 +13,7 @@ var hierarchy =
     [ "fe::Entity", "classfe_1_1_entity.html", null ],
     [ "fe::MapData", "classfe_1_1_map_data.html", null ],
     [ "fe::Matrix3d< T >", "classfe_1_1_matrix3d.html", null ],
-    [ "fe::Matrix3d< fe::TileAnimData >", "classfe_1_1_matrix3d.html", null ],
+    [ "fe::Matrix3d< fe::fe::TileAnimData >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< sf::Sprite >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< unsigned int >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::ShadowsInitializer", "classfe_1_1_shadows_initializer.html", null ],

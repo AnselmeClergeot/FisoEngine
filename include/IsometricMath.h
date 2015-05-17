@@ -48,10 +48,10 @@ namespace fe {
 Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data);
 
 /**
-* \fn Vector2 getTileCoordAtPixels(const Vector2 pixels,
+* \fn fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels,
                              const unsigned int layer,
-                             const MapData &map_data,
-                             const Camera *camera = 0)
+                             const fe::MapData &map_data,
+                             const fe::Camera *camera = 0)
 * \brief To get the map-coordinates pointed by 2D screen coordinates
 *
 * \param pixels The screen coordinates
@@ -60,10 +60,10 @@ Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data);
 * \param camera The pointer to the map Camera
 * \return The map tile coordinates
 */
-Vector2 getTileCoordAtPixels(const Vector2 pixels,
+fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels,
                              const unsigned int layer,
-                             const MapData &map_data,
-                             const Camera *camera = 0);
+                             const fe::MapData &map_data,
+                             const fe::Camera *camera = 0);
 
 }
 

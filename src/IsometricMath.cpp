@@ -19,23 +19,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "IsometricMath.h"
 
-using namespace fe;
 
-Vector2 fe::toIsometricPosition(const Vector3 coord, const MapData &map_data) {
-    return Vector2(map_data.getPosition().x+(coord.x-coord.y-1)*map_data.getTileBaseHeight(),
-                   map_data.getPosition().y+(coord.x+coord.y)*map_data.getTileBaseHeight()/2
-                   -coord.z*(map_data.getTileSize().y-map_data.getTileBaseHeight()));
+
+fe::Vector2 fe::toIsometricPosition(const fe::Vector3 coord, const fe::MapData &map_data) {
+    return fe::Vector2(map_data.getPosition().x+(coord.x-coord.y-1)*map_data.getTileBaseHeight(),
+                       map_data.getPosition().y+(coord.x+coord.y)*map_data.getTileBaseHeight()/2
+                       -coord.z*(map_data.getTileSize().y-map_data.getTileBaseHeight()));
 }
 
-Vector2 fe::getTileCoordAtPixels(const Vector2 pixels,
-                             const unsigned int layer,
-                             const MapData &map_data,
-                             const Camera *camera) {
+fe::Vector2 fe::getTileCoordAtPixels(const fe::Vector2 pixels,
+                                     const unsigned int layer,
+                                     const fe::MapData &map_data,
+                                     const fe::Camera *camera) {
     if(camera==0)
-    return Vector2((static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() +                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight(),
+    return fe::Vector2((static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() +                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight(),
                    (static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() -                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight());
     if(camera!=0)
-    return Vector2((static_cast<int>(pixels.y - map_data.getPosition().y+
+    return fe::Vector2((static_cast<int>(pixels.y - map_data.getPosition().y+
 camera->getViewCenter().y-camera->getViewDimensions().y/2) + (layer-1)*map_data.getTileBaseHeight() +
                     static_cast<int>(pixels.x - map_data.getPosition().x+camera->getViewCenter().x-camera->getViewDimensions().x/2)/2)/map_data.getTileBaseHeight(),
                    (static_cast<int>(pixels.y - map_data.getPosition().y+camera->getViewCenter().y-camera->getViewDimensions().y/2) + (layer-1)*map_data.getTileBaseHeight() -

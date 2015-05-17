@@ -19,34 +19,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileAnimData.h"
 
-using namespace fe;
 
-TileAnimData::TileAnimData() : m_kind(Global),
-                               m_direction(Right),
-                               m_x(0),
-                               m_status(false),
-                               m_waitStatus(false),
-                               m_length(0)
+
+fe::TileAnimData::TileAnimData() : m_kind(Global),
+                                   m_direction(Right),
+                                   m_x(0),
+                                   m_status(false),
+                                   m_waitStatus(false),
+                                   m_length(0)
 { }
 
-void TileAnimData::setKind(const AnimKind kind) {
+void fe::TileAnimData::setKind(const fe::AnimKind kind) {
     m_kind = kind;
 
-    if(m_kind==Single)
+    if(m_kind==fe::AnimKind::Single)
         m_waitStatus = false;
-    if(m_kind==Global)
+    if(m_kind==fe::AnimKind::Global)
         m_waitStatus = true;
 
     resetX();
 }
 
-void TileAnimData::setDirection(const AnimDirection direction) {
+void fe::TileAnimData::setDirection(const fe::AnimDirection direction) {
     m_direction = direction;
 
     resetX();
 }
 
-void TileAnimData::setStatus(const bool status) {
+void fe::TileAnimData::setStatus(const bool status) {
     m_waitStatus = status;
     if(status==false)
         m_status = false;
@@ -54,57 +54,57 @@ void TileAnimData::setStatus(const bool status) {
     resetX();
 }
 
-void TileAnimData::setLength(const unsigned int length) {
+void fe::TileAnimData::setLength(const unsigned int length) {
     m_length = length;
 }
 
-AnimKind TileAnimData::getKind() const {
+fe::AnimKind fe::TileAnimData::getKind() const {
     return m_kind;
 }
 
-AnimDirection TileAnimData::getDirection() const {
+fe::AnimDirection fe::TileAnimData::getDirection() const {
     return m_direction;
 }
 
-unsigned int TileAnimData::getLength() const {
+unsigned int fe::TileAnimData::getLength() const {
     return m_length;
 }
 
-unsigned int TileAnimData::getX() const {
+unsigned int fe::TileAnimData::getX() const {
     return m_x;
 }
 
-bool TileAnimData::getStatus() const {
+bool fe::TileAnimData::getStatus() const {
     return m_status;
 }
 
-void TileAnimData::updateX() {
+void fe::TileAnimData::updateX() {
     if(m_status==true)
         if(m_length>1)
         {
-            if(m_direction==Right)
+            if(m_direction==fe::AnimDirection::Right)
             {
                 if(m_x+1<m_length)
                     m_x++;
                 else
                 {
-                    if(m_kind==Global)
+                    if(m_kind==fe::AnimKind::Global)
                         resetX();
-                    else if(m_kind==Single)
+                    else if(m_kind==fe::AnimKind::Single)
                         m_waitStatus = false;
                 }
 
             }
 
-            if(m_direction==Left)
+            if(m_direction==fe::AnimDirection::Left)
             {
                 if(m_x>0)
                     m_x--;
                 else
                 {
-                    if(m_kind==Global)
+                    if(m_kind==fe::AnimKind::Global)
                         resetX();
-                    else if(m_kind==Single)
+                    else if(m_kind==fe::AnimKind::Single)
                         m_waitStatus = false;
                 }
 
@@ -114,10 +114,10 @@ void TileAnimData::updateX() {
     m_status = m_waitStatus;
 }
 
-void TileAnimData::resetX() {
-    if(m_direction==Left)
+void fe::TileAnimData::resetX() {
+    if(m_direction==fe::AnimDirection::Left)
         m_x = m_length-1;
 
-    if(m_direction==Right)
+    if(m_direction==fe::AnimDirection::Right)
         m_x = 0;
 }

@@ -19,18 +19,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Timer.h"
 
-using namespace fe;
 
-Timer::Timer() : m_clock(), m_milliseconds(0)
+
+fe::Timer::Timer() : m_clock(), m_milliseconds(0)
 { }
 
-void Timer::restart() {
+void fe::Timer::restart() {
     m_clock = clock();
 
     m_milliseconds = 0;
 }
 
-const unsigned int &Timer::getElapsedTime() {
+const unsigned int &fe::Timer::getElapsedTime() {
     m_milliseconds = (clock() - m_clock) / (double)(CLOCKS_PER_SEC / 1000);
 
     return m_milliseconds;

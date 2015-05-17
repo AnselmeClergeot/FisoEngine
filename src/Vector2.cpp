@@ -19,46 +19,46 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Vector2.h"
 
-using namespace fe;
 
-Vector2::Vector2() : x(0), y(0)
+
+fe::Vector2::Vector2() : x(0), y(0)
 { }
 
-Vector2::Vector2(const int x, const int y) : x(x), y(y)
+fe::Vector2::Vector2(const int x, const int y) : x(x), y(y)
 { }
 
-Vector2::Vector2(const Vector2 &vec) : x(vec.x), y(vec.y)
+fe::Vector2::Vector2(const Vector2 &vec) : x(vec.x), y(vec.y)
 { }
 
-Vector2& Vector2::operator=(const Vector2 &vec) {
+fe::Vector2& fe::Vector2::operator=(const fe::Vector2 &vec) {
     x = vec.x;
     y = vec.y;
 
     return *this;
 }
 
-void Vector2::operator+=(const Vector2 &vec) {
+void fe::Vector2::operator+=(const fe::Vector2 &vec) {
     x+=vec.x;
     y+=vec.y;
 }
 
-void Vector2::operator-=(const Vector2 &vec) {
+void fe::Vector2::operator-=(const fe::Vector2 &vec) {
     x-=vec.x;
     y-=vec.y;
 }
 
-Vector2 fe::operator+(const Vector2& v1, const Vector2 &v2) {
-    Vector2 res(v1);
+fe::Vector2 fe::operator+(const fe::Vector2& v1, const fe::Vector2 &v2) {
+    fe::Vector2 res(v1);
     res+=v2;
     return res;
 }
 
-Vector2 fe::operator-(const Vector2& v1, const Vector2 &v2) {
-    Vector2 res(v1);
+fe::Vector2 fe::operator-(const fe::Vector2& v1, const fe::Vector2 &v2) {
+    fe::Vector2 res(v1);
     res-=v2;
     return res;
 }
 
-bool fe::operator==(const Vector2& v1, const Vector2 &v2) {
+bool fe::operator==(const fe::Vector2& v1, const fe::Vector2 &v2) {
     return(v1.x==v2.x && v1.y==v2.y);
 }

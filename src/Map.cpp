@@ -19,9 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "Map.h"
 
-using namespace fe;
-
-Map::Map(Camera &camera)
+fe::Map::Map(fe::Camera &camera)
  : m_camera(camera),
    m_data(),
    m_configsLoader(m_data), m_configsSaver(m_data),
@@ -38,7 +36,7 @@ Map::Map(Camera &camera)
     m_camera.setEntitiesContainer(m_entityContainer);
 }
 
-void Map::create() {
+void fe::Map::create() {
     m_configsLoader.load();
     m_tileGroup.initialize();
     m_tileGroup.configureWith(m_data.getTempConf());
@@ -47,7 +45,7 @@ void Map::create() {
     m_animator.resizeTileAnimDataList();
 }
 
-void Map::reload() {
+void fe::Map::reload() {
     create();
 
     m_tileGroup.setGroupOpacity(255);
@@ -57,56 +55,56 @@ void Map::reload() {
         m_shadowsInterface.init();
 }
 
-void Map::save() {
+void fe::Map::save() {
     m_configsSaver.save();
 }
 
-void Map::addLayerFile(const std::string path) {
+void fe::Map::addLayerFile(const std::string path) {
     m_configsLoader.addLoadFile(path);
     m_configsSaver.addLoadFile(path);
 }
 
-void Map::resetLayerFiles() {
+void fe::Map::resetLayerFiles() {
     m_configsLoader.resetLayerList();
     m_configsSaver.resetLayerList();
 }
 
-void Map::setTileset(const std::string path) {
+void fe::Map::setTileset(const std::string path) {
     m_tileGroup.setTilesetPath(path);
 }
 
-void Map::setTileSize(const Vector2 size) {
+void fe::Map::setTileSize(const fe::Vector2 size) {
     m_data.setTileSize(size);
 }
 
-void Map::setTileSize(const unsigned int w, const unsigned int h) {
-    setTileSize(Vector2(w, h));
+void fe::Map::setTileSize(const unsigned int w, const unsigned int h) {
+    setTileSize(fe::Vector2(w, h));
 }
 
-void Map::setTileBaseHeight(const unsigned int h) {
+void fe::Map::setTileBaseHeight(const unsigned int h) {
     m_data.setTileBaseHeight(h);
 }
 
-void Map::setInvisibleTile(const unsigned int tile) {
+void fe::Map::setInvisibleTile(const unsigned int tile) {
     m_data.setInvisibleTile(tile);
     addTranslucentTile(tile);
 }
 
-void Map::addTranslucentTile(const unsigned int tile) {
+void fe::Map::addTranslucentTile(const unsigned int tile) {
     m_data.addTranslucentTile(tile);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateShadingOfAll();
 }
 
-void Map::removeTranslucentTile(const unsigned int tile) {
+void fe::Map::removeTranslucentTile(const unsigned int tile) {
     m_data.removeTranslucentTile(tile);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateShadingOfAll();
 }
 
-void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw) {
+void fe::Map::setTileAt(const fe::Vector3 coord, const unsigned int tile, bool modifConf, bool modifDraw) {
     if(modifConf)
         m_data.getPermConf().at(coord.x, coord.y, coord.z) = tile;
 
@@ -122,38 +120,38 @@ void Map::setTileAt(const Vector3 coord, const unsigned int tile, bool modifConf
     }
 }
 
-void Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                    bool modifConf, bool modifDraw) {
-    setTileAt(Vector3(x, y, z), tile, modifConf, modifDraw);
+void fe::Map::setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                        bool modifConf, bool modifDraw) {
+    setTileAt(fe::Vector3(x, y, z), tile, modifConf, modifDraw);
 }
 
-void Map::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
+void fe::Map::setTileOpacity(const fe::Vector3 coord, const unsigned int opacity) {
     m_tileGroup.setTileOpacity(coord, opacity);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfSpecific(coord);
 }
 
-void Map::setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+void fe::Map::setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
                              const unsigned int opacity) {
-    setTileOpacity(Vector3(x, y, z), opacity);
+    setTileOpacity(fe::Vector3(x, y, z), opacity);
 }
 
-void Map::setOpacityOfType(const unsigned int tile, const unsigned int opacity) {
+void fe::Map::setOpacityOfType(const unsigned int tile, const unsigned int opacity) {
     m_tileGroup.setTypeOpacity(tile, opacity);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfType(tile);
 }
 
-void Map::setMapOpacity(const unsigned int opacity) {
+void fe::Map::setMapOpacity(const unsigned int opacity) {
     m_tileGroup.setGroupOpacity(opacity);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfAll();
 }
 
-void Map::setPosition(const Vector2 pos) {
-    Vector2 tempPos;
+void fe::Map::setPosition(const fe::Vector2 pos) {
+    fe::Vector2 tempPos;
     tempPos = m_data.getPosition();
 
     m_data.setPosition(pos);
@@ -166,11 +164,11 @@ void Map::setPosition(const Vector2 pos) {
         m_shadowsTilegroup.updatePosition();
 }
 
-void Map::setPosition(const unsigned int x, const unsigned int y) {
-    setPosition(Vector2(x, y));
+void fe::Map::setPosition(const unsigned int x, const unsigned int y) {
+    setPosition(fe::Vector2(x, y));
 }
 
-void Map::move(const Vector2 rate) {
+void fe::Map::move(const fe::Vector2 rate) {
     m_data.move(rate);
     m_tileGroup.updatePosition();
 
@@ -181,11 +179,11 @@ void Map::move(const Vector2 rate) {
         m_shadowsTilegroup.updatePosition();
 }
 
-void Map::move(const unsigned int rx, const unsigned int ry) {
-    move(Vector2(rx, ry));
+void fe::Map::move(const unsigned int rx, const unsigned int ry) {
+    move(fe::Vector2(rx, ry));
 }
 
-void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+void fe::Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     for(int layer(0); layer<m_data.getSize().y; layer++)
     {
         m_tileGroup.draw(target, layer, &m_interposing);
@@ -196,70 +194,71 @@ void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     }
 }
 
-Vector3 Map::getDimensions() const {
-    return Vector3(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y);
+fe::Vector3 fe::Map::getDimensions() const {
+    return fe::Vector3(m_data.getSize().x, m_data.getSize().x, m_data.getSize().y);
 }
 
-Vector2 Map::getPosition() const {
+fe::Vector2 fe::Map::getPosition() const {
     return m_data.getPosition();
 }
 
-Vector2 Map::getTileSize() const {
+fe::Vector2 fe::Map::getTileSize() const {
     return m_data.getTileSize();
 }
 
-unsigned int Map::getTileBaseHeight() const {
+unsigned int fe::Map::getTileBaseHeight() const {
     return m_data.getTileBaseHeight();
 }
 
-unsigned int Map::getInvisibleTile() const {
+unsigned int fe::Map::getInvisibleTile() const {
     return m_data.getInvisibleTile();
 }
 
-bool Map::isTranslucent(const unsigned int tile) const {
+bool fe::Map::isTranslucent(const unsigned int tile) const {
     return m_data.isTranslucent(tile);
 }
 
-unsigned int Map::getTileAt(const Vector3 coord) {
+unsigned int fe::Map::getTileAt(const fe::Vector3 coord) {
     return m_data.getPermConf().at(coord.x, coord.y, coord.z);
 }
 
-unsigned int Map::getTileAt(const unsigned int x, const unsigned int y, const unsigned int z) {
-    return getTileAt(Vector3(x, y, z));
+unsigned int fe::Map::getTileAt(const unsigned int x, const unsigned int y, const unsigned int z) {
+    return getTileAt(fe::Vector3(x, y, z));
 }
 
-unsigned int Map::getMapOpacity() const {
+unsigned int fe::Map::getMapOpacity() const {
     return m_tileGroup.getGroupOpacity();
 }
 
-unsigned int Map::getTileOpacity(const Vector3 coord) {
+unsigned int fe::Map::getTileOpacity(const fe::Vector3 coord) {
     return m_tileGroup.getTileOpacity(coord);
 }
 
-unsigned int Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z) {
-    return getTileOpacity(Vector3(x, y, z));
+unsigned int fe::Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z) {
+    return getTileOpacity(fe::Vector3(x, y, z));
 }
 
-unsigned int Map::getOpacityOfType(const unsigned int type) const {
+unsigned int fe::Map::getOpacityOfType(const unsigned int type) const {
     return m_tileGroup.getOpacityOfType(type);
 }
 
-Vector2 Map::getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer) const {
-    return ::getTileCoordAtPixels(pixels, layer, m_data, &m_camera);
+fe::Vector2 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const {
+    return fe::getTileCoordAtPixels(pixels, layer, m_data, &m_camera);
 }
 
-Vector2 Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const {
-    return getTileCoordAtPixels(Vector2(px, py), layer);
+fe::Vector2 fe::Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const
+{
+    return getTileCoordAtPixels(fe::Vector2(px, py), layer);
 }
 
-ShadowsInterface &Map::shadows() {
+fe::ShadowsInterface &fe::Map::shadows() {
     return m_shadowsInterface;
 }
 
-EntitiesContainer &Map::entities() {
+fe::EntitiesContainer &fe::Map::entities() {
     return m_entityContainer;
 }
 
-Animator &Map::animator() {
+fe::Animator &fe::Map::animator() {
     return m_animator;
 }

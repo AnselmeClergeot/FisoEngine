@@ -19,19 +19,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsInitializer.h"
 
-using namespace fe;
-
-ShadowsInitializer::ShadowsInitializer(TileGroup &tilegroup,
-                                       ShadowsSystemStates &states,
-                                       MapData &mapData,
-                                       DynamicShader &shader) : m_tileGroup(tilegroup),
-                                                                m_mapData(mapData),
-                                                                m_states(states),
-                                                                m_shader(shader)
+fe::ShadowsInitializer::ShadowsInitializer(fe::TileGroup &tilegroup,
+                                           fe::ShadowsSystemStates &states,
+                                           fe::MapData &mapData,
+                                           fe::DynamicShader &shader) : m_tileGroup(tilegroup),
+                                                                        m_mapData(mapData),
+                                                                        m_states(states),
+                                                                        m_shader(shader)
 { }
 
-void ShadowsInitializer::initialize() {
-    Matrix3d<unsigned int> tempConf;
+void fe::ShadowsInitializer::initialize() {
+    fe::Matrix3d<unsigned int> tempConf;
 
     resizeMatrix(tempConf);
     fillMatrix(tempConf);
@@ -42,19 +40,19 @@ void ShadowsInitializer::initialize() {
     m_states.setInitialized();
 }
 
-void ShadowsInitializer::resizeMatrix(Matrix3d<unsigned int> &tempConf) {
+void fe::ShadowsInitializer::resizeMatrix(fe::Matrix3d<unsigned int> &tempConf) {
     tempConf.resize(m_mapData.getSize().x, m_mapData.getSize().x, m_mapData.getSize().y,
                     m_mapData.getInvisibleTile());
 }
 
-void ShadowsInitializer::fillMatrix(Matrix3d<unsigned int> &tempConf) {
+void fe::ShadowsInitializer::fillMatrix(fe::Matrix3d<unsigned int> &tempConf) {
     for(std::size_t z(0); z<m_mapData.getSize().y; z++)
         for(std::size_t y(0); y<m_mapData.getSize().x; y++)
             for(std::size_t x(0); x<m_mapData.getSize().x; x++)
-                calculateShadowInConf(Vector3(x, y, z), tempConf);
+                calculateShadowInConf(fe::Vector3(x, y, z), tempConf);
 }
 
-void ShadowsInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d<unsigned int> &tempConf) {
+void fe::ShadowsInitializer::calculateShadowInConf(const fe::Vector3 coord, fe::Matrix3d<unsigned int> &tempConf) {
     if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, coord.z)))
     for(int z(coord.z-1); z>-1; z--)
     {
@@ -69,5 +67,5 @@ void ShadowsInitializer::calculateShadowInConf(const Vector3 coord, Matrix3d<uns
 
     for(int z(coord.z+1); z<m_mapData.getSize().y; z++)
         if(!m_mapData.isTranslucent(m_mapData.getTempConf().at(coord.x, coord.y, z)))
-            calculateShadowInConf(Vector3(coord.x, coord.y, z), tempConf);
+            calculateShadowInConf(fe::Vector3(coord.x, coord.y, z), tempConf);
 }

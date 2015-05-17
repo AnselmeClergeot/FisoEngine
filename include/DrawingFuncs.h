@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 namespace fe {
 
 /**
-* \fn bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera)
+* \fn bool isVisible(const fe::Vector2 position, const fe::Vector2 elementSize, fe::Camera &camera)
 * \brief To know if an element is visible on the screen
 *
 * \param position Position of the element
@@ -44,7 +44,7 @@ namespace fe {
 * \param camera Reference to the map camera
 * \return true if visible or false if not visible
 */
-bool isVisible(const Vector2 position, const Vector2 elementSize, Camera &camera);
+bool isVisible(const fe::Vector2 position, const fe::Vector2 elementSize, fe::Camera &camera);
 
 }
 

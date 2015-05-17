@@ -60,39 +60,39 @@ class Vector3
         Vector3(const int x, const int y, const int z);
 
         /**
-        * \fn Vector3(const Vector3 &vec)
+        * \fn Vector3(const fe::Vector3 &vec)
         * \brief The copy constructor
         *
         * \param vec The copy model
         */
-        Vector3(const Vector3 &vec);
+        Vector3(const fe::Vector3 &vec);
 
         /**
-        * \fn Vector3& operator=(const Vector3 &vec)
+        * \fn fe::Vector3& operator=(const fe::Vector3 &vec)
         * \brief The copy constructor
         *
         * \param vec The copy model
         * \return Reference to the set Vector3
         */
-        Vector3& operator=(const Vector3 &vec);
+        fe::Vector3& operator=(const fe::Vector3 &vec);
 
         /**
-        * \fn void operator+=(const Vector3 &vec)
+        * \fn void operator+=(const fe::Vector3 &vec)
         * \brief The += operator
         *
         * \param vec The model to add to the Vector3
         * \return void
         */
-        void operator+=(const Vector3 &vec);
+        void operator+=(const fe::Vector3 &vec);
 
         /**
-        * \fn void operator-=(const Vector3 &vec)
+        * \fn void operator-=(const fe::Vector3 &vec)
         * \brief The -= operator
         *
         * \param vec The model to subtract to the Vector3
         * \return void
         */
-        void operator-=(const Vector3 &vec);
+        void operator-=(const fe::Vector3 &vec);
 
         int x, /*!< The x element */
 
@@ -102,34 +102,34 @@ class Vector3
 };
 
 /**
-* \fn Vector3 operator+(const Vector3 &v1, const Vector3 &v2)
+* \fn fe::Vector3 operator+(const fe::Vector3 &v1, const fe::Vector3 &v2)
 * \brief The + operator
 *
 * \param v1 The first addition member
 * \param v2 The second addition member
 * \return The result Vector3
 */
-Vector3 operator+(const Vector3 &v1, const Vector3 &v2);
+fe::Vector3 operator+(const fe::Vector3 &v1, const fe::Vector3 &v2);
 
 /**
-* \fn Vector3 operator-(const Vector3 &v1, const Vector3 &v2)
+* \fn fe::Vector3 operator-(const fe::Vector3 &v1, const fe::Vector3 &v2)
 * \brief The - operator
 *
 * \param v1 The first subtraction member
 * \param v2 The second subtraction member
 * \return The result Vector3
 */
-Vector3 operator-(const Vector3 &v1, const Vector3 &v2);
+fe::Vector3 operator-(const fe::Vector3 &v1, const fe::Vector3 &v2);
 
 /**
-* \fn bool operator==(const Vector3 &v1, const Vector3 &v2)
+* \fn bool operator==(const fe::Vector3 &v1, const fe::Vector3 &v2)
 * \brief The == operator
 *
 * \param v1 The first comparison member
 * \param v2 The second comparison member
 * \return True if v1==v2, false otherwise
 */
-bool operator==(const Vector3 &v1, const Vector3 &v2);
+bool operator==(const fe::Vector3 &v1, const fe::Vector3 &v2);
 
 }
 

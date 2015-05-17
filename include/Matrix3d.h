@@ -58,21 +58,21 @@ class Matrix3d
         Matrix3d();
 
         /**
-        * \fn Matrix3d(const Matrix3d &matrix)
+        * \fn Matrix3d(const fe::Matrix3d &matrix)
         * \brief The copy constructor
         *
         * \param matrix Reference to the copy model
         */
-        Matrix3d(const Matrix3d &matrix);
+        Matrix3d(const fe::Matrix3d<T> &matrix);
 
         /**
-        * \fn Matrix3d& operator=(const Matrix3d &matrix)
+        * \fn Matrix3d& operator=(const fe::Matrix3d &matrix)
         * \brief The assignment operator
         *
         * \param matrix Reference to the copy model
         * \return Reference to the set Matrix3d
         */
-        Matrix3d& operator=(const Matrix3d &matrix);
+        Matrix3d& operator=(const fe::Matrix3d<T> &matrix);
 
         /**
         * \fn Matrix3d(const unsigned int w, const unsigned int h, const unsigned int d)
@@ -213,11 +213,11 @@ Matrix3d<T>::Matrix3d() : m_w(0), m_h(0), m_d(0), m_data(0)
 { }
 
 template<typename T>
-Matrix3d<T>::Matrix3d(const Matrix3d &matrix) : m_w(matrix.m_w), m_h(matrix.m_h), m_d(matrix.m_d), m_data(matrix.m_data)
+Matrix3d<T>::Matrix3d(const fe::Matrix3d<T> &matrix) : m_w(matrix.m_w), m_h(matrix.m_h), m_d(matrix.m_d), m_data(matrix.m_data)
 { }
 
 template<typename T>
-Matrix3d<T>& Matrix3d<T>::operator=(const Matrix3d &matrix) {
+Matrix3d<T>& Matrix3d<T>::operator=(const fe::Matrix3d<T> &matrix) {
     m_w = matrix.m_w;
     m_h = matrix.m_h;
     m_d = matrix.m_d;
@@ -228,28 +228,28 @@ Matrix3d<T>& Matrix3d<T>::operator=(const Matrix3d &matrix) {
 
 template<typename T>
 Matrix3d<T>::Matrix3d(const unsigned int w,
-                   const unsigned int h,
-                   const unsigned int d) : m_w(w),
-                                           m_h(h),
-                                           m_d(d),
-                                           m_data(w*h*d)
+                      const unsigned int h,
+                      const unsigned int d) : m_w(w),
+                                              m_h(h),
+                                              m_d(d),
+                                              m_data(w*h*d)
 { }
 
 template<typename T>
 Matrix3d<T>::Matrix3d(const unsigned int w,
-                   const unsigned int h,
-                   const unsigned int d,
-                   const T fill) : m_w(w),
-                                              m_h(h),
-                                              m_d(d),
-                                              m_data(w*h*d, fill)
+                      const unsigned int h,
+                      const unsigned int d,
+                      const T fill) : m_w(w),
+                                      m_h(h),
+                                      m_d(d),
+                                      m_data(w*h*d, fill)
 { }
 
 template<typename T>
 void Matrix3d<T>::resize(const unsigned int w,
-                      const unsigned int h,
-                      const unsigned int d,
-                      const T fill) {
+                         const unsigned int h,
+                         const unsigned int d,
+                         const T fill) {
     m_w = w;
     m_h = h;
     m_d = d;
@@ -258,8 +258,8 @@ void Matrix3d<T>::resize(const unsigned int w,
 
 template<typename T>
 void Matrix3d<T>::resize(const unsigned int w,
-                      const unsigned int h,
-                      const unsigned int d) {
+                         const unsigned int h,
+                         const unsigned int d) {
     m_w = w;
     m_h = h;
     m_d = d;

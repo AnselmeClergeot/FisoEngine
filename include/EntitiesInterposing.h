@@ -43,15 +43,15 @@ class EntitiesInterposing
 {
     public:
         /**
-        * \fn EntitiesInterposing(EntitiesContainer &container)
+        * \fn EntitiesInterposing(fe::EntitiesContainer &container)
         * \brief The class constructor
         *
         * \param container Reference to the entities container to access the entities
         */
-        EntitiesInterposing(EntitiesContainer &container);
+        EntitiesInterposing(fe::EntitiesContainer &container);
 
         /**
-        * \fn void interpose(Vector3 coord, sf::RenderTarget& target) const
+        * \fn void interpose(fe::Vector3 coord, sf::RenderTarget& target) const
         * \brief This function is called at each map drawing to draw each entity of the map
                   at the right moment, before certain tiles and after others.
         *
@@ -59,11 +59,11 @@ class EntitiesInterposing
         * \param target The target to draw the entities on. [SPECIFIC TO SFML]
         * \return void
         */
-        void interpose(Vector3 coord, sf::RenderTarget& target) const;
+        void interpose(fe::Vector3 coord, sf::RenderTarget& target) const;
 
     private:
         //The entity container, to access all the entities
-        EntitiesContainer &m_container; /* !< Reference to the EntitiesContainer to access the entities*/
+        fe::EntitiesContainer &m_container; /* !< Reference to the EntitiesContainer to access the entities*/
 };
 }
 

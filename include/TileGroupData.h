@@ -50,13 +50,13 @@ class TileGroupData
     public:
 
         /**
-        * \fn TileGroupData(MapData &mapData, Camera &camera)
+        * \fn TileGroupData(fe::MapData &mapData, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param camera Reference to the map camera
         */
-        TileGroupData(MapData &mapData, Camera &camera);
+        TileGroupData(fe::MapData &mapData, fe::Camera &camera);
 
         /**
         * \fn sf::Texture &getTileset()
@@ -67,20 +67,20 @@ class TileGroupData
         sf::Texture &getTileset();
 
         /**
-        * \fn Matrix3d<sf::Sprite> &getTiles()
+        * \fn fe::Matrix3d<sf::Sprite> &getTiles()
         * \brief To get the list of tiles [SPECIFIC TO SFML]
         *
         * \return The vector of sprites
         */
-        Matrix3d<sf::Sprite> &getTiles();
+        fe::Matrix3d<sf::Sprite> &getTiles();
 
         /**
-        * \fn Matrix3d<unsigned int> &getOpacities()
+        * \fn fe::Matrix3d<unsigned int> &getOpacities()
         * \brief To get a reference to the tile opacities values
         *
         * \return The Matrix3d of opacities values
         */
-        Matrix3d<unsigned int> &getOpacities();
+        fe::Matrix3d<unsigned int> &getOpacities();
 
         /**
         * \fn unsigned int getTileNumber() const
@@ -91,32 +91,32 @@ class TileGroupData
         unsigned int getTileNumber() const;
 
         /**
-        * \fn void configureWith(Matrix3d<unsigned int> &config)
+        * \fn void configureWith(fe::Matrix3d<unsigned int> &config)
         * \brief To set the TileGroup configuration Matrix3d
         *
         * \param config The reference to the TileGroup configuration Matrix3d
         * \return void
         */
-        void configureWith(Matrix3d<unsigned int> &config);
+        void configureWith(fe::Matrix3d<unsigned int> &config);
 
         /**
-        * \fn void setTileAt(const Vector3 coord, const unsigned int index)
+        * \fn void setTileAt(const fe::Vector3 coord, const unsigned int index)
         * \brief To set the tile at 3D coordinates with a tileset coordinate
         *
         * \param coord The tile coordinates
         * \param index The tileset Y index
         * \return void
         */
-        void setTileAt(const Vector3 coord, const unsigned int index);
+        void setTileAt(const fe::Vector3 coord, const unsigned int index);
 
         /**
-        * \fn sf::Sprite &spriteAt(const Vector3 coord)
+        * \fn sf::Sprite &spriteAt(const fe::Vector3 coord)
         * \brief To get a reference to a specific tile sprite from tile 3D coordinates[SPECIFIC TO SFML]
         *
         * \param coord The tile coordinates
         * \return The reference to the asked tile sprite
         */
-        sf::Sprite &spriteAt(const Vector3 coord);
+        sf::Sprite &spriteAt(const fe::Vector3 coord);
 
         /**
         * \fn sf::Sprite &spriteAt(const unsigned int index)
@@ -136,33 +136,33 @@ class TileGroupData
         void updatePosition();
 
         /**
-        * \fn void setTilePosition(const Vector3 coord)
+        * \fn void setTilePosition(const fe::Vector3 coord)
         * \brief To calculate the position of a specific tile of the TileGrouo
         *
         * \param coord The coordinates of the tile to place
         * \return void
         */
-        void setTilePosition(const Vector3 coord);
+        void setTilePosition(const fe::Vector3 coord);
 
         /**
-        * \fn void frameTile(const Vector3 coord, const Vector2 tilesetCoord)
+        * \fn void frameTile(const fe::Vector3 coord, const fe::Vector2 tilesetCoord)
         * \brief To frame a specific tile with 2D tileset coordinates
         *
         * \param coord The 3D tile coordinates
         * \param tilesetCoord The tileset coordinates in tiles
         * \return void
         */
-        void frameTile(const Vector3 coord, const Vector2 tilesetCoord);
+        void frameTile(const fe::Vector3 coord, const fe::Vector2 tilesetCoord);
 
         /**
-        * \fn void setTileOpacity(const Vector3 coord, const unsigned int opacity)
+        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile from 1D index
         *
         * \param coord The tile 3D coordinates
         * \param opacity The opacity value, from 0 to 255
         * \return void
         */
-        void setTileOpacity(const Vector3 coord, const unsigned int opacity);
+        void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
 
         /**
         * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
@@ -184,23 +184,23 @@ class TileGroupData
         void setGroupOpacity(const unsigned int opacity);
 
         /**
-        * \fn void applyOpacityOn(const Vector3 coord)
+        * \fn void applyOpacityOn(const fe::Vector3 coord)
         * \brief To apply the opacity value of the Matrix3d on a tile
         *
         * \param coord The tile 3D coordinates
         * \return void
         */
-        void applyOpacityOn(const Vector3 coord);
+        void applyOpacityOn(const fe::Vector3 coord);
 
         /**
-        * \fn void checkForOpacity(const Vector3 coord, const unsigned int tile)
+        * \fn void checkForOpacity(const fe::Vector3 coord, const unsigned int tile)
         * \brief To eventually set the opacity of the tile which was set
         *
         * \param coord The tile 3D coordinates
         * \param tile The tile number
         * \return void
         */
-        void checkForOpacity(const Vector3 coord, const unsigned int tile);
+        void checkForOpacity(const fe::Vector3 coord, const unsigned int tile);
 
         /**
         * \fn void reloadOpacities()
@@ -211,13 +211,13 @@ class TileGroupData
         void reloadOpacities();
 
         /**
-        * \fn unsigned int getTileOpacity(const Vector3 coord)
+        * \fn unsigned int getTileOpacity(const fe::Vector3 coord)
         * \brief To get the opacity of a specific tile at 3D coordinates
         *
         * \param coord The tile 3D coordinates
         * \return The opacity value of the tile, from 0 to 255
         */
-        unsigned int getTileOpacity(const Vector3 coord);
+        unsigned int getTileOpacity(const fe::Vector3 coord);
 
         /**
         * \fn unsigned int getGroupOpacity() const
@@ -228,23 +228,23 @@ class TileGroupData
         unsigned int getGroupOpacity() const;
 
         /**
-        * \fn void resetOpacityOf(const Vector3 coord)
+        * \fn void resetOpacityOf(const fe::Vector3 coord)
         * \brief To reset the opacity of a specific tile at 3D coordinates
         *
         * \param coord The tile 3D coordinates
         * \return void
         */
-        void resetOpacityOf(const Vector3 coord);
+        void resetOpacityOf(const fe::Vector3 coord);
 
         /**
-        * \fn void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord)
+        * \fn void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord)
         * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
         * \param coord The 3D coordinate of the tile
         * \param tilesetCoord The tileset coordinates
         * \return void
         */
-        void setTileTilesetX(const Vector3 coord, Vector2 tilesetCoord);
+        void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord);
 
         /**
         * \fn unsigned int getOpacityOfType(const unsigned int type) const
@@ -259,15 +259,15 @@ class TileGroupData
 
         sf::Texture m_tileset; /*!< The tileset texture [SPECIFIC TO SFML] */
 
-        Matrix3d<sf::Sprite> m_tiles;  /*!<  The Matrix3d of tile sprites [SPECIFIC TO SFML]*/
+        fe::Matrix3d<sf::Sprite> m_tiles;  /*!<  The Matrix3d of tile sprites [SPECIFIC TO SFML]*/
 
-        MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
+        fe::MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 
-        Camera &m_camera; /*!< Reference to the map camera */
+        fe::Camera &m_camera; /*!< Reference to the map camera */
 
-        Matrix3d<unsigned int> m_tilesOpacities; /*!< The Matrix3d of tiles opacities values*/
+        fe::Matrix3d<unsigned int> m_tilesOpacities; /*!< The Matrix3d of tiles opacities values*/
 
-        std::vector<Vector2> m_typesOpacities; /*!< The tile types opacities values list */
+        std::vector<fe::Vector2> m_typesOpacities; /*!< The tile types opacities values list */
 
         unsigned int m_opacity; /*!< The global opacity (if set) */
 };

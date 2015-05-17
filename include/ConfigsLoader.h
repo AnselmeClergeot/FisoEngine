@@ -45,13 +45,13 @@ class ConfigsLoader
     public:
 
         /**
-        * \fn ConfigsLoader(MapData &data)
+        * \fn ConfigsLoader(fe::MapData &data)
         * \brief The class constructor
         *
         * \param data Reference to the MapData to get needed data
         * \return void
         */
-        ConfigsLoader(MapData &data);
+        ConfigsLoader(fe::MapData &data);
 
         /**
         * \fn void addLoadFile(const std::string path)
@@ -111,7 +111,7 @@ class ConfigsLoader
         */
         void equalizeMatrices();
 
-        MapData &m_data; /*!< The reference to the MapData to get needed data */
+        fe::MapData &m_data; /*!< The reference to the MapData to get needed data */
 
         std::vector<std::string> m_paths; /*!< The layer files path list */
 };

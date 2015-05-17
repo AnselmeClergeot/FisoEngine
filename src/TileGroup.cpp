@@ -19,67 +19,67 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileGroup.h"
 
-using namespace fe;
 
-TileGroup::TileGroup(MapData &mapData,
-                     Camera &camera) : m_data(mapData, camera),
-                                       m_loader(m_data, mapData),
-                                       m_drawer(mapData, m_data, camera)
+
+fe::TileGroup::TileGroup(fe::MapData &mapData,
+                         fe::Camera &camera) : m_data(mapData, camera),
+                                               m_loader(m_data, mapData),
+                                               m_drawer(mapData, m_data, camera)
 { }
 
-void TileGroup::setTilesetPath(const std::string path) {
+void fe::TileGroup::setTilesetPath(const std::string path) {
     m_loader.setTilesetPath(path);
 }
 
-void TileGroup::initialize() {
+void fe::TileGroup::initialize() {
     m_loader.initialize();
 }
 
-void TileGroup::configureWith(Matrix3d<unsigned int> &matrix) {
+void fe::TileGroup::configureWith(fe::Matrix3d<unsigned int> &matrix) {
     m_data.configureWith(matrix);
 }
 
-void TileGroup::setTileAt(const Vector3 coord, const unsigned int index) {
+void fe::TileGroup::setTileAt(const fe::Vector3 coord, const unsigned int index) {
     m_data.setTileAt(coord, index);
 }
 
-void TileGroup::updatePosition() {
+void fe::TileGroup::updatePosition() {
     m_data.updatePosition();
 }
 
-void TileGroup::setTileOpacity(const Vector3 coord, const unsigned int opacity) {
+void fe::TileGroup::setTileOpacity(const fe::Vector3 coord, const unsigned int opacity) {
     m_data.setTileOpacity(coord, opacity);
 }
 
-void TileGroup::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
+void fe::TileGroup::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
     m_data.setTypeOpacity(tile, opacity);
 }
 
-void TileGroup::setGroupOpacity(const unsigned int opacity) {
+void fe::TileGroup::setGroupOpacity(const unsigned int opacity) {
     m_data.setGroupOpacity(opacity);
 }
 
-void TileGroup::reloadOpacities() {
+void fe::TileGroup::reloadOpacities() {
     m_data.reloadOpacities();
 }
 
-void TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
-                     const EntitiesInterposing *interposing) const {
+void fe::TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
+                         const fe::EntitiesInterposing *interposing) const {
     m_drawer.draw(target, layer, interposing);
 }
 
-unsigned int TileGroup::getTileOpacity(const Vector3 coord) {
+unsigned int fe::TileGroup::getTileOpacity(const fe::Vector3 coord) {
     return m_data.getTileOpacity(coord);
 }
 
-unsigned int TileGroup::getGroupOpacity() const {
+unsigned int fe::TileGroup::getGroupOpacity() const {
     return m_data.getGroupOpacity();
 }
 
-void TileGroup::setTileTilesetX(const Vector3 coord, const Vector2 tilesetCoord) {
+void fe::TileGroup::setTileTilesetX(const fe::Vector3 coord, const fe::Vector2 tilesetCoord) {
     m_data.setTileTilesetX(coord, tilesetCoord);
 }
 
-unsigned int TileGroup::getOpacityOfType(const unsigned int type) const {
+unsigned int fe::TileGroup::getOpacityOfType(const unsigned int type) const {
     return m_data.getOpacityOfType(type);
 }

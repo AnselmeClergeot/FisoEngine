@@ -19,12 +19,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "EntitiesInterposing.h"
 
-using namespace fe;
 
-EntitiesInterposing::EntitiesInterposing(EntitiesContainer &container) : m_container(container)
+
+fe::EntitiesInterposing::EntitiesInterposing(fe::EntitiesContainer &container) : m_container(container)
 { }
 
-void EntitiesInterposing::interpose(Vector3 coord, sf::RenderTarget& target) const {
+void fe::EntitiesInterposing::interpose(fe::Vector3 coord, sf::RenderTarget& target) const {
     for(std::size_t i(0); i<m_container.getEntitiesNumber(); i++)
     {
         if(m_container.entityAt(i).getTilePosition()==coord && m_container.entityAt(i).getDrawingState())

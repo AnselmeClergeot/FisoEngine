@@ -20,41 +20,42 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupLoader.h"
 #include "ioFuncs.h"
 
-using namespace fe;
 
-TileGroupLoader::TileGroupLoader(TileGroupData &data, MapData &mapData) : m_mapData(mapData),
-                                                                          m_tilesetPath(""),
-                                                                          m_data(data)
+
+fe::TileGroupLoader::TileGroupLoader(fe::TileGroupData &data,
+                                     fe::MapData &mapData) : m_mapData(mapData),
+                                                             m_tilesetPath(""),
+                                                             m_data(data)
 { }
 
-void TileGroupLoader::setTilesetPath(const std::string path) {
+void fe::TileGroupLoader::setTilesetPath(const std::string path) {
     if(fileExists(path))
         m_tilesetPath = path;
 }
 
-void TileGroupLoader::loadTileset() {
+void fe::TileGroupLoader::loadTileset() {
     m_data.getTileset().loadFromFile(m_tilesetPath);
 }
 
-void TileGroupLoader::resizeTileList() {
+void fe::TileGroupLoader::resizeTileList() {
     m_data.getTiles().resize(m_mapData.getTempConf().getW(),
                              m_mapData.getTempConf().getH(),
                              m_mapData.getTempConf().getD());
 }
 
-void TileGroupLoader::setTilesTileset() {
+void fe::TileGroupLoader::setTilesTileset() {
     for(std::size_t i(0); i<m_data.getTileNumber(); i++)
         m_data.spriteAt(i).setTexture(m_data.getTileset());
 }
 
-void TileGroupLoader::resizeOpacitiesMatrix3d() {
+void fe::TileGroupLoader::resizeOpacitiesMatrix3d() {
     m_data.getOpacities().resize(m_mapData.getTempConf().getW(),
-                                m_mapData.getTempConf().getH(),
-                                m_mapData.getTempConf().getD(),
+                                 m_mapData.getTempConf().getH(),
+                                 m_mapData.getTempConf().getD(),
                                  255);
 }
 
-void TileGroupLoader::initialize() {
+void fe::TileGroupLoader::initialize() {
     loadTileset();
     resizeTileList();
     resizeOpacitiesMatrix3d();

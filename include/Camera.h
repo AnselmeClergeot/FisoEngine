@@ -67,13 +67,13 @@ class Camera
         Camera(const unsigned int viewW, const unsigned int viewH);
 
         /**
-        * \fn void setViewDimensions(const Vector2 dim)
+        * \fn void setViewDimensions(const fe::Vector2 dim)
         * \brief To set the camera view width and height
         *
         * \param dim The camera dimensions
         * \return void
         */
-        void setViewDimensions(const Vector2 dim);
+        void setViewDimensions(const fe::Vector2 dim);
 
         /**
         * \fn void setViewDimensions(const unsigned int w, const unsigned int h)
@@ -86,13 +86,13 @@ class Camera
         void setViewDimensions(const unsigned int w, const unsigned int h);
 
         /**
-        * \fn void setViewCenter(const Vector2 center)
+        * \fn void setViewCenter(const fe::Vector2 center)
         * \brief To set the camera view center coordinates
         *
         * \param center The camera view center in pixels
         * \return void
         */
-        void setViewCenter(const Vector2 center);
+        void setViewCenter(const fe::Vector2 center);
 
         /**
         * \fn void setViewCenter(const unsigned int centerX, const unsigned int centerY)
@@ -105,13 +105,13 @@ class Camera
         void setViewCenter(const unsigned int centerX, const unsigned int centerY);
 
         /**
-        * \fn void moveViewCenter(const Vector2 rate)
+        * \fn void moveViewCenter(const fe::Vector2 rate)
         * \brief To move the view center
         *
         * \param rate The move rate in pixels
         * \return void
         */
-        void moveViewCenter(const Vector2 rate);
+        void moveViewCenter(const fe::Vector2 rate);
 
         /**
         * \fn void moveViewCenter(const unsigned int rx, const unsigned int ry)
@@ -142,32 +142,32 @@ class Camera
     private:
 
         /**
-        * \fn void setTileGroups(TileGroup &map, TileGroup &shadows)
+        * \fn void setTileGroups(fe::TileGroup &map, fe::TileGroup &shadows)
         * \brief To set the TileGroups pointers
         *
         * \param map reference to the map TileGroup
         * \param shadows reference to the shadows TileGroup
         * \return void
         */
-        void setTileGroups(TileGroup &map, TileGroup &shadows);
+        void setTileGroups(fe::TileGroup &map, fe::TileGroup &shadows);
 
         /**
-        * \fn void setEntitiesContainer(EntitiesContainer &container)
+        * \fn void setEntitiesContainer(fe::EntitiesContainer &container)
         * \brief To set the EntitiesContainer pointer
         *
         * \param container reference to the map EntitiesContainer
         * \return void
         */
-        void setEntitiesContainer(EntitiesContainer &container);
+        void setEntitiesContainer(fe::EntitiesContainer &container);
 
-        Vector2 m_viewDimensions; /*!< The camera view dimensions */
+        fe::Vector2 m_viewDimensions; /*!< The camera view dimensions */
 
-        Vector2 m_viewCenter; /*!< The center of the camera view */
+        fe::Vector2 m_viewCenter; /*!< The center of the camera view */
 
-        std::unique_ptr<TileGroup> m_mapTilegroup, /*!< The pointer to the map TileGroup */
-                                   m_shadowsTilegroup; /*!< The pointer to the shadows TileGroup */
+        std::unique_ptr<fe::TileGroup> m_mapTilegroup, /*!< The pointer to the map TileGroup */
+                                       m_shadowsTilegroup; /*!< The pointer to the shadows TileGroup */
 
-        std::unique_ptr<EntitiesContainer> m_entitiesContainer; /*!< The pointer to the map EntitiesContainer */
+        std::unique_ptr<fe::EntitiesContainer> m_entitiesContainer; /*!< The pointer to the map EntitiesContainer */
 };
 }
 

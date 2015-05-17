@@ -47,13 +47,13 @@ class TileGroupLoader
     public:
 
         /**
-        * \fn TileGroupLoader(TileGroupData &data, MapData &mapData)
+        * \fn TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData)
         * \brief The class constructor
         *
         * \param data Reference to the TileGroupData to load
         * \param mapData Reference to the MapData to load
         */
-        TileGroupLoader(TileGroupData &data, MapData &mapData);
+        TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData);
 
         /**
         * \fn void setTilesetPath(const std::string path)
@@ -106,11 +106,11 @@ class TileGroupLoader
         */
         void setTilesTileset();
 
-        MapData &m_mapData; /*!<  Reference to the MapData */
+        fe::MapData &m_mapData; /*!<  Reference to the MapData */
 
         std::string m_tilesetPath; /*!<  The tileset fille path */
 
-        TileGroupData &m_data; /*!<  The reference to the TileGroupData to load */
+        fe::TileGroupData &m_data; /*!<  The reference to the TileGroupData to load */
 };
 }
 

@@ -19,33 +19,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "ShadowsInterface.h"
 
-using namespace fe;
 
-ShadowsInterface::ShadowsInterface(ShadowsInitializer &initializer,
-                                   ShadowsSystemStates &states,
-                                   TileGroup &tilegroup) : m_initializer(initializer),
-                                                           m_states(states),
-                                                           m_tilegroup(tilegroup)
+
+fe::ShadowsInterface::ShadowsInterface(fe::ShadowsInitializer &initializer,
+                                       fe::ShadowsSystemStates &states,
+                                       fe::TileGroup &tilegroup) : m_initializer(initializer),
+                                                                   m_states(states),
+                                                                   m_tilegroup(tilegroup)
 {
 
 }
 
-void ShadowsInterface::setTileset(const std::string path) {
+void fe::ShadowsInterface::setTileset(const std::string path) {
     m_tilegroup.setTilesetPath(path);
 }
 
-void ShadowsInterface::setOpacity(const unsigned int opacity) {
+void fe::ShadowsInterface::setOpacity(const unsigned int opacity) {
     m_tilegroup.setGroupOpacity(opacity);
 }
 
-void ShadowsInterface::init() {
+void fe::ShadowsInterface::init() {
     m_initializer.initialize();
 }
 
-void ShadowsInterface::setOn(bool on) {
+void fe::ShadowsInterface::setOn(bool on) {
     m_states.setOn(on);
 }
 
-unsigned int ShadowsInterface::getOpacity() const {
+unsigned int fe::ShadowsInterface::getOpacity() const {
     return m_tilegroup.getGroupOpacity();
 }

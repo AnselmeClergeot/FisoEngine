@@ -135,21 +135,24 @@ $(document).ready(function(){initNavTree('_isometric_math_8h_source.html','');})
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefe.html">fe</a> {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;Vector2 <a class="code" href="namespacefe.html#a3a0d711f11c096b1ffcebe91f42ac45f">toIsometricPosition</a>(<span class="keyword">const</span> Vector3 coord, <span class="keyword">const</span> MapData &amp;map_data);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;Vector2 <a class="code" href="namespacefe.html#a072cd58e327968894e17969422a394a2">toIsometricPosition</a>(<span class="keyword">const</span> Vector3 coord, <span class="keyword">const</span> MapData &amp;map_data);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;Vector2 <a class="code" href="namespacefe.html#a6782e1c3923ae62b583b0f953f392fcf">getTileCoordAtPixels</a>(<span class="keyword">const</span> Vector2 pixels,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="classfe_1_1_vector2.html">fe::Vector2</a> <a class="code" href="namespacefe.html#a549a5d2707b91af2c9ec28130ec6bac2">getTileCoordAtPixels</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">fe::Vector2</a> pixels,</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                             <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                             <span class="keyword">const</span> MapData &amp;map_data,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                             <span class="keyword">const</span> Camera *camera = 0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                             <span class="keyword">const</span> <a class="code" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;map_data,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                             <span class="keyword">const</span> <a class="code" href="classfe_1_1_camera.html">fe::Camera</a> *camera = 0);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // ISOMETRICMATH_H</span></div>
-<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Animator.h:42</div></div>
+<div class="ttc" id="namespacefe_html_a072cd58e327968894e17969422a394a2"><div class="ttname"><a href="namespacefe.html#a072cd58e327968894e17969422a394a2">fe::toIsometricPosition</a></div><div class="ttdeci">Vector2 toIsometricPosition(const Vector3 coord, const MapData &amp;map_data)</div><div class="ttdoc">To get the tile screen position from its map-coordinates. </div><div class="ttdef"><b>Definition:</b> IsometricMath.cpp:24</div></div>
+<div class="ttc" id="classfe_1_1_map_data_html"><div class="ttname"><a href="classfe_1_1_map_data.html">fe::MapData</a></div><div class="ttdoc">This class is the container of all map data. </div><div class="ttdef"><b>Definition:</b> MapData.h:44</div></div>
+<div class="ttc" id="namespacefe_html_a549a5d2707b91af2c9ec28130ec6bac2"><div class="ttname"><a href="namespacefe.html#a549a5d2707b91af2c9ec28130ec6bac2">fe::getTileCoordAtPixels</a></div><div class="ttdeci">fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer, const fe::MapData &amp;map_data, const fe::Camera *camera=0)</div><div class="ttdoc">To get the map-coordinates pointed by 2D screen coordinates. </div><div class="ttdef"><b>Definition:</b> IsometricMath.cpp:30</div></div>
+<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Map.h:48</div></div>
 <div class="ttc" id="_map_data_8h_html"><div class="ttname"><a href="_map_data_8h.html">MapData.h</a></div><div class="ttdoc">Definition of MapData class. </div></div>
-<div class="ttc" id="namespacefe_html_a6782e1c3923ae62b583b0f953f392fcf"><div class="ttname"><a href="namespacefe.html#a6782e1c3923ae62b583b0f953f392fcf">fe::getTileCoordAtPixels</a></div><div class="ttdeci">Vector2 getTileCoordAtPixels(const Vector2 pixels, const unsigned int layer, const MapData &amp;map_data, const Camera *camera=0)</div><div class="ttdoc">To get the map-coordinates pointed by 2D screen coordinates. </div><div class="ttdef"><b>Definition:</b> IsometricMath.cpp:30</div></div>
+<div class="ttc" id="classfe_1_1_camera_html"><div class="ttname"><a href="classfe_1_1_camera.html">fe::Camera</a></div><div class="ttdoc">This class is the class instantiated by the user to handle a world camera. </div><div class="ttdef"><b>Definition:</b> Camera.h:47</div></div>
 <div class="ttc" id="_vector2_8h_html"><div class="ttname"><a href="_vector2_8h.html">Vector2.h</a></div><div class="ttdoc">Definition of Vector2 class. </div></div>
-<div class="ttc" id="namespacefe_html_a3a0d711f11c096b1ffcebe91f42ac45f"><div class="ttname"><a href="namespacefe.html#a3a0d711f11c096b1ffcebe91f42ac45f">fe::toIsometricPosition</a></div><div class="ttdeci">Vector2 toIsometricPosition(const Vector3 coord, const MapData &amp;map_data)</div><div class="ttdoc">To get the tile screen position from its map-coordinates. </div><div class="ttdef"><b>Definition:</b> IsometricMath.cpp:24</div></div>
+<div class="ttc" id="classfe_1_1_vector2_html"><div class="ttname"><a href="classfe_1_1_vector2.html">fe::Vector2</a></div><div class="ttdoc">This class is a container of 2 int x and y. </div><div class="ttdef"><b>Definition:</b> Vector2.h:41</div></div>
 <div class="ttc" id="_vector3_8h_html"><div class="ttname"><a href="_vector3_8h.html">Vector3.h</a></div><div class="ttdoc">Definition of Vector3 class. </div></div>
 <div class="ttc" id="_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div><div class="ttdoc">Definition of Camera class. </div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -158,7 +161,7 @@ $(document).ready(function(){initNavTree('_isometric_math_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_isometric_math_8h.html">IsometricMath.h</a></li>
-    <li class="footer">Generated on Mon May 11 2015 18:40:44 for MoteurRedesign by
+    <li class="footer">Generated on Sun May 17 2015 13:23:00 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
