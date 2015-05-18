@@ -43,12 +43,13 @@ class EntitiesInterposing
 {
     public:
         /**
-        * \fn EntitiesInterposing(fe::EntitiesContainer &container)
+        * \fn EntitiesInterposing(fe::EntitiesContainer &container, fe::MapData &mapData)
         * \brief The class constructor
         *
         * \param container Reference to the entities container to access the entities
+        * \param mapData Reference to the MapData
         */
-        EntitiesInterposing(fe::EntitiesContainer &container);
+        EntitiesInterposing(fe::EntitiesContainer &container, fe::MapData &mapData);
 
         /**
         * \fn void interpose(fe::Vector3 coord, sf::RenderTarget& target) const
@@ -62,8 +63,11 @@ class EntitiesInterposing
         void interpose(fe::Vector3 coord, sf::RenderTarget& target) const;
 
     private:
-        //The entity container, to access all the entities
-        fe::EntitiesContainer &m_container; /* !< Reference to the EntitiesContainer to access the entities*/
+
+        fe::EntitiesContainer &m_container; /*!< Reference to the EntitiesContainer to access the entities*/
+
+        fe::MapData &m_mapData; /*!< Reference to the MapData */
+
 };
 }
 

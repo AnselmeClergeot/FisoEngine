@@ -91,7 +91,7 @@ class Entity
 
         /**
         * \fn void setBaseCoord(const unsigned int x, const unsigned int y)
-        * \brief To set the base coordinate of the entity
+        * \brief To set the base coordinate of the entitym_container.entityAt(i).getTilePosition().x==coord.x
         *
         * \param x The entity base x coordinate relative to the left entity border
         * \param y The entity base y coordinate relative to the top entity border

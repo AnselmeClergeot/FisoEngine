@@ -121,9 +121,9 @@ $(document).ready(function(){initNavTree('classfe_1_1_entities_interposing.html'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adddddd92eafc79e7e58a820c2873231e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entities_interposing.html#adddddd92eafc79e7e58a820c2873231e">EntitiesInterposing</a> (<a class="el" href="classfe_1_1_entities_container.html">fe::EntitiesContainer</a> &amp;container)</td></tr>
-<tr class="memdesc:adddddd92eafc79e7e58a820c2873231e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#adddddd92eafc79e7e58a820c2873231e">More...</a><br /></td></tr>
-<tr class="separator:adddddd92eafc79e7e58a820c2873231e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3968c4386f0f93b6ba856d047ac3417"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entities_interposing.html#ac3968c4386f0f93b6ba856d047ac3417">EntitiesInterposing</a> (<a class="el" href="classfe_1_1_entities_container.html">fe::EntitiesContainer</a> &amp;container, <a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData)</td></tr>
+<tr class="memdesc:ac3968c4386f0f93b6ba856d047ac3417"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ac3968c4386f0f93b6ba856d047ac3417">More...</a><br /></td></tr>
+<tr class="separator:ac3968c4386f0f93b6ba856d047ac3417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd35effb6a95c2f0a72446f9342d8346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entities_interposing.html#acd35effb6a95c2f0a72446f9342d8346">interpose</a> (<a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a> coord, sf::RenderTarget &amp;target) const </td></tr>
 <tr class="memdesc:acd35effb6a95c2f0a72446f9342d8346"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called at each map drawing to draw each entity of the map at the right moment, before certain tiles and after others.  <a href="#acd35effb6a95c2f0a72446f9342d8346">More...</a><br /></td></tr>
 <tr class="separator:acd35effb6a95c2f0a72446f9342d8346"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,12 +132,14 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac1d4e4cb703009f5aa796257532aa449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_entities_container.html">fe::EntitiesContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entities_interposing.html#ac1d4e4cb703009f5aa796257532aa449">m_container</a></td></tr>
 <tr class="separator:ac1d4e4cb703009f5aa796257532aa449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aec593bbed8153091bb1480bac1b073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entities_interposing.html#a2aec593bbed8153091bb1480bac1b073">m_mapData</a></td></tr>
+<tr class="separator:a2aec593bbed8153091bb1480bac1b073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that interposes the entities into the map tiles. </p>
 <p>This class is charged to interposes the user entities between the map tiles of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="adddddd92eafc79e7e58a820c2873231e"></a>
+<a class="anchor" id="ac3968c4386f0f93b6ba856d047ac3417"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -145,8 +147,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">fe::EntitiesInterposing::EntitiesInterposing </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classfe_1_1_entities_container.html">fe::EntitiesContainer</a> &amp;&#160;</td>
-          <td class="paramname"><em>container</em></td><td>)</td>
+          <td class="paramname"><em>container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;&#160;</td>
+          <td class="paramname"><em>mapData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,6 +167,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">container</td><td>Reference to the entities container to access the entities </td></tr>
+    <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="classfe_1_1_map_data.html" title="This class is the container of all map data. ">MapData</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,6 +229,28 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Reference to the <a class="el" href="classfe_1_1_entities_container.html" title="Class that contains the map entities and cares of adding/deleting entities. ">EntitiesContainer</a> to access the entities </p>
+
+</div>
+</div>
+<a class="anchor" id="a2aec593bbed8153091bb1480bac1b073"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classfe_1_1_map_data.html">fe::MapData</a>&amp; fe::EntitiesInterposing::m_mapData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to the <a class="el" href="classfe_1_1_map_data.html" title="This class is the container of all map data. ">MapData</a> </p>
 
 </div>
 </div>
@@ -229,7 +264,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_entities_interposing.html">EntitiesInterposing</a></li>
-    <li class="footer">Generated on Sun May 17 2015 20:07:51 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 18 2015 18:55:24 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

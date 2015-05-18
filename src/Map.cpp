@@ -29,7 +29,7 @@ fe::Map::Map(fe::Camera &camera)
    m_shadowsInitializer(m_shadowsTilegroup, m_shadowsStates, m_data, m_dynamicShader),
    m_shadowsInterface(m_shadowsInitializer, m_shadowsStates, m_shadowsTilegroup),
    m_entityContainer(m_data, m_camera),
-   m_interposing(m_entityContainer),
+   m_interposing(m_entityContainer, m_data),
    m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_camera)
 {
     m_camera.setTileGroups(m_tileGroup, m_shadowsTilegroup);
