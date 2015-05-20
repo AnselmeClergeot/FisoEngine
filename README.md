@@ -12,7 +12,7 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map creation/saving and manipulation
 * Level editing with map-editor software
 * Map dynamic reloading
-* Tile opacity manipulating
+* Tile color manipulating (color + opacity)
 * Map shading
 * Tile global animations (water, etc.)
 * Tile single animations (door, etc.)
