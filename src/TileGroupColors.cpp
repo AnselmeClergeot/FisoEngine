@@ -79,14 +79,21 @@ void fe::TileGroupColors::applyColorOfTile(const fe::Vector3 coord) {
 }
 
 void fe::TileGroupColors::checkForColor(const fe::Vector3 coord, const unsigned int tile) {
+    bool isSpecial(false);
+
     for(std::size_t i(0); i<m_types.size(); i++)
     {
         if(m_types[i]==tile)
         {
+            isSpecial = true;
             m_tilesColors.at(coord.x, coord.y, coord.z) = m_typesColors[i];
-            applyColorOfTile(coord);
         }
     }
+
+    if(!isSpecial)
+        m_tilesColors.at(coord.x, coord.y, coord.z) = fe::Color();
+
+    applyColorOfTile(coord);
 }
 
 void fe::TileGroupColors::reloadColors() {

@@ -21,12 +21,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupColors.hpp"
 
 fe::TileGroupData::TileGroupData(fe::MapData &mapData,
-                                 fe::Camera &camera,
-                                 fe::TileGroupColors &colors) : m_tileset(),
-                                                                m_tiles(),
-                                                                m_mapData(mapData),
-                                                                m_camera(camera),
-                                                                m_colors(colors)
+                                 fe::Camera &camera) : m_tileset(),
+                                                       m_tiles(),
+                                                       m_mapData(mapData),
+                                                       m_camera(camera)
 { }
 
 sf::Texture &fe::TileGroupData::getTileset() {
@@ -49,11 +47,6 @@ void fe::TileGroupData::configureWith(fe::Matrix3d<unsigned int> &config) {
 }
 
 void fe::TileGroupData::setTileAt(const fe::Vector3 coord, const unsigned int index) {
-    if(index==m_mapData.getInvisibleTile())
-        (coord);
-    else
-        m_colors.checkForColor(coord, index);
-
     frameTile(coord, fe::Vector2(0, index));
 }
 

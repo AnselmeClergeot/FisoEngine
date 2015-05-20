@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 fe::TileGroup::TileGroup(fe::MapData &mapData,
-                         fe::Camera &camera) : m_data(mapData, camera, m_colors),
+                         fe::Camera &camera) : m_data(mapData, camera),
                                                m_loader(m_data, mapData, m_colors),
                                                m_drawer(mapData, m_data, camera, m_colors),
                                                m_colors(mapData, m_data)
@@ -42,6 +42,7 @@ void fe::TileGroup::configureWith(fe::Matrix3d<unsigned int> &matrix) {
 
 void fe::TileGroup::setTileAt(const fe::Vector3 coord, const unsigned int index) {
     m_data.setTileAt(coord, index);
+    m_colors.checkForColor(coord, index);
 }
 
 void fe::TileGroup::updatePosition() {

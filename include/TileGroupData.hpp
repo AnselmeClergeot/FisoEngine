@@ -52,14 +52,13 @@ class TileGroupData
     public:
 
         /**
-        * \fn TileGroupData(fe::MapData &mapData, fe::Camera &camera, fe::TileGroupColors &colors)
+        * \fn TileGroupData(fe::MapData &mapData, fe::Camera &camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param camera Reference to the map camera
-        * \param colors Reference to the TileGroupColors
         */
-        TileGroupData(fe::MapData &mapData, fe::Camera &camera, fe::TileGroupColors &colors);
+        TileGroupData(fe::MapData &mapData, fe::Camera &camera);
 
         /**
         * \fn sf::Texture &getTileset()
@@ -168,8 +167,6 @@ class TileGroupData
         fe::MapData &m_mapData;  /*!< Reference to the MapData to get useful map data*/
 
         fe::Camera &m_camera; /*!< Reference to the map camera */
-
-        fe::TileGroupColors &m_colors; /*!< Reference to TileGroupColors */
 };
 }
 
