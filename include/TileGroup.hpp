@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupData.hpp"
 #include "TileGroupLoader.hpp"
 #include "TileGroupDrawer.hpp"
+#include "TileGroupColors.hpp"
 
 namespace fe {
 /**
@@ -101,41 +102,59 @@ class TileGroup
         void updatePosition();
 
         /**
-        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
-        * \brief To set the opacity of a specific tile from 1D index
+        * \fn void setTileColor(const fe::Vector3 coord, const fe::Color color)
+        * \brief To set the color of a specific tile from 3D coordinates
         *
         * \param coord The tile 3D coordinates
-        * \param opacity The opacity value, from 0 to 255
+        * \param color The color
+        * \return void
+        */
+        void setTileColor(const fe::Vector3 coord, const fe::Color color);
+
+        /**
+        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
+        * \brief To set the opacity of a specific tile from 3D coordinates
+        *
+        * \param coord The tile 3D coordinates
+        * \param opacity The opacity value
         * \return void
         */
         void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
 
         /**
-        * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
-        * \brief To set the opacity of all the tiles of the same type
+        * \fn void setTypeColor(const unsigned int tile, const fe::Color color)
+        * \brief To set the color of all the tiles of the same type
         *
         * \param tile The tile number
-        * \param opacity The opacity value, from 0 to 255
+        * \param color The color
         * \return void
         */
-        void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
+        void setTypeColor(const unsigned int tile, const fe::Color color);
 
         /**
-        * \fn void setGroupOpacity(const unsigned int opacity)
-        * \brief To set the opacity of all the tiles of the TileGroup
+        * \fn void setGroupColor(const fe::Color color)
+        * \brief To set the color of all the tiles of the TileGroup
         *
-        * \param opacity The opacity value, from 0 to 255
+        * \param color The color
         * \return void
         */
-        void setGroupOpacity(const unsigned int opacity);
+        void setGroupColor(const fe::Color color);
 
         /**
-        * \fn void reloadOpacities()
-        * \brief To reload the opacities from the types list
+        * \fn fe::Color getGroupColor() const
+        * \brief To get the group color
+        *
+        * \return The color
+        */
+        fe::Color getGroupColor() const;
+
+        /**
+        * \fn void reloadColors()
+        * \brief To reload the colors from the types list
         *
         * \return void
         */
-        void reloadOpacities();
+        void reloadColors();
 
         /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
@@ -152,21 +171,13 @@ class TileGroup
                   const fe::EntitiesInterposing *interposing = 0) const;
 
         /**
-        * \fn unsigned int getTileOpacity(const fe::Vector3 coord) const
-        * \brief To get the opacity of a specific tile at 3D coordinates
+        * \fn fe::Color getTileColor(const fe::Vector3 coord)
+        * \brief To get the color of a specific tile at 3D coordinates
         *
         * \param coord The tile 3D coordinates
-        * \return The opacity value of the tile, from 0 to 255
+        * \return The color of the tile
         */
-        unsigned int getTileOpacity(const fe::Vector3 coord);
-
-        /**
-        * \fn unsigned int getGroupOpacity() const
-        * \brief To get the opacity of the entire TileGroup if set
-        *
-        * \return The opacity value of the entire TileGroup, from 0 to 255
-        */
-        unsigned int getGroupOpacity() const;
+        fe::Color getTileColor(const fe::Vector3 coord);
 
         /**
         * \fn void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord)
@@ -179,13 +190,13 @@ class TileGroup
         void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord);
 
         /**
-        * \fn unsigned int getOpacityOfType(const unsigned int type) const
+        * \fn fe::Color getColorOfType(const unsigned int type) const
         * \brief To get the opacity of a specific tile type
         *
-        * \param type The tile type from its number
+        * \param type The tile color
         * \return void
         */
-        unsigned int getOpacityOfType(const unsigned int type) const;
+        fe::Color getColorOfType(const unsigned int type) const;
 
     private:
 
@@ -194,6 +205,8 @@ class TileGroup
         fe::TileGroupLoader m_loader; /*!< The TileGroupLoader */
 
         fe::TileGroupDrawer m_drawer; /*!< The TileGroupDrawer */
+
+        fe::TileGroupColors m_colors; /*!< The TileGroupColors */
 };
 }
 

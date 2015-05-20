@@ -19,14 +19,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "TileGroupDrawer.hpp"
 #include "DrawingFuncs.hpp"
-
-
+#include "TileGroupColors.hpp"
 
 fe::TileGroupDrawer::TileGroupDrawer(fe::MapData &mapData,
                                      fe::TileGroupData &data,
-                                     fe::Camera &camera) : m_mapData(mapData),
-                                                           m_data(data),
-                                                           m_camera(camera)
+                                     fe::Camera &camera,
+                                     fe::TileGroupColors &colors) : m_mapData(mapData),
+                                                                    m_data(data),
+                                                                    m_camera(camera),
+                                                                    m_colors(colors)
 { }
 
 void fe::TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
@@ -36,7 +37,7 @@ void fe::TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int laye
     {
         if(isVisible(toIsometricPosition(fe::Vector3(x, y, layer), m_mapData),m_mapData.getTileSize(), m_camera) &&
            m_mapData.getTempConf().at(x, y, layer)!=m_mapData.getInvisibleTile() &&
-           m_data.getTileOpacity(fe::Vector3(x, y, layer))>0)
+           m_colors.getTileColor(fe::Vector3(x, y, layer)).a>0)
         {
             target.draw(m_data.spriteAt(fe::Vector3(x, y, layer)));
         }

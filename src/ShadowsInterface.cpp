@@ -35,7 +35,7 @@ void fe::ShadowsInterface::setTileset(const std::string path) {
 }
 
 void fe::ShadowsInterface::setOpacity(const unsigned int opacity) {
-    m_tilegroup.setGroupOpacity(opacity);
+    m_tilegroup.setGroupColor(fe::Color(255, 255, 255, opacity));
 }
 
 void fe::ShadowsInterface::init() {
@@ -47,5 +47,5 @@ void fe::ShadowsInterface::setOn(bool on) {
 }
 
 unsigned int fe::ShadowsInterface::getOpacity() const {
-    return m_tilegroup.getGroupOpacity();
+    return m_tilegroup.getGroupColor().a;
 }

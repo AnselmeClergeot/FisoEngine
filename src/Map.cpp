@@ -41,15 +41,15 @@ void fe::Map::create() {
     m_tileGroup.initialize();
     m_tileGroup.configureWith(m_data.getTempConf());
 
-    m_tileGroup.reloadOpacities();
+    m_tileGroup.reloadColors();
     m_animator.resizeTileAnimDataList();
 }
 
 void fe::Map::reload() {
     create();
 
-    m_tileGroup.setGroupOpacity(255);
-    m_tileGroup.reloadOpacities();
+    m_tileGroup.setGroupColor(fe::Color());
+    m_tileGroup.reloadColors();
 
     if(m_shadowsStates.isInitialized())
         m_shadowsInterface.init();
@@ -124,27 +124,36 @@ void fe::Map::setTileAt(const unsigned int x, const unsigned int y, const unsign
     setTileAt(fe::Vector3(x, y, z), tile, modifConf, modifDraw);
 }
 
-void fe::Map::setTileOpacity(const fe::Vector3 coord, const unsigned int opacity) {
-    m_tileGroup.setTileOpacity(coord, opacity);
+void fe::Map::setTileColor(const fe::Vector3 coord, const fe::Color color) {
+    m_tileGroup.setTileColor(coord, color);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfSpecific(coord);
 }
 
-void fe::Map::setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
+void fe::Map::setTileColor(const unsigned int x,const unsigned int y,const unsigned int z,
+                             const fe::Color color) {
+    setTileColor(fe::Vector3(x, y, z), color);
+}
+
+void fe::Map::setTileOpacity(const fe::Vector3 coord, const unsigned int opacity) {
+    m_tileGroup.setTileOpacity(coord, opacity);
+}
+
+void fe::Map::setTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z,
                              const unsigned int opacity) {
     setTileOpacity(fe::Vector3(x, y, z), opacity);
 }
 
-void fe::Map::setOpacityOfType(const unsigned int tile, const unsigned int opacity) {
-    m_tileGroup.setTypeOpacity(tile, opacity);
+void fe::Map::setColorOfType(const unsigned int tile, const fe::Color color) {
+    m_tileGroup.setTypeColor(tile, color);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfType(tile);
 }
 
-void fe::Map::setMapOpacity(const unsigned int opacity) {
-    m_tileGroup.setGroupOpacity(opacity);
+void fe::Map::setMapColor(const fe::Color color) {
+    m_tileGroup.setGroupColor(color);
 
     if(m_shadowsStates.isInitialized())
         m_dynamicShader.updateOpacityOfAll();
@@ -226,20 +235,20 @@ unsigned int fe::Map::getTileAt(const unsigned int x, const unsigned int y, cons
     return getTileAt(fe::Vector3(x, y, z));
 }
 
-unsigned int fe::Map::getMapOpacity() const {
-    return m_tileGroup.getGroupOpacity();
+fe::Color fe::Map::getMapColor() const {
+    return m_tileGroup.getGroupColor();
 }
 
-unsigned int fe::Map::getTileOpacity(const fe::Vector3 coord) {
-    return m_tileGroup.getTileOpacity(coord);
+fe::Color fe::Map::getTileColor(const fe::Vector3 coord) {
+    return m_tileGroup.getTileColor(coord);
 }
 
-unsigned int fe::Map::getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z) {
-    return getTileOpacity(fe::Vector3(x, y, z));
+fe::Color fe::Map::getTileColor(const unsigned int x, const unsigned int y, const unsigned int z) {
+    return getTileColor(fe::Vector3(x, y, z));
 }
 
-unsigned int fe::Map::getOpacityOfType(const unsigned int type) const {
-    return m_tileGroup.getOpacityOfType(type);
+fe::Color fe::Map::getColorOfType(const unsigned int type) const {
+    return m_tileGroup.getColorOfType(type);
 }
 
 fe::Vector2 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const {

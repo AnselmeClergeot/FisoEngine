@@ -23,9 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 fe::TileGroupLoader::TileGroupLoader(fe::TileGroupData &data,
-                                     fe::MapData &mapData) : m_mapData(mapData),
-                                                             m_tilesetPath(""),
-                                                             m_data(data)
+                                     fe::MapData &mapData,
+                                     fe::TileGroupColors &colors) : m_mapData(mapData),
+                                                                    m_tilesetPath(""),
+                                                                    m_data(data),
+                                                                    m_colors(colors)
 { }
 
 void fe::TileGroupLoader::setTilesetPath(const std::string path) {
@@ -49,10 +51,10 @@ void fe::TileGroupLoader::setTilesTileset() {
 }
 
 void fe::TileGroupLoader::resizeOpacitiesMatrix3d() {
-    m_data.getOpacities().resize(m_mapData.getTempConf().getW(),
+    m_colors.getColors().resize(m_mapData.getTempConf().getW(),
                                  m_mapData.getTempConf().getH(),
                                  m_mapData.getTempConf().getD(),
-                                 255);
+                                 fe::Color());
 }
 
 void fe::TileGroupLoader::initialize() {
@@ -62,5 +64,5 @@ void fe::TileGroupLoader::initialize() {
     setTilesTileset();
 
     m_data.updatePosition();
-    m_data.setGroupOpacity(m_data.getGroupOpacity());
+    m_colors.setGroupColor(m_colors.getGroupColor());
 }

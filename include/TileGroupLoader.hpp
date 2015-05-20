@@ -33,6 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 #include <fstream>
 #include "TileGroupData.hpp"
+#include "TileGroupColors.hpp"
 
 namespace fe {
 /**
@@ -47,13 +48,14 @@ class TileGroupLoader
     public:
 
         /**
-        * \fn TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData)
+        * \fn TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData, fe::TileGroupColors &colors)
         * \brief The class constructor
         *
         * \param data Reference to the TileGroupData to load
         * \param mapData Reference to the MapData to load
+        * \param colors Reference to the TileGroupColors
         */
-        TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData);
+        TileGroupLoader(fe::TileGroupData &data, fe::MapData &mapData, fe::TileGroupColors &colors);
 
         /**
         * \fn void setTilesetPath(const std::string path)
@@ -111,6 +113,8 @@ class TileGroupLoader
         std::string m_tilesetPath; /*!<  The tileset fille path */
 
         fe::TileGroupData &m_data; /*!<  The reference to the TileGroupData to load */
+
+        fe::TileGroupColors &m_colors; /*!<  The reference to the TileGroupColors */
 };
 }
 

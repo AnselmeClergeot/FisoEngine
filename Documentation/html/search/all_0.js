@@ -10,6 +10,5 @@ var searchData=
   ['animdirection',['AnimDirection',['../namespacefe.html#ab3facb2cbee4186cdcd076ae4975b2c8',1,'fe']]],
   ['animkind',['AnimKind',['../namespacefe.html#a6553d0aacd3ec123dea43ced8cff5d7b',1,'fe']]],
   ['apply',['apply',['../classfe_1_1_animator.html#a82143d09996fef3b725043a6d35c53f1',1,'fe::Animator']]],
-  ['applyopacityon',['applyOpacityOn',['../classfe_1_1_tile_group_data.html#a2d2e394341076ade9dac62de0bf17d8e',1,'fe::TileGroupData']]],
   ['at',['at',['../classfe_1_1_matrix3d.html#a4cc201fd1569e9d2434e8c4f7237fe95',1,'fe::Matrix3d::at(const unsigned int x, const unsigned int y, const unsigned int z)'],['../classfe_1_1_matrix3d.html#ac24f527c19e76247f641a9eb6d0eaca0',1,'fe::Matrix3d::at(const unsigned int index)']]]
 ];

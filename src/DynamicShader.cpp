@@ -77,8 +77,8 @@ void fe::DynamicShader::updateOpacityOfType(const unsigned int type) {
 
 void fe::DynamicShader::updateOpacityOfSpecific(const fe::Vector3 coord) {
     if(haveShadowVisible(coord))
-        m_shadowsTg.setTileOpacity(fe::Vector3(coord.x, coord.y, getShadowZ(coord)),
-                            (int)((float)m_mapTg.getTileOpacity(coord)/(float)255*m_shadowsTg.getGroupOpacity()));
+        m_shadowsTg.setTileColor(fe::Vector3(coord.x, coord.y, getShadowZ(coord)),
+                            fe::Color(255, 255, 255, (int)((float)m_mapTg.getTileColor(coord).a/(float)255*m_shadowsTg.getGroupColor().a)));
 }
 
 unsigned int fe::DynamicShader::getShadowZ(const fe::Vector3 tileCoord) {

@@ -48,14 +48,16 @@ class TileGroupDrawer
     public:
 
         /**
-        * \fn TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera)
+        * \fn TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera,
+                              fe::TileGroupColors &colors)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param data Reference to the TileGroupData to get needed data to draw
         * \param camera Reference to the map camera
+        * \param colors Reference to the TileGroupColors
         */
-        TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera);
+        TileGroupDrawer(fe::MapData &mapData, fe::TileGroupData &data, fe::Camera &camera, fe::TileGroupColors &colors);
 
         /**
         * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
@@ -78,6 +80,8 @@ class TileGroupDrawer
         fe::TileGroupData &m_data; /*!< Reference to the TileGroupData to get needed data to draw */
 
         fe::Camera &m_camera; /*!< Reference to the map camera */
+
+        fe::TileGroupColors &m_colors; /*!< Reference to the TileGroupColors */
 };
 }
 

@@ -37,7 +37,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "IsometricMath.hpp"
 #include "DrawingFuncs.hpp"
 
+
 namespace fe {
+    class TileGroupColors;
 /**
  * \class TileGroupData
  * \brief This class stores all the TileGroup stuff
@@ -50,13 +52,14 @@ class TileGroupData
     public:
 
         /**
-        * \fn TileGroupData(fe::MapData &mapData, fe::Camera &camera)
+        * \fn TileGroupData(fe::MapData &mapData, fe::Camera &camera, fe::TileGroupColors &colors)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param camera Reference to the map camera
+        * \param colors Reference to the TileGroupColors
         */
-        TileGroupData(fe::MapData &mapData, fe::Camera &camera);
+        TileGroupData(fe::MapData &mapData, fe::Camera &camera, fe::TileGroupColors &colors);
 
         /**
         * \fn sf::Texture &getTileset()
@@ -73,14 +76,6 @@ class TileGroupData
         * \return The vector of sprites
         */
         fe::Matrix3d<sf::Sprite> &getTiles();
-
-        /**
-        * \fn fe::Matrix3d<unsigned int> &getOpacities()
-        * \brief To get a reference to the tile opacities values
-        *
-        * \return The Matrix3d of opacities values
-        */
-        fe::Matrix3d<unsigned int> &getOpacities();
 
         /**
         * \fn unsigned int getTileNumber() const
@@ -155,88 +150,6 @@ class TileGroupData
         void frameTile(const fe::Vector3 coord, const fe::Vector2 tilesetCoord);
 
         /**
-        * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
-        * \brief To set the opacity of a specific tile from 1D index
-        *
-        * \param coord The tile 3D coordinates
-        * \param opacity The opacity value, from 0 to 255
-        * \return void
-        */
-        void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
-
-        /**
-        * \fn void setTypeOpacity(const unsigned int tile, const unsigned int opacity)
-        * \brief To set the opacity of all the tiles of the same type
-        *
-        * \param tile The tile number
-        * \param opacity The opacity value, from 0 to 255
-        * \return void
-        */
-        void setTypeOpacity(const unsigned int tile, const unsigned int opacity);
-
-        /**
-        * \fn void setGroupOpacity(const unsigned int opacity)
-        * \brief To set the opacity of all the tiles of the TileGroup
-        *
-        * \param opacity The opacity value, from 0 to 255
-        * \return void
-        */
-        void setGroupOpacity(const unsigned int opacity);
-
-        /**
-        * \fn void applyOpacityOn(const fe::Vector3 coord)
-        * \brief To apply the opacity value of the Matrix3d on a tile
-        *
-        * \param coord The tile 3D coordinates
-        * \return void
-        */
-        void applyOpacityOn(const fe::Vector3 coord);
-
-        /**
-        * \fn void checkForOpacity(const fe::Vector3 coord, const unsigned int tile)
-        * \brief To eventually set the opacity of the tile which was set
-        *
-        * \param coord The tile 3D coordinates
-        * \param tile The tile number
-        * \return void
-        */
-        void checkForOpacity(const fe::Vector3 coord, const unsigned int tile);
-
-        /**
-        * \fn void reloadOpacities()
-        * \brief To reload the opacities from the types list
-        *
-        * \return void
-        */
-        void reloadOpacities();
-
-        /**
-        * \fn unsigned int getTileOpacity(const fe::Vector3 coord)
-        * \brief To get the opacity of a specific tile at 3D coordinates
-        *
-        * \param coord The tile 3D coordinates
-        * \return The opacity value of the tile, from 0 to 255
-        */
-        unsigned int getTileOpacity(const fe::Vector3 coord);
-
-        /**
-        * \fn unsigned int getGroupOpacity() const
-        * \brief To get the opacity of the entire TileGroup if set
-        *
-        * \return The opacity value of the entire TileGroup, from 0 to 255
-        */
-        unsigned int getGroupOpacity() const;
-
-        /**
-        * \fn void resetOpacityOf(const fe::Vector3 coord)
-        * \brief To reset the opacity of a specific tile at 3D coordinates
-        *
-        * \param coord The tile 3D coordinates
-        * \return void
-        */
-        void resetOpacityOf(const fe::Vector3 coord);
-
-        /**
         * \fn void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord)
         * \brief To set the X tileset coordinate of a specific tile from its coordinates
         *
@@ -245,15 +158,6 @@ class TileGroupData
         * \return void
         */
         void setTileTilesetX(const fe::Vector3 coord, fe::Vector2 tilesetCoord);
-
-        /**
-        * \fn unsigned int getOpacityOfType(const unsigned int type) const
-        * \brief To get the opacity of a specific tile type
-        *
-        * \param type The tile type from its number
-        * \return void
-        */
-        unsigned int getOpacityOfType(const unsigned int type) const;
 
     private:
 
@@ -265,11 +169,7 @@ class TileGroupData
 
         fe::Camera &m_camera; /*!< Reference to the map camera */
 
-        fe::Matrix3d<unsigned int> m_tilesOpacities; /*!< The Matrix3d of tiles opacities values*/
-
-        std::vector<fe::Vector2> m_typesOpacities; /*!< The tile types opacities values list */
-
-        unsigned int m_opacity; /*!< The global opacity (if set) */
+        fe::TileGroupColors &m_colors; /*!< Reference to TileGroupColors */
 };
 }
 

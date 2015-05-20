@@ -198,47 +198,71 @@ class Map : public sf::Drawable
         void setTileAt(const unsigned int x, const unsigned int y, const unsigned int z, const unsigned int tile,                       bool modifConf, bool modifDraw);
 
         /**
+        * \fn void setTileColor(const fe::Vector3 coord, const fe::Color color)
+        * \brief To set the color of a specific tile
+        *
+        * \param coord The 3D coordinates of the tile
+        * \param color The color
+        * \return void
+        */
+        void setTileColor(const fe::Vector3 coord, const fe::Color color);
+
+        /**
+        * \fn void setTileColor(const unsigned int x, const unsigned int y, const unsigned int z,
+                                const fe::Color color)
+        * \brief To set the color of a specific tile
+        *
+        * \param x The x coordinate of the tile
+        * \param y The y coordinate of the tile
+        * \param z The z coordinate of the tile
+        * \param color The color
+        * \return void
+        */
+        void setTileColor(const unsigned int x, const unsigned int y, const unsigned int z,
+                            const fe::Color color);
+
+        /**
         * \fn void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity)
         * \brief To set the opacity of a specific tile
         *
-        * \param coord The 3D coordinates of the tile
-        * \param opacity The opacity from 0 to 255
+        * \param coord The tile coordinates
+        * \param opacity The opacity value
         * \return void
         */
         void setTileOpacity(const fe::Vector3 coord, const unsigned int opacity);
 
         /**
-        * \fn void setTileOpacity(const unsigned int x,const unsigned int y,const unsigned int z,
-                                const unsigned int opacity)
+        * \fn void setTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z,
+                            const unsigned int opacity)
         * \brief To set the opacity of a specific tile
         *
         * \param x The x coordinate of the tile
         * \param y The y coordinate of the tile
         * \param z The z coordinate of the tile
-        * \param opacity The opacity from 0 to 255
+        * \param opacity The opacity value
         * \return void
         */
         void setTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z,
-                                const unsigned int opacity);
+                            const unsigned int opacty);
 
         /**
-        * \fn void setOpacityOfType(const unsigned int tile, const unsigned int opacity)
-        * \brief To set the opacity of all tiles of a specific number
+        * \fn void setColorOfType(const unsigned int tile, const fe::Color color)
+        * \brief To set the color of all tiles of a specific number
         *
         * \param tile The tile number
-        * \param opacity The opacity from 0 to 255
+        * \param color The color
         * \return void
         */
-        void setOpacityOfType(const unsigned int tile, const unsigned int opacity);
+        void setColorOfType(const unsigned int tile, const fe::Color color);
 
         /**
-        * \fn void setMapOpacity(const unsigned int opacity)
-        * \brief To set the opacity of the map tiles
+        * \fn void setMapColor(const fe::Color)
+        * \brief To set the color of the map tiles
         *
-        * \param opacity The opacity from 0 to 255
+        * \param color The color
         * \return void
         */
-        void setMapOpacity(const unsigned int opacity);
+        void setMapColor(const fe::Color);
 
         /**
         * \fn void setPosition(const fe::Vector2 pos)
@@ -358,41 +382,41 @@ class Map : public sf::Drawable
         unsigned int getTileAt(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn unsigned int getMapOpacity() const
-        * \brief To get the opacity of the map if set
+        * \fn fe::Color getMapColor() const
+        * \brief To get the color of the map if set
         *
-        * \return The opacity of the map in an unsigned int, value from 0 to 255
+        * \return The color of the map
         */
-        unsigned int getMapOpacity() const;
+        fe::Color getMapColor() const;
 
         /**
-        * \fn unsigned int getTileOpacity(const fe::Vector3 coord)
-        * \brief To get the opacity of a map tile at specific coordinates
+        * \fn fe::Color getTileColor(const fe::Vector3 coord)
+        * \brief To get the color of a map tile at specific coordinates
         *
         * \param coord The coordinates of the tile
-        * \return The opacity of the tile in an unsigned int, value from 0 to 255
+        * \return The color of the tile in an unsigned int
         */
-        unsigned int getTileOpacity(const fe::Vector3 coord);
+        fe::Color getTileColor(const fe::Vector3 coord);
 
         /**
-        * \fn unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z)
-        * \brief To get the opacity of a map tile at specific coordinates
+        * \fn fe::Color getTileColor(const unsigned int x, const unsigned int y, const unsigned int z)
+        * \brief To get the color of a map tile at specific coordinates
         *
         * \param x The x coordinate of the tile
         * \param y The y coordinate of the tile
         * \param z The z coordinate of the tile
-        * \return The opacity of the tile in an unsigned int, value from 0 to 255
+        * \return The color of the tile in an unsigned int, value from 0 to 255
         */
-        unsigned int getTileOpacity(const unsigned int x, const unsigned int y, const unsigned int z);
+        fe::Color getTileColor(const unsigned int x, const unsigned int y, const unsigned int z);
 
         /**
-        * \fn unsigned int getOpacityOfType(const unsigned int type) const
-        * \brief To get the opacity of a specific tile type
+        * \fn fe::Color getColorOfType(const unsigned int type) const
+        * \brief To get the color of a specific tile type
         *
         * \param type The tile type from its number
-        * \return void
+        * \return The color of the tile type
         */
-        unsigned int getOpacityOfType(const unsigned int type) const;
+        fe::Color getColorOfType(const unsigned int type) const;
 
         /**
         * \fn fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const

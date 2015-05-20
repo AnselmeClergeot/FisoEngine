@@ -18,15 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "TileGroupData.hpp"
+#include "TileGroupColors.hpp"
 
 fe::TileGroupData::TileGroupData(fe::MapData &mapData,
-                                 fe::Camera &camera) : m_tileset(),
-                                                       m_tiles(),
-                                                       m_mapData(mapData),
-                                                       m_camera(camera),
-                                                       m_tilesOpacities(),
-                                                       m_typesOpacities(),
-                                                       m_opacity(255)
+                                 fe::Camera &camera,
+                                 fe::TileGroupColors &colors) : m_tileset(),
+                                                                m_tiles(),
+                                                                m_mapData(mapData),
+                                                                m_camera(camera),
+                                                                m_colors(colors)
 { }
 
 sf::Texture &fe::TileGroupData::getTileset() {
@@ -35,10 +35,6 @@ sf::Texture &fe::TileGroupData::getTileset() {
 
 fe::Matrix3d<sf::Sprite> &fe::TileGroupData::getTiles() {
     return m_tiles;
-}
-
-fe::Matrix3d<unsigned int> &fe::TileGroupData::getOpacities() {
-    return m_tilesOpacities;
 }
 
 unsigned int fe::TileGroupData::getTileNumber() const {
@@ -54,9 +50,9 @@ void fe::TileGroupData::configureWith(fe::Matrix3d<unsigned int> &config) {
 
 void fe::TileGroupData::setTileAt(const fe::Vector3 coord, const unsigned int index) {
     if(index==m_mapData.getInvisibleTile())
-        resetOpacityOf(coord);
+        (coord);
     else
-        checkForOpacity(coord, index);
+        m_colors.checkForColor(coord, index);
 
     frameTile(coord, fe::Vector2(0, index));
 }
@@ -91,103 +87,7 @@ void fe::TileGroupData::frameTile(const fe::Vector3 coord, const fe::Vector2 til
                                                          m_mapData.getTileSize().y));
 }
 
-void fe::TileGroupData::setTileOpacity(const fe::Vector3 coord, const unsigned int opacity) {
-    m_tilesOpacities.at(coord.x, coord.y, coord.z) = opacity;
-
-    applyOpacityOn(coord);
-}
-
-void fe::TileGroupData::setTypeOpacity(const unsigned int tile, const unsigned int opacity) {
-    bool alreadyPresent(false);
-
-    for(std::size_t i(0); i<m_typesOpacities.size(); i++)
-    {
-        if(m_typesOpacities[i].x==tile)
-            alreadyPresent = true;
-    }
-
-    if(!alreadyPresent)
-        m_typesOpacities.push_back(fe::Vector2(tile, opacity));
-
-    else
-    {
-        for(std::size_t i(0); i<m_typesOpacities.size(); i++)
-        {
-            if(m_typesOpacities[i].x==tile)
-                m_typesOpacities[i].y = opacity;
-        }
-    }
-
-
-        for(std::size_t x(0); x<m_tilesOpacities.getW(); x++)
-            for(std::size_t y(0); y<m_tilesOpacities.getH(); y++)
-                for(std::size_t z(0); z<m_tilesOpacities.getD(); z++)
-                if(m_mapData.getTempConf().at(x, y, z)==tile)
-                {
-                    m_tilesOpacities.at(x, y, z) = opacity;
-                    applyOpacityOn(fe::Vector3(x, y, z));
-                }
-}
-
-void fe::TileGroupData::setGroupOpacity(const unsigned int opacity) {
-    m_opacity = opacity;
-
-    for(std::size_t x(0); x<m_tilesOpacities.getW(); x++)
-        for(std::size_t y(0); y<m_tilesOpacities.getH(); y++)
-            for(std::size_t z(0); z<m_tilesOpacities.getD(); z++)
-            {
-                m_tilesOpacities.at(x, y, z) = opacity;
-                applyOpacityOn(fe::Vector3(x, y, z));
-            }
-}
-
-void fe::TileGroupData::applyOpacityOn(const fe::Vector3 coord) {
-        m_tiles.at(coord.x, coord.y, coord.z).setColor(sf::Color(255,
-                                                                 255,
-                                                                 255,
-                                                                 m_tilesOpacities.at(coord.x, coord.y, coord.z)));
-}
-
-void fe::TileGroupData::checkForOpacity(const fe::Vector3 coord, const unsigned int tile) {
-    for(std::size_t i(0); i<m_typesOpacities.size(); i++)
-    {
-        if(m_typesOpacities[i].x==tile)
-        {
-            m_tilesOpacities.at(coord.x, coord.y, coord.z) = m_typesOpacities[i].y;
-            applyOpacityOn(coord);
-        }
-    }
-}
-
-void fe::TileGroupData::reloadOpacities() {
-    for(std::size_t x(0); x<m_mapData.getSize().x; x++)
-        for(std::size_t y(0); y<m_mapData.getSize().x; y++)
-            for(std::size_t z(0); z<m_mapData.getSize().y; z++)
-                checkForOpacity(fe::Vector3(x, y, z), m_mapData.getTempConf().at(x, y, z));
-}
-
-unsigned int fe::TileGroupData::getTileOpacity(const fe::Vector3 coord) {
-    return m_tilesOpacities.at(coord.x, coord.y, coord.z);
-}
-
-unsigned int fe::TileGroupData::getGroupOpacity() const {
-    return m_opacity;
-}
-
-void fe::TileGroupData::resetOpacityOf(const fe::Vector3 coord) {
-    setTileOpacity(coord, 255);
-}
-
 void fe::TileGroupData::setTileTilesetX(const fe::Vector3 coord, const fe::Vector2 tilesetCoord) {
     if(isVisible(toIsometricPosition(coord, m_mapData), m_mapData.getTileSize(), m_camera))
         frameTile(coord, tilesetCoord);
-}
-
-unsigned int fe::TileGroupData::getOpacityOfType(const unsigned int type) const {
-    for(std::size_t i(0); i<m_typesOpacities.size(); i++)
-    {
-        if(m_typesOpacities[i].x==type)
-            return m_typesOpacities[i].y;
-    }
-    return 255;
 }

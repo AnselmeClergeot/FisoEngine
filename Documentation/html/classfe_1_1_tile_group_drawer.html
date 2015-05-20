@@ -121,9 +121,9 @@ $(document).ready(function(){initNavTree('classfe_1_1_tile_group_drawer.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a741a88c6a5a033c1cd464d9c1d4675"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a8a741a88c6a5a033c1cd464d9c1d4675">TileGroupDrawer</a> (<a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData, <a class="el" href="classfe_1_1_tile_group_data.html">fe::TileGroupData</a> &amp;data, <a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera)</td></tr>
-<tr class="memdesc:a8a741a88c6a5a033c1cd464d9c1d4675"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a8a741a88c6a5a033c1cd464d9c1d4675">More...</a><br /></td></tr>
-<tr class="separator:a8a741a88c6a5a033c1cd464d9c1d4675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e38c8cd897656408e9c11b471545ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a92e38c8cd897656408e9c11b471545ba">TileGroupDrawer</a> (<a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData, <a class="el" href="classfe_1_1_tile_group_data.html">fe::TileGroupData</a> &amp;data, <a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera, fe::TileGroupColors &amp;colors)</td></tr>
+<tr class="memdesc:a92e38c8cd897656408e9c11b471545ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a92e38c8cd897656408e9c11b471545ba">More...</a><br /></td></tr>
+<tr class="separator:a92e38c8cd897656408e9c11b471545ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2088517602559ae6da2c81914ddf3a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a2088517602559ae6da2c81914ddf3a71">draw</a> (sf::RenderTarget &amp;target, const unsigned int layer, const <a class="el" href="classfe_1_1_entities_interposing.html">fe::EntitiesInterposing</a> *interposing=0) const </td></tr>
 <tr class="memdesc:a2088517602559ae6da2c81914ddf3a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific layer of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a2088517602559ae6da2c81914ddf3a71">More...</a><br /></td></tr>
 <tr class="separator:a2088517602559ae6da2c81914ddf3a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,12 +136,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aaf8c3d33fe56a2247681751e642593f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f4aba80d750f78d66bcb32ea1dd8c48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a1f4aba80d750f78d66bcb32ea1dd8c48">m_camera</a></td></tr>
 <tr class="separator:a1f4aba80d750f78d66bcb32ea1dd8c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86f63fee116364ea0bdea57930d730a"><td class="memItemLeft" align="right" valign="top">fe::TileGroupColors &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#aa86f63fee116364ea0bdea57930d730a">m_colors</a></td></tr>
+<tr class="separator:aa86f63fee116364ea0bdea57930d730a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is charged to draw the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
 <p><a class="el" href="classfe_1_1_tile_group_drawer.html" title="This class is charged to draw the TileGroup. ">TileGroupDrawer</a> class uses <a class="el" href="classfe_1_1_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> stuff (tile images, etc.) to draw the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> on screen. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8a741a88c6a5a033c1cd464d9c1d4675"></a>
+<a class="anchor" id="a92e38c8cd897656408e9c11b471545ba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -161,7 +163,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td>
-          <td class="paramname"><em>camera</em>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fe::TileGroupColors &amp;&#160;</td>
+          <td class="paramname"><em>colors</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -177,6 +185,7 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">mapData</td><td>Reference to the <a class="el" href="classfe_1_1_map_data.html" title="This class is the container of all map data. ">MapData</a> to get useful map data </td></tr>
     <tr><td class="paramname">data</td><td>Reference to the <a class="el" href="classfe_1_1_tile_group_data.html" title="This class stores all the TileGroup stuff. ">TileGroupData</a> to get needed data to draw </td></tr>
     <tr><td class="paramname">camera</td><td>Reference to the map camera </td></tr>
+    <tr><td class="paramname">colors</td><td>Reference to the TileGroupColors </td></tr>
   </table>
   </dd>
 </dl>
@@ -249,6 +258,27 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa86f63fee116364ea0bdea57930d730a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fe::TileGroupColors&amp; fe::TileGroupDrawer::m_colors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to the TileGroupColors </p>
+
+</div>
+</div>
 <a class="anchor" id="aaf8c3d33fe56a2247681751e642593f1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +331,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_tile_group_drawer.html">TileGroupDrawer</a></li>
-    <li class="footer">Generated on Mon May 18 2015 18:55:24 for MoteurRedesign by
+    <li class="footer">Generated on Wed May 20 2015 14:40:45 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
