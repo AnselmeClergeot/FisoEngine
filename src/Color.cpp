@@ -12,6 +12,12 @@ fe::Color::Color(const unsigned int r, const unsigned int g, const unsigned int 
 fe::Color::Color(const fe::Color& color) : r(color.r), g(color.g), b(color.b), a(color.a)
 { }
 
+fe::Color::Color(const unsigned int r, const unsigned int g, const unsigned int b) : r(r),
+                                                                                     g(g),
+                                                                                     b(b),
+                                                                                     a(255)
+{ }
+
 fe::Color &fe::Color::operator=(const fe::Color& color) {
     r = color.r;
     g = color.g;

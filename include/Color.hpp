@@ -61,6 +61,16 @@ class Color
         Color(const unsigned int r, const unsigned int g, const unsigned int b, const unsigned int a);
 
         /**
+        * \fn Color(unsigned int r, unsigned int g, unsigned int b)
+        * \brief The class constructor with color values only
+        *
+        * \param r The red value
+        * \param g The green value
+        * \param b The blue value
+        */
+        Color(const unsigned int r, const unsigned int g, const unsigned int b);
+
+        /**
         * \fn Color(const fe::Color& color)
         * \brief The class copy constructor
         *
