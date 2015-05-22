@@ -85,7 +85,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
       <li><a href="#index_x"><span>x</span></a></li>
       <li><a href="#index_y"><span>y</span></a></li>
       <li class="current"><a href="#index_z"><span>z</span></a></li>
@@ -122,6 +128,43 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 <div class="contents">
 &#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>a
+: <a class="el" href="classfe_1_1_color.html#aa384644674feaf51bb85ae2bd85dd753">fe::Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>b
+: <a class="el" href="classfe_1_1_color.html#aeae7b9bdd98522e9410791bc75b3c55a">fe::Color</a>
+</li>
+<li>Black
+: <a class="el" href="classfe_1_1_color.html#a8d678fe55815e4b7823f86f1b6e05015">fe::Color</a>
+</li>
+<li>Blue
+: <a class="el" href="classfe_1_1_color.html#a2a1e900eb9398fb184bfe697da9dac99">fe::Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>Cyan
+: <a class="el" href="classfe_1_1_color.html#aa7e5304a2347f3282526bf50cafad458">fe::Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>g
+: <a class="el" href="classfe_1_1_color.html#a6637dd57b75b61e03b11e75cf159f5b8">fe::Color</a>
+</li>
+<li>Green
+: <a class="el" href="classfe_1_1_color.html#a8adf755115601016b727b87df3b4c9c7">fe::Color</a>
+</li>
+</ul>
+
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>m_animations
@@ -179,8 +222,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_drawer
 : <a class="el" href="classfe_1_1_tile_group.html#ad01430ff4b3f05c9236558647eb051eb">fe::TileGroup</a>
 </li>
-<li>m_drawState
-: <a class="el" href="classfe_1_1_entity.html#a4c558911fb6a65bb5a6868a46a40f1e3">fe::Entity</a>
+<li>m_drawStatus
+: <a class="el" href="classfe_1_1_entity.html#a33862f827af205286509602339905c78">fe::Entity</a>
 </li>
 <li>m_dynamicShader
 : <a class="el" href="classfe_1_1_map.html#a5e9a3c51d251713fdf127ccae043f66b">fe::Map</a>
@@ -193,6 +236,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_entityContainer
 : <a class="el" href="classfe_1_1_map.html#a651fb17e5751ebab143a2076bb029fc6">fe::Map</a>
+</li>
+<li>m_groupColor
+: <a class="el" href="classfe_1_1_tile_group_colors.html#afce97584ffce6a69857afe7d12f7a2d9">fe::TileGroupColors</a>
 </li>
 <li>m_h
 : <a class="el" href="classfe_1_1_matrix3d.html#ab700a43a7e41bbdc4d359454f0ef1631">fe::Matrix3d&lt; T &gt;</a>
@@ -225,6 +271,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="classfe_1_1_entities_interposing.html#a2aec593bbed8153091bb1480bac1b073">fe::EntitiesInterposing</a>
 , <a class="el" href="classfe_1_1_entity.html#a3df17d2a0df02577fb4e8f2a9a37a8f4">fe::Entity</a>
 , <a class="el" href="classfe_1_1_shadows_initializer.html#abcbce29f0d5d22df9dc13b659f7cb529">fe::ShadowsInitializer</a>
+, <a class="el" href="classfe_1_1_tile_group_colors.html#a3a6b5d3c64991a96a021636953abac0d">fe::TileGroupColors</a>
 , <a class="el" href="classfe_1_1_tile_group_data.html#ad95c9ba0527fc42f6e0f7fff406aac0f">fe::TileGroupData</a>
 , <a class="el" href="classfe_1_1_tile_group_drawer.html#ac10eba0c12e09bcc0a61742a52b3f64e">fe::TileGroupDrawer</a>
 , <a class="el" href="classfe_1_1_tile_group_loader.html#ab7f7b0741da41524de7cacecbcfcc61e">fe::TileGroupLoader</a>
@@ -290,7 +337,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="classfe_1_1_shadows_interface.html#ac5a4fa46e5230e392c5b8738aaaf34d6">fe::ShadowsInterface</a>
 </li>
 <li>m_status
-: <a class="el" href="classfe_1_1_tile_anim_data.html#afb6252aea57525ef94f185e40087c182">fe::TileAnimData</a>
+: <a class="el" href="classfe_1_1_tile_anim_data.html#a8affb6d71d0de8f7b7f8c9aa9be259ad">fe::TileAnimData</a>
 </li>
 <li>m_tempConf
 : <a class="el" href="classfe_1_1_map_data.html#acb8348c84b97d1fcf745e15a7f772ec5">fe::MapData</a>
@@ -311,11 +358,17 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_tilegroup
 : <a class="el" href="classfe_1_1_shadows_interface.html#a3a44a6f4e8e47e20d197a4e98bc4c092">fe::ShadowsInterface</a>
 </li>
+<li>m_tilegroupData
+: <a class="el" href="classfe_1_1_tile_group_colors.html#a332b76e620f2893de36e47395d450c8a">fe::TileGroupColors</a>
+</li>
 <li>m_tilePosition
 : <a class="el" href="classfe_1_1_entity.html#abba7852ebe38e698b097ff7e2867be35">fe::Entity</a>
 </li>
 <li>m_tiles
 : <a class="el" href="classfe_1_1_tile_group_data.html#a1b5254b48aded3fb2871982377b324f3">fe::TileGroupData</a>
+</li>
+<li>m_tilesColors
+: <a class="el" href="classfe_1_1_tile_group_colors.html#a191e522263ffedf2a4a22c96769abbb7">fe::TileGroupColors</a>
 </li>
 <li>m_tileset
 : <a class="el" href="classfe_1_1_tile_group_data.html#aac626efd9a713615d084cc34857d1f39">fe::TileGroupData</a>
@@ -332,6 +385,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_translucentTiles
 : <a class="el" href="classfe_1_1_map_data.html#a2a6f9ab6f9c9c77cd5148c3de289045f">fe::MapData</a>
 </li>
+<li>m_types
+: <a class="el" href="classfe_1_1_tile_group_colors.html#ac9e3663b82bff46aa68216bbb388ee8b">fe::TileGroupColors</a>
+</li>
+<li>m_typesColors
+: <a class="el" href="classfe_1_1_tile_group_colors.html#a11966f4863000f1196d4f290367318ff">fe::TileGroupColors</a>
+</li>
 <li>m_viewCenter
 : <a class="el" href="classfe_1_1_camera.html#aedb11a52dce41db9390a6707bf0fc31c">fe::Camera</a>
 </li>
@@ -342,10 +401,30 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classfe_1_1_matrix3d.html#ac53adcea10af1db0a3ab741ad7125191">fe::Matrix3d&lt; T &gt;</a>
 </li>
 <li>m_waitStatus
-: <a class="el" href="classfe_1_1_tile_anim_data.html#ab269ebfc47d79d2726ee779b894ffbcf">fe::TileAnimData</a>
+: <a class="el" href="classfe_1_1_tile_anim_data.html#a6060345dc79afad34f79cdcfff15b061">fe::TileAnimData</a>
 </li>
 <li>m_x
 : <a class="el" href="classfe_1_1_tile_anim_data.html#a1055c23f633ab7dc2131e1d5be421af2">fe::TileAnimData</a>
+</li>
+<li>Magenta
+: <a class="el" href="classfe_1_1_color.html#aff958b931ddc467ee32003f86c490c11">fe::Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>r
+: <a class="el" href="classfe_1_1_color.html#add91fa421f46f825a6001dd1c5b511a2">fe::Color</a>
+</li>
+<li>Red
+: <a class="el" href="classfe_1_1_color.html#a2db9ebbbf2962d5f98d6eae78d67af2c">fe::Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>White
+: <a class="el" href="classfe_1_1_color.html#aa225f3046a6f3c78cf55aa87fe169747">fe::Color</a>
 </li>
 </ul>
 
@@ -363,6 +442,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classfe_1_1_vector2.html#a768154c72d34ecc8dec746c77c37192a">fe::Vector2</a>
 , <a class="el" href="classfe_1_1_vector3.html#ad86b9aa0c5245f9e94ccf62a7987f63f">fe::Vector3</a>
 </li>
+<li>Yellow
+: <a class="el" href="classfe_1_1_color.html#a46f9c4a89d0024d1329db3bac635a702">fe::Color</a>
+</li>
 </ul>
 
 
@@ -376,7 +458,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 20 2015 18:49:18 for MoteurRedesign by
+    <li class="footer">Generated on Fri May 22 2015 18:32:55 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -1,5 +1,14 @@
 #include "Color.hpp"
 
+const fe::Color fe::Color::Black(0, 0, 0);
+const fe::Color fe::Color::White(255, 255, 255);
+const fe::Color fe::Color::Red(255, 0, 0);
+const fe::Color fe::Color::Green(0, 255, 0);
+const fe::Color fe::Color::Blue(0, 0, 255);
+const fe::Color fe::Color::Yellow(255, 255, 0);
+const fe::Color fe::Color::Magenta(255, 0, 255);
+const fe::Color fe::Color::Cyan(0, 255, 255);
+
 fe::Color::Color() : r(255), g(255), b(255), a(255)
 { }
 

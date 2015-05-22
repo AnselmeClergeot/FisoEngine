@@ -8,6 +8,8 @@ var files =
     [ "Camera.hpp", "_camera_8hpp.html", [
       [ "Camera", "classfe_1_1_camera.html", "classfe_1_1_camera" ]
     ] ],
+    [ "Color.cpp", "_color_8cpp.html", null ],
+    [ "Color.hpp", "_color_8hpp.html", "_color_8hpp" ],
     [ "ConfigsLoader.cpp", "_configs_loader_8cpp.html", null ],
     [ "ConfigsLoader.hpp", "_configs_loader_8hpp.html", [
       [ "ConfigsLoader", "classfe_1_1_configs_loader.html", "classfe_1_1_configs_loader" ]
@@ -31,9 +33,7 @@ var files =
       [ "EntitiesInterposing", "classfe_1_1_entities_interposing.html", "classfe_1_1_entities_interposing" ]
     ] ],
     [ "Entity.cpp", "_entity_8cpp.html", null ],
-    [ "Entity.hpp", "_entity_8hpp.html", [
-      [ "Entity", "classfe_1_1_entity.html", "classfe_1_1_entity" ]
-    ] ],
+    [ "Entity.hpp", "_entity_8hpp.html", "_entity_8hpp" ],
     [ "ioFuncs.cpp", "io_funcs_8cpp.html", null ],
     [ "ioFuncs.hpp", "io_funcs_8hpp.html", "io_funcs_8hpp" ],
     [ "IsometricMath.cpp", "_isometric_math_8cpp.html", null ],
@@ -67,6 +67,10 @@ var files =
     [ "TileGroup.cpp", "_tile_group_8cpp.html", null ],
     [ "TileGroup.hpp", "_tile_group_8hpp.html", [
       [ "TileGroup", "classfe_1_1_tile_group.html", "classfe_1_1_tile_group" ]
+    ] ],
+    [ "TileGroupColors.cpp", "_tile_group_colors_8cpp.html", null ],
+    [ "TileGroupColors.hpp", "_tile_group_colors_8hpp.html", [
+      [ "TileGroupColors", "classfe_1_1_tile_group_colors.html", "classfe_1_1_tile_group_colors" ]
     ] ],
     [ "TileGroupData.cpp", "_tile_group_data_8cpp.html", null ],
     [ "TileGroupData.hpp", "_tile_group_data_8hpp.html", [

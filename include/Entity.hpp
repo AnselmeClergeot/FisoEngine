@@ -47,6 +47,11 @@ namespace fe {
  * Entity class is the class manipulated by the user to interact with this same entity.
  * Entity class contains all entity data from position, size, to the image of this entity...
  */
+
+/*!  DrawStatus defines the drawing status of an entity : drawing/not drawing*/
+enum DrawStatus {Draw /*!< Draw state */,
+                 NotDraw /*!< NotDraw state */};
+
 class Entity
 {
     friend class EntitiesInterposing;
@@ -128,13 +133,13 @@ class Entity
         void setImagePath(const std::string path);
 
         /**
-        * \fn void setDrawState(const bool state)
+        * \fn void setDrawStatus(const fe::DrawStatus status)
         * \brief To set the draw state of the entity (if it have to be drawn or not)
         *
-        * \param state The draw state: true for on and false for off
+        * \param status The draw status
         * \return void
         */
-        void setDrawState(const bool state);
+        void setDrawStatus(const fe::DrawStatus status);
 
         /**
         * \fn void setLayer(const unsigned int layer)
@@ -186,12 +191,12 @@ class Entity
         sf::Sprite &getSprite();
 
         /**
-        * \fn bool getDrawingState() const
-        * \brief To get the drawing state of the entity
+        * \fn fe::DrawStatus getDrawStatus() const
+        * \brief To get the draw status of the entity
         *
-        * \return The entity drawing state: true for on and false for off
+        * \return The entity draw status
         */
-        bool getDrawingState() const;
+        fe::DrawStatus getDrawStatus() const;
 
         /**
         * \fn void setPosition(const fe::Vector2 pos)
@@ -243,7 +248,7 @@ class Entity
 
         sf::Sprite m_sprite; /* !< The entity sprite [SPECIFIC TO SFML]*/
 
-        bool m_drawState; /* !< The entity draw state*/
+        fe::DrawStatus m_drawStatus; /* !< The entity draw state*/
 
         fe::MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 

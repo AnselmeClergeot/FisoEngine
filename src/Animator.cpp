@@ -119,7 +119,7 @@ void fe::Animator::setKindOf(const unsigned int x, const unsigned int y, const u
 }
 
 void fe::Animator::launchAnimation(const fe::Vector3 coord) {
-    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(true);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::AnimStatus::On);
 }
 
 void fe::Animator::launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
@@ -127,7 +127,7 @@ void fe::Animator::launchAnimation(const unsigned int x, const unsigned int y, c
 }
 
 void fe::Animator::stopAnimation(const fe::Vector3 coord) {
-    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(false);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::AnimStatus::Off);
 }
 
 void fe::Animator::stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {

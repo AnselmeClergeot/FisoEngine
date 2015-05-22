@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "fe::Animator", "classfe_1_1_animator.html", null ],
     [ "fe::Camera", "classfe_1_1_camera.html", null ],
+    [ "fe::Color", "classfe_1_1_color.html", null ],
     [ "fe::ConfigsLoader", "classfe_1_1_configs_loader.html", null ],
     [ "fe::ConfigsSaver", "classfe_1_1_configs_saver.html", null ],
     [ "Drawable", null, [
@@ -13,6 +14,7 @@ var hierarchy =
     [ "fe::Entity", "classfe_1_1_entity.html", null ],
     [ "fe::MapData", "classfe_1_1_map_data.html", null ],
     [ "fe::Matrix3d< T >", "classfe_1_1_matrix3d.html", null ],
+    [ "fe::Matrix3d< fe::fe::Color >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< fe::fe::TileAnimData >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< sf::Sprite >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< unsigned int >", "classfe_1_1_matrix3d.html", null ],
@@ -21,6 +23,7 @@ var hierarchy =
     [ "fe::ShadowsSystemStates", "classfe_1_1_shadows_system_states.html", null ],
     [ "fe::TileAnimData", "classfe_1_1_tile_anim_data.html", null ],
     [ "fe::TileGroup", "classfe_1_1_tile_group.html", null ],
+    [ "fe::TileGroupColors", "classfe_1_1_tile_group_colors.html", null ],
     [ "fe::TileGroupData", "classfe_1_1_tile_group_data.html", null ],
     [ "fe::TileGroupDrawer", "classfe_1_1_tile_group_drawer.html", null ],
     [ "fe::TileGroupLoader", "classfe_1_1_tile_group_loader.html", null ],

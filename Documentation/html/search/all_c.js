@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['reload',['reload',['../classfe_1_1_map.html#ab08829ca55b6065f13555be3fed76e2c',1,'fe::Map']]],
-  ['reloadcolors',['reloadColors',['../classfe_1_1_tile_group.html#a79859db4d53d87617a5b58c763ac84ba',1,'fe::TileGroup']]],
-  ['removeall',['removeAll',['../classfe_1_1_entities_container.html#a34276a38946ad354b1ba100d48915745',1,'fe::EntitiesContainer']]],
-  ['removeentity',['removeEntity',['../classfe_1_1_entities_container.html#a854e9983f72b1fa470146b96fa8daf06',1,'fe::EntitiesContainer']]],
-  ['removetranslucenttile',['removeTranslucentTile',['../classfe_1_1_map.html#a5373973fd3a0dc4aa3df1af9bc74f28f',1,'fe::Map::removeTranslucentTile()'],['../classfe_1_1_map_data.html#ad27728c92da9c50a17dcae2ea8ae64c5',1,'fe::MapData::removeTranslucentTile()']]],
-  ['resetlayerfiles',['resetLayerFiles',['../classfe_1_1_map.html#a5f11c03d67ef2f9c1077a4b965e9c1b6',1,'fe::Map']]],
-  ['resetlayerlist',['resetLayerList',['../classfe_1_1_configs_saver.html#ad5209ec788b87f344b487d3cff16ad18',1,'fe::ConfigsSaver::resetLayerList()'],['../classfe_1_1_configs_loader.html#ab80e074d7fc3d95fa826093ab31b0f66',1,'fe::ConfigsLoader::resetLayerList()']]],
-  ['resetx',['resetX',['../classfe_1_1_tile_anim_data.html#a174c3358798188dddb5d79d93f57db0d',1,'fe::TileAnimData']]],
-  ['resize',['resize',['../classfe_1_1_matrix3d.html#afbf14d109a0b17363dce8b13297ffe25',1,'fe::Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d, const T fill)'],['../classfe_1_1_matrix3d.html#a874958820866c09ee2ad563dce73060a',1,'fe::Matrix3d::resize(const unsigned int w, const unsigned int h, const unsigned int d)']]],
-  ['resizematrices',['resizeMatrices',['../classfe_1_1_configs_loader.html#a16bd34ea49ccaf226dcc0f5a29a1f29f',1,'fe::ConfigsLoader']]],
-  ['resizematrix',['resizeMatrix',['../classfe_1_1_shadows_initializer.html#ac05a8d815e5ee6ecb65171b4f7242e7d',1,'fe::ShadowsInitializer']]],
-  ['resizeopacitiesmatrix3d',['resizeOpacitiesMatrix3d',['../classfe_1_1_tile_group_loader.html#aa62562407012901a1feeee0ba8420973',1,'fe::TileGroupLoader']]],
-  ['resizetileanimdatalist',['resizeTileAnimDataList',['../classfe_1_1_animator.html#a3a94c3e1b3d0da58693beaf55db51103',1,'fe::Animator']]],
-  ['resizetilelist',['resizeTileList',['../classfe_1_1_tile_group_loader.html#a68df30a3a1b0d7a8da2559d04aeb56f1',1,'fe::TileGroupLoader']]],
-  ['restart',['restart',['../classfe_1_1_timer.html#ada3c62696f15b72ed9ea31da86ce09d5',1,'fe::Timer']]],
-  ['right',['Right',['../namespacefe.html#ab3facb2cbee4186cdcd076ae4975b2c8a4881918320fbcbae110b064e39066c14',1,'fe']]]
+  ['off',['Off',['../namespacefe.html#ad3825bc20fce6a29bdc052e4e2e330a4a5d8f9710acbdb3d0fa4adfe1159f87d4',1,'fe']]],
+  ['on',['On',['../namespacefe.html#ad3825bc20fce6a29bdc052e4e2e330a4ac2f4cef269a743efd81aef83b2d3834e',1,'fe']]],
+  ['operator_2b',['operator+',['../namespacefe.html#a00074f6435ccb3838a4a0156a5b5380c',1,'fe::operator+(const fe::Vector2 &amp;v1, const fe::Vector2 &amp;v2)'],['../namespacefe.html#af2058752113bc137f723de75e5188e27',1,'fe::operator+(const fe::Vector3 &amp;v1, const fe::Vector3 &amp;v2)']]],
+  ['operator_2b_3d',['operator+=',['../classfe_1_1_vector2.html#af3f03b18c5b8ae7f5af37c6dedad4197',1,'fe::Vector2::operator+=()'],['../classfe_1_1_vector3.html#a99e05d4da17bec3aa13b4b911f5c8753',1,'fe::Vector3::operator+=()']]],
+  ['operator_2d',['operator-',['../namespacefe.html#ab6ab07d9edfa8de31bca1f268eadd458',1,'fe::operator-(const fe::Vector2 &amp;v1, const fe::Vector2 &amp;v2)'],['../namespacefe.html#a4f3b9cdd62dbc9a197b0211d0671fb5a',1,'fe::operator-(const fe::Vector3 &amp;v1, const fe::Vector3 &amp;v2)']]],
+  ['operator_2d_3d',['operator-=',['../classfe_1_1_vector2.html#a29745c49686159dfc2f1e9d7e36628ef',1,'fe::Vector2::operator-=()'],['../classfe_1_1_vector3.html#adcebef29d91db36810f372dd72a1876b',1,'fe::Vector3::operator-=()']]],
+  ['operator_3d',['operator=',['../classfe_1_1_matrix3d.html#acf480c93aa2ed9382ca7b6af23c287a3',1,'fe::Matrix3d::operator=()'],['../classfe_1_1_color.html#a260012e5b4909f828dd55e673487ba76',1,'fe::Color::operator=()'],['../classfe_1_1_vector2.html#a4bcbbddb11e7c54b0cec15dab3d21c0b',1,'fe::Vector2::operator=()'],['../classfe_1_1_vector3.html#a8c5de26c889515e49c6e6a98e4c44020',1,'fe::Vector3::operator=()']]],
+  ['operator_3d_3d',['operator==',['../namespacefe.html#abc6b8da69ff37642a2ddab617558b262',1,'fe::operator==(const fe::Color &amp;color1, const fe::Color &amp;color2)'],['../namespacefe.html#acbfe84f2c4e5e921be9915d654e94ad0',1,'fe::operator==(const fe::Vector2 &amp;v1, const fe::Vector2 &amp;v2)'],['../namespacefe.html#a444c66f1856fbfa59fe0d12c0bc598f0',1,'fe::operator==(const fe::Vector3 &amp;v1, const fe::Vector3 &amp;v2)']]]
 ];

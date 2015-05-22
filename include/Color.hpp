@@ -92,7 +92,14 @@ class Color
                      b, /*!< The blue value */
                      a; /*!< The alpha (opacity) value */
 
-    private:
+    static const fe::Color Black;       /*!< The black prepared color */
+    static const fe::Color White;       /*!< The white prepared color */
+    static const fe::Color Red;         /*!< The red prepared color */
+    static const fe::Color Green;       /*!< The green prepared color */
+    static const fe::Color Blue;        /*!< The blue prepared color */
+    static const fe::Color Yellow;      /*!< The yellow prepared color */
+    static const fe::Color Magenta;     /*!< The magenta prepared color */
+    static const fe::Color Cyan;        /*!< The cyan prepared color */
 };
 
 /**

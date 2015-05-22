@@ -27,17 +27,17 @@ fe::Vector2 fe::toIsometricPosition(const fe::Vector3 coord, const fe::MapData &
                        -coord.z*(map_data.getTileSize().y-map_data.getTileBaseHeight()));
 }
 
-fe::Vector2 fe::getTileCoordAtPixels(const fe::Vector2 pixels,
+fe::Vector3 fe::getTileCoordAtPixels(const fe::Vector2 pixels,
                                      const unsigned int layer,
                                      const fe::MapData &map_data,
                                      const fe::Camera *camera) {
     if(camera==0)
-    return fe::Vector2((static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() +                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight(),
-                   (static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() -                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight());
+    return fe::Vector3((static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() +                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight(),
+                   (static_cast<int>(pixels.y - map_data.getPosition().y) + (layer-1)*map_data.getTileBaseHeight() -                    static_cast<int>(pixels.x - map_data.getPosition().x)/2)/map_data.getTileBaseHeight(), layer);
     if(camera!=0)
-    return fe::Vector2((static_cast<int>(pixels.y - map_data.getPosition().y+
+    return fe::Vector3((static_cast<int>(pixels.y - map_data.getPosition().y+
 camera->getViewCenter().y-camera->getViewDimensions().y/2) + (layer-1)*map_data.getTileBaseHeight() +
                     static_cast<int>(pixels.x - map_data.getPosition().x+camera->getViewCenter().x-camera->getViewDimensions().x/2)/2)/map_data.getTileBaseHeight(),
                    (static_cast<int>(pixels.y - map_data.getPosition().y+camera->getViewCenter().y-camera->getViewDimensions().y/2) + (layer-1)*map_data.getTileBaseHeight() -
-                    static_cast<int>(pixels.x - map_data.getPosition().x+camera->getViewCenter().x-camera->getViewDimensions().x/2)/2)/map_data.getTileBaseHeight());
+                    static_cast<int>(pixels.x - map_data.getPosition().x+camera->getViewCenter().x-camera->getViewDimensions().x/2)/2)/map_data.getTileBaseHeight(), layer);
 }

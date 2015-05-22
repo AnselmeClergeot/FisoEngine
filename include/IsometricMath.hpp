@@ -48,7 +48,7 @@ namespace fe {
 Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data);
 
 /**
-* \fn fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels,
+* \fn fe::Vector3 getTileCoordAtPixels(const fe::Vector2 pixels,
                              const unsigned int layer,
                              const fe::MapData &map_data,
                              const fe::Camera *camera = 0)
@@ -60,7 +60,7 @@ Vector2 toIsometricPosition(const Vector3 coord, const MapData &map_data);
 * \param camera The pointer to the map Camera
 * \return The map tile coordinates
 */
-fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels,
+fe::Vector3 getTileCoordAtPixels(const fe::Vector2 pixels,
                              const unsigned int layer,
                              const fe::MapData &map_data,
                              const fe::Camera *camera = 0);

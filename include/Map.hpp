@@ -419,17 +419,17 @@ class Map : public sf::Drawable
         fe::Color getColorOfType(const unsigned int type) const;
 
         /**
-        * \fn fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const
+        * \fn fe::Vector3 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const
         * \brief To get the map-relative tile coordinates pointed by 2D screen coordinates
         *
         * \param pixels The screen coordinates
         * \param layer The map layer number to base on to process calculations
         * \return The map-relative tile coordinates in a Vector2
         */
-        fe::Vector2 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const;
+        fe::Vector3 getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const;
 
         /**
-        * \fn fe::Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py,
+        * \fn fe::Vector3 getTileCoordAtPixels(const unsigned int px, const unsigned int py,
                                            const unsigned int layer) const
         * \brief To get the map-relative tile coordinates pointed by 2D screen coordinates
         *
@@ -438,7 +438,7 @@ class Map : public sf::Drawable
         * \param layer The map layer number to base on to process calculations
         * \return The map-relative tile coordinates in a Vector2
         */
-        fe::Vector2 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
+        fe::Vector3 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
 
         /**
         * \fn fe::ShadowsInterface &shadows()

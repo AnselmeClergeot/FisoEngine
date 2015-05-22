@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['launchanimation',['launchAnimation',['../classfe_1_1_animator.html#a8a4dc3df3308fc16f08805095c71e54a',1,'fe::Animator::launchAnimation(const fe::Vector3 coord)'],['../classfe_1_1_animator.html#aaa561f05e8030e258ddc3f54bc236baa',1,'fe::Animator::launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z)']]],
-  ['left',['Left',['../namespacefe.html#ab3facb2cbee4186cdcd076ae4975b2c8a57b2f92ceab039dbfd41d87fcb1cdd3b',1,'fe']]],
-  ['load',['load',['../classfe_1_1_configs_loader.html#a64d37b3de9ed3fa156003dbdb63a0213',1,'fe::ConfigsLoader']]],
-  ['loadmapsize',['loadMapSize',['../classfe_1_1_configs_loader.html#ac71931ddc74dbefa0d07902e460356e1',1,'fe::ConfigsLoader']]],
-  ['loadmatrices',['loadMatrices',['../classfe_1_1_configs_loader.html#a92dc8eda55f8d09d52d866649f1a16cc',1,'fe::ConfigsLoader']]],
-  ['loadtileset',['loadTileset',['../classfe_1_1_tile_group_loader.html#a77b71fededdc735295f3230863d48d9a',1,'fe::TileGroupLoader']]]
+  ['init',['init',['../classfe_1_1_shadows_interface.html#a3381f679611f218ddceb417241231170',1,'fe::ShadowsInterface']]],
+  ['initialize',['initialize',['../classfe_1_1_tile_group.html#acb1bdf5c99aa76bc6933a90ce25c3c54',1,'fe::TileGroup::initialize()'],['../classfe_1_1_shadows_initializer.html#a81ab8fc9d0f0111c09021c8a740a583e',1,'fe::ShadowsInitializer::initialize()'],['../classfe_1_1_tile_group_loader.html#af84ef697c83813200e1f89393c07d03c',1,'fe::TileGroupLoader::initialize()']]],
+  ['interpose',['interpose',['../classfe_1_1_entities_interposing.html#acd35effb6a95c2f0a72446f9342d8346',1,'fe::EntitiesInterposing']]],
+  ['iofuncs_2ecpp',['ioFuncs.cpp',['../io_funcs_8cpp.html',1,'']]],
+  ['iofuncs_2ehpp',['ioFuncs.hpp',['../io_funcs_8hpp.html',1,'']]],
+  ['isinitialized',['isInitialized',['../classfe_1_1_shadows_system_states.html#a3bde6f47648f1a3c1dba98ba7a3b853b',1,'fe::ShadowsSystemStates']]],
+  ['isometricmath_2ecpp',['IsometricMath.cpp',['../_isometric_math_8cpp.html',1,'']]],
+  ['isometricmath_2ehpp',['IsometricMath.hpp',['../_isometric_math_8hpp.html',1,'']]],
+  ['ison',['isOn',['../classfe_1_1_shadows_system_states.html#a174b49687175e2f2b041daf5d59de0b8',1,'fe::ShadowsSystemStates']]],
+  ['istranslucent',['isTranslucent',['../classfe_1_1_map.html#a9504d9d501328cd5eebe9158004060aa',1,'fe::Map::isTranslucent()'],['../classfe_1_1_map_data.html#aae508c2fcf952d630d2f7408e1070c14',1,'fe::MapData::isTranslucent()']]],
+  ['isvisible',['isVisible',['../namespacefe.html#af5c34eefabd3ba5342c827e1e9694264',1,'fe']]]
 ];

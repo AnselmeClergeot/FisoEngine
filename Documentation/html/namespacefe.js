@@ -2,6 +2,7 @@ var namespacefe =
 [
     [ "Animator", "classfe_1_1_animator.html", "classfe_1_1_animator" ],
     [ "Camera", "classfe_1_1_camera.html", "classfe_1_1_camera" ],
+    [ "Color", "classfe_1_1_color.html", "classfe_1_1_color" ],
     [ "ConfigsLoader", "classfe_1_1_configs_loader.html", "classfe_1_1_configs_loader" ],
     [ "ConfigsSaver", "classfe_1_1_configs_saver.html", "classfe_1_1_configs_saver" ],
     [ "DynamicShader", "classfe_1_1_dynamic_shader.html", "classfe_1_1_dynamic_shader" ],
@@ -16,6 +17,7 @@ var namespacefe =
     [ "ShadowsSystemStates", "classfe_1_1_shadows_system_states.html", "classfe_1_1_shadows_system_states" ],
     [ "TileAnimData", "classfe_1_1_tile_anim_data.html", "classfe_1_1_tile_anim_data" ],
     [ "TileGroup", "classfe_1_1_tile_group.html", "classfe_1_1_tile_group" ],
+    [ "TileGroupColors", "classfe_1_1_tile_group_colors.html", "classfe_1_1_tile_group_colors" ],
     [ "TileGroupData", "classfe_1_1_tile_group_data.html", "classfe_1_1_tile_group_data" ],
     [ "TileGroupDrawer", "classfe_1_1_tile_group_drawer.html", "classfe_1_1_tile_group_drawer" ],
     [ "TileGroupLoader", "classfe_1_1_tile_group_loader.html", "classfe_1_1_tile_group_loader" ],

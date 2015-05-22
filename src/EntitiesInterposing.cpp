@@ -29,9 +29,9 @@ fe::EntitiesInterposing::EntitiesInterposing(fe::EntitiesContainer &container,
 void fe::EntitiesInterposing::interpose(fe::Vector3 coord, sf::RenderTarget& target) const {
     for(std::size_t i(0); i<m_container.getEntitiesNumber(); i++)
     {
-        if(m_container.entityAt(i).getTilePosition()==coord &&
-           m_container.entityAt(i).getDrawingState() ||
-           m_container.entityAt(i).getTilePosition().z==m_mapData.getSize().y)
+        if(m_container.entityAt(i).getDrawStatus()==fe::DrawStatus::Draw &&
+           (m_container.entityAt(i).getTilePosition()==coord ||
+           m_container.entityAt(i).getTilePosition().z==m_mapData.getSize().y))
                 m_container.entityAt(i).draw(target);
 
     }

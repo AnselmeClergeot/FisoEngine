@@ -251,11 +251,11 @@ fe::Color fe::Map::getColorOfType(const unsigned int type) const {
     return m_tileGroup.getColorOfType(type);
 }
 
-fe::Vector2 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const {
+fe::Vector3 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const {
     return fe::getTileCoordAtPixels(pixels, layer, m_data, &m_camera);
 }
 
-fe::Vector2 fe::Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const
+fe::Vector3 fe::Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const
 {
     return getTileCoordAtPixels(fe::Vector2(px, py), layer);
 }
