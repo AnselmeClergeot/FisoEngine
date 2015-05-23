@@ -441,6 +441,26 @@ class Map : public sf::Drawable
         fe::Vector3 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
 
         /**
+        * \fn fe::Vector2 getPositionOfTile(const fe::Vector3 coord) const
+        * \brief To get the pixel position of a specific tile
+        *
+        * \param coord The tile 3D coordinates
+        * \return The tile position in pixels
+        */
+        fe::Vector2 getPositionOfTile(const fe::Vector3 coord) const;
+
+        /**
+        * \fn fe::Vector2 getPositionOfTile(const unsigned int x, const unsigned int y, const unsigned int z) const
+        * \brief To get the pixel position of a specific tile
+        *
+        * \param x The tile x coordinate
+        * \param y The tile y coordinate
+        * \param z The tile z coordinate
+        * \return The tile position in pixels
+        */
+        fe::Vector2 getPositionOfTile(const unsigned int x, const unsigned int y, const unsigned int z) const;
+
+        /**
         * \fn fe::ShadowsInterface &shadows()
         * \brief To access the shadows system interface
         *

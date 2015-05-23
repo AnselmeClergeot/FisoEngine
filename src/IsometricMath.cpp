@@ -21,8 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-fe::Vector2 fe::toIsometricPosition(const fe::Vector3 coord, const fe::MapData &map_data) {
-    return fe::Vector2(map_data.getPosition().x+(coord.x-coord.y-1)*map_data.getTileBaseHeight(),
+fe::Vector2 fe::toIsometricPosition(const fe::Vector3 coord,
+                                    const fe::MapData &map_data) {
+        return fe::Vector2(map_data.getPosition().x+(coord.x-coord.y-1)*map_data.getTileBaseHeight(),
                        map_data.getPosition().y+(coord.x+coord.y)*map_data.getTileBaseHeight()/2
                        -coord.z*(map_data.getTileSize().y-map_data.getTileBaseHeight()));
 }

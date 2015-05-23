@@ -85,13 +85,13 @@ class ShadowsInterface
         void init();
 
         /**
-        * \fn void setOn(bool on)
+        * \fn void setStatus(const fe::Status status)
         * \brief To set the shadows on
         *
-        * \param on True for on and false for off
+        * \param status The on/off status
         * \return void
         */
-        void setOn(bool on);
+        void setStatus(const fe::Status status);
 
         /**
         * \fn unsigned int getOpacity() const
@@ -100,6 +100,14 @@ class ShadowsInterface
         * \return The shadows opacity
         */
         unsigned int getOpacity() const;
+
+        /**
+        * \fn fe::Status getStatus() const
+        * \brief To get the shadows system on/off status
+        *
+        * \return The shadows system status
+        */
+        fe::Status getStatus() const;
 
     private:
 

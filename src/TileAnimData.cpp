@@ -24,8 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 fe::TileAnimData::TileAnimData() : m_kind(Global),
                                    m_direction(Right),
                                    m_x(0),
-                                   m_status(fe::AnimStatus::Off),
-                                   m_waitStatus(fe::AnimStatus::Off),
+                                   m_status(fe::Status::Off),
+                                   m_waitStatus(fe::Status::Off),
                                    m_length(0)
 { }
 
@@ -33,9 +33,9 @@ void fe::TileAnimData::setKind(const fe::AnimKind kind) {
     m_kind = kind;
 
     if(m_kind==fe::AnimKind::Single)
-        m_waitStatus = fe::AnimStatus::Off;
+        m_waitStatus = fe::Status::Off;
     if(m_kind==fe::AnimKind::Global)
-        m_waitStatus = fe::AnimStatus::On;
+        m_waitStatus = fe::Status::On;
 
     resetX();
 }
@@ -46,10 +46,10 @@ void fe::TileAnimData::setDirection(const fe::AnimDirection direction) {
     resetX();
 }
 
-void fe::TileAnimData::setStatus(const fe::AnimStatus status) {
+void fe::TileAnimData::setStatus(const fe::Status status) {
     m_waitStatus = status;
-    if(status==fe::AnimStatus::Off)
-        m_status = fe::AnimStatus::Off;
+    if(status==fe::Status::Off)
+        m_status = fe::Status::Off;
 
     resetX();
 }
@@ -74,12 +74,12 @@ unsigned int fe::TileAnimData::getX() const {
     return m_x;
 }
 
-fe::AnimStatus fe::TileAnimData::getStatus() const {
+fe::Status fe::TileAnimData::getStatus() const {
     return m_status;
 }
 
 void fe::TileAnimData::updateX() {
-    if(m_status==fe::AnimStatus::On)
+    if(m_status==fe::Status::On)
         if(m_length>1)
         {
             if(m_direction==fe::AnimDirection::Right)
@@ -91,7 +91,7 @@ void fe::TileAnimData::updateX() {
                     if(m_kind==fe::AnimKind::Global)
                         resetX();
                     else if(m_kind==fe::AnimKind::Single)
-                        m_waitStatus = fe::AnimStatus::Off;
+                        m_waitStatus = fe::Status::Off;
                 }
 
             }
@@ -105,7 +105,7 @@ void fe::TileAnimData::updateX() {
                     if(m_kind==fe::AnimKind::Global)
                         resetX();
                     else if(m_kind==fe::AnimKind::Single)
-                        m_waitStatus = fe::AnimStatus::Off;
+                        m_waitStatus = fe::Status::Off;
                 }
 
             }

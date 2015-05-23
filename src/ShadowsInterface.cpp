@@ -42,10 +42,14 @@ void fe::ShadowsInterface::init() {
     m_initializer.initialize();
 }
 
-void fe::ShadowsInterface::setOn(bool on) {
-    m_states.setOn(on);
+void fe::ShadowsInterface::setStatus(const fe::Status status) {
+    m_states.setStatus(status);
 }
 
 unsigned int fe::ShadowsInterface::getOpacity() const {
     return m_tilegroup.getGroupColor().a;
+}
+
+fe::Status fe::ShadowsInterface::getStatus() const {
+    return m_states.getStatus();
 }

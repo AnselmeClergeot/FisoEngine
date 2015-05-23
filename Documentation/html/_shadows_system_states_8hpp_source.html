@@ -129,45 +129,49 @@ $(document).ready(function(){initNavTree('_shadows_system_states_8hpp_source.htm
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef SHADOWSSYSTEMSTATES_HPP</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define SHADOWSSYSTEMSTATES_HPP</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefe.html">fe</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classfe_1_1_shadows_system_states.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfe_1_1_shadows_system_states.html">ShadowsSystemStates</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classfe_1_1_shadows_system_states.html#a9cc6a9022f924f28a5242a4f713f1392">ShadowsSystemStates</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a599fbb13f8e4d37ce61032ead73d74a0">setOn</a>(<span class="keywordtype">bool</span> on);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_shadows_system_states.html#aa23a188247772a70754cb40d53bc235a">setInitialized</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a174b49687175e2f2b041daf5d59de0b8">isOn</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a3bde6f47648f1a3c1dba98ba7a3b853b">isInitialized</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_status_8hpp.html">Status.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefe.html">fe</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classfe_1_1_shadows_system_states.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfe_1_1_shadows_system_states.html">ShadowsSystemStates</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classfe_1_1_shadows_system_states.html#a9cc6a9022f924f28a5242a4f713f1392">ShadowsSystemStates</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_shadows_system_states.html#ab7c62f076dea4890e219bd0184f0c184">setStatus</a>(<span class="keyword">const</span> <a class="code" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a> status);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_shadows_system_states.html#aa23a188247772a70754cb40d53bc235a">setInitialized</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a> <a class="code" href="classfe_1_1_shadows_system_states.html#ab12f6e2e7150fee9876f426429bc7e53">getStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a3bde6f47648f1a3c1dba98ba7a3b853b">isInitialized</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classfe_1_1_shadows_system_states.html#a114b6d8bbebfdaa937ae6cb61ec55bef">   87</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a114b6d8bbebfdaa937ae6cb61ec55bef">m_on</a>, </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classfe_1_1_shadows_system_states.html#a8e85583e301426d6d42a5fcd198a4fa4">m_initialized</a>; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // SHADOWSSYSTEMSTATES_HPP</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classfe_1_1_shadows_system_states.html#acb4671a6c588a27aab7aaae9600bf278">   89</a></span>&#160;        <a class="code" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a> <a class="code" href="classfe_1_1_shadows_system_states.html#acb4671a6c588a27aab7aaae9600bf278">m_status</a>; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classfe_1_1_shadows_system_states.html#a8e85583e301426d6d42a5fcd198a4fa4">   91</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classfe_1_1_shadows_system_states.html#a8e85583e301426d6d42a5fcd198a4fa4">m_initialized</a>; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // SHADOWSSYSTEMSTATES_HPP</span></div>
+<div class="ttc" id="classfe_1_1_shadows_system_states_html_ab7c62f076dea4890e219bd0184f0c184"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#ab7c62f076dea4890e219bd0184f0c184">fe::ShadowsSystemStates::setStatus</a></div><div class="ttdeci">void setStatus(const fe::Status status)</div><div class="ttdoc">To set the shadows system on/off. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:28</div></div>
+<div class="ttc" id="classfe_1_1_shadows_system_states_html_ab12f6e2e7150fee9876f426429bc7e53"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#ab12f6e2e7150fee9876f426429bc7e53">fe::ShadowsSystemStates::getStatus</a></div><div class="ttdeci">fe::Status getStatus() const </div><div class="ttdoc">To know if the shadows system is on or off. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:37</div></div>
 <div class="ttc" id="classfe_1_1_shadows_system_states_html_aa23a188247772a70754cb40d53bc235a"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#aa23a188247772a70754cb40d53bc235a">fe::ShadowsSystemStates::setInitialized</a></div><div class="ttdeci">void setInitialized()</div><div class="ttdoc">To set the shadows system initialized state to true. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:33</div></div>
-<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> TileGroup.hpp:39</div></div>
+<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Color.hpp:34</div></div>
+<div class="ttc" id="namespacefe_html_a9096c5b6066aeef8a86649156b072985"><div class="ttname"><a href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> Status.hpp:36</div></div>
 <div class="ttc" id="classfe_1_1_shadows_system_states_html_a9cc6a9022f924f28a5242a4f713f1392"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a9cc6a9022f924f28a5242a4f713f1392">fe::ShadowsSystemStates::ShadowsSystemStates</a></div><div class="ttdeci">ShadowsSystemStates()</div><div class="ttdoc">The default class constructor. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:24</div></div>
-<div class="ttc" id="classfe_1_1_shadows_system_states_html_a174b49687175e2f2b041daf5d59de0b8"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a174b49687175e2f2b041daf5d59de0b8">fe::ShadowsSystemStates::isOn</a></div><div class="ttdeci">bool isOn() const </div><div class="ttdoc">To know if the shadows system is on or off. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:37</div></div>
-<div class="ttc" id="classfe_1_1_shadows_system_states_html_a599fbb13f8e4d37ce61032ead73d74a0"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a599fbb13f8e4d37ce61032ead73d74a0">fe::ShadowsSystemStates::setOn</a></div><div class="ttdeci">void setOn(bool on)</div><div class="ttdoc">To set the shadows system on/off. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:28</div></div>
-<div class="ttc" id="classfe_1_1_shadows_system_states_html_a8e85583e301426d6d42a5fcd198a4fa4"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a8e85583e301426d6d42a5fcd198a4fa4">fe::ShadowsSystemStates::m_initialized</a></div><div class="ttdeci">bool m_initialized</div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:87</div></div>
-<div class="ttc" id="classfe_1_1_shadows_system_states_html_a114b6d8bbebfdaa937ae6cb61ec55bef"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a114b6d8bbebfdaa937ae6cb61ec55bef">fe::ShadowsSystemStates::m_on</a></div><div class="ttdeci">bool m_on</div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:87</div></div>
-<div class="ttc" id="classfe_1_1_shadows_system_states_html"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html">fe::ShadowsSystemStates</a></div><div class="ttdoc">This class is the state container of the shadows system. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:41</div></div>
+<div class="ttc" id="classfe_1_1_shadows_system_states_html_acb4671a6c588a27aab7aaae9600bf278"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#acb4671a6c588a27aab7aaae9600bf278">fe::ShadowsSystemStates::m_status</a></div><div class="ttdeci">fe::Status m_status</div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:89</div></div>
+<div class="ttc" id="classfe_1_1_shadows_system_states_html_a8e85583e301426d6d42a5fcd198a4fa4"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a8e85583e301426d6d42a5fcd198a4fa4">fe::ShadowsSystemStates::m_initialized</a></div><div class="ttdeci">bool m_initialized</div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:91</div></div>
+<div class="ttc" id="classfe_1_1_shadows_system_states_html"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html">fe::ShadowsSystemStates</a></div><div class="ttdoc">This class is the state container of the shadows system. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.hpp:43</div></div>
 <div class="ttc" id="classfe_1_1_shadows_system_states_html_a3bde6f47648f1a3c1dba98ba7a3b853b"><div class="ttname"><a href="classfe_1_1_shadows_system_states.html#a3bde6f47648f1a3c1dba98ba7a3b853b">fe::ShadowsSystemStates::isInitialized</a></div><div class="ttdeci">bool isInitialized() const </div><div class="ttdoc">To know if the shadows system is initialized or not. </div><div class="ttdef"><b>Definition:</b> ShadowsSystemStates.cpp:41</div></div>
+<div class="ttc" id="_status_8hpp_html"><div class="ttname"><a href="_status_8hpp.html">Status.hpp</a></div><div class="ttdoc">Definition of Status enumeration. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_shadows_system_states_8hpp.html">ShadowsSystemStates.hpp</a></li>
-    <li class="footer">Generated on Fri May 22 2015 18:32:54 for MoteurRedesign by
+    <li class="footer">Generated on Sat May 23 2015 17:52:16 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

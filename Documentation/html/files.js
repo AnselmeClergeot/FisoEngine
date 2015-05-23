@@ -33,7 +33,9 @@ var files =
       [ "EntitiesInterposing", "classfe_1_1_entities_interposing.html", "classfe_1_1_entities_interposing" ]
     ] ],
     [ "Entity.cpp", "_entity_8cpp.html", null ],
-    [ "Entity.hpp", "_entity_8hpp.html", "_entity_8hpp" ],
+    [ "Entity.hpp", "_entity_8hpp.html", [
+      [ "Entity", "classfe_1_1_entity.html", "classfe_1_1_entity" ]
+    ] ],
     [ "ioFuncs.cpp", "io_funcs_8cpp.html", null ],
     [ "ioFuncs.hpp", "io_funcs_8hpp.html", "io_funcs_8hpp" ],
     [ "IsometricMath.cpp", "_isometric_math_8cpp.html", null ],
@@ -62,6 +64,7 @@ var files =
     [ "ShadowsSystemStates.hpp", "_shadows_system_states_8hpp.html", [
       [ "ShadowsSystemStates", "classfe_1_1_shadows_system_states.html", "classfe_1_1_shadows_system_states" ]
     ] ],
+    [ "Status.hpp", "_status_8hpp.html", "_status_8hpp" ],
     [ "TileAnimData.cpp", "_tile_anim_data_8cpp.html", null ],
     [ "TileAnimData.hpp", "_tile_anim_data_8hpp.html", "_tile_anim_data_8hpp" ],
     [ "TileGroup.cpp", "_tile_group_8cpp.html", null ],

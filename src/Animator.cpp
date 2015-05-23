@@ -119,7 +119,7 @@ void fe::Animator::setKindOf(const unsigned int x, const unsigned int y, const u
 }
 
 void fe::Animator::launchAnimation(const fe::Vector3 coord) {
-    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::AnimStatus::On);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::Status::On);
 }
 
 void fe::Animator::launchAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
@@ -127,7 +127,7 @@ void fe::Animator::launchAnimation(const unsigned int x, const unsigned int y, c
 }
 
 void fe::Animator::stopAnimation(const fe::Vector3 coord) {
-    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::AnimStatus::Off);
+    m_tileAnimationsData.at(coord.x, coord.y, coord.z).setStatus(fe::Status::Off);
 }
 
 void fe::Animator::stopAnimation(const unsigned int x, const unsigned int y, const unsigned int z) {
@@ -146,7 +146,7 @@ void fe::Animator::apply() {
                                            fe::Vector2(m_tileAnimationsData.at(x, y, z).getX(),
                                                        m_mapData.getTempConf().at(x, y, z)));
 
-            if(m_shadowsStates.isOn())
+            if(m_shadowsStates.getStatus()==fe::Status::On)
                 m_shader.updateTileFromAnim(fe::Vector3(x, y, z), m_tileAnimationsData.at(x, y, z).getX());
         }
     }

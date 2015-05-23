@@ -29,7 +29,7 @@ fe::Entity::Entity(fe::MapData &mapData,
                                           m_baseCoord(),
                                           m_texture(),
                                           m_sprite(),
-                                          m_drawStatus(fe::DrawStatus::NotDraw),
+                                          m_drawStatus(fe::Status::Off),
                                           m_mapData(mapData),
                                           m_camera(camera)
 {
@@ -87,7 +87,7 @@ void fe::Entity::draw(sf::RenderTarget& target) const {
         target.draw(m_sprite);
 }
 
-void fe::Entity::setDrawStatus(const fe::DrawStatus status) {
+void fe::Entity::setDrawStatus(const fe::Status status) {
     m_drawStatus = status;
 }
 
@@ -120,6 +120,6 @@ sf::Sprite &fe::Entity::getSprite() {
     return m_sprite;
 }
 
-fe::DrawStatus fe::Entity::getDrawStatus() const {
+fe::Status fe::Entity::getDrawStatus() const {
     return m_drawStatus;
 }

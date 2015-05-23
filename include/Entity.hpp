@@ -38,6 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Vector3.hpp"
 #include "Camera.hpp"
 #include "MapData.hpp"
+#include "Status.hpp"
 
 namespace fe {
 /**
@@ -47,11 +48,6 @@ namespace fe {
  * Entity class is the class manipulated by the user to interact with this same entity.
  * Entity class contains all entity data from position, size, to the image of this entity...
  */
-
-/*!  DrawStatus defines the drawing status of an entity : drawing/not drawing*/
-enum DrawStatus {Draw /*!< Draw state */,
-                 NotDraw /*!< NotDraw state */};
-
 class Entity
 {
     friend class EntitiesInterposing;
@@ -133,13 +129,13 @@ class Entity
         void setImagePath(const std::string path);
 
         /**
-        * \fn void setDrawStatus(const fe::DrawStatus status)
+        * \fn void setDrawStatus(const fe::Status status)
         * \brief To set the draw state of the entity (if it have to be drawn or not)
         *
         * \param status The draw status
         * \return void
         */
-        void setDrawStatus(const fe::DrawStatus status);
+        void setDrawStatus(const fe::Status status);
 
         /**
         * \fn void setLayer(const unsigned int layer)
@@ -191,12 +187,12 @@ class Entity
         sf::Sprite &getSprite();
 
         /**
-        * \fn fe::DrawStatus getDrawStatus() const
+        * \fn fe::Status getDrawStatus() const
         * \brief To get the draw status of the entity
         *
         * \return The entity draw status
         */
-        fe::DrawStatus getDrawStatus() const;
+        fe::Status getDrawStatus() const;
 
         /**
         * \fn void setPosition(const fe::Vector2 pos)
@@ -248,7 +244,7 @@ class Entity
 
         sf::Sprite m_sprite; /* !< The entity sprite [SPECIFIC TO SFML]*/
 
-        fe::DrawStatus m_drawStatus; /* !< The entity draw state*/
+        fe::Status m_drawStatus; /* !< The entity draw state*/
 
         fe::MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 

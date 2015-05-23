@@ -133,12 +133,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3381f679611f218ddceb417241231170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_shadows_interface.html#a3381f679611f218ddceb417241231170">init</a> ()</td></tr>
 <tr class="memdesc:a3381f679611f218ddceb417241231170"><td class="mdescLeft">&#160;</td><td class="mdescRight">To call shadows calculation.  <a href="#a3381f679611f218ddceb417241231170">More...</a><br /></td></tr>
 <tr class="separator:a3381f679611f218ddceb417241231170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347dbbbec15ba5311683e388e47101ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_shadows_interface.html#a347dbbbec15ba5311683e388e47101ef">setOn</a> (bool on)</td></tr>
-<tr class="memdesc:a347dbbbec15ba5311683e388e47101ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the shadows on.  <a href="#a347dbbbec15ba5311683e388e47101ef">More...</a><br /></td></tr>
-<tr class="separator:a347dbbbec15ba5311683e388e47101ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d876ea22c81cd8e0e40abf6b6eefb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_shadows_interface.html#ad6d876ea22c81cd8e0e40abf6b6eefb5">setStatus</a> (const <a class="el" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a> status)</td></tr>
+<tr class="memdesc:ad6d876ea22c81cd8e0e40abf6b6eefb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the shadows on.  <a href="#ad6d876ea22c81cd8e0e40abf6b6eefb5">More...</a><br /></td></tr>
+<tr class="separator:ad6d876ea22c81cd8e0e40abf6b6eefb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0faaf0238db09cdd1473ae405ad6863"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_shadows_interface.html#ad0faaf0238db09cdd1473ae405ad6863">getOpacity</a> () const </td></tr>
 <tr class="memdesc:ad0faaf0238db09cdd1473ae405ad6863"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the shadows opacity.  <a href="#ad0faaf0238db09cdd1473ae405ad6863">More...</a><br /></td></tr>
 <tr class="separator:ad0faaf0238db09cdd1473ae405ad6863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2851c096c588fbb1af9159d26237efde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_shadows_interface.html#a2851c096c588fbb1af9159d26237efde">getStatus</a> () const </td></tr>
+<tr class="memdesc:a2851c096c588fbb1af9159d26237efde"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the shadows system on/off status.  <a href="#a2851c096c588fbb1af9159d26237efde">More...</a><br /></td></tr>
+<tr class="separator:a2851c096c588fbb1af9159d26237efde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -214,6 +217,24 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2851c096c588fbb1af9159d26237efde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a> fe::ShadowsInterface::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the shadows system on/off status. </p>
+<dl class="section return"><dt>Returns</dt><dd>The shadows system status </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3381f679611f218ddceb417241231170"></a>
 <div class="memitem">
 <div class="memproto">
@@ -228,31 +249,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>To call shadows calculation. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a347dbbbec15ba5311683e388e47101ef"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fe::ShadowsInterface::setOn </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>on</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the shadows on. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">on</td><td>True for on and false for off </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
@@ -275,6 +271,31 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opacity</td><td>The opacity value, from 0 to 255 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6d876ea22c81cd8e0e40abf6b6eefb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fe::ShadowsInterface::setStatus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacefe.html#a9096c5b6066aeef8a86649156b072985">fe::Status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the shadows on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The on/off status </td></tr>
   </table>
   </dd>
 </dl>
@@ -381,7 +402,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_shadows_interface.html">ShadowsInterface</a></li>
-    <li class="footer">Generated on Fri May 22 2015 18:32:55 for MoteurRedesign by
+    <li class="footer">Generated on Sat May 23 2015 17:52:17 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

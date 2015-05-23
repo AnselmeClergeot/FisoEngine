@@ -197,7 +197,7 @@ void fe::Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     {
         m_tileGroup.draw(target, layer, &m_interposing);
 
-        if(m_shadowsStates.isOn())
+        if(m_shadowsStates.getStatus()==fe::Status::On)
             m_shadowsTilegroup.draw(target, layer);
 
     }
@@ -258,6 +258,14 @@ fe::Vector3 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsign
 fe::Vector3 fe::Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const
 {
     return getTileCoordAtPixels(fe::Vector2(px, py), layer);
+}
+
+fe::Vector2 fe::Map::getPositionOfTile(const fe::Vector3 coord) const {
+    return fe::toIsometricPosition(coord, m_data);
+}
+
+fe::Vector2 fe::Map::getPositionOfTile(const unsigned int x, const unsigned int y, const unsigned int z) const {
+    return getPositionOfTile(fe::Vector3(x, y, z));
 }
 
 fe::ShadowsInterface &fe::Map::shadows() {

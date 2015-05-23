@@ -17,27 +17,24 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ShadowsSystemStates.hpp"
+/**
+ * \file Status.hpp
+ * \brief Definition of Status enumeration
+ * \author AnselmeClergeot
+ * \version beta
+ * \date 01/05/15
+ *
+ * Status.hpp defines the Status enumeration
+ *
+ */
 
+#ifndef STATUS_H
+#define STATUS_H
 
-
-fe::ShadowsSystemStates::ShadowsSystemStates() : m_status(fe::Status::Off),
-                                                 m_initialized(false)
-{ }
-
-void fe::ShadowsSystemStates::setStatus(const fe::Status status) {
-    if(m_initialized)
-        m_status = status;
+namespace fe {
+/*!  Status is used to represent On/Off states*/
+enum Status {On /*!< On status */,
+             Off /*!< Off status */};
 }
 
-void fe::ShadowsSystemStates::setInitialized() {
-    m_initialized = true;
-}
-
-fe::Status fe::ShadowsSystemStates::getStatus() const {
-    return m_status;
-}
-
-bool fe::ShadowsSystemStates::isInitialized() const {
-    return m_initialized;
-}
+#endif // STATUS_H

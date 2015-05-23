@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TILEANIMDATA_HPP
 
 #include "Vector2.hpp"
+#include "Status.hpp"
 
 namespace fe {
 
@@ -42,10 +43,6 @@ enum AnimKind {Global /*!< A global animation kind like water, etc. */,
 /*!  AnimDirection defines the tile animation direction*/
 enum AnimDirection {Right /*!< Right direction animation */,
                     Left /*!< Left direction animation */ };
-
-/*!  AnimStatus defines the tile animation on/off status*/
-enum AnimStatus {On /*!< On state */,
-                 Off /*!< Off state */};
 
 /**
  * \class TileAnimData
@@ -93,13 +90,13 @@ class TileAnimData
         void setLength(const unsigned int length);
 
         /**
-        * \fn void setStatus(const fe::AnimStatus)
+        * \fn void setStatus(const fe::Status status)
         * \brief To set the animation status (playing/not playing)
         *
         * \param status The playing status
         * \return void
         */
-        void setStatus(const fe::AnimStatus);
+        void setStatus(const fe::Status status);
 
         /**
         * \fn void updateX()
@@ -150,12 +147,12 @@ class TileAnimData
         unsigned int getX() const;
 
         /**
-        * \fn fe::AnimStatus getStatus() const
+        * \fn fe::Status getStatus() const
         * \brief To get the animation playing status
         *
         * \return The animation playing status
         */
-        fe::AnimStatus getStatus() const;
+        fe::Status getStatus() const;
 
     private:
 
@@ -165,9 +162,9 @@ class TileAnimData
 
         unsigned int m_x; /*!< The present frame of the animation */
 
-        fe::AnimStatus m_status; /*!< The playing status of the animation */
+        fe::Status m_status; /*!< The playing status of the animation */
 
-        fe::AnimStatus m_waitStatus; /*!< The waiting playing status for the next frame */
+        fe::Status m_waitStatus; /*!< The waiting playing status for the next frame */
 
         unsigned int m_length; /*!< The length of the animation in frames*/
 };

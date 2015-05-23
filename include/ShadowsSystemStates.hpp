@@ -31,6 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SHADOWSSYSTEMSTATES_HPP
 #define SHADOWSSYSTEMSTATES_HPP
 
+#include "Status.hpp"
+
 namespace fe {
 /**
  * \class ShadowsSystemStates
@@ -50,13 +52,13 @@ class ShadowsSystemStates
         ShadowsSystemStates();
 
         /**
-        * \fn void setOn(bool on)
+        * \fn void setStatus(const fe::Status status)
         * \brief To set the shadows system on/off
         *
-        * \param on True for on and false for off
+        * \param status The status
         * \return void
         */
-        void setOn(bool on);
+        void setStatus(const fe::Status status);
 
         /**
         * \fn void setInitialized()
@@ -67,12 +69,12 @@ class ShadowsSystemStates
         void setInitialized();
 
         /**
-        * \fn bool isOn() const
+        * \fn fe::Status getStatus() const
         * \brief To know if the shadows system is on or off
         *
         * \return True for on and false for off
         */
-        bool isOn() const;
+        fe::Status getStatus() const;
 
         /**
         * \fn bool isInitialized() const
@@ -84,9 +86,9 @@ class ShadowsSystemStates
 
     private:
 
-        bool m_on, /*!< The on/off state */
+        fe::Status m_status; /*!< The on/off state */
 
-        m_initialized; /*!< The initialized or not state */
+        bool m_initialized; /*!< The initialized or not state */
 };
 }
 
