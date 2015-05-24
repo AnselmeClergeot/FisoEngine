@@ -20,8 +20,8 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Simple camera system
 * Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
-### Latest development news !
-**The beta release is avalaible! I am looking for testers to experiment this first version!**<br/>
+### Currently working on :
+I am making possible the change of the Map camera during the program execution.
 
 ### On which feature are you currently working ?
 I am adding a camera system to the engine! ScreenInfos is know Camera and the user will have to operate directly on its Camera instance to manipulate views.
