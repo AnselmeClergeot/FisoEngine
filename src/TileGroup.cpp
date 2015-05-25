@@ -73,9 +73,9 @@ void fe::TileGroup::reloadColors() {
     m_colors.reloadColors();
 }
 
-void fe::TileGroup::draw(sf::RenderTarget& target, const unsigned int layer,
-                         const fe::EntitiesInterposing *interposing) const {
-    m_drawer.draw(target, layer, interposing);
+void fe::TileGroup::drawTile(const fe::Vector3 coord, sf::RenderTarget& target,
+                                   const fe::EntitiesInterposing *interposing) const {
+    m_drawer.drawTile(coord, target, interposing);
 }
 
 fe::Color fe::TileGroup::getTileColor(const fe::Vector3 coord) {

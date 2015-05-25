@@ -30,19 +30,15 @@ fe::TileGroupDrawer::TileGroupDrawer(fe::MapData &mapData,
                                                                     m_colors(colors)
 { }
 
-void fe::TileGroupDrawer::draw(sf::RenderTarget& target, const unsigned int layer,
-                               const fe::EntitiesInterposing *interposing) const {
-    for(std::size_t x(0); x<m_data.getTiles().getW(); x++)
-        for(std::size_t y(0); y<m_data.getTiles().getH(); y++)
-    {
-        if(isVisible(toIsometricPosition(fe::Vector3(x, y, layer), m_mapData),m_mapData.getTileSize(), m_camera) &&
-           m_mapData.getTempConf().at(x, y, layer)!=m_mapData.getInvisibleTile() &&
-           m_colors.getTileColor(fe::Vector3(x, y, layer)).a>0)
+void fe::TileGroupDrawer::drawTile(const fe::Vector3 coord, sf::RenderTarget& target,
+                                   const fe::EntitiesInterposing *interposing) const {
+        if(isVisible(toIsometricPosition(coord, m_mapData),m_mapData.getTileSize(), m_camera) &&
+           m_mapData.getTempConf().at(coord.x, coord.y, coord.z)!=m_mapData.getInvisibleTile() &&
+           m_colors.getTileColor(coord).a>0)
         {
-            target.draw(m_data.spriteAt(fe::Vector3(x, y, layer)));
+            target.draw(m_data.spriteAt(coord));
         }
 
         if(interposing!=0)
-            interposing->interpose(fe::Vector3(x, y, layer), target);
-    }
+            interposing->interpose(coord, target);
 }

@@ -157,9 +157,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79859db4d53d87617a5b58c763ac84ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group.html#a79859db4d53d87617a5b58c763ac84ba">reloadColors</a> ()</td></tr>
 <tr class="memdesc:a79859db4d53d87617a5b58c763ac84ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reload the colors from the types list.  <a href="#a79859db4d53d87617a5b58c763ac84ba">More...</a><br /></td></tr>
 <tr class="separator:a79859db4d53d87617a5b58c763ac84ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964e56cebca5540fff9ea3f02a1b1b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group.html#a964e56cebca5540fff9ea3f02a1b1b75">draw</a> (sf::RenderTarget &amp;target, const unsigned int layer, const <a class="el" href="classfe_1_1_entities_interposing.html">fe::EntitiesInterposing</a> *interposing=0) const </td></tr>
-<tr class="memdesc:a964e56cebca5540fff9ea3f02a1b1b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific layer of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a964e56cebca5540fff9ea3f02a1b1b75">More...</a><br /></td></tr>
-<tr class="separator:a964e56cebca5540fff9ea3f02a1b1b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf636a9144c56248b6eb888a6fc5d99c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group.html#acf636a9144c56248b6eb888a6fc5d99c">drawTile</a> (const <a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a> coord, sf::RenderTarget &amp;target, const <a class="el" href="classfe_1_1_entities_interposing.html">fe::EntitiesInterposing</a> *interposing=0) const </td></tr>
+<tr class="memdesc:acf636a9144c56248b6eb888a6fc5d99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific tile of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#acf636a9144c56248b6eb888a6fc5d99c">More...</a><br /></td></tr>
+<tr class="separator:acf636a9144c56248b6eb888a6fc5d99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf23f1a32e392080b233451119797bc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_color.html">fe::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group.html#adf23f1a32e392080b233451119797bc3">getTileColor</a> (const <a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a> coord)</td></tr>
 <tr class="memdesc:adf23f1a32e392080b233451119797bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the color of a specific tile at 3D coordinates.  <a href="#adf23f1a32e392080b233451119797bc3">More...</a><br /></td></tr>
 <tr class="separator:adf23f1a32e392080b233451119797bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,21 +246,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a964e56cebca5540fff9ea3f02a1b1b75"></a>
+<a class="anchor" id="acf636a9144c56248b6eb888a6fc5d99c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fe::TileGroup::draw </td>
+          <td class="memname">void fe::TileGroup::drawTile </td>
           <td>(</td>
-          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
-          <td class="paramname"><em>target</em>, </td>
+          <td class="paramtype">const <a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>layer</em>, </td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -276,11 +276,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To draw a specific layer of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
+<p>To draw a specific tile of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">coord</td><td>The coordinates </td></tr>
     <tr><td class="paramname">target</td><td>The target on which to draw the tiles [SPECIFIC SFML] </td></tr>
-    <tr><td class="paramname">layer</td><td>The layer number to draw </td></tr>
     <tr><td class="paramname">interposing</td><td>The pointer to the <a class="el" href="classfe_1_1_entities_interposing.html" title="Class that interposes the entities into the map tiles. ">EntitiesInterposing</a> class to interpose entities if the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> is the map tiles <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </td></tr>
   </table>
   </dd>
@@ -736,7 +736,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_tile_group.html">TileGroup</a></li>
-    <li class="footer">Generated on Sat May 23 2015 17:52:17 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 25 2015 11:57:25 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

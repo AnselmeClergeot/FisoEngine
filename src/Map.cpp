@@ -193,13 +193,14 @@ void fe::Map::move(const unsigned int rx, const unsigned int ry) {
 }
 
 void fe::Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    for(int layer(0); layer<m_data.getSize().y; layer++)
+    for(int x(0); x<m_data.getSize().x; x++)
+        for(int y(0); y<m_data.getSize().x; y++)
+            for(int z(0); z<m_data.getSize().y; z++)
     {
-        m_tileGroup.draw(target, layer, &m_interposing);
+        m_tileGroup.drawTile(fe::Vector3(x, y, z), target, &m_interposing);
 
         if(m_shadowsStates.getStatus()==fe::Status::On)
-            m_shadowsTilegroup.draw(target, layer);
-
+            m_shadowsTilegroup.drawTile(fe::Vector3(x, y, z), target);
     }
 }
 

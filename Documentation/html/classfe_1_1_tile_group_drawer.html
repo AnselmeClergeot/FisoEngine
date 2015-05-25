@@ -124,9 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92e38c8cd897656408e9c11b471545ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a92e38c8cd897656408e9c11b471545ba">TileGroupDrawer</a> (<a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData, <a class="el" href="classfe_1_1_tile_group_data.html">fe::TileGroupData</a> &amp;data, <a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera, <a class="el" href="classfe_1_1_tile_group_colors.html">fe::TileGroupColors</a> &amp;colors)</td></tr>
 <tr class="memdesc:a92e38c8cd897656408e9c11b471545ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#a92e38c8cd897656408e9c11b471545ba">More...</a><br /></td></tr>
 <tr class="separator:a92e38c8cd897656408e9c11b471545ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2088517602559ae6da2c81914ddf3a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a2088517602559ae6da2c81914ddf3a71">draw</a> (sf::RenderTarget &amp;target, const unsigned int layer, const <a class="el" href="classfe_1_1_entities_interposing.html">fe::EntitiesInterposing</a> *interposing=0) const </td></tr>
-<tr class="memdesc:a2088517602559ae6da2c81914ddf3a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific layer of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a2088517602559ae6da2c81914ddf3a71">More...</a><br /></td></tr>
-<tr class="separator:a2088517602559ae6da2c81914ddf3a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40aa8007b22a7f90d34455af426f8462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_tile_group_drawer.html#a40aa8007b22a7f90d34455af426f8462">drawTile</a> (const <a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a> coord, sf::RenderTarget &amp;target, const <a class="el" href="classfe_1_1_entities_interposing.html">fe::EntitiesInterposing</a> *interposing=0) const </td></tr>
+<tr class="memdesc:a40aa8007b22a7f90d34455af426f8462"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw a specific tile of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>.  <a href="#a40aa8007b22a7f90d34455af426f8462">More...</a><br /></td></tr>
+<tr class="separator:a40aa8007b22a7f90d34455af426f8462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -193,21 +193,21 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2088517602559ae6da2c81914ddf3a71"></a>
+<a class="anchor" id="a40aa8007b22a7f90d34455af426f8462"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fe::TileGroupDrawer::draw </td>
+          <td class="memname">void fe::TileGroupDrawer::drawTile </td>
           <td>(</td>
-          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
-          <td class="paramname"><em>target</em>, </td>
+          <td class="paramtype">const <a class="el" href="classfe_1_1_vector3.html">fe::Vector3</a>&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>layer</em>, </td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -223,11 +223,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To draw a specific layer of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
+<p>To draw a specific tile of the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">coord</td><td>The coordinates </td></tr>
     <tr><td class="paramname">target</td><td>The target on which to draw the tiles [SPECIFIC SFML] </td></tr>
-    <tr><td class="paramname">layer</td><td>The layer number to draw </td></tr>
     <tr><td class="paramname">interposing</td><td>The pointer to the <a class="el" href="classfe_1_1_entities_interposing.html" title="Class that interposes the entities into the map tiles. ">EntitiesInterposing</a> class to interpose entities if the <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> is the map tiles <a class="el" href="classfe_1_1_tile_group.html" title="This class offers an isometric tile-map manipulation. ">TileGroup</a> </td></tr>
   </table>
   </dd>
@@ -331,7 +331,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_tile_group_drawer.html">TileGroupDrawer</a></li>
-    <li class="footer">Generated on Sat May 23 2015 17:52:17 for MoteurRedesign by
+    <li class="footer">Generated on Mon May 25 2015 11:57:25 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

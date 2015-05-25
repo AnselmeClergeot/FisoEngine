@@ -2,7 +2,7 @@ var classfe_1_1_tile_group =
 [
     [ "TileGroup", "classfe_1_1_tile_group.html#a8ae1ed933f1d9126b494d79e68b16b0c", null ],
     [ "configureWith", "classfe_1_1_tile_group.html#a7327ee8aab2fe6685cd04466b777f18c", null ],
-    [ "draw", "classfe_1_1_tile_group.html#a964e56cebca5540fff9ea3f02a1b1b75", null ],
+    [ "drawTile", "classfe_1_1_tile_group.html#acf636a9144c56248b6eb888a6fc5d99c", null ],
     [ "getColorOfType", "classfe_1_1_tile_group.html#a33d5dc31c4eef37aeeb7fdf0b838a5dc", null ],
     [ "getGroupColor", "classfe_1_1_tile_group.html#aff3003cce9c9097d89e5fe61539936f9", null ],
     [ "getTileColor", "classfe_1_1_tile_group.html#adf23f1a32e392080b233451119797bc3", null ],

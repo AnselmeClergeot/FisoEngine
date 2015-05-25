@@ -157,18 +157,18 @@ class TileGroup
         void reloadColors();
 
         /**
-        * \fn void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const fe::EntitiesInterposing *interposing = 0) const
-        * \brief To draw a specific layer of the TileGroup
+        * \fn void drawTile(const fe::Vector3 coord, sf::RenderTarget& target,
+                                   const fe::EntitiesInterposing *interposing = 0) const
+        * \brief To draw a specific tile of the TileGroup
         *
+        * \param coord The coordinates
         * \param target The target on which to draw the tiles [SPECIFIC SFML]
-        * \param layer The layer number to draw
         * \param interposing The pointer to the EntitiesInterposing class to
                  interpose entities if the TileGroup is the map tiles TileGroup
         * \return void
         */
-        void draw(sf::RenderTarget& target, const unsigned int layer,
-                  const fe::EntitiesInterposing *interposing = 0) const;
+        void drawTile(const fe::Vector3 coord, sf::RenderTarget& target,
+                                   const fe::EntitiesInterposing *interposing = 0) const;
 
         /**
         * \fn fe::Color getTileColor(const fe::Vector3 coord)
