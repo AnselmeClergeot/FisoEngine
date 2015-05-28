@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "fe::Animation", "classfe_1_1_animation.html", null ],
     [ "fe::Animator", "classfe_1_1_animator.html", null ],
     [ "fe::Camera", "classfe_1_1_camera.html", null ],
     [ "fe::Color", "classfe_1_1_color.html", null ],
@@ -12,6 +13,7 @@ var hierarchy =
     [ "fe::EntitiesContainer", "classfe_1_1_entities_container.html", null ],
     [ "fe::EntitiesInterposing", "classfe_1_1_entities_interposing.html", null ],
     [ "fe::Entity", "classfe_1_1_entity.html", null ],
+    [ "fe::FrameSet", "classfe_1_1_frame_set.html", null ],
     [ "fe::MapData", "classfe_1_1_map_data.html", null ],
     [ "fe::Matrix3d< T >", "classfe_1_1_matrix3d.html", null ],
     [ "fe::Matrix3d< fe::fe::Color >", "classfe_1_1_matrix3d.html", null ],

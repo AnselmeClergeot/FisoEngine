@@ -1,5 +1,9 @@
 var files =
 [
+    [ "Animation.cpp", "_animation_8cpp.html", null ],
+    [ "Animation.hpp", "_animation_8hpp.html", [
+      [ "Animation", "classfe_1_1_animation.html", "classfe_1_1_animation" ]
+    ] ],
     [ "Animator.cpp", "_animator_8cpp.html", null ],
     [ "Animator.hpp", "_animator_8hpp.html", [
       [ "Animator", "classfe_1_1_animator.html", "classfe_1_1_animator" ]
@@ -35,6 +39,10 @@ var files =
     [ "Entity.cpp", "_entity_8cpp.html", null ],
     [ "Entity.hpp", "_entity_8hpp.html", [
       [ "Entity", "classfe_1_1_entity.html", "classfe_1_1_entity" ]
+    ] ],
+    [ "FrameSet.cpp", "_frame_set_8cpp.html", null ],
+    [ "FrameSet.hpp", "_frame_set_8hpp.html", [
+      [ "FrameSet", "classfe_1_1_frame_set.html", "classfe_1_1_frame_set" ]
     ] ],
     [ "ioFuncs.cpp", "io_funcs_8cpp.html", null ],
     [ "ioFuncs.hpp", "io_funcs_8hpp.html", "io_funcs_8hpp" ],

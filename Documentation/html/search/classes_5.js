@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['shadowsinitializer',['ShadowsInitializer',['../classfe_1_1_shadows_initializer.html',1,'fe']]],
-  ['shadowsinterface',['ShadowsInterface',['../classfe_1_1_shadows_interface.html',1,'fe']]],
-  ['shadowssystemstates',['ShadowsSystemStates',['../classfe_1_1_shadows_system_states.html',1,'fe']]]
+  ['map',['Map',['../classfe_1_1_map.html',1,'fe']]],
+  ['mapdata',['MapData',['../classfe_1_1_map_data.html',1,'fe']]],
+  ['matrix3d',['Matrix3d',['../classfe_1_1_matrix3d.html',1,'fe']]],
+  ['matrix3d_3c_20fe_3a_3afe_3a_3acolor_20_3e',['Matrix3d&lt; fe::fe::Color &gt;',['../classfe_1_1_matrix3d.html',1,'fe']]],
+  ['matrix3d_3c_20fe_3a_3afe_3a_3atileanimdata_20_3e',['Matrix3d&lt; fe::fe::TileAnimData &gt;',['../classfe_1_1_matrix3d.html',1,'fe']]],
+  ['matrix3d_3c_20sf_3a_3asprite_20_3e',['Matrix3d&lt; sf::Sprite &gt;',['../classfe_1_1_matrix3d.html',1,'fe']]],
+  ['matrix3d_3c_20unsigned_20int_20_3e',['Matrix3d&lt; unsigned int &gt;',['../classfe_1_1_matrix3d.html',1,'fe']]]
 ];

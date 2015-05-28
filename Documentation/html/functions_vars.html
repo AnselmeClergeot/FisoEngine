@@ -201,6 +201,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_container
 : <a class="el" href="classfe_1_1_entities_interposing.html#ac1d4e4cb703009f5aa796257532aa449">fe::EntitiesInterposing</a>
 </li>
+<li>m_currentFrame
+: <a class="el" href="classfe_1_1_animation.html#a99d000f9e7e64e3c15b0a721c986d2c7">fe::Animation</a>
+</li>
+<li>m_currentFrameSet
+: <a class="el" href="classfe_1_1_animation.html#a7da237dcb4761e10b6245c94b76505f4">fe::Animation</a>
+</li>
 <li>m_d
 : <a class="el" href="classfe_1_1_matrix3d.html#a323248bff0a3b13f684da5bf5df204bd">fe::Matrix3d&lt; T &gt;</a>
 </li>
@@ -237,6 +243,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_entityContainer
 : <a class="el" href="classfe_1_1_map.html#a651fb17e5751ebab143a2076bb029fc6">fe::Map</a>
 </li>
+<li>m_frameCoords
+: <a class="el" href="classfe_1_1_frame_set.html#a3a5baebe3480de83fc8d686e019cfcb2">fe::FrameSet</a>
+</li>
+<li>m_frameSize
+: <a class="el" href="classfe_1_1_frame_set.html#a3f3a9b61105bd4e7477cc34c00308383">fe::FrameSet</a>
+</li>
 <li>m_groupColor
 : <a class="el" href="classfe_1_1_tile_group_colors.html#afce97584ffce6a69857afe7d12f7a2d9">fe::TileGroupColors</a>
 </li>
@@ -259,7 +271,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classfe_1_1_tile_anim_data.html#a8338aba17ba9e591bafe16d14e90098b">fe::TileAnimData</a>
 </li>
 <li>m_length
-: <a class="el" href="classfe_1_1_tile_anim_data.html#ad23dba6104e5a59d92385035322558a4">fe::TileAnimData</a>
+: <a class="el" href="classfe_1_1_frame_set.html#a1023636e751ed56c03d51e54241e0165">fe::FrameSet</a>
+, <a class="el" href="classfe_1_1_tile_anim_data.html#ad23dba6104e5a59d92385035322558a4">fe::TileAnimData</a>
 </li>
 <li>m_loader
 : <a class="el" href="classfe_1_1_tile_group.html#acf1e87cef08691ab8b4a69c3e113220a">fe::TileGroup</a>
@@ -296,6 +309,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_pixelPosition
 : <a class="el" href="classfe_1_1_entity.html#aca8f2ae2073603080f4610ed5af2db60">fe::Entity</a>
 </li>
+<li>m_playing
+: <a class="el" href="classfe_1_1_animation.html#a7e5cdf3d5aff33d08c060813426916d6">fe::Animation</a>
+</li>
 <li>m_position
 : <a class="el" href="classfe_1_1_map_data.html#ad2f4836450dd3aab6f550385ca5c2668">fe::MapData</a>
 </li>
@@ -325,9 +341,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_speed
 : <a class="el" href="classfe_1_1_animator.html#a845689b59142a837627f49b4f3e20cad">fe::Animator</a>
+, <a class="el" href="classfe_1_1_frame_set.html#a3b5697ec10d7fe06d3590a033d4ce9f4">fe::FrameSet</a>
 </li>
 <li>m_sprite
 : <a class="el" href="classfe_1_1_entity.html#aa6aa9e6753de83eef0765d7489d67b58">fe::Entity</a>
+</li>
+<li>m_spriteSheet
+: <a class="el" href="classfe_1_1_animation.html#ad9081ccdc2ad03e98fb9e63ae1fc4fbd">fe::Animation</a>
 </li>
 <li>m_states
 : <a class="el" href="classfe_1_1_shadows_initializer.html#abc1e54983500fb570f1d101faf08b673">fe::ShadowsInitializer</a>
@@ -378,7 +398,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classfe_1_1_map_data.html#aed61e815fc9ae96fa930d9d6a99dcd55">fe::MapData</a>
 </li>
 <li>m_timer
-: <a class="el" href="classfe_1_1_animator.html#ad6c3e89117879be068dcd3ac6e22155e">fe::Animator</a>
+: <a class="el" href="classfe_1_1_animation.html#a1cec52ea86ca95e7c3d89b6026172127">fe::Animation</a>
+, <a class="el" href="classfe_1_1_animator.html#ad6c3e89117879be068dcd3ac6e22155e">fe::Animator</a>
 </li>
 <li>m_translucentTiles
 : <a class="el" href="classfe_1_1_map_data.html#a2a6f9ab6f9c9c77cd5148c3de289045f">fe::MapData</a>
@@ -456,7 +477,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 25 2015 11:57:26 for MoteurRedesign by
+    <li class="footer">Generated on Thu May 28 2015 19:13:39 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

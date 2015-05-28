@@ -1,11 +1,17 @@
 var searchData=
 [
   ['a',['a',['../classfe_1_1_color.html#aa384644674feaf51bb85ae2bd85dd753',1,'fe::Color']]],
+  ['addframecoord',['addFrameCoord',['../classfe_1_1_frame_set.html#a6984dce46dd92642ae1bcc2fc91ffedc',1,'fe::FrameSet::addFrameCoord(const fe::Vector2 coord)'],['../classfe_1_1_frame_set.html#ab92512e067192ad6911133654e2878eb',1,'fe::FrameSet::addFrameCoord(const unsigned int x, const unsigned int y)']]],
   ['addlayerfile',['addLayerFile',['../classfe_1_1_map.html#a6bc575dbc0004a13dd421e8c10327501',1,'fe::Map']]],
   ['addloadfile',['addLoadFile',['../classfe_1_1_configs_loader.html#a7a1bc9ec4f439e186cfc8a2a0bbff205',1,'fe::ConfigsLoader::addLoadFile()'],['../classfe_1_1_configs_saver.html#a8b79f753d51402830b4770d56012e8e5',1,'fe::ConfigsSaver::addLoadFile()']]],
   ['addtranslucenttile',['addTranslucentTile',['../classfe_1_1_map.html#a64d75d2bad141dbf66a812d9299d876c',1,'fe::Map::addTranslucentTile()'],['../classfe_1_1_map_data.html#a62e5e00d276b091950e70a87730df918',1,'fe::MapData::addTranslucentTile()']]],
-  ['animator',['Animator',['../classfe_1_1_animator.html#a6c8a3344841cfd1affd29a7c3158be55',1,'fe::Animator::Animator()'],['../classfe_1_1_map.html#ad8d07e240f84b3a58d407967cc13156e',1,'fe::Map::animator()']]],
+  ['animate',['animate',['../classfe_1_1_animation.html#a7ea6d8ac8f22db1db6899f9c15df099b',1,'fe::Animation']]],
+  ['animation',['Animation',['../classfe_1_1_animation.html',1,'fe']]],
+  ['animation',['Animation',['../classfe_1_1_animation.html#adb2a0015e0385c63467e2a8ec08af177',1,'fe::Animation']]],
+  ['animation_2ecpp',['Animation.cpp',['../_animation_8cpp.html',1,'']]],
+  ['animation_2ehpp',['Animation.hpp',['../_animation_8hpp.html',1,'']]],
   ['animator',['Animator',['../classfe_1_1_animator.html',1,'fe']]],
+  ['animator',['animator',['../classfe_1_1_map.html#ad8d07e240f84b3a58d407967cc13156e',1,'fe::Map::animator()'],['../classfe_1_1_animator.html#a6c8a3344841cfd1affd29a7c3158be55',1,'fe::Animator::Animator()']]],
   ['animator_2ecpp',['Animator.cpp',['../_animator_8cpp.html',1,'']]],
   ['animator_2ehpp',['Animator.hpp',['../_animator_8hpp.html',1,'']]],
   ['animdirection',['AnimDirection',['../namespacefe.html#ab3facb2cbee4186cdcd076ae4975b2c8',1,'fe']]],

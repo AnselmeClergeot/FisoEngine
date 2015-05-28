@@ -1,5 +1,6 @@
 var namespacefe =
 [
+    [ "Animation", "classfe_1_1_animation.html", "classfe_1_1_animation" ],
     [ "Animator", "classfe_1_1_animator.html", "classfe_1_1_animator" ],
     [ "Camera", "classfe_1_1_camera.html", "classfe_1_1_camera" ],
     [ "Color", "classfe_1_1_color.html", "classfe_1_1_color" ],
@@ -9,6 +10,7 @@ var namespacefe =
     [ "EntitiesContainer", "classfe_1_1_entities_container.html", "classfe_1_1_entities_container" ],
     [ "EntitiesInterposing", "classfe_1_1_entities_interposing.html", "classfe_1_1_entities_interposing" ],
     [ "Entity", "classfe_1_1_entity.html", "classfe_1_1_entity" ],
+    [ "FrameSet", "classfe_1_1_frame_set.html", "classfe_1_1_frame_set" ],
     [ "Map", "classfe_1_1_map.html", "classfe_1_1_map" ],
     [ "MapData", "classfe_1_1_map_data.html", "classfe_1_1_map_data" ],
     [ "Matrix3d", "classfe_1_1_matrix3d.html", "classfe_1_1_matrix3d" ],
