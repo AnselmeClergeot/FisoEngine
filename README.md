@@ -20,11 +20,12 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Simple camera system
 * Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
-### Currently working on :
-I am making possible the change of the Map camera during the program execution.
+### Last FisoEngine news ! 
+A simple system of spritesheet animations is now available with FisoEngine ! Two new classes are used: Animation and FrameSet.
 
-### On which feature are you currently working ?
-I am adding a camera system to the engine! ScreenInfos is know Camera and the user will have to operate directly on its Camera instance to manipulate views.
+The tile drawing system order has a little bit changed : removed bug of entities that were hidden by tiles on their top, even if these tiles were behind them.
+
+I am upgrading FisoEngine performances by making the functions that returns heavy-memory classes able to return const references.
 
 ### F.A.Q
 * **Why should I use FisoEngine?**
