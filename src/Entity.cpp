@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "DrawingFuncs.hpp"
 
 fe::Entity::Entity(fe::MapData &mapData,
-                   fe::Camera &camera) :  m_tilePosition(),
+                   fe::Camera *&camera) :  m_tilePosition(),
                                           m_pixelPosition(),
                                           m_dimensions(),
                                           m_baseCoord(),
@@ -56,8 +56,8 @@ void fe::Entity::setBaseCoord(const unsigned int x, const unsigned int y) {
 
 void fe::Entity::setPosition(const fe::Vector2 pos) {
     m_pixelPosition = pos;
-    m_sprite.setPosition(pos.x+m_camera.getViewDimensions().x/2-m_camera.getViewCenter().x,
-                         pos.y+m_camera.getViewDimensions().y/2-m_camera.getViewCenter().y);
+    m_sprite.setPosition(pos.x+m_camera->getViewDimensions().x/2-m_camera->getViewCenter().x,
+                         pos.y+m_camera->getViewDimensions().y/2-m_camera->getViewCenter().y);
 
     calculateTilePosition();
 }
@@ -83,7 +83,7 @@ void fe::Entity::setImagePath(const std::string path) {
 }
 
 void fe::Entity::draw(sf::RenderTarget& target) const {
-    if(isVisible(m_pixelPosition, m_dimensions, m_camera))
+    if(isVisible(m_pixelPosition, m_dimensions, *m_camera))
         target.draw(m_sprite);
 }
 

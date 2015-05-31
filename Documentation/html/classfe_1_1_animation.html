@@ -125,9 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb2a0015e0385c63467e2a8ec08af177"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#adb2a0015e0385c63467e2a8ec08af177">Animation</a> ()</td></tr>
 <tr class="memdesc:adb2a0015e0385c63467e2a8ec08af177"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#adb2a0015e0385c63467e2a8ec08af177">More...</a><br /></td></tr>
 <tr class="separator:adb2a0015e0385c63467e2a8ec08af177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636fbfd7c2dffc1a05f550d363c7fe48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a636fbfd7c2dffc1a05f550d363c7fe48">~Animation</a> ()</td></tr>
-<tr class="memdesc:a636fbfd7c2dffc1a05f550d363c7fe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class destructor.  <a href="#a636fbfd7c2dffc1a05f550d363c7fe48">More...</a><br /></td></tr>
-<tr class="separator:a636fbfd7c2dffc1a05f550d363c7fe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81320e80abbd268a2e1af4b7dfa11634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a81320e80abbd268a2e1af4b7dfa11634">setSpriteSheet</a> (sf::Sprite &amp;spriteSheet)</td></tr>
 <tr class="memdesc:a81320e80abbd268a2e1af4b7dfa11634"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set a reference to the spritesheet to animate.  <a href="#a81320e80abbd268a2e1af4b7dfa11634">More...</a><br /></td></tr>
 <tr class="separator:a81320e80abbd268a2e1af4b7dfa11634"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,12 +156,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7e5cdf3d5aff33d08c060813426916d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d000f9e7e64e3c15b0a721c986d2c7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a99d000f9e7e64e3c15b0a721c986d2c7">m_currentFrame</a></td></tr>
 <tr class="separator:a99d000f9e7e64e3c15b0a721c986d2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9081ccdc2ad03e98fb9e63ae1fc4fbd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; sf::Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#ad9081ccdc2ad03e98fb9e63ae1fc4fbd">m_spriteSheet</a></td></tr>
-<tr class="separator:ad9081ccdc2ad03e98fb9e63ae1fc4fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4617a74ceed9c73be8c603c4fd4c1705"><td class="memItemLeft" align="right" valign="top">sf::Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a4617a74ceed9c73be8c603c4fd4c1705">m_spriteSheet</a></td></tr>
+<tr class="separator:a4617a74ceed9c73be8c603c4fd4c1705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cec52ea86ca95e7c3d89b6026172127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_timer.html">fe::Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a1cec52ea86ca95e7c3d89b6026172127">m_timer</a></td></tr>
 <tr class="separator:a1cec52ea86ca95e7c3d89b6026172127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da237dcb4761e10b6245c94b76505f4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#a7da237dcb4761e10b6245c94b76505f4">m_currentFrameSet</a></td></tr>
-<tr class="separator:a7da237dcb4761e10b6245c94b76505f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade12d4a73ff509d262f6fb15f352022a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_animation.html#ade12d4a73ff509d262f6fb15f352022a">m_currentFrameSet</a></td></tr>
+<tr class="separator:ade12d4a73ff509d262f6fb15f352022a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used by user to animate any spritesheet. </p>
@@ -184,23 +181,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The class constructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="a636fbfd7c2dffc1a05f550d363c7fe48"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">fe::Animation::~Animation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The class destructor. </p>
 
 </div>
 </div>
@@ -382,7 +362,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7da237dcb4761e10b6245c94b76505f4"></a>
+<a class="anchor" id="ade12d4a73ff509d262f6fb15f352022a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -390,7 +370,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a>&gt; fe::Animation::m_currentFrameSet</td>
+          <td class="memname"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a>* fe::Animation::m_currentFrameSet</td>
         </tr>
       </table>
   </td>
@@ -424,7 +404,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad9081ccdc2ad03e98fb9e63ae1fc4fbd"></a>
+<a class="anchor" id="a4617a74ceed9c73be8c603c4fd4c1705"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -432,7 +412,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;sf::Sprite&gt; fe::Animation::m_spriteSheet</td>
+          <td class="memname">sf::Sprite* fe::Animation::m_spriteSheet</td>
         </tr>
       </table>
   </td>
@@ -476,7 +456,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_animation.html">Animation</a></li>
-    <li class="footer">Generated on Thu May 28 2015 19:13:38 for MoteurRedesign by
+    <li class="footer">Generated on Sun May 31 2015 11:36:11 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

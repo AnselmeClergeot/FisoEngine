@@ -56,13 +56,6 @@ class Animation
         Animation();
 
         /**
-        * \fn ~Animation()
-        * \brief The class destructor
-        *
-        */
-        ~Animation();
-
-        /**
         * \fn void setSpriteSheet(sf::Sprite &spriteSheet)
         * \brief To set a reference to the spritesheet to animate
         *
@@ -127,11 +120,11 @@ class Animation
 
         unsigned int m_currentFrame; /*!< The current frame */
 
-        std::unique_ptr<sf::Sprite> m_spriteSheet; /*!< The pointer to the spritesheet */
+        sf::Sprite* m_spriteSheet; /*!< The pointer to the spritesheet */
 
         fe::Timer m_timer; /*!< The Timer of the animation */
 
-        std::unique_ptr<fe::FrameSet> m_currentFrameSet; /*!< The pointer to the current FrameSet */
+        fe::FrameSet* m_currentFrameSet; /*!< The pointer to the current FrameSet */
 };
 
 }

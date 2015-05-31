@@ -112,26 +112,25 @@ $(document).ready(function(){initNavTree('classfe_1_1_frame_set.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a6984dce46dd92642ae1bcc2fc91ffedc">addFrameCoord</a>(const fe::Vector2 coord)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#ab92512e067192ad6911133654e2878eb">addFrameCoord</a>(const unsigned int x, const unsigned int y)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a71a20e49d51947fbbddbe33e638a71ae">addFrame</a>(const fe::Vector2 coord, const fe::Vector2 size)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a50c9f830f1c235a00fca13efe00b8d63">addFrame</a>(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a1044775211d326c7f7f1ff6ea1d97714">FrameSet</a>()</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#aa62048a79264e1c25a5243700d4cef2a">getFrameCoordAt</a>(const unsigned int frameNumber) const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#afe2f53d6a20451efb5f76c801345c476">getFrameSize</a>() const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a0666c5c06c15a8f772ef0dd93f4a374e">getLength</a>() const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#aedf52ca725302dfd48bf759213fc5b3d">getSpeed</a>() const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a3a5baebe3480de83fc8d686e019cfcb2">m_frameCoords</a></td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a3f3a9b61105bd4e7477cc34c00308383">m_frameSize</a></td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a5f7fb8f7b08adb6c9a32d39a6977fdb8">FrameSet</a>(const fe::FrameSet &amp;frameSet)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a8e15936ee3672a4ac3b095a54830021f">getFrameCoord</a>(const unsigned int frameNumber)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a4ddc71d8df0428723b3bf71f3ce0e03f">getFrameSize</a>(const unsigned int frameNumber)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a0666c5c06c15a8f772ef0dd93f4a374e">getLength</a>() const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#aedf52ca725302dfd48bf759213fc5b3d">getSpeed</a>() const </td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#afe90ab593fc8e5ff563eb2199ba6dec7">m_frames</a></td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a1023636e751ed56c03d51e54241e0165">m_length</a></td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a3b5697ec10d7fe06d3590a033d4ce9f4">m_speed</a></td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#a452c81cca171a6243f31923061a36a36">setFrameSize</a>(const fe::Vector2 size)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#ae67bd65e70b6b7ec681f01fa949be708">setFrameSize</a>(const unsigned int w, const unsigned int h)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#afde403294a683d72daa85e872bcbae35">setSpeed</a>(const unsigned int speed)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#adff5861d6f6497d040d2f5eab981f221">operator=</a>(const fe::FrameSet &amp;frameSet)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classfe_1_1_frame_set.html#afde403294a683d72daa85e872bcbae35">setSpeed</a>(const unsigned int speed)</td><td class="entry"><a class="el" href="classfe_1_1_frame_set.html">fe::FrameSet</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 28 2015 19:13:39 for MoteurRedesign by
+    <li class="footer">Generated on Sun May 31 2015 11:36:11 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

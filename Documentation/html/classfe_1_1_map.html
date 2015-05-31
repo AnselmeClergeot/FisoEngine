@@ -132,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5d60ab0224c351d87e50347ff699675"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#aa5d60ab0224c351d87e50347ff699675">Map</a> (<a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera)</td></tr>
 <tr class="memdesc:aa5d60ab0224c351d87e50347ff699675"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classfe_1_1_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> class constructor.  <a href="#aa5d60ab0224c351d87e50347ff699675">More...</a><br /></td></tr>
 <tr class="separator:aa5d60ab0224c351d87e50347ff699675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e92c5121330b8827c6c3db96c0e9c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#a12e92c5121330b8827c6c3db96c0e9c2">setCamera</a> (<a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a12e92c5121330b8827c6c3db96c0e9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the <a class="el" href="classfe_1_1_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> active camera.  <a href="#a12e92c5121330b8827c6c3db96c0e9c2">More...</a><br /></td></tr>
+<tr class="separator:a12e92c5121330b8827c6c3db96c0e9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af47332e9cb4c52ba6be54d6cb58716f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#af47332e9cb4c52ba6be54d6cb58716f2">create</a> ()</td></tr>
 <tr class="memdesc:af47332e9cb4c52ba6be54d6cb58716f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called by user to create the map.  <a href="#af47332e9cb4c52ba6be54d6cb58716f2">More...</a><br /></td></tr>
 <tr class="separator:af47332e9cb4c52ba6be54d6cb58716f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,8 +270,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a507b915fe454d4b5e51c5497efe1a770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#a507b915fe454d4b5e51c5497efe1a770">m_camera</a></td></tr>
-<tr class="separator:a507b915fe454d4b5e51c5497efe1a770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90eb39a186b36e0f61ac68efb5c459ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#a90eb39a186b36e0f61ac68efb5c459ee">m_camera</a></td></tr>
+<tr class="separator:a90eb39a186b36e0f61ac68efb5c459ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb32cc44f49388d4e0dfd1adbe781b20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_map_data.html">fe::MapData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#abb32cc44f49388d4e0dfd1adbe781b20">m_data</a></td></tr>
 <tr class="separator:abb32cc44f49388d4e0dfd1adbe781b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7ae692d91b09836847993847ed4f78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_configs_loader.html">fe::ConfigsLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_map.html#a3f7ae692d91b09836847993847ed4f78">m_configsLoader</a></td></tr>
@@ -1044,6 +1047,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a12e92c5121330b8827c6c3db96c0e9c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fe::Map::setCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the <a class="el" href="classfe_1_1_map.html" title="Class used by user to manipulate an isometric map. ">Map</a> active camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Reference to the map camera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a228ad19e04a2542fc6dbf63f63fbb97e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1628,7 +1656,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a507b915fe454d4b5e51c5497efe1a770"></a>
+<a class="anchor" id="a90eb39a186b36e0f61ac68efb5c459ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1636,7 +1664,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a>&amp; fe::Map::m_camera</td>
+          <td class="memname"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a>* fe::Map::m_camera</td>
         </tr>
       </table>
   </td>
@@ -1890,7 +1918,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_map.html">Map</a></li>
-    <li class="footer">Generated on Thu May 28 2015 19:13:39 for MoteurRedesign by
+    <li class="footer">Generated on Sun May 31 2015 11:36:11 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

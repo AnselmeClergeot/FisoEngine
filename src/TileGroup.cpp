@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 fe::TileGroup::TileGroup(fe::MapData &mapData,
-                         fe::Camera &camera) : m_data(mapData, camera),
+                         fe::Camera *&camera) : m_data(mapData, camera),
                                                m_loader(m_data, mapData, m_colors),
                                                m_drawer(mapData, m_data, camera, m_colors),
                                                m_colors(mapData, m_data)

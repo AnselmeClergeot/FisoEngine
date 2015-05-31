@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "EntitiesContainer.hpp"
 
 fe::EntitiesContainer::EntitiesContainer(fe::MapData &mapData,
-                                         fe::Camera &camera) : m_entities(),
+                                         fe::Camera *&camera) : m_entities(),
                                                                m_mapData(mapData),
                                                                m_camera(camera)
 { }

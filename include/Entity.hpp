@@ -54,13 +54,13 @@ class Entity
     public:
 
         /**
-        * \fn Entity(fe::MapData &mapData, fe::Camera &camera)
+        * \fn Entity(fe::MapData &mapData, fe::Camera *&camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful data
         * \param camera Reference to the map camera
         */
-        Entity(fe::MapData &mapData, fe::Camera &camera);
+        Entity(fe::MapData &mapData, fe::Camera *&camera);
 
         /**
         * \fn void setDimensions(const fe::Vector2 dim)
@@ -248,7 +248,7 @@ class Entity
 
         fe::MapData& m_mapData; /* !< The pointer to the MapData to get useful data*/
 
-        fe::Camera& m_camera; /* !< The pointer to the map camera */
+        fe::Camera*& m_camera; /* !< The pointer to the map camera */
 };
 }
 

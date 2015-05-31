@@ -54,7 +54,7 @@ class Animator
     public:
         /**
         * \fn Animator(fe::MapData &mapData, fe::TileGroup &mapTilegroup, fe::DynamicShader &shader,
-                 fe::ShadowsSystemStates &shadowsStates, fe::Camera &camera)
+                 fe::ShadowsSystemStates &shadowsStates, fe::Camera *&camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
@@ -64,7 +64,7 @@ class Animator
         * \param camera Reference to the map camera
         */
         Animator(fe::MapData &mapData, fe::TileGroup &mapTilegroup, fe::DynamicShader &shader,
-                 fe::ShadowsSystemStates &shadowsStates, fe::Camera &camera);
+                 fe::ShadowsSystemStates &shadowsStates, fe::Camera *&camera);
 
         /**
         * \fn void resizeTileAnimDataList()
@@ -356,7 +356,7 @@ class Animator
 
         fe::ShadowsSystemStates &m_shadowsStates; /*!< The reference to the ShadowsSystemStates */
 
-        fe::Camera &m_camera; /*!< The reference to the map camera */
+        fe::Camera *&m_camera; /*!< The reference to the map camera */
 };
 }
 

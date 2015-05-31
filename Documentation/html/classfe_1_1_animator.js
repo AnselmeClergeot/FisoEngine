@@ -1,6 +1,6 @@
 var classfe_1_1_animator =
 [
-    [ "Animator", "classfe_1_1_animator.html#a6c8a3344841cfd1affd29a7c3158be55", null ],
+    [ "Animator", "classfe_1_1_animator.html#a17ae72a259317a5d520279436ce271cd", null ],
     [ "apply", "classfe_1_1_animator.html#a82143d09996fef3b725043a6d35c53f1", null ],
     [ "getAnimKindOfTile", "classfe_1_1_animator.html#a48882d5336b122e2dd07b5f7f8fd597d", null ],
     [ "getAnimLengthOfTile", "classfe_1_1_animator.html#aedd4c791eab1daeb9962fc8d7dc33c3c", null ],
@@ -31,7 +31,7 @@ var classfe_1_1_animator =
     [ "updateTileAt", "classfe_1_1_animator.html#a2673996675d82fee9543cdf1f933f19e", null ],
     [ "Map", "classfe_1_1_animator.html#ad2f32e921244459f7cc6d50355429cc6", null ],
     [ "m_animations", "classfe_1_1_animator.html#afc87a17114d3b03c8b84fdadc6edfc51", null ],
-    [ "m_camera", "classfe_1_1_animator.html#a7fec4723b96f46cfee648f81356960c5", null ],
+    [ "m_camera", "classfe_1_1_animator.html#a057875ea8765d649e1a1d4b7dd279369", null ],
     [ "m_mapData", "classfe_1_1_animator.html#a36b1530125856d325c705ef79368866a", null ],
     [ "m_mapTilegroup", "classfe_1_1_animator.html#a16c0ede33225ad7ee957e4ef281a5a4d", null ],
     [ "m_shader", "classfe_1_1_animator.html#aa0c3e78d2e0b74964307029e89887f64", null ],

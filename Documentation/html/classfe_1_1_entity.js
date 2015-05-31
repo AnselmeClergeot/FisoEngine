@@ -1,6 +1,6 @@
 var classfe_1_1_entity =
 [
-    [ "Entity", "classfe_1_1_entity.html#ab56b5c1e983e3084e2e359d37effe49f", null ],
+    [ "Entity", "classfe_1_1_entity.html#ac913cd1a4b161dd97b9ef2ce249d349d", null ],
     [ "calculateTilePosition", "classfe_1_1_entity.html#a87fd349c0d82eae4fc4173c4d475285c", null ],
     [ "draw", "classfe_1_1_entity.html#a6cf788a905307a95cd8be5ae25794192", null ],
     [ "getBaseCoord", "classfe_1_1_entity.html#a7c251c33a5bdb98654bb3bef3bdd36a0", null ],
@@ -22,7 +22,7 @@ var classfe_1_1_entity =
     [ "setPosition", "classfe_1_1_entity.html#a718ad228597e1cee579aff42d08e2e6a", null ],
     [ "EntitiesInterposing", "classfe_1_1_entity.html#a219c3e12db2aa69c69d56a08447e82db", null ],
     [ "m_baseCoord", "classfe_1_1_entity.html#ab7e3d4794d36bc25151043741078b0b3", null ],
-    [ "m_camera", "classfe_1_1_entity.html#aabb98d7b80432f65b896b06428b19455", null ],
+    [ "m_camera", "classfe_1_1_entity.html#ad1460f5f5e39cfcd8392039e1cc74966", null ],
     [ "m_dimensions", "classfe_1_1_entity.html#a91aaeaa39aa03af7a9d089cd15698e0b", null ],
     [ "m_drawStatus", "classfe_1_1_entity.html#a60f527a0c615140d37b8da2a95df3536", null ],
     [ "m_mapData", "classfe_1_1_entity.html#a3df17d2a0df02577fb4e8f2a9a37a8f4", null ],

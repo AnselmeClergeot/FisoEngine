@@ -1,43 +1,48 @@
 #include "FrameSet.hpp"
 
-fe::FrameSet::FrameSet() : m_length(0), m_frameSize(0, 0), m_speed(0), m_frameCoords()
-{
+fe::FrameSet::FrameSet() : m_length(0), m_speed(0), m_frames()
+{ }
 
+fe::FrameSet::FrameSet(const fe::FrameSet &frameSet) : m_length(frameSet.m_length),
+                                                       m_speed(frameSet.m_speed),
+                                                       m_frames(frameSet.m_frames)
+{ }
+
+fe::FrameSet &fe::FrameSet::operator=(const fe::FrameSet &frameSet) {
+    m_length = frameSet.m_length;
+    m_speed = frameSet.m_speed;
+    m_frames = frameSet.m_frames;
 }
 
 void fe::FrameSet::setSpeed(const unsigned int speed) {
     m_speed = speed;
 }
 
-void fe::FrameSet::addFrameCoord(const fe::Vector2 coord) {
-    m_frameCoords.push_back(coord);
+void fe::FrameSet::addFrame(const fe::Vector2 coord, const fe::Vector2 size) {
+    std::vector<fe::Vector2> temp;
+    temp.push_back(coord);
+    temp.push_back(size);
+    m_frames.push_back(temp);
 }
 
-void fe::FrameSet::addFrameCoord(const unsigned int x, const unsigned int y) {
-    addFrameCoord(fe::Vector2(x, y));
-}
-
-void fe::FrameSet::setFrameSize(const fe::Vector2 size) {
-    m_frameSize = size;
-}
-
-void fe::FrameSet::setFrameSize(const unsigned int w, const unsigned int h) {
-    setFrameSize(fe::Vector2(w, h));
+void fe::FrameSet::addFrame(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h) {
+    addFrame(fe::Vector2(x, y), fe::Vector2(w, h));
 }
 
 unsigned int fe::FrameSet::getLength() const {
-    return m_frameCoords.size();
+    return m_frames.size();
 }
 
-fe::Vector2 fe::FrameSet::getFrameSize() const {
-    return m_frameSize;
+fe::Vector2 &fe::FrameSet::getFrameCoord(const unsigned int frameNumber) {
+    assert(frameNumber<m_frames.size());
+    return m_frames[frameNumber][0];
+}
+
+fe::Vector2 &fe::FrameSet::getFrameSize(const unsigned int frameNumber) {
+    assert(frameNumber<m_frames.size());
+    return m_frames[frameNumber][1];
 }
 
 unsigned int fe::FrameSet::getSpeed() const {
     return m_speed;
-}
-
-fe::Vector2 fe::FrameSet::getFrameCoordAt(const unsigned int frameNumber) const {
-    assert(frameNumber<m_frameCoords.size());
-    return m_frameCoords[frameNumber];
 }

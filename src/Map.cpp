@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Map.hpp"
 
 fe::Map::Map(fe::Camera &camera)
- : m_camera(camera),
+ : m_camera(&camera),
    m_data(),
    m_configsLoader(m_data), m_configsSaver(m_data),
    m_tileGroup(m_data, m_camera), m_shadowsTilegroup(m_data, m_camera),
@@ -32,8 +32,12 @@ fe::Map::Map(fe::Camera &camera)
    m_interposing(m_entityContainer, m_data),
    m_animator(m_data, m_tileGroup, m_dynamicShader, m_shadowsStates, m_camera)
 {
-    m_camera.setTileGroups(m_tileGroup, m_shadowsTilegroup);
-    m_camera.setEntitiesContainer(m_entityContainer);
+    m_camera->setTileGroups(m_tileGroup, m_shadowsTilegroup);
+    m_camera->setEntitiesContainer(m_entityContainer);
+}
+
+void fe::Map::setCamera(fe::Camera &camera) {
+    m_camera = &camera;
 }
 
 void fe::Map::create() {
@@ -253,7 +257,7 @@ fe::Color fe::Map::getColorOfType(const unsigned int type) const {
 }
 
 fe::Vector3 fe::Map::getTileCoordAtPixels(const fe::Vector2 pixels, const unsigned int layer) const {
-    return fe::getTileCoordAtPixels(pixels, layer, m_data, &m_camera);
+    return fe::getTileCoordAtPixels(pixels, layer, m_data, m_camera);
 }
 
 fe::Vector3 fe::Map::getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const

@@ -49,13 +49,13 @@ class TileGroup
     public:
 
         /**
-        * \fn TileGroup(fe::MapData &mapData, fe::Camera &camera)
+        * \fn TileGroup(fe::MapData &mapData, fe::Camera *&camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get useful map data
         * \param camera Reference to the map camera
         */
-        TileGroup(fe::MapData &mapData, fe::Camera &camera);
+        TileGroup(fe::MapData &mapData, fe::Camera *&camera);
 
         /**
         * \fn void setTilesetPath(const std::string path)

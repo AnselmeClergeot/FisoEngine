@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "TileGroupColors.hpp"
 
 fe::TileGroupData::TileGroupData(fe::MapData &mapData,
-                                 fe::Camera &camera) : m_tileset(),
+                                 fe::Camera *&camera) : m_tileset(),
                                                        m_tiles(),
                                                        m_mapData(mapData),
                                                        m_camera(camera)
@@ -68,9 +68,9 @@ void fe::TileGroupData::updatePosition() {
 void fe::TileGroupData::setTilePosition(const fe::Vector3 coord) {
     m_tiles.at(coord.x, coord.y, coord.z).
     setPosition(toIsometricPosition(coord, m_mapData).x+
-                    m_camera.getViewDimensions().x/2-m_camera.getViewCenter().x,
+                    m_camera->getViewDimensions().x/2-m_camera->getViewCenter().x,
                 toIsometricPosition(coord, m_mapData).y+
-                    m_camera.getViewDimensions().y/2-m_camera.getViewCenter().y);
+                    m_camera->getViewDimensions().y/2-m_camera->getViewCenter().y);
 }
 
 void fe::TileGroupData::frameTile(const fe::Vector3 coord, const fe::Vector2 tilesetCoord) {
@@ -81,6 +81,6 @@ void fe::TileGroupData::frameTile(const fe::Vector3 coord, const fe::Vector2 til
 }
 
 void fe::TileGroupData::setTileTilesetX(const fe::Vector3 coord, const fe::Vector2 tilesetCoord) {
-    if(isVisible(toIsometricPosition(coord, m_mapData), m_mapData.getTileSize(), m_camera))
+    if(isVisible(toIsometricPosition(coord, m_mapData), m_mapData.getTileSize(), *m_camera))
         frameTile(coord, tilesetCoord);
 }

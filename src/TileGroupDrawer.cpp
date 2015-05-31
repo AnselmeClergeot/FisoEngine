@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 fe::TileGroupDrawer::TileGroupDrawer(fe::MapData &mapData,
                                      fe::TileGroupData &data,
-                                     fe::Camera &camera,
+                                     fe::Camera *&camera,
                                      fe::TileGroupColors &colors) : m_mapData(mapData),
                                                                     m_data(data),
                                                                     m_camera(camera),
@@ -32,7 +32,7 @@ fe::TileGroupDrawer::TileGroupDrawer(fe::MapData &mapData,
 
 void fe::TileGroupDrawer::drawTile(const fe::Vector3 coord, sf::RenderTarget& target,
                                    const fe::EntitiesInterposing *interposing) const {
-        if(isVisible(toIsometricPosition(coord, m_mapData),m_mapData.getTileSize(), m_camera) &&
+        if(isVisible(toIsometricPosition(coord, m_mapData),m_mapData.getTileSize(), *m_camera) &&
            m_mapData.getTempConf().at(coord.x, coord.y, coord.z)!=m_mapData.getInvisibleTile() &&
            m_colors.getTileColor(coord).a>0)
         {

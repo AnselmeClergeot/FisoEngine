@@ -123,9 +123,9 @@ $(document).ready(function(){initNavTree('classfe_1_1_entity.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab56b5c1e983e3084e2e359d37effe49f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#ab56b5c1e983e3084e2e359d37effe49f">Entity</a> (<a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData, <a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;camera)</td></tr>
-<tr class="memdesc:ab56b5c1e983e3084e2e359d37effe49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ab56b5c1e983e3084e2e359d37effe49f">More...</a><br /></td></tr>
-<tr class="separator:ab56b5c1e983e3084e2e359d37effe49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac913cd1a4b161dd97b9ef2ce249d349d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#ac913cd1a4b161dd97b9ef2ce249d349d">Entity</a> (<a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;mapData, <a class="el" href="classfe_1_1_camera.html">fe::Camera</a> *&amp;camera)</td></tr>
+<tr class="memdesc:ac913cd1a4b161dd97b9ef2ce249d349d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class constructor.  <a href="#ac913cd1a4b161dd97b9ef2ce249d349d">More...</a><br /></td></tr>
+<tr class="separator:ac913cd1a4b161dd97b9ef2ce249d349d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8c689d62e38f2fb964260fe757b5a7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#ab8c689d62e38f2fb964260fe757b5a7c">setDimensions</a> (const <a class="el" href="classfe_1_1_vector2.html">fe::Vector2</a> dim)</td></tr>
 <tr class="memdesc:ab8c689d62e38f2fb964260fe757b5a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the entity dimensions.  <a href="#ab8c689d62e38f2fb964260fe757b5a7c">More...</a><br /></td></tr>
 <tr class="separator:ab8c689d62e38f2fb964260fe757b5a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,8 +205,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a60f527a0c615140d37b8da2a95df3536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3df17d2a0df02577fb4e8f2a9a37a8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_map_data.html">fe::MapData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#a3df17d2a0df02577fb4e8f2a9a37a8f4">m_mapData</a></td></tr>
 <tr class="separator:a3df17d2a0df02577fb4e8f2a9a37a8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb98d7b80432f65b896b06428b19455"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#aabb98d7b80432f65b896b06428b19455">m_camera</a></td></tr>
-<tr class="separator:aabb98d7b80432f65b896b06428b19455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1460f5f5e39cfcd8392039e1cc74966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_entity.html#ad1460f5f5e39cfcd8392039e1cc74966">m_camera</a></td></tr>
+<tr class="separator:ad1460f5f5e39cfcd8392039e1cc74966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -217,7 +217,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Class that contains all entity data. </p>
 <p><a class="el" href="classfe_1_1_entity.html" title="Class that contains all entity data. ">Entity</a> class is the class manipulated by the user to interact with this same entity. <a class="el" href="classfe_1_1_entity.html" title="Class that contains all entity data. ">Entity</a> class contains all entity data from position, size, to the image of this entity... </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab56b5c1e983e3084e2e359d37effe49f"></a>
+<a class="anchor" id="ac913cd1a4b161dd97b9ef2ce249d349d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -230,7 +230,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a> *&amp;&#160;</td>
           <td class="paramname"><em>camera</em>&#160;</td>
         </tr>
         <tr>
@@ -773,7 +773,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aabb98d7b80432f65b896b06428b19455"></a>
+<a class="anchor" id="ad1460f5f5e39cfcd8392039e1cc74966"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -781,7 +781,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a>&amp; fe::Entity::m_camera</td>
+          <td class="memname"><a class="el" href="classfe_1_1_camera.html">fe::Camera</a>*&amp; fe::Entity::m_camera</td>
         </tr>
       </table>
   </td>
@@ -943,7 +943,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_entity.html">Entity</a></li>
-    <li class="footer">Generated on Thu May 28 2015 19:13:39 for MoteurRedesign by
+    <li class="footer">Generated on Sun May 31 2015 11:36:11 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

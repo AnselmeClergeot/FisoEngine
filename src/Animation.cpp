@@ -4,19 +4,12 @@ fe::Animation::Animation() : m_spriteSheet(nullptr), m_timer(), m_currentFrameSe
                              m_playing(fe::Status::On)
 { }
 
-fe::Animation::~Animation() {
-    m_spriteSheet.release();
-    m_currentFrameSet.release();
-}
-
 void fe::Animation::setSpriteSheet(sf::Sprite &spriteSheet) {
-    m_spriteSheet.release();
-    m_spriteSheet = std::unique_ptr<sf::Sprite>(&spriteSheet);
+    m_spriteSheet = &spriteSheet;
 }
 
 void fe::Animation::setCurrentFrameSet(fe::FrameSet &frameSet) {
-    m_currentFrameSet.release();
-    m_currentFrameSet = std::unique_ptr<fe::FrameSet>(&frameSet);
+    m_currentFrameSet = &frameSet;
 
     frameSprite();
 }
@@ -38,10 +31,10 @@ void fe::Animation::animate() {
 }
 
 void fe::Animation::frameSprite() {
-    m_spriteSheet->setTextureRect(sf::IntRect(m_currentFrameSet->getFrameCoordAt(m_currentFrame).x,
-                                                  m_currentFrameSet->getFrameCoordAt(m_currentFrame).y,
-                                                  m_currentFrameSet->getFrameSize().x,
-                                                  m_currentFrameSet->getFrameSize().y));
+    m_spriteSheet->setTextureRect(sf::IntRect(m_currentFrameSet->getFrameCoord(m_currentFrame).x,
+                                                  m_currentFrameSet->getFrameCoord(m_currentFrame).y,
+                                                  m_currentFrameSet->getFrameSize(m_currentFrame).x,
+                                                  m_currentFrameSet->getFrameSize(m_currentFrame).y));
 }
 
 void fe::Animation::setStatus(const fe::Status status) {

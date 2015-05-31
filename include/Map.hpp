@@ -66,6 +66,15 @@ class Map : public sf::Drawable
         Map(fe::Camera &camera);
 
         /**
+        * \fn void setCamera(fe::Camera &camera)
+        * \brief To set the Map active camera
+        *
+        * \param camera Reference to the map camera
+        * \return void
+        */
+        void setCamera(fe::Camera &camera);
+
+        /**
         * \fn void create()
         * \brief Function called by user to create the map
         *
@@ -486,7 +495,7 @@ class Map : public sf::Drawable
 
     private:
 
-        fe::Camera &m_camera; /*!< The pointer to the map camera */
+        fe::Camera *m_camera; /*!< The pointer to the map camera */
 
         fe::MapData m_data; /*!< The map data container */
 

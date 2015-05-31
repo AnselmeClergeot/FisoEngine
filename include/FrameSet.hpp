@@ -55,6 +55,23 @@ class FrameSet
         FrameSet();
 
         /**
+        * \fn FrameSet(const fe::FrameSet &frameSet)
+        * \brief The class copy constructor
+        *
+        * \param frameSet Reference to the model FrameSet
+        */
+        FrameSet(const fe::FrameSet &frameSet);
+
+        /**
+        * \fn fe::FrameSet &operator=(const fe::FrameSet &frameSet)
+        * \brief The class = operator
+        *
+        * \param frameSet Reference to the model FrameSet
+        * \return A reference to this instance
+        */
+        fe::FrameSet &operator=(const fe::FrameSet &frameSet);
+
+        /**
         * \fn void setSpeed(const unsigned int speed)
         * \brief To set the time delay between each frame
         *
@@ -64,42 +81,26 @@ class FrameSet
         void setSpeed(const unsigned int speed);
 
         /**
-        * \fn void addFrameCoord(const fe::Vector2 coord)
-        * \brief To add a frame to the FrameSet from its spritesheet coordinates
+        * \fn void addFrame(const fe::Vector2 coord, const fe::Vector2 size)
+        * \brief To add a frame to the FrameSet from its spritesheet coordinates and dimensions
         *
         * \param coord The coordinates of the frame in pixels
+        * \param size The dimensions of the frame in pixels
         * \return void
         */
-        void addFrameCoord(const fe::Vector2 coord);
+        void addFrame(const fe::Vector2 coord, const fe::Vector2 size);
 
         /**
-        * \fn void addFrameCoord(const unsigned int x, const unsigned int y)
-        * \brief To add a frame to the FrameSet from its spritesheet coordinates
+        * \fn void addFrame(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h)
+        * \brief To add a frame to the FrameSet from its spritesheet coordinates and dimensions
         *
         * \param x The x coordinate of the frame in pixels
         * \param y The y coordinate of the frame in pixels
+        * \param w The width of the frame
+        * \param h The height of the frame
         * \return void
         */
-        void addFrameCoord(const unsigned int x, const unsigned int y);
-
-        /**
-        * \fn void setFrameSize(const fe::Vector2 size)
-        * \brief To set the dimensions of the frames
-        *
-        * \param size The dimensions of a frame in pixels
-        * \return void
-        */
-        void setFrameSize(const fe::Vector2 size);
-
-        /**
-        * \fn void setFrameSize(const unsigned int w, const unsigned int h)
-        * \brief To set the dimensions of the frames
-        *
-        * \param w The width of a frame in pixels
-        * \param h The height of a frame in pixels
-        * \return void
-        */
-        void setFrameSize(const unsigned int w, const unsigned int h);
+        void addFrame(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h);
 
         /**
         * \fn unsigned int getLength() const
@@ -110,12 +111,22 @@ class FrameSet
         unsigned int getLength() const;
 
         /**
-        * \fn fe::Vector2 getFrameSize() const
-        * \brief To get the frames dimensions
+        * \fn fe::Vector2 &getFrameCoord(const unsigned int frameNumber) const
+        * \brief To get a reference to the coordinates of a specific frame
         *
-        * \return The dimensions of the FrameSet in pixels
+        * \param frameNumber The frame number
+        * \return A reference to the coordinates of the frame in pixels
         */
-        fe::Vector2 getFrameSize() const;
+        fe::Vector2 &getFrameCoord(const unsigned int frameNumber);
+
+        /**
+        * \fn fe::Vector2 &getFrameSize(const unsigned int frameNumber) const
+        * \brief To get a reference to the dimensions of a specific frame
+        *
+        * \param frameNumber The frame number
+        * \return A reference to the dimensions of the frame in pixels
+        */
+        fe::Vector2 &getFrameSize(const unsigned int frameNumber);
 
         /**
         * \fn unsigned int getSpeed() const
@@ -125,24 +136,13 @@ class FrameSet
         */
         unsigned int getSpeed() const;
 
-        /**
-        * \fn fe::Vector2 getFrameCoordAt(const unsigned int frameNumber) const
-        * \brief To get the spritesheet-coordinates of a specific frame
-        *
-        * \param frameNumber The frame number
-        * \return The spritesheet-coordinates of the frame in pixels
-        */
-        fe::Vector2 getFrameCoordAt(const unsigned int frameNumber) const;
-
     private:
 
         unsigned int m_length; /*!< The FrameSet length in frames */
 
-        fe::Vector2 m_frameSize; /*!< The frame dimensions in pixels */
-
         unsigned int m_speed; /*!< The FrameSet speed in milliseconds between each frame */
 
-        std::vector<fe::Vector2> m_frameCoords; /*!< The FrameSet frames coordinates */
+        std::vector<std::vector<fe::Vector2> > m_frames; /*!< The list of frames data */
 };
 
 }

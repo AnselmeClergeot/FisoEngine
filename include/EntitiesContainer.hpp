@@ -47,13 +47,13 @@ class EntitiesContainer
     public:
 
         /**
-        * \fn EntitiesContainer(fe::MapData &mapData, fe::Camera &camera)
+        * \fn EntitiesContainer(fe::MapData &mapData, fe::Camera *&camera)
         * \brief The class constructor
         *
         * \param mapData Reference to the MapData to get needed data
         * \param camera Reference to the map camera
         */
-        EntitiesContainer(fe::MapData &mapData, fe::Camera &camera);
+        EntitiesContainer(fe::MapData &mapData, fe::Camera *&camera);
 
         /**
         * \fn ~EntitiesContainer()
@@ -110,7 +110,7 @@ class EntitiesContainer
 
         fe::MapData &m_mapData; /*!< The reference to the MapData to get useful data */
 
-        fe::Camera &m_camera; /*!< The reference to the map camera */
+        fe::Camera *&m_camera; /*!< The reference to the map camera */
 };
 }
 
