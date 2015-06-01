@@ -1,6 +1,7 @@
 var classfe_1_1_animation =
 [
     [ "Animation", "classfe_1_1_animation.html#adb2a0015e0385c63467e2a8ec08af177", null ],
+    [ "Animation", "classfe_1_1_animation.html#a7a633db8f24e14688a8dc684877645fe", null ],
     [ "animate", "classfe_1_1_animation.html#a7ea6d8ac8f22db1db6899f9c15df099b", null ],
     [ "frameSprite", "classfe_1_1_animation.html#a03e3aabaab448db0e3f99e63d5bb0a36", null ],
     [ "getCurrentFrame", "classfe_1_1_animation.html#a8024d319e653c0f25b9dded7aa654a71", null ],

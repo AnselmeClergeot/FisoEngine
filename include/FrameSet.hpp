@@ -103,6 +103,14 @@ class FrameSet
         void addFrame(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h);
 
         /**
+        * \fn void resetFrames()
+        * \brief To reset all the frames
+        *
+        * \return void
+        */
+        void resetFrames();
+
+        /**
         * \fn unsigned int getLength() const
         * \brief To get the length of the FrameSet in frames
         *
@@ -137,8 +145,6 @@ class FrameSet
         unsigned int getSpeed() const;
 
     private:
-
-        unsigned int m_length; /*!< The FrameSet length in frames */
 
         unsigned int m_speed; /*!< The FrameSet speed in milliseconds between each frame */
 

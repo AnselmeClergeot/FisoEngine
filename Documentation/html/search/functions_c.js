@@ -6,6 +6,7 @@ var searchData=
   ['removeentity',['removeEntity',['../classfe_1_1_entities_container.html#a854e9983f72b1fa470146b96fa8daf06',1,'fe::EntitiesContainer']]],
   ['removetranslucenttile',['removeTranslucentTile',['../classfe_1_1_map.html#a5373973fd3a0dc4aa3df1af9bc74f28f',1,'fe::Map::removeTranslucentTile()'],['../classfe_1_1_map_data.html#ad27728c92da9c50a17dcae2ea8ae64c5',1,'fe::MapData::removeTranslucentTile()']]],
   ['resetcolorof',['resetColorOf',['../classfe_1_1_tile_group_colors.html#a2a6fa52786016ba8203e1ee079830e83',1,'fe::TileGroupColors']]],
+  ['resetframes',['resetFrames',['../classfe_1_1_frame_set.html#a80a651332f49ab6dfd100a4d699d1f85',1,'fe::FrameSet']]],
   ['resetlayerfiles',['resetLayerFiles',['../classfe_1_1_map.html#a5f11c03d67ef2f9c1077a4b965e9c1b6',1,'fe::Map']]],
   ['resetlayerlist',['resetLayerList',['../classfe_1_1_configs_loader.html#ab80e074d7fc3d95fa826093ab31b0f66',1,'fe::ConfigsLoader::resetLayerList()'],['../classfe_1_1_configs_saver.html#ad5209ec788b87f344b487d3cff16ad18',1,'fe::ConfigsSaver::resetLayerList()']]],
   ['resetx',['resetX',['../classfe_1_1_tile_anim_data.html#a174c3358798188dddb5d79d93f57db0d',1,'fe::TileAnimData']]],

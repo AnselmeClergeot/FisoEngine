@@ -56,6 +56,14 @@ class Animation
         Animation();
 
         /**
+        * \fn Animation(sf::Sprite &sprite)
+        * \brief The class constructor with spritesheet
+        *
+        * \param sprite Reference to the spritesheet
+        */
+        Animation(sf::Sprite &sprite);
+
+        /**
         * \fn void setSpriteSheet(sf::Sprite &spriteSheet)
         * \brief To set a reference to the spritesheet to animate
         *

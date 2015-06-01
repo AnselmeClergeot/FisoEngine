@@ -1,15 +1,13 @@
 #include "FrameSet.hpp"
 
-fe::FrameSet::FrameSet() : m_length(0), m_speed(0), m_frames()
+fe::FrameSet::FrameSet() : m_speed(50), m_frames()
 { }
 
-fe::FrameSet::FrameSet(const fe::FrameSet &frameSet) : m_length(frameSet.m_length),
-                                                       m_speed(frameSet.m_speed),
+fe::FrameSet::FrameSet(const fe::FrameSet &frameSet) : m_speed(frameSet.m_speed),
                                                        m_frames(frameSet.m_frames)
 { }
 
 fe::FrameSet &fe::FrameSet::operator=(const fe::FrameSet &frameSet) {
-    m_length = frameSet.m_length;
     m_speed = frameSet.m_speed;
     m_frames = frameSet.m_frames;
 }
@@ -27,6 +25,10 @@ void fe::FrameSet::addFrame(const fe::Vector2 coord, const fe::Vector2 size) {
 
 void fe::FrameSet::addFrame(const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h) {
     addFrame(fe::Vector2(x, y), fe::Vector2(w, h));
+}
+
+void fe::FrameSet::resetFrames() {
+    m_frames.clear();
 }
 
 unsigned int fe::FrameSet::getLength() const {

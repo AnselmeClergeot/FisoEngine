@@ -4,6 +4,9 @@ fe::Animation::Animation() : m_spriteSheet(nullptr), m_timer(), m_currentFrameSe
                              m_playing(fe::Status::On)
 { }
 
+fe::Animation::Animation(sf::Sprite &sprite) : m_spriteSheet(&sprite), m_timer(), m_currentFrameSet(nullptr),                                               m_currentFrame(0), m_playing(fe::Status::On)
+{ }
+
 void fe::Animation::setSpriteSheet(sf::Sprite &spriteSheet) {
     m_spriteSheet = &spriteSheet;
 }
@@ -11,11 +14,14 @@ void fe::Animation::setSpriteSheet(sf::Sprite &spriteSheet) {
 void fe::Animation::setCurrentFrameSet(fe::FrameSet &frameSet) {
     m_currentFrameSet = &frameSet;
 
-    frameSprite();
+    if(m_currentFrameSet->getLength()>0)
+        frameSprite();
 }
 
 void fe::Animation::animate() {
-    if(m_timer.getElapsedTime()>m_currentFrameSet->getSpeed() && m_playing==fe::Status::On)
+    if(m_timer.getElapsedTime()>m_currentFrameSet->getSpeed() &&
+       m_playing==fe::Status::On &&
+       m_currentFrameSet->getLength()>0)
     {
         if(m_currentFrame+1<m_currentFrameSet->getLength())
             m_currentFrame++;
@@ -25,8 +31,6 @@ void fe::Animation::animate() {
         m_timer.restart();
 
         frameSprite();
-
-
     }
 }
 
@@ -41,7 +45,9 @@ void fe::Animation::setStatus(const fe::Status status) {
     if(status==fe::Status::Off)
     {
         m_currentFrame = 0;
-        frameSprite();
+
+        if(m_currentFrameSet->getLength()>0)
+            frameSprite();
     }
     m_playing = status;
 }

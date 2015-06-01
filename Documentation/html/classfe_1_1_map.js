@@ -42,7 +42,7 @@ var classfe_1_1_map =
     [ "setTileColor", "classfe_1_1_map.html#a5b87b592e2b3404c19d0ecf7fb20d5cf", null ],
     [ "setTileOpacity", "classfe_1_1_map.html#adb89b4272cdc535c3cfa1312d14a813d", null ],
     [ "setTileOpacity", "classfe_1_1_map.html#a35da2e412862e8605cae13d742c050ac", null ],
-    [ "setTileset", "classfe_1_1_map.html#af0bbcfe2f19434030e34100ed59ff5e2", null ],
+    [ "setTileset", "classfe_1_1_map.html#a726583cf425e16f8f3925f5a380bb579", null ],
     [ "setTileSize", "classfe_1_1_map.html#ad5b7e9c5355d32e8d9f264181d8bc9ba", null ],
     [ "setTileSize", "classfe_1_1_map.html#a4e7dff5011900ff5c55113487f90d7e3", null ],
     [ "shadows", "classfe_1_1_map.html#aa9ee602999aed69ced60eb19133c5790", null ],

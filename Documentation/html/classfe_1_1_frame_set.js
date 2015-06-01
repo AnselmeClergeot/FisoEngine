@@ -9,8 +9,8 @@ var classfe_1_1_frame_set =
     [ "getLength", "classfe_1_1_frame_set.html#a0666c5c06c15a8f772ef0dd93f4a374e", null ],
     [ "getSpeed", "classfe_1_1_frame_set.html#aedf52ca725302dfd48bf759213fc5b3d", null ],
     [ "operator=", "classfe_1_1_frame_set.html#adff5861d6f6497d040d2f5eab981f221", null ],
+    [ "resetFrames", "classfe_1_1_frame_set.html#a80a651332f49ab6dfd100a4d699d1f85", null ],
     [ "setSpeed", "classfe_1_1_frame_set.html#afde403294a683d72daa85e872bcbae35", null ],
     [ "m_frames", "classfe_1_1_frame_set.html#afe90ab593fc8e5ff563eb2199ba6dec7", null ],
-    [ "m_length", "classfe_1_1_frame_set.html#a1023636e751ed56c03d51e54241e0165", null ],
     [ "m_speed", "classfe_1_1_frame_set.html#a3b5697ec10d7fe06d3590a033d4ce9f4", null ]
 ];

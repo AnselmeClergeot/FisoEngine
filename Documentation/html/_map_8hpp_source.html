@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('_map_8hpp_source.html','');});
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_map.html#a5f11c03d67ef2f9c1077a4b965e9c1b6">resetLayerFiles</a>();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_map.html#af0bbcfe2f19434030e34100ed59ff5e2">setTileset</a>(<span class="keyword">const</span> std::string path);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_map.html#a726583cf425e16f8f3925f5a380bb579">setTileset</a>(<span class="keyword">const</span> std::string path);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classfe_1_1_map.html#ad5b7e9c5355d32e8d9f264181d8bc9ba">setTileSize</a>(<span class="keyword">const</span> <a class="code" href="classfe_1_1_vector2.html">Vector2</a> size);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
@@ -261,7 +261,6 @@ $(document).ready(function(){initNavTree('_map_8hpp_source.html','');});
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;}</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="preprocessor">#endif // MAP_HPP</span></div>
-<div class="ttc" id="classfe_1_1_map_html_af0bbcfe2f19434030e34100ed59ff5e2"><div class="ttname"><a href="classfe_1_1_map.html#af0bbcfe2f19434030e34100ed59ff5e2">fe::Map::setTileset</a></div><div class="ttdeci">void setTileset(const std::string path)</div><div class="ttdoc">To set the map tileset. </div><div class="ttdef"><b>Definition:</b> Map.cpp:76</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a0b6ad7ff30ad026520674c5b5915e473"><div class="ttname"><a href="classfe_1_1_map.html#a0b6ad7ff30ad026520674c5b5915e473">fe::Map::getPositionOfTile</a></div><div class="ttdeci">fe::Vector2 getPositionOfTile(const fe::Vector3 coord) const </div><div class="ttdoc">To get the pixel position of a specific tile. </div><div class="ttdef"><b>Definition:</b> Map.cpp:268</div></div>
 <div class="ttc" id="classfe_1_1_animator_html"><div class="ttname"><a href="classfe_1_1_animator.html">fe::Animator</a></div><div class="ttdoc">Class that animates the map tiles. </div><div class="ttdef"><b>Definition:</b> Animator.hpp:50</div></div>
 <div class="ttc" id="_configs_saver_8hpp_html"><div class="ttname"><a href="_configs_saver_8hpp.html">ConfigsSaver.hpp</a></div><div class="ttdoc">Definition of ConfigsSaver class. </div></div>
@@ -277,9 +276,10 @@ $(document).ready(function(){initNavTree('_map_8hpp_source.html','');});
 <div class="ttc" id="classfe_1_1_map_data_html"><div class="ttname"><a href="classfe_1_1_map_data.html">fe::MapData</a></div><div class="ttdoc">This class is the container of all map data. </div><div class="ttdef"><b>Definition:</b> MapData.hpp:44</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a46dca1c0eebeebb732e6eddb8e0c75e4"><div class="ttname"><a href="classfe_1_1_map.html#a46dca1c0eebeebb732e6eddb8e0c75e4">fe::Map::entities</a></div><div class="ttdeci">fe::EntitiesContainer &amp; entities()</div><div class="ttdoc">To access the entities container to add/delete/access objects. </div><div class="ttdef"><b>Definition:</b> Map.cpp:280</div></div>
 <div class="ttc" id="_map_data_8hpp_html"><div class="ttname"><a href="_map_data_8hpp.html">MapData.hpp</a></div><div class="ttdoc">Definition of MapData class. </div></div>
+<div class="ttc" id="classfe_1_1_map_html_a726583cf425e16f8f3925f5a380bb579"><div class="ttname"><a href="classfe_1_1_map.html#a726583cf425e16f8f3925f5a380bb579">fe::Map::setTileset</a></div><div class="ttdeci">void setTileset(const std::string path)</div><div class="ttdoc">To set the map tileset. </div><div class="ttdef"><b>Definition:</b> Map.cpp:76</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a5a3af07ec95d46e90e3c92ac887512d0"><div class="ttname"><a href="classfe_1_1_map.html#a5a3af07ec95d46e90e3c92ac887512d0">fe::Map::save</a></div><div class="ttdeci">void save()</div><div class="ttdoc">Function called by user to save the map configuration into layer files. </div><div class="ttdef"><b>Definition:</b> Map.cpp:62</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a829a3d9479a143548fa08312f491b4b4"><div class="ttname"><a href="classfe_1_1_map.html#a829a3d9479a143548fa08312f491b4b4">fe::Map::setTileBaseHeight</a></div><div class="ttdeci">void setTileBaseHeight(const unsigned int h)</div><div class="ttdoc">To set the tile base height. </div><div class="ttdef"><b>Definition:</b> Map.cpp:88</div></div>
-<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> Status.hpp:34</div></div>
+<div class="ttc" id="namespacefe_html"><div class="ttname"><a href="namespacefe.html">fe</a></div><div class="ttdef"><b>Definition:</b> ShadowsInitializer.hpp:39</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a64d75d2bad141dbf66a812d9299d876c"><div class="ttname"><a href="classfe_1_1_map.html#a64d75d2bad141dbf66a812d9299d876c">fe::Map::addTranslucentTile</a></div><div class="ttdeci">void addTranslucentTile(const unsigned int tile)</div><div class="ttdoc">To add a translucent tile to the map from its number. </div><div class="ttdef"><b>Definition:</b> Map.cpp:97</div></div>
 <div class="ttc" id="classfe_1_1_map_html_a3f7ae692d91b09836847993847ed4f78"><div class="ttname"><a href="classfe_1_1_map.html#a3f7ae692d91b09836847993847ed4f78">fe::Map::m_configsLoader</a></div><div class="ttdeci">fe::ConfigsLoader m_configsLoader</div><div class="ttdef"><b>Definition:</b> Map.hpp:502</div></div>
 <div class="ttc" id="classfe_1_1_map_html_ad5b7e9c5355d32e8d9f264181d8bc9ba"><div class="ttname"><a href="classfe_1_1_map.html#ad5b7e9c5355d32e8d9f264181d8bc9ba">fe::Map::setTileSize</a></div><div class="ttdeci">void setTileSize(const Vector2 size)</div><div class="ttdoc">To set the tile dimensions. </div><div class="ttdef"><b>Definition:</b> Map.cpp:80</div></div>
@@ -346,7 +346,7 @@ $(document).ready(function(){initNavTree('_map_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_map_8hpp.html">Map.hpp</a></li>
-    <li class="footer">Generated on Sun May 31 2015 11:36:10 for MoteurRedesign by
+    <li class="footer">Generated on Mon Jun 1 2015 18:26:30 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

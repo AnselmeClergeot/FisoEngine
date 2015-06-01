@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a50c9f830f1c235a00fca13efe00b8d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#a50c9f830f1c235a00fca13efe00b8d63">addFrame</a> (const unsigned int x, const unsigned int y, const unsigned int w, const unsigned int h)</td></tr>
 <tr class="memdesc:a50c9f830f1c235a00fca13efe00b8d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">To add a frame to the <a class="el" href="classfe_1_1_frame_set.html" title="Class used by user to prepare a set of frame. ">FrameSet</a> from its spritesheet coordinates and dimensions.  <a href="#a50c9f830f1c235a00fca13efe00b8d63">More...</a><br /></td></tr>
 <tr class="separator:a50c9f830f1c235a00fca13efe00b8d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a651332f49ab6dfd100a4d699d1f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#a80a651332f49ab6dfd100a4d699d1f85">resetFrames</a> ()</td></tr>
+<tr class="memdesc:a80a651332f49ab6dfd100a4d699d1f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reset all the frames.  <a href="#a80a651332f49ab6dfd100a4d699d1f85">More...</a><br /></td></tr>
+<tr class="separator:a80a651332f49ab6dfd100a4d699d1f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0666c5c06c15a8f772ef0dd93f4a374e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#a0666c5c06c15a8f772ef0dd93f4a374e">getLength</a> () const </td></tr>
 <tr class="memdesc:a0666c5c06c15a8f772ef0dd93f4a374e"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the length of the <a class="el" href="classfe_1_1_frame_set.html" title="Class used by user to prepare a set of frame. ">FrameSet</a> in frames.  <a href="#a0666c5c06c15a8f772ef0dd93f4a374e">More...</a><br /></td></tr>
 <tr class="separator:a0666c5c06c15a8f772ef0dd93f4a374e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,8 +157,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1023636e751ed56c03d51e54241e0165"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#a1023636e751ed56c03d51e54241e0165">m_length</a></td></tr>
-<tr class="separator:a1023636e751ed56c03d51e54241e0165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b5697ec10d7fe06d3590a033d4ce9f4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#a3b5697ec10d7fe06d3590a033d4ce9f4">m_speed</a></td></tr>
 <tr class="separator:a3b5697ec10d7fe06d3590a033d4ce9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe90ab593fc8e5ff563eb2199ba6dec7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classfe_1_1_vector2.html">fe::Vector2</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfe_1_1_frame_set.html#afe90ab593fc8e5ff563eb2199ba6dec7">m_frames</a></td></tr>
@@ -404,6 +405,24 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a80a651332f49ab6dfd100a4d699d1f85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fe::FrameSet::resetFrames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reset all the frames. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="afde403294a683d72daa85e872bcbae35"></a>
 <div class="memitem">
 <div class="memproto">
@@ -451,27 +470,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1023636e751ed56c03d51e54241e0165"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int fe::FrameSet::m_length</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The <a class="el" href="classfe_1_1_frame_set.html" title="Class used by user to prepare a set of frame. ">FrameSet</a> length in frames </p>
-
-</div>
-</div>
 <a class="anchor" id="a3b5697ec10d7fe06d3590a033d4ce9f4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -503,7 +501,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacefe.html">fe</a></li><li class="navelem"><a class="el" href="classfe_1_1_frame_set.html">FrameSet</a></li>
-    <li class="footer">Generated on Sun May 31 2015 11:36:11 for MoteurRedesign by
+    <li class="footer">Generated on Mon Jun 1 2015 18:26:31 for MoteurRedesign by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
