@@ -445,7 +445,7 @@ class Map : public sf::Drawable
         * \param px The x screen coordinate
         * \param py The y screen coordinate
         * \param layer The map layer number to base on to process calculations
-        * \return The map-relative tile coordinates in a Vector2
+        * \return The map-relative tile coordinates
         */
         fe::Vector3 getTileCoordAtPixels(const unsigned int px, const unsigned int py, const unsigned int layer) const;
 
