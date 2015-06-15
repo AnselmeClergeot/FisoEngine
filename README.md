@@ -47,7 +47,7 @@ Don't hesitate to send me messages to my email adress above. I would like to get
 
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
 #### <a href="https://github.com/AnselmeClergeot/FisoEngine/tree/master/Documentation">Engine documentation!</a>
-#### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases/tag/test">First stable release!</a>
+#### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases">First stable release!</a>
 
 ### Demo images
 <img src="https://github.com/AnselmeClergeot/FisoEngine/blob/master/Examples/Demo%20images/dofusMap.PNG" width="275"></img>
