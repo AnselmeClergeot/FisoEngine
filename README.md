@@ -3,10 +3,9 @@
 ### Welcome to the Fiso Engine repository!
 
 Fiso Engine is C++ a **soft**, **simple** and **tile-based** isometric engine made for being **easily bindable with any graphics library**.<br/>
-During the development, the engine is bind only with <a href="http://www.sfml-dev.org/index-fr.php">SFML</a>. <br/>
-It is still in development and the beta version has been released.<br/>
+The first stable version has been released but development is still active, due to some bugs that could be present.<br/>
 Fiso Engine is under the <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3.0 License</a>.<br/>
-For more informations, you can contact me by mail at anselmedu25@hotmail.com.
+For more informations,  contact me by mail at anselmedu25@hotmail.com.
 
 Fiso Engine is very simple of use and will offer all the features you would expect to create your game:
 * Map creation/saving and manipulation
@@ -16,16 +15,14 @@ Fiso Engine is very simple of use and will offer all the features you would expe
 * Map shading
 * Tile global animations (water, etc.)
 * Tile single animations (door, etc.)
-* Map object entities (for players, etc.)
+* Map entities (for players, etc.)
+* Basic sprite animation classes
 * Simple camera system
 * Useful functions at your disposal to help you improving your gameplay (tile-picking, etc.)
 
 ### Last FisoEngine news ! 
-A simple system of spritesheet animations is now available with FisoEngine ! Two new classes are used: Animation and FrameSet.
-
-The tile drawing system order has a little bit changed : removed bug of entities that were hidden by tiles on their top, even if these tiles were behind them.
-
-I am upgrading FisoEngine performances by making the functions that returns heavy-memory classes able to return const references.
+**Some users are currently testing the engine and few little bugs and doc mistakes were been solved.** <br/>
+It's never too late to ask me some other development ideas !
 
 ### F.A.Q
 * **Why should I use FisoEngine?**
@@ -50,7 +47,7 @@ Don't hesitate to send me messages to my email adress above. I would like to get
 
 #### <a href="https://github.com/AnselmeClergeot/IsometricEngine/wiki/Home">Engine Tutorials!</a>
 #### <a href="https://github.com/AnselmeClergeot/FisoEngine/tree/master/Documentation">Engine documentation!</a>
-#### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases/tag/test">Beta release!</a>
+#### <a href="https://github.com/AnselmeClergeot/FisoEngine/releases/tag/test">First stable release!</a>
 
 ### Demo images
 <img src="https://github.com/AnselmeClergeot/FisoEngine/blob/master/Examples/Demo%20images/dofusMap.PNG" width="275"></img>
